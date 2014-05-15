@@ -77,3 +77,43 @@ section {
   font-family: "freight-sans-pro", sans-serif;
   text-align: right;
   color: #808590; }
+
+.playlist {
+  list-style-type: none; }
+  .playlist.start {
+    counter-reset: song; }
+  .playlist li {
+    margin-bottom: 20px;
+    line-height: 1.2em;
+    position: relative; }
+    .playlist li:before {
+      font-family: "freight-sans-pro", sans-serif;
+      content: counter(song);
+      counter-increment: song;
+      position: absolute;
+      top: 1.2em; }
+  .playlist.left {
+    float: left;
+    margin-left: 30px; }
+    .playlist.left li:before {
+      left: -29px; }
+  .playlist.right {
+    float: right;
+    margin-right: 30px;
+    text-align: right; }
+    .playlist.right li:before {
+      right: -29px; }
+
+.song-name {
+  font-style: italic; }
+
+.song-meta {
+  font-family: "freight-sans-pro", sans-serif;
+  color: #808590; }
+
+.spotify {
+  width: 100%;
+  height: 80px; }
+
+.clear {
+  clear: both; }
