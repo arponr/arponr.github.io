@@ -21,22 +21,28 @@ p {
 ul {
   list-style: none; }
 
-h1, h2 {
+h1, h2, h3 {
   font-weight: normal;
   font-size: 1rem; }
 
 header {
   font-family: "freight-sans-pro", sans-serif;
   text-align: center;
-  margin: 40px 0; }
+  margin: 40px auto;
+  width: 300px; }
   header h1 {
     font-size: 1.2rem;
     text-transform: uppercase; }
+  header h3 {
+    color: #808590;
+    margin-top: 5px; }
 
 footer {
   font-family: "freight-sans-pro", sans-serif;
-  margin: 40px 0;
-  text-align: center; }
+  font-size: 0.9rem;
+  margin: 40px auto;
+  width: 450px;
+  text-align: right; }
 
 section {
   position: relative;
@@ -71,6 +77,9 @@ section {
 
 .stream li {
   margin-bottom: 15px; }
+  .stream li .date {
+    font-family: "freight-sans-pro", sans-serif;
+    color: #808590; }
 
 .grothendieck {
   float: right;

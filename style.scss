@@ -47,7 +47,7 @@ ul {
     list-style: none;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-weight: normal;
     font-size: $size-base;
 }
@@ -55,18 +55,26 @@ h1, h2 {
 header {
     font-family: $sans;
     text-align: center;
-    margin: 40px 0;
+    margin: 40px auto;
+    width: $width * 2/3;
 
     h1 {
         font-size: $size-huge;
         text-transform: uppercase;
     }
+
+    h3 {
+        color: $color-light;
+        margin-top: 5px;
+    }
 }
 
 footer {
     font-family: $sans;
-    margin: 40px 0;
-    text-align: center;
+    font-size: $size-small;
+    margin: 40px auto;
+    width: $width;
+    text-align: right;
 }
 
 section {
@@ -114,6 +122,11 @@ section {
 
 .stream li {
     margin-bottom: 15px;
+
+    .date {
+        font-family: $sans;
+        color: $color-light;
+    }
 }
 
 .grothendieck {
