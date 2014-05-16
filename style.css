@@ -121,8 +121,10 @@ section {
   color: #808590; }
 
 .spotify {
-  width: 100%;
-  height: 80px; }
+  text-align: center; }
+  .spotify iframe {
+    width: 390px;
+    height: 80px; }
 
 .clear {
   clear: both; }

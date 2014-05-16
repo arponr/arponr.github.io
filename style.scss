@@ -189,8 +189,12 @@ $playlist-line: 1.2em;
 }
 
 .spotify {
-    width: 100%;
-    height: 80px;
+    text-align: center;
+
+    iframe {
+        width: $width - 2 * $playlist-margin;
+        height: 80px;
+    }
 }
 
 .clear {
