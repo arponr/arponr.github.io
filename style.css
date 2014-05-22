@@ -80,8 +80,13 @@ footer {
   footer a:link, footer a:visited {
     text-decoration: underline; }
 
+section h1 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 10px; }
+
 .text {
-  line-height: 1.4em;
+  line-height: 1.35em;
   text-align: justify; }
   .text a:link, .text a:visited {
     text-decoration: underline;
@@ -97,8 +102,9 @@ footer {
       left: -10px; }
 
 .stream li {
-  margin-bottom: 20px;
-  width: 257.14286px; }
+  margin-bottom: 15px;
+  margin-left: 20px;
+  width: 237.14286px; }
   .stream li .desc, .stream li .date {
     font-family: "freight-sans-pro", sans-serif; }
   .stream li .date {

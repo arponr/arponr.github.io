@@ -16,6 +16,7 @@ $border-dark: #707580;
 $width: 450px;
 $nav-height: 20px;
 $stream-width: $width * 4/7;
+$stream-margin: 20px;
 
 * {
     margin: 0;
@@ -130,8 +131,14 @@ footer {
     }
 }
 
+section h1 {
+    font-size: $size-small;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
 .text {
-    line-height: 1.4em;
+    line-height: 1.35em;
     text-align: justify;
 
     a:link, a:visited {
@@ -156,8 +163,9 @@ footer {
 }
 
 .stream li {
-    margin-bottom: 20px;
-    width: $stream-width;
+    margin-bottom: 15px;
+    margin-left: $stream-margin;
+    width: $stream-width - $stream-margin;
 
     .desc, .date {
         font-family: $sans;
