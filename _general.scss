@@ -1,0 +1,179 @@
+$serif: "calluna", serif;
+$sans: "freight-sans-pro", sans-serif;
+
+$size-base: 1rem;
+$size-small: .9rem;
+$size-big: 1.1rem;
+$size-huge: 1.3rem;
+
+$color-base: #303540;
+$color-light: #707580;
+$color-link: #000510;
+
+$border-light: #c0c5d0;
+$border-dark: #707580;
+
+$width: 450px;
+$nav-height: 20px;
+$stream-width: $width * 4/7;
+
+* {
+    margin: 0;
+    padding: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+html {
+    font-family: $serif;
+    font-size: 90%;
+    color: $color-base;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: $color-base;
+}
+
+p, blockquote {
+    margin-bottom: 10px;
+}
+
+blockquote {
+    font-family: $sans;
+    color: $color-light;
+    text-align: right;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    font-size: $size-base;
+}
+
+.clear {
+    clear: both;
+}
+
+.wrap {
+    position: relative;
+    width: $width;
+    margin: 40px auto;
+}
+
+header {
+    text-align: right;
+
+    h1 {
+        font-size: $size-huge;
+        margin-top: 10px;
+    }
+
+    h3 {
+        font-family: $sans;
+        color: $color-light;
+        margin-top: 5px;
+    }
+}
+
+nav {
+    height: $nav-height;
+    border-bottom: 1px solid $border-light;
+
+    li {
+        font-family: $sans;
+        font-size: $size-small;
+        color: $color-light;
+        text-transform: uppercase;
+        display: inline;
+        float: right;
+        margin-left: 15px;
+        height: $nav-height;
+
+        a:link, a:visited {
+            color: $color-light;
+        }
+
+        &.active {
+            border-bottom: 1pt solid $border-dark;
+
+            a:link, a:visited {
+                color: $color-base;
+            }
+        }
+    }
+}
+
+footer {
+    font-family: $sans;
+    font-size: $size-small;
+    text-align: right;
+
+    a:link, a:visited {
+        text-decoration: underline;
+    }
+}
+
+.text {
+    line-height: 1.4em;
+    text-align: justify;
+
+    a:link, a:visited {
+        text-decoration: underline;
+        color: $color-link;
+    }
+
+    ul, ol {
+        margin: 10px 0 10px 35px;
+    }
+
+    ul li {
+        margin-bottom: 5px;
+        text-indent: -13px;
+
+        &:before {
+            content: "\2014";
+            position: relative;
+            left: -10px;
+        }
+    }
+}
+
+.stream li {
+    margin-bottom: 20px;
+    width: $stream-width;
+
+    .desc, .date {
+        font-family: $sans;
+    }
+
+    .date {
+        color: $color-light;
+        font-size: $size-small;
+    }
+
+    .desc {
+        display: none;
+        position: absolute;
+        right: 0;
+        margin-top: -35px;
+        width: $width - $stream-width - 20px;
+        text-align: right;
+    }
+}
