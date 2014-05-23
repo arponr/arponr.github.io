@@ -4,7 +4,7 @@ $sans: "freight-sans-pro", sans-serif;
 $size-base: 1rem;
 $size-small: .9rem;
 $size-big: 1.1rem;
-$size-huge: 1.3rem;
+$size-huge: 1.5rem;
 
 $color-base: #303540;
 $color-light: #707580;
@@ -15,8 +15,9 @@ $border-dark: #707580;
 
 $width: 450px;
 $nav-height: 20px;
-$stream-width: $width * 4/7;
-$stream-margin: 20px;
+$stream-width: $width * 2/3;
+$stream-margin: 15px;
+$stream-date-width: 80px;
 
 * {
     margin: 0;
@@ -68,6 +69,20 @@ h1, h2, h3 {
     font-size: $size-base;
 }
 
+figure {
+    img {
+        max-width: 100%;
+    }
+
+    figcaption {
+        font-family: $sans;
+        font-size: $size-small;
+        color: $color-light;
+        text-align: center;
+        margin-top: 5px;
+    }
+}
+
 .clear {
     clear: both;
 }
@@ -75,33 +90,18 @@ h1, h2, h3 {
 .wrap {
     position: relative;
     width: $width;
-    margin: 40px auto;
-}
-
-header {
-    text-align: right;
-
-    h1 {
-        font-size: $size-huge;
-        margin-top: 10px;
-    }
-
-    h3 {
-        font-family: $sans;
-        color: $color-light;
-        margin-top: 5px;
-    }
+    margin: 30px auto;
 }
 
 nav {
     height: $nav-height;
     border-bottom: 1px solid $border-light;
+    font-family: $sans;
+    font-size: $size-small;
+    color: $color-light;
+    text-transform: uppercase;
 
     li {
-        font-family: $sans;
-        font-size: $size-small;
-        color: $color-light;
-        text-transform: uppercase;
         display: inline;
         float: right;
         margin-left: 15px;
@@ -131,10 +131,22 @@ footer {
     }
 }
 
-section h1 {
+header {
+    h1 {
+        font-size: $size-huge;
+    }
+
+    h2, h3 {
+        margin-top: 2px;
+        font-family: $sans;
+        color: $color-light;
+    }
+}
+
+article h1 {
     font-size: $size-small;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .text {
@@ -163,9 +175,8 @@ section h1 {
 }
 
 .stream li {
-    margin-bottom: 15px;
-    margin-left: $stream-margin;
-    width: $stream-width - $stream-margin;
+    margin-bottom: $stream-margin;
+    width: $stream-width;
 
     .desc, .date {
         font-family: $sans;
@@ -174,14 +185,19 @@ section h1 {
     .date {
         color: $color-light;
         font-size: $size-small;
+        width: $stream-date-width;
+        float: left;
+    }
+
+    .title {
+        display: block;
+        margin-left: $stream-date-width;
     }
 
     .desc {
         display: none;
         position: absolute;
-        right: 0;
-        margin-top: -35px;
-        width: $width - $stream-width - 20px;
-        text-align: right;
+        left: $stream-width + $stream-margin;
+        width: $width - $stream-width - $stream-margin;
     }
 }

@@ -36,32 +36,31 @@ h1, h2, h3 {
   font-weight: normal;
   font-size: 1rem; }
 
+figure img {
+  max-width: 100%; }
+figure figcaption {
+  font-family: "freight-sans-pro", sans-serif;
+  font-size: 0.9rem;
+  color: #707580;
+  text-align: center;
+  margin-top: 5px; }
+
 .clear {
   clear: both; }
 
 .wrap {
   position: relative;
   width: 450px;
-  margin: 40px auto; }
-
-header {
-  text-align: right; }
-  header h1 {
-    font-size: 1.3rem;
-    margin-top: 10px; }
-  header h3 {
-    font-family: "freight-sans-pro", sans-serif;
-    color: #707580;
-    margin-top: 5px; }
+  margin: 30px auto; }
 
 nav {
   height: 20px;
-  border-bottom: 1px solid #c0c5d0; }
+  border-bottom: 1px solid #c0c5d0;
+  font-family: "freight-sans-pro", sans-serif;
+  font-size: 0.9rem;
+  color: #707580;
+  text-transform: uppercase; }
   nav li {
-    font-family: "freight-sans-pro", sans-serif;
-    font-size: 0.9rem;
-    color: #707580;
-    text-transform: uppercase;
     display: inline;
     float: right;
     margin-left: 15px;
@@ -80,10 +79,17 @@ footer {
   footer a:link, footer a:visited {
     text-decoration: underline; }
 
-section h1 {
+header h1 {
+  font-size: 1.5rem; }
+header h2, header h3 {
+  margin-top: 2px;
+  font-family: "freight-sans-pro", sans-serif;
+  color: #707580; }
+
+article h1 {
   font-size: 0.9rem;
   text-transform: uppercase;
-  margin-bottom: 10px; }
+  margin-bottom: 15px; }
 
 .text {
   line-height: 1.35em;
@@ -103,29 +109,22 @@ section h1 {
 
 .stream li {
   margin-bottom: 15px;
-  margin-left: 20px;
-  width: 237.14286px; }
+  width: 300px; }
   .stream li .desc, .stream li .date {
     font-family: "freight-sans-pro", sans-serif; }
   .stream li .date {
     color: #707580;
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    width: 80px;
+    float: left; }
+  .stream li .title {
+    display: block;
+    margin-left: 80px; }
   .stream li .desc {
     display: none;
     position: absolute;
-    right: 0;
-    margin-top: -35px;
-    width: 172.85714px;
-    text-align: right; }
-
-#me img {
-  width: 100%; }
-#me figcaption {
-  font-family: "freight-sans-pro", sans-serif;
-  font-size: 0.9rem;
-  color: #707580;
-  text-align: center;
-  margin-top: 5px; }
+    left: 315px;
+    width: 135px; }
 
 .playlist {
   list-style-type: none; }

@@ -1,0 +1,34 @@
+{% include header.html %}
+
+    <section class="wrap spotify">
+      <iframe frameborder="0" allowtransparency="true"
+              src="https://embed.spotify.com/?uri=spotify:user:arpon.raksit:playlist:{{ page.spotify }}"></iframe>
+    </section>
+
+    <article class="wrap">
+      <ol class="playlist left start">
+        {% for song in page.songs.left %}
+        <li>
+          <span class="song-name">{{ song.name }}</span><br>
+          <span class="song-meta">
+            {{ song.artist }}<br>
+            {{ song.album }}
+          </span>
+        </li>
+        {% endfor %}
+      </ol>
+
+      <ol class="playlist right">
+        {% for song in page.songs.right %}
+        <li>
+          <span class="song-name">{{ song.name }}</span><br>
+          <span class="song-meta">
+            {{ song.artist }}<br>
+            {{ song.album }}
+          </span>
+        </li>
+        {% endfor %}
+      </ol>
+    </article>
+
+{% include footer.html %}
