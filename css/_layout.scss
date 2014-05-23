@@ -1,0 +1,88 @@
+figure {
+    img {
+        max-width: 100%;
+    }
+
+    figcaption {
+        font-family: $sans;
+        font-size: $size-small;
+        color: $color-light;
+        text-align: center;
+        margin-top: 5px;
+    }
+}
+
+.wrap {
+    position: relative;
+    width: $width;
+    margin: 30px auto;
+}
+
+nav {
+    height: $nav-height;
+    border-bottom: 1px solid $border-light;
+    font-family: $sans;
+    font-size: $size-small;
+    color: $color-light;
+    text-transform: uppercase;
+
+    li {
+        display: inline;
+        float: right;
+        margin-left: 15px;
+        height: $nav-height;
+
+        a:link, a:visited {
+            color: $color-light;
+        }
+
+        &.active {
+            border-bottom: 1pt solid $border-dark;
+
+            a:link, a:visited {
+                color: $color-base;
+            }
+        }
+    }
+}
+
+header {
+    h1 {
+        font-size: $size-huge;
+    }
+
+    h2 {
+        margin-top: 2px;
+        width: $col2;
+        font-family: $sans;
+        color: $color-light;
+    }
+}
+
+.stream li {
+    margin-bottom: $stream-margin;
+    width: $col2;
+
+    .desc, .date {
+        font-family: $sans;
+    }
+
+    .date {
+        color: $color-light;
+        font-size: $size-small;
+        width: $col1;
+        float: left;
+    }
+
+    .title {
+        display: block;
+        margin-left: $col1;
+    }
+
+    .desc {
+        display: none;
+        position: absolute;
+        left: $col2 + $stream-margin;
+        width: $width - $col2 - $stream-margin;
+    }
+}
