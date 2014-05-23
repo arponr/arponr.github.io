@@ -3,7 +3,7 @@ layout: text
 section: blog
 title: Black River
 permalink: /black-river
-preview: First full (draft of a) set of lyrics
+desc: First full (draft of a) set of lyrics.
 ---
 
 dark dark night and cold cold flow  

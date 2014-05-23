@@ -4,14 +4,14 @@ section: about
 title: About
 banner_url: me.jpg
 banner_alt: me
-banner_cap: "Here I am: full of dignity, grace, and whatever is in those
-             bowls."
+banner_cap: Here I am, full of dignity, grace, and whatever is in those
+            bowls.
 ---
 
 I'm Arpon Raksit, an undergraduate at Harvard. I'm mostly focused on
 trying to understand (parts of) math. This site is basically a place
 for me to [blog][blog] short snippets, and keep some longer expository
-[writing][writing], on the subject.
+[notes][notes], on the subject.
 
 > "it always turned out that understanding was all that mattered"  
 > --- A. Grothendieck
@@ -25,7 +25,7 @@ Contact me at [arpon.raksit@gmail.com][mail].
 
 
 [blog]: /blog/
-[writing]: /writing/
+[notes]: /notes/
 [mail]: mailto:arpon.raksit@gmail.com
 
   

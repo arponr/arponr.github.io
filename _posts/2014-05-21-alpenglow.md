@@ -3,7 +3,7 @@ layout: playlist
 section: blog
 title: Alpenglow
 permalink: /alpenglow
-preview: These are beautiful
+desc: These are beautiful.
 spotify: 67TTE88qJtwUUeA2zwCCwE
 songs:
   left:

@@ -29,7 +29,12 @@
     </nav>
 
     <header class="wrap">
-      {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
-      {% if page.date %}<h2>{{ page.date | date_to_string }}</h2>{% endif %}
-      {% if page.preview %}<h3>{{ page.preview }}</h3>{% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if page.date or page.desc %}
+      <h2>
+        {% if page.date %}{{ page.date | date_to_string }}{% endif %}
+        {% if page.date and page.desc %}&mdash; {% endif %}
+        {% if page.desc %}{{ page.desc }}{% endif %}
+      </h2>
+      {% endif %}
     </header>

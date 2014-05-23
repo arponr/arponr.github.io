@@ -3,7 +3,7 @@ layout: playlist
 section: blog
 title: Simple Song
 permalink: /simple-song
-preview: A playlist worth posting
+desc: A playlist worth posting.
 spotify: 6rBSgFlU5CT5AVB8UDmlAI
 songs:
   left:

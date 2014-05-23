@@ -45,9 +45,6 @@ figure figcaption {
   text-align: center;
   margin-top: 5px; }
 
-.clear {
-  clear: both; }
-
 .wrap {
   position: relative;
   width: 450px;
@@ -72,19 +69,32 @@ nav {
       nav li.active a:link, nav li.active a:visited {
         color: #303540; }
 
-footer {
-  font-family: "freight-sans-pro", sans-serif;
-  font-size: 0.9rem;
-  text-align: right; }
-  footer a:link, footer a:visited {
-    text-decoration: underline; }
-
 header h1 {
   font-size: 1.5rem; }
-header h2, header h3 {
+header h2 {
   margin-top: 2px;
+  width: 300px;
   font-family: "freight-sans-pro", sans-serif;
   color: #707580; }
+
+.stream li {
+  margin-bottom: 15px;
+  width: 300px; }
+  .stream li .desc, .stream li .date {
+    font-family: "freight-sans-pro", sans-serif; }
+  .stream li .date {
+    color: #707580;
+    font-size: 0.9rem;
+    width: 80px;
+    float: left; }
+  .stream li .title {
+    display: block;
+    margin-left: 80px; }
+  .stream li .desc {
+    display: none;
+    position: absolute;
+    left: 315px;
+    width: 135px; }
 
 article h1 {
   font-size: 0.9rem;
@@ -106,25 +116,6 @@ article h1 {
       content: "\2014";
       position: relative;
       left: -10px; }
-
-.stream li {
-  margin-bottom: 15px;
-  width: 300px; }
-  .stream li .desc, .stream li .date {
-    font-family: "freight-sans-pro", sans-serif; }
-  .stream li .date {
-    color: #707580;
-    font-size: 0.9rem;
-    width: 80px;
-    float: left; }
-  .stream li .title {
-    display: block;
-    margin-left: 80px; }
-  .stream li .desc {
-    display: none;
-    position: absolute;
-    left: 315px;
-    width: 135px; }
 
 .playlist {
   list-style-type: none; }

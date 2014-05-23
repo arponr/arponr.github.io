@@ -3,7 +3,7 @@ layout: playlist
 section: blog
 title: Dancepack
 permalink: /dancepack
-preview: A pack for dancing
+desc: A pack for dancing.
 spotify: 5S5kx8teiOksOxDb5KKlrO
 songs:
   left:
