@@ -3,9 +3,6 @@
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [["$", "$"]]
-    },
     "HTML-CSS": {
       scale: 95,
       availableFonts: [],
@@ -15,7 +12,22 @@
     TeX: {
       extensions: ["AMSmath.js", "AMSsymbols.js", "/js/xypic.js"],
       Macros: {
-        op: ["\\operatorname{\\text{#1}}", 1]
+        l: "\\left",
+        r: "\\right",
+        f: ["\\frac{#1}{#2}", 2],
+        lv: "\\lvert",
+        rv: "\\rvert",
+        op: ["\\operatorname{\\text{#1}}", 1],
+        c: "\\colon",
+        ce: "\\mathrel{:=}",
+        ec: "\\mathrel{=:}",
+        mr: ["\\mathrm{#1}", 1],
+        mc: ["\\mathscr{#1}", 1],
+        bb: ["\\mathbb{#1}", 1],
+        mb: ["\\mathbf{#1}", 1],
+        mf: ["\\mathfrak{#1}", 1],
+        qed: "~~\\diamondsuit",
+        ker: "\\op{ker}"
       }
     }
   });

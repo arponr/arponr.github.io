@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>{{ site.name }}{% if page.title %} | {{ page.title }}{% endif %}</title>
@@ -21,6 +21,13 @@
             src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
     <script type="text/javascript" src="/js/mathjax-config.js"></script>
     {% endif %}
+
+    <script type="text/javascript" src="/js/Hyphenator.js"></script>
+    <script type="text/javascript">
+      MathJax.Hub.Register.StartupHook("End",function () {
+        Hyphenator.run();
+      });
+    </script>
   </head>
 
   <body>

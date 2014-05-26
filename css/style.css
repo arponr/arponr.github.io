@@ -21,20 +21,30 @@ a:link, a:visited {
   text-decoration: none;
   color: #303540; }
 
-p, blockquote {
-  margin-bottom: 10px; }
-
-blockquote {
-  font-family: "freight-sans-pro", sans-serif;
-  color: #707580;
-  text-align: right; }
-
 ul {
   list-style: none; }
 
 h1, h2, h3 {
   font-weight: normal;
   font-size: 1rem; }
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  top: 0.5em; }
+
+p + p, blockquote + p, ul + p, ol + p {
+  margin-top: 10px; }
+
+blockquote {
+  font-family: "freight-sans-pro", sans-serif;
+  color: #707580;
+  text-align: right; }
 
 figure img {
   max-width: 100%; }
@@ -47,7 +57,7 @@ figure figcaption {
 
 .wrap {
   position: relative;
-  width: 450px;
+  width: 460px;
   margin: 30px auto; }
 
 nav {
@@ -73,13 +83,12 @@ header h1 {
   font-size: 1.5rem; }
 header h2 {
   margin-top: 2px;
-  width: 300px;
   font-family: "freight-sans-pro", sans-serif;
   color: #707580; }
 
 .stream li {
   margin-bottom: 15px;
-  width: 300px; }
+  width: 306.66667px; }
   .stream li .desc, .stream li .date {
     font-family: "freight-sans-pro", sans-serif; }
   .stream li .date {
@@ -93,8 +102,8 @@ header h2 {
   .stream li .desc {
     display: none;
     position: absolute;
-    left: 315px;
-    width: 135px; }
+    left: 321.66667px;
+    width: 138.33333px; }
 
 article h1 {
   font-size: 0.9rem;
@@ -108,14 +117,28 @@ article h1 {
     text-decoration: underline;
     color: #000510; }
   .text ul, .text ol {
-    margin: 10px 0 10px 35px; }
+    margin-left: 35px; }
+    .text ul li, .text ol li {
+      margin-top: 5px; }
   .text ul li {
-    margin-bottom: 5px;
     text-indent: -13px; }
     .text ul li:before {
       content: "\2014";
       position: relative;
       left: -10px; }
+
+.footnotes:before {
+  content: '';
+  display: block;
+  background: #c0c5d0;
+  height: 1px;
+  width: 80px;
+  margin-top: 30px;
+  margin-bottom: 10px; }
+.footnotes ol {
+  margin-left: 15px;
+  font-size: 0.9rem;
+  line-height: 1.25em; }
 
 .playlist {
   list-style-type: none; }

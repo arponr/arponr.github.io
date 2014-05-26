@@ -14,11 +14,14 @@ article h1 {
     }
 
     ul, ol {
-        margin: 10px 0 10px 35px;
+        margin-left: 35px;
+
+        li {
+            margin-top: 5px;
+        }
     }
 
     ul li {
-        margin-bottom: 5px;
         text-indent: -13px;
 
         &:before {
@@ -26,6 +29,24 @@ article h1 {
             position: relative;
             left: -10px;
         }
+    }
+}
+
+.footnotes {
+    &:before {
+        content: '';
+        display: block;
+        background: $border-light;
+        height: 1px;
+        width: $col1;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    ol {
+        margin-left: 15px;
+        font-size: $size-small;
+        line-height: 1.25em;
     }
 }
 

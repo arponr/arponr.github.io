@@ -29,16 +29,6 @@ a:link, a:visited {
     color: $color-base;
 }
 
-p, blockquote {
-    margin-bottom: 10px;
-}
-
-blockquote {
-    font-family: $sans;
-    color: $color-light;
-    text-align: right;
-}
-
 ul {
     list-style: none;
 }
@@ -46,4 +36,17 @@ ul {
 h1, h2, h3 {
     font-weight: normal;
     font-size: $size-base;
+}
+
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    top: 0.5em;
 }

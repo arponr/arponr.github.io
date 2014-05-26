@@ -1,3 +1,16 @@
+p, blockquote, ul, ol {
+    & + p {
+        margin-top: 10px;
+    }
+}
+
+blockquote {
+    font-family: $sans;
+    color: $color-light;
+    text-align: right;
+}
+
+
 figure {
     img {
         max-width: 100%;
@@ -53,7 +66,6 @@ header {
 
     h2 {
         margin-top: 2px;
-        width: $col2;
         font-family: $sans;
         color: $color-light;
     }
