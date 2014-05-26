@@ -29,7 +29,7 @@ Recall also that:
    \to i_*\mc{O}_Z)$$;
 2. the *closed subspace* determined by $$\mc{I}$$ is defined as the
    locally ringed space $$Z' \ce (\op{supp}(\mc{O}_X/\mc{I}),
-   \mc{O}_X/\mc{I})$$.
+   \mc{O}_X/\mc{I})$$;
 3. the natural map $$i' \c Z' \to X$$ is a closed immersion with ideal
    sheaf $$\mc{I}$$;
 4. $$i \c Z \to X$$ in fact induces an isomorphism $$h \c Z \to Z'$$

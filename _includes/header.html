@@ -11,26 +11,18 @@
     <script type="text/javascript" src="//use.typekit.net/cen6cew.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-    {% if page.js %}
     <script type="text/javascript" src="/js/jquery.js"></script>
-    <script type="text/javascript" src="/js/j.js"></script>
-    {% endif %}
+    <script type="text/javascript" src="/js/Hyphenator.js"></script>
 
     {% if page.math %}
     <script type="text/javascript"
             src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
-    <script type="text/javascript" src="/js/mathjax-config.js"></script>
     {% endif %}
 
-    <script type="text/javascript" src="/js/Hyphenator.js"></script>
-    <script type="text/javascript">
-      MathJax.Hub.Register.StartupHook("End",function () {
-        Hyphenator.run();
-      });
-    </script>
+    <script type="text/javascript" src="/js/j.js"></script>
   </head>
 
-  <body>
+  <body{% if page.math %} class="math"{% endif %}>
     <nav class="wrap">
       <ul>
         <li{% if page.section == "notes" %} class="active"{% endif %}>

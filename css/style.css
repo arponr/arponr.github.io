@@ -38,7 +38,7 @@ sup {
 sub {
   top: 0.5em; }
 
-p + p, blockquote + p, ul + p, ol + p {
+p + p, p + blockquote, blockquote + p, blockquote + blockquote, ul + p, ul + blockquote, ol + p, ol + blockquote {
   margin-top: 10px; }
 
 blockquote {
