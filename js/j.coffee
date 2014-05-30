@@ -38,7 +38,11 @@ jQuery ->
                     mb: ["\\mathbf{#1}", 1]
                     mf: ["\\mathfrak{#1}", 1]
                     qed: "~~\\diamondsuit"
+                    ob: "\\op{ob}"
+                    hom: "\\op{hom}"
                     ker: "\\op{ker}"
+                    id: "\\op{id}"
+                    max: "\\op{max}"
         )
         MathJax.Hub.Register.StartupHook "End", ->
             Hyphenator.run()

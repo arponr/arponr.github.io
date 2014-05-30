@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'calendas_plus';
+  src: url("calendas_plus-webfont.eot");
+  src: url("calendas_plus-webfont.eot?#iefix") format("embedded-opentype"), url("calendas_plus-webfont.woff") format("woff"), url("calendas_plus-webfont.ttf") format("truetype"), url("calendas_plus-webfont.svg#calendas_plusregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 * {
   margin: 0;
   padding: 0;
@@ -105,11 +111,6 @@ header h2 {
     left: 321.66667px;
     width: 138.33333px; }
 
-article h1 {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  margin-bottom: 15px; }
-
 .text {
   line-height: 1.35em;
   text-align: justify; }
@@ -126,6 +127,12 @@ article h1 {
       content: "\2014";
       position: relative;
       left: -10px; }
+  .text h1 {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-bottom: 10px; }
+    * + .text h1 {
+      margin-top: 20px; }
 
 .footnotes:before {
   content: '';

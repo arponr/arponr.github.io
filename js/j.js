@@ -36,7 +36,11 @@
             mb: ["\\mathbf{#1}", 1],
             mf: ["\\mathfrak{#1}", 1],
             qed: "~~\\diamondsuit",
-            ker: "\\op{ker}"
+            ob: "\\op{ob}",
+            hom: "\\op{hom}",
+            ker: "\\op{ker}",
+            id: "\\op{id}",
+            max: "\\op{max}"
           }
         }
       });

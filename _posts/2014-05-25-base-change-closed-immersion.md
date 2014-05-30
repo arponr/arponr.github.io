@@ -1,6 +1,6 @@
 ---
 layout: text
-math: true;
+math: true
 section: blog
 title: Base change of closed immersion
 permalink: /base-change-closed-immersion
