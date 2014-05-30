@@ -4,7 +4,7 @@ math: true
 section: blog
 title: Finite presentation basics
 permalink: /finite-presentation-basics
-desc: Two basic facts about finitel presentation, proved for both
+desc: Two basic facts about finite presentation, proved for both
       modules and algebras at the same time!
 ---
 
