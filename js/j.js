@@ -21,26 +21,11 @@
         TeX: {
           extensions: ["AMSmath.js", "AMSsymbols.js", "/js/xypic.js"],
           Macros: {
-            l: "\\left",
-            r: "\\right",
-            f: ["\\frac{#1}{#2}", 2],
-            lv: "\\lvert",
-            rv: "\\rvert",
-            op: ["\\operatorname{\\text{#1}}", 1],
-            c: "\\colon",
-            ce: "\\mathrel{:=}",
-            ec: "\\mathrel{=:}",
-            mr: ["\\mathrm{#1}", 1],
-            mc: ["\\mathscr{#1}", 1],
-            bb: ["\\mathbb{#1}", 1],
-            mb: ["\\mathbf{#1}", 1],
-            mf: ["\\mathfrak{#1}", 1],
-            qed: "~~\\diamondsuit",
-            ob: "\\op{ob}",
-            hom: "\\op{hom}",
-            ker: "\\op{ker}",
-            id: "\\op{id}",
-            max: "\\op{max}"
+            opname: ["\\operatorname{\\text{#1}}", 1],
+            mathcal: ["\\mathscr{#1}", 1],
+            mathrm: ["\\text{#1}", 1],
+            iso: "\\mathrel{\\large\\simeq}",
+            qed: "~~\\diamondsuit"
           }
         }
       });

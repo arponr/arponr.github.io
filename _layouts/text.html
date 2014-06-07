@@ -10,6 +10,15 @@
     {% endif %}
 
     <article class="wrap text hyphenate">
+      {% if page.preamble %}
+      <div class="preamble">
+        $$
+        {% for cmd in page.preamble %}
+        \newcommand{ \{{ cmd[0] }} }{% if cmd[1] > 0 %}[ {{ cmd[1] }} ]{% endif %}{ {{ cmd[2] }} }
+        {% endfor %}
+        $$
+      </div>
+      {% endif %}
       {{ content }}
     </article>
 

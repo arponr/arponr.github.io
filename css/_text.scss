@@ -27,13 +27,18 @@
 
     h1 {
         font-size: $size-big;
-        font-style: italic;
+        font-variant: small-caps;
+        text-align: center;
         margin-bottom: 10px;
 
         * + & {
             margin-top: 20px;
         }
     }
+}
+
+.preamble {
+    display: none;
 }
 
 .footnotes {

@@ -1,8 +1,20 @@
 @font-face {
-  font-family: 'calendas_plus';
+  font-family: 'calendas-plus';
   src: url("calendas_plus-webfont.eot");
-  src: url("calendas_plus-webfont.eot?#iefix") format("embedded-opentype"), url("calendas_plus-webfont.woff") format("woff"), url("calendas_plus-webfont.ttf") format("truetype"), url("calendas_plus-webfont.svg#calendas_plusregular") format("svg");
+  src: url("calendas_plus-webfont.eot?#iefix") format("embedded-opentype"), url("calendas_plus-webfont.woff") format("woff"), url("calendas_plus-webfont.ttf") format("truetype"), url("calendas_plus-webfont.svg#calendas_plus") format("svg");
   font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'calendas-plus';
+  src: url("calendas_plus_italic-webfont.eot");
+  src: url("calendas_plus_italic-webfont.eot?#iefix") format("embedded-opentype"), url("calendas_plus_italic-webfont.woff") format("woff"), url("calendas_plus_italic-webfont.ttf") format("truetype"), url("calendas_plus_italic-webfont.svg#calendas_plus_italic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'calendas-plus';
+  src: url("calendas_plus_bold-webfont.eot");
+  src: url("calendas_plus_bold-webfont.eot?#iefix") format("embedded-opentype"), url("calendas_plus_bold-webfont.woff") format("woff"), url("calendas_plus_bold-webfont.ttf") format("truetype"), url("calendas_plus_bold-webfont.svg#calendas_plus_bold") format("svg");
+  font-weight: bold;
   font-style: normal; }
 * {
   margin: 0;
@@ -18,14 +30,15 @@
 html {
   font-family: "calluna", serif;
   font-size: 90%;
-  color: #303540; }
+  color: #202530;
+  background: #f9f9f3; }
 
 body {
   overflow-y: scroll; }
 
 a:link, a:visited {
   text-decoration: none;
-  color: #303540; }
+  color: #202530; }
 
 ul {
   list-style: none; }
@@ -49,7 +62,7 @@ p + p, p + blockquote, blockquote + p, blockquote + blockquote, ul + p, ul + blo
 
 blockquote {
   font-family: "freight-sans-pro", sans-serif;
-  color: #707580;
+  color: #606570;
   text-align: right; }
 
 figure img {
@@ -57,7 +70,7 @@ figure img {
 figure figcaption {
   font-family: "freight-sans-pro", sans-serif;
   font-size: 0.9rem;
-  color: #707580;
+  color: #606570;
   text-align: center;
   margin-top: 5px; }
 
@@ -71,7 +84,7 @@ nav {
   border-bottom: 1px solid #c0c5d0;
   font-family: "freight-sans-pro", sans-serif;
   font-size: 0.9rem;
-  color: #707580;
+  color: #606570;
   text-transform: uppercase; }
   nav li {
     display: inline;
@@ -79,18 +92,18 @@ nav {
     margin-left: 15px;
     height: 20px; }
     nav li a:link, nav li a:visited {
-      color: #707580; }
+      color: #606570; }
     nav li.active {
       border-bottom: 1pt solid #707580; }
       nav li.active a:link, nav li.active a:visited {
-        color: #303540; }
+        color: #202530; }
 
 header h1 {
   font-size: 1.5rem; }
 header h2 {
   margin-top: 2px;
   font-family: "freight-sans-pro", sans-serif;
-  color: #707580; }
+  color: #606570; }
 
 .stream li {
   margin-bottom: 15px;
@@ -98,7 +111,7 @@ header h2 {
   .stream li .desc, .stream li .date {
     font-family: "freight-sans-pro", sans-serif; }
   .stream li .date {
-    color: #707580;
+    color: #606570;
     font-size: 0.9rem;
     width: 80px;
     float: left; }
@@ -128,11 +141,15 @@ header h2 {
       position: relative;
       left: -10px; }
   .text h1 {
-    font-size: 1.25rem;
-    font-style: italic;
+    font-size: 1.15rem;
+    font-variant: small-caps;
+    text-align: center;
     margin-bottom: 10px; }
     * + .text h1 {
       margin-top: 20px; }
+
+.preamble {
+  display: none; }
 
 .footnotes:before {
   content: '';
@@ -175,7 +192,7 @@ header h2 {
 
 .song-meta {
   font-family: "freight-sans-pro", sans-serif;
-  color: #707580; }
+  color: #606570; }
 
 .spotify iframe {
   width: 100%;
