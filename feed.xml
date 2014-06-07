@@ -10,9 +10,10 @@ layout: none
     {% for post in site.posts limit:25 %}
     <item>
       <title>{{ post.title }}</title>
-      <description>{{ post.desc | xml_escape }}</description>
-      <pubDate>{{ post.date }}</pubDate>
+      <description>{{ post.content | xml_escape }}</description>
+      <pubDate>{{ post.date | date_to_string }}</pubDate>
       <link>{{ site.url }}{{ post.permalink }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ post.permalink }}</guid>
     </item>
     {% endfor %}
   </channel>
