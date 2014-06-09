@@ -22,6 +22,9 @@
           mtextFontInherit: true
         },
         TeX: {
+          equationNumbers: {
+            autoNumber: "AMS"
+          },
           extensions: ["AMSmath.js", "AMSsymbols.js", "/js/xypic.js"],
           Macros: {
             opname: ["\\operatorname{\\text{#1}}", 1],
