@@ -28,7 +28,7 @@ class Jekyll::Converters::Markdown::TeXdown
      ["theorem", "Theorem"]].each do |e|
       t = Regexp.quote(e[0])
       i = i.gsub(/\\begin\{#{t}\}\s*(.*?)\s*\\end\{#{t}\}/m,
-                 "<div class=\"environment #{e[0]}\">\n\#\#\#\#\#\##{e[1]}\n\\1\n</div>")
+                 "<div class=\"environment #{e[0]}\">\n#{"\#"*6}#{e[1]}\n\\1\n</div>")
     end
     
     Kramdown::Document.new(i, :auto_ids => false, :parse_block_html => true).to_html
