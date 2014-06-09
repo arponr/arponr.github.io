@@ -82,6 +82,7 @@ definition.<sup id="fnref:immersion-general"><a href="#fn:immersion-general" cla
 
 <div class="environment definition">
   <h6>Definition</h6>
+
   <p>We say a morphism $i \c Z \to X$ of locally ringed spaces is a
 <em>closed immersion</em> if:</p>
 
@@ -108,8 +109,9 @@ such that $i = i' \circ h$.</li>
   </ol>
 </div>
 
-<div class="environment lemma">
-  <h6>Lemma</h6>
+<div id="monomorphism" class="environment lemma">
+  <h6>1. Lemma</h6>
+
   <p>If $i \c Z \to X$ is a closed immersion of locally ringed spaces,
 then $i$ is a monomorphism (in the category of locally ringed
 spaces).</p>
@@ -117,13 +119,15 @@ spaces).</p>
 
 <div class="environment proof">
   <h6>Proof</h6>
+
   <p>By definition, the map of spaces $\lv Z \rv \to \lv X \rv$ is a
 monomorphism and the map of sheaves $\O_X \to i_*\O_Z$ is an
 epimorphism, so the claim is clear.</p>
 </div>
 
-<div class="environment lemma">
-  <h6>Lemma</h6>
+<div id="factoring" class="environment lemma">
+  <h6>2. Lemma</h6>
+
   <p>Let $i \c Z \to X$ be a closed immersion of locally ringed spaces,
 and let $\I$ be the corresponding ideal sheaf. Then a morphism
 of locally ringed spaces $f \c Y \to X$ factors through
@@ -135,8 +139,9 @@ exists.</p>
 
 <div class="environment proof">
   <h6>Proof</h6>
-  <p>Uniqueness is immediate from $i$ being a monomorphism, which is the
-previous lemma, so we need only prove the existence statement. As
+
+  <p>Uniqueness is immediate from $i$ being a monomorphism by
+<a href="#monomorphism">Lm. 1</a>, so we need only prove the existence statement. As
 recalled above, we can assume without loss of generality that $i$ is
 the inclusion of the closed subspace $Z \ce
 (\supp(\O_X/\I), \O_X/\I)$.</p>
@@ -171,6 +176,7 @@ defining ideals behave under base change.</p>
 
 <div class="environment lemma">
   <h6>Lemma</h6>
+
   <p>Let $i \c Z \to X$ be a closed immersion of locally ringed spaces,
 and let $\I$ be the corresponding ideal sheaf. Let $f \c Y \to
 X$ be any morphism of locally ringed spaces. Let $\I'$ be the
@@ -189,12 +195,13 @@ we have a pullback diagram
 
 <div class="environment proof">
   <h6>Proof</h6>
-  <p>By the previous lemma, giving a morphism of locally ringed spaces $T
+
+  <p>By <a href="#factoring">Lm. 2</a>, giving a morphism of locally ringed spaces $T
 \to Z'$ is equivalent to giving a morphism $a \c T \to Y$ such that
 the map $a^*\I' \to \O_T$ is zero. We claim this condition
 is equivalent to asking that $(f \circ a)^*\I \to \O_T$ is
-zero. Assuming this for the moment, this in turn is equivalent by the
-previous lemma to giving a morphism $b \c T \to Z$ such that $f
+zero. Assuming this for the moment, this in turn is equivalent by
+<a href="#factoring">Lm. 2</a> to giving a morphism $b \c T \to Z$ such that $f
 \circ a = i \circ b$. Thus $Z'$ satisfies the necessary universal
 property (in particular the morphism $g$ is determined by the
 identity $Z' \to Z'$, i.e. it is the morphism $b$ corresponding to

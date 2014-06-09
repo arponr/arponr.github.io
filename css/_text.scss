@@ -15,6 +15,10 @@
         }
     }
 
+    ol {
+        list-style-type: lower-roman;
+    }
+
     ul li {
         text-indent: -13px;
 
@@ -79,6 +83,7 @@
     }
 
     ol {
+        list-style-type: decimal;
         margin-left: 15px;
         font-size: $size-small;
         line-height: 1.25em;

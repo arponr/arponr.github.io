@@ -45,7 +45,7 @@ Recall also that:
    such that $i = i' \circ h$.
 \end{definition}
 
-\begin{lemma}
+\begin{lemma}{monomorphism}
 If $i \c Z \to X$ is a closed immersion of locally ringed spaces,
 then $i$ is a monomorphism (in the category of locally ringed
 spaces).
@@ -57,7 +57,7 @@ monomorphism and the map of sheaves $\O_X \to i_*\O_Z$ is an
 epimorphism, so the claim is clear.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}{factoring}
 Let $i \c Z \to X$ be a closed immersion of locally ringed spaces,
 and let $\I$ be the corresponding ideal sheaf. Then a morphism
 of locally ringed spaces $f \c Y \to X$ factors through
@@ -68,8 +68,8 @@ exists.
 \end{lemma}
 
 \begin{proof}
-Uniqueness is immediate from $i$ being a monomorphism, which is the
-previous lemma, so we need only prove the existence statement. As
+Uniqueness is immediate from $i$ being a monomorphism by
+\ref{monomorphism}, so we need only prove the existence statement. As
 recalled above, we can assume without loss of generality that $i$ is
 the inclusion of the closed subspace $Z \ce
 (\supp(\O_X/\I), \O_X/\I)$.
@@ -120,12 +120,12 @@ we have a pullback diagram
 \end{lemma}
 
 \begin{proof}
-By the previous lemma, giving a morphism of locally ringed spaces $T
+By \ref{factoring}, giving a morphism of locally ringed spaces $T
 \to Z'$ is equivalent to giving a morphism $a \c T \to Y$ such that
 the map $a^*\I' \to \O_T$ is zero. We claim this condition
 is equivalent to asking that $(f \circ a)^*\I \to \O_T$ is
-zero. Assuming this for the moment, this in turn is equivalent by the
-previous lemma to giving a morphism $b \c T \to Z$ such that $f
+zero. Assuming this for the moment, this in turn is equivalent by
+\ref{factoring} to giving a morphism $b \c T \to Z$ such that $f
 \circ a = i \circ b$. Thus $Z'$ satisfies the necessary universal
 property (in particular the morphism $g$ is determined by the
 identity $Z' \to Z'$, i.e. it is the morphism $b$ corresponding to

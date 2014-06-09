@@ -19,6 +19,8 @@ jQuery ->
                 webFont: "Neo-Euler"
                 mtextFontInherit: true
             TeX:
+                equationNumbers:
+                    autoNumber: "AMS"
                 extensions: [
                     "AMSmath.js"
                     "AMSsymbols.js"
