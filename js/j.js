@@ -11,6 +11,9 @@
     } else {
       MathJax.Hub.Config({
         extensions: ["tex2jax.js"],
+        tex2jax: {
+          inlineMath: [["$", "$"]]
+        },
         jax: ["input/TeX", "output/HTML-CSS"],
         "HTML-CSS": {
           scale: 95,

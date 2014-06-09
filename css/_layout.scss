@@ -1,5 +1,5 @@
-p, blockquote, ul, ol {
-    & + p, & + blockquote {
+p, blockquote, ul, ol, div {
+    & + p, & + blockquote, & + div {
         margin-top: 10px;
     }
 }

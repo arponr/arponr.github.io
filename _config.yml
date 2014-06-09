@@ -1,4 +1,5 @@
 name: arponr
 url: http://www.arponr.com
 
-markdown: kramdown
+markdown: TeXdown
+
