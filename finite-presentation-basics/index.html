@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>arponr | Finite presentation basics</title>
+    <meta property="og:title" content="Finite presentation basics"/>
+    <meta property="og:site_name" content="arponr"/>
+
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="RSS">
+
+    <script type="text/javascript" src="//use.typekit.net/cen6cew.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/Hyphenator.js"></script>
+
+    
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+    
+
+    <script type="text/javascript" src="/js/j.js"></script>
+  </head>
+
+  <body class="math">
+    <nav class="wrap">
+      <ul>
+        <li>
+          <a href="/notes/">notes</a></li>
+        <li class="active">
+          <a href="/blog/">blog</a></li>
+        <li>
+          <a href="/">about</a></li>
+      </ul>
+      arponr
+    </nav>
+
+    <header class="wrap">
+      <h1>Finite presentation basics</h1>
+      
+      <h2>
+        29 May 2014
+        &mdash; 
+        Two basic facts about finite presentation, proved for both modules and algebras at the same time!
+      </h2>
+      
+    </header>
+
+
+    
+
+    <article class="wrap text hyphenate">
+      
+      <div class="preamble">
+        $$
+        
+        \newcommand{ \c }{ \colon }
+        
+        \newcommand{ \ce }{ \mathrel{:=} }
+        
+        \newcommand{ \obj }{ \opname{obj} }
+        
+        \newcommand{ \mor }{ \opname{mor} }
+        
+        \newcommand{ \id }{ \mathrm{id} }
+        
+        \newcommand{ \ker }{ \opname{ker} }
+        
+        \newcommand{ \max }{ \opname{max} }
+        
+        \newcommand{ \C }{ \mathcal{C} }
+        
+        \newcommand{ \N }{ \mathbb{N} }
+        
+        $$
+      </div>
+      
+      <p>We recall the definitions and prove two basic statements about finite
+presentation, that “finitely presented implies always finitely
+presented”<sup id="fnref:always"><a href="#fn:always" class="footnote">1</a></sup> and that it is a local property. The proofs in the
+setting of modules and in the setting of algebras are completely
+analogous, so we will abstract very slightly and address both at once.</p>
+
+<p>Our notation is as follows:</p>
+
+<ul>
+  <li>All rings and algebras are commutative with unit.</li>
+  <li>For a ring $A$, let $\C_A$ denote either the category of
+$A$-modules or the category of $A$-algebras. All arrows indicate
+morphisms in $\C_A$.</li>
+  <li>Let $\amalg$ denote the coproduct in $\C_A$, i.e., direct
+sum $\oplus$ for $A$-modules or tensor product $\otimes_A$ for
+$A$-algebras.</li>
+  <li>For $C \in \obj(\C_A)$ and $n \in \N$ let $C^{\amalg
+n}$ denote the $n$-fold coproduct $C \amalg \cdots \amalg C$
+and $C^n$ denote the $n$-fold product $C \times \cdots \times
+C$.</li>
+  <li>Let $F_A \in \obj(\C_A)$ denote the free object on one element,
+i.e., $F_A \iso A$ for $A$-modules and $F_A \iso A[t]$ for
+$A$-algebras. Thus for any $n \in \N$ there is an
+isomorphism $\mor_{\C_A}(F_A^{\amalg n},C) \iso C^n$ natural
+in $C \in \obj(\C_A)$.</li>
+</ul>
+
+<p>Now to the content. Fix a ring $A$ for the remainder.</p>
+
+<div class="environment definition">
+  <h6>Definition</h6>
+  <p>An object $C \in \obj(\C_A)$ is:</p>
+
+  <ol>
+    <li><em>finitely generated</em> if for some $n \in \N$ there is a
+surjection $F_A^{\amalg n} \to M$;</li>
+    <li><em>finitely presented</em> if for some $n \in \N$ there is a
+surjection $F_A^{\amalg n} \to M$ with finitely generated
+kernel.</li>
+  </ol>
+</div>
+
+<div class="environment lemma">
+  <h6>Lemma</h6>
+  <p>Let $f \c C \to D$ and $g \c D \to E$ be morphisms in
+$\C_A$.  Define $h \ce g \circ f$. Then if $f$ is
+surjective, the canonical morphism $\ker(h) \to \ker(g)$ induced by
+$f$ is surjective. In particular, if $\ker(h)$ is finitely
+generated then so is $\ker(g)$.</p>
+</div>
+
+<div class="environment proof">
+  <h6>Proof</h6>
+  <p>Evident.</p>
+</div>
+
+<div class="environment proposition">
+  <h6>Proposition</h6>
+  <p>(Finitely presented $\Rightarrow$ always finitely presented)
+Let $C \in \obj(\C_A)$ be finitely presented. If $\alpha \c D
+\to C$ is a surjection with $D$ finitely generated, then
+$\ker(\alpha)$ is finitely generated.</p>
+</div>
+
+<div class="environment proof">
+  <h6>Proof</h6>
+  <p>By the previous lemma we may assume $D \iso F_A^{\amalg m}$. By
+definition we have a surjection $\beta \c F_A^{\amalg n} \to C$ with
+$\ker(\beta)$ finitely generated. Consider the diagram
+\[
+\begin{xy}
+\xymatrix {
+ & F_A^{\amalg m} \ar@{>>}[dr]^\alpha & \\
+ F_A^{\amalg m} \amalg F_A^{\amalg n}
+ \ar@{>>}[ur]^{\id\,\amalg\,\xi}
+ \ar@{>>}[dr]_{\eta\,\amalg\,\id}
+ \ar@{>>}[rr]^-\gamma
+ & & C, \\
+ & F_A^{\amalg n} \ar@{>>}[ur]_\beta &
+}
+\end{xy}
+\]
+where $\xi \c F_A^{\amalg n} \to F_A^{\amalg m}$ and $\eta \c
+F_A^{\amalg m} \to F_A^{\amalg n}$ are defined such that $\alpha
+\circ \xi = \beta$ and $\beta \circ \eta = \alpha$—which exist
+since free objects are projective in $\obj(\C_A)$—so that
+defining $\gamma \ce \alpha \amalg \beta$ makes the diagram
+commute. Now, if $t_1,\ldots,t_m$ are the canonical generators (in
+the appropriate sense according to $\C_A$) of $F_A^{\amalg
+m}$, then clearly $\ker(\gamma)$ is generated by $\ker(\beta)$
+and $\{t_i - \eta(t_i)\}_{1 \le i \le m}$. Thus $\ker(\beta)$
+being finitely generated implies $\ker(\gamma)$ is finitely
+generated, which implies $\ker(\alpha)$ is finitely generated by the
+previous lemma.</p>
+</div>
+
+<div class="environment proposition">
+  <h6>Proposition</h6>
+  <p>(Finite generation and presentation are local)
+Let $C \in \obj(\C_A)$.</p>
+
+  <ol>
+    <li>If $C$ is finitely generated (resp. presented), then for any $f
+\in A$ the localisation $C_f$ is finitely generated
+(resp. presented) in $\C_{A_f}$.</li>
+    <li>If $f_1,\ldots,f_n \in A$ generate the unit ideal and
+$C_{f_i}$ is finitely generated (resp. presented) in
+$\C_{A_{f_i}}$ for each $i$, then $C$ is finitely
+generated (resp. presented).</li>
+  </ol>
+</div>
+
+<div class="environment proof">
+  <h6>Proof</h6>
+  <p>We first address finite generation.</p>
+
+  <ol>
+    <li>Observe $(F_A)_f \iso F_{A_f}$. Thus, since localisation is
+exact (and hence commutes with finite products), a surjection
+$F_A^{\amalg n} \to C$ localises to a surjection
+$F_{A_f}^{\amalg n} \to C_f$.</li>
+    <li>Suppose $C_{f_i}$ is generated (in the appropriate sense) by
+$\{a_{i,j}/f_i^{r_{i,j}}\}_{1 \le j \le m_i}$ for each $i$.
+Take $R \ge \max\{r_{i,j}\}$. Then for all $i$ we have that
+$f_i^Ra$ is generated by $\{a_{i,j}\}$ for any $a \in
+A$. Since $f_1,\ldots,f_n$ generate the unit ideal, so do
+$f_1^R,\ldots,f_n^R$ and hence there exist $c_i \in A$ such
+that $\sum c_if_i^R = 1$. It is then clear that $\{c_i\} \cup
+\{a_{i,j}\}$ generates $C$.</li>
+  </ol>
+
+  <p>Now finite presentation. Recall since localisation commutes with
+kernels since it is exact.</p>
+
+  <ol>
+    <li>This is immediate from localisation commuting with kernels and that
+we have proved (1) for finite generation.</li>
+    <li>Since we have proved (2) for finite generation there is a
+surjection $\alpha \c F_A^{\amalg n} \to C$. Then for each $i$,
+$\alpha_{f_i} \c F_{A_{f_i}}^{\amalg n} \to C_{f_i}$ is a
+surjection, so by the first proposition (finitely presented implies
+always finitely presented) we know $\ker(\alpha_{f_i}) \iso
+\ker(\alpha)_{f_i}$ is finitely generated. By the statement (2)
+for finite generation this implies $\ker(\alpha)$ is finitely
+generated as desired.</li>
+  </ol>
+</div>
+
+<p>Ok that’s it! I mostly wanted to write this up because you can prove
+it in both settings at once, which I found fun. I thought a bit about
+axiomiatising the type of category one could prove this for, but I
+ended up wanting to assume a lot of stuff and it seemed like the
+exposition would get pretty ugly.</p>
+
+<div class="environment remark">
+  <h6>Remark</h6>
+  <p>This last proposition is what one needs to prove when showing that a
+morphism of schemes being of locally of finite type or locally of
+finite presentation is local on the source.</p>
+</div>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:always">
+
+      <p>This catchy phrasing for the proposition is taken from <a href="//math216.wordpress.com/">Vakil’s
+notes</a>. <a href="#fnref:always" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    </article>
+
+  </body>
+</html>
+
