@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>arponr</title>
+    <description>blog by arpon</description>
+    <link>http://www.arponr.com</link>
+    <lastBuildDate>2014-06-08T22:45:24-04:00</lastBuildDate>
+    <atom:link href="http://www.arponr.com/feed.xml" rel="self"/>
+    
+    <item>
+      <title>Bordism I: definitions</title>
+      <description>&lt;p&gt;I’m trying to learn some stable homotopy theory this summer, and am
+starting out by reading about bordism. My first goal is to understand
+Thom’s computation of the unoriented bordism ring, i.e., the
+classification of unoriented compact smooth manifolds up to
+bordism. This post is just about the basic setup of the problem (with
+an eye towards other bordism problems as well). I’ve been following a
+couple of sets of notes by &lt;a href=&quot;//www-math.mit.edu/~hrm/papers/cobordism.pdf&quot;&gt;Haynes Miller&lt;/a&gt; and &lt;a href=&quot;//www.math.umass.edu/~weston/oldpapers/cobord.pdf&quot;&gt;Tom
+Weston&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4&gt;Generalities&lt;/h4&gt;
+
+&lt;div class=&quot;environment definition&quot;&gt;
+  &lt;h6&gt;Definition&lt;/h6&gt;
+  &lt;p&gt;A &lt;em&gt;bordism category&lt;/em&gt; is a category $\B$ equipped
+with a functor $\d \c \B \to \B$ and natural transformation
+$\iota \c \d \to \id_\B$ such that:&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;$\B$ has finite coproducts $M \amalg N$, including an initial
+object $\e$;&lt;/li&gt;
+    &lt;li&gt;$\B$ is essentially small, i.e., has a small subcategory $\B_0$
+such that every $M \in \obj(\B)$ is isomorphic to some $M_0 \in
+\obj(\B_0)$;&lt;/li&gt;
+    &lt;li&gt;$\d$ and $\iota$ preserve coproducts;&lt;/li&gt;
+    &lt;li&gt;$\d\e \iso \e$ and $\d\d M \iso \e$ for all $M \in
+\obj(\B)$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment example&quot;&gt;
+  &lt;h6&gt;Example&lt;/h6&gt;
+  &lt;p&gt;Hopefully the notation is suggestive enough so that
+this motivating example is predictable. We take $\B$ to be the
+category $\Mfld$ of compact smooth manifolds (and smooth maps),
+$\d$ to be the boundary, and $\iota$ to be the inclusion of the
+boundary. Finite coproducts in $\Mfld$ are given by disjoint union,
+and $\e$ is the empty manifold. Note, $\Mfld$ is essentially
+small because every object can be embedded as a subset of
+$\R^\infty$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In the remainder of this section we state some elementary facts about
+a general bordism category $\B$. Then in the next section we will
+address this main example (although in slightly more generality, by
+letting our manifolds have extra structure and working over a base
+space).&lt;/p&gt;
+
+&lt;div class=&quot;environment definitions&quot;&gt;
+  &lt;h6&gt;Definitions&lt;/h6&gt;
+  &lt;ul&gt;
+    &lt;li&gt;We say $M,N \in \obj(\B)$ are &lt;em&gt;bordant&lt;/em&gt;, and write $M \equiv N$,
+if there exist $U,V \in \obj(\B)$ such that $M \amalg \d U \iso N
+\amalg \d V$.&lt;/li&gt;
+    &lt;li&gt;The relation $\equiv$ is called &lt;em&gt;bordism&lt;/em&gt;.&lt;/li&gt;
+    &lt;li&gt;We say $M \in \obj(\B)$ is &lt;em&gt;closed&lt;/em&gt; if $\d M \iso \e$ and a
+ &lt;em&gt;boundary&lt;/em&gt; if $M \equiv \e$.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment lemma&quot;&gt;
+  &lt;h6&gt;Lemma&lt;/h6&gt;
+  &lt;p&gt;Let $K,L,M,N \in \obj(\B)$.&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;Bordism is an equivalence relation, whose equivalence classes form
+a set.&lt;/li&gt;
+    &lt;li&gt;$M \equiv N \implies \d M \iso \d N$.&lt;/li&gt;
+    &lt;li&gt;$\d M \equiv \e$.&lt;/li&gt;
+    &lt;li&gt;$K \equiv M, L \equiv N \implies K \amalg L \equiv M \amalg N$.&lt;/li&gt;
+    &lt;li&gt;If $M \equiv N$ then $M$ is closed (resp. a boundary) if and
+only if $N$ is closed (resp. a boundary).&lt;/li&gt;
+    &lt;li&gt;If $M,N$ are closed (resp. boundaries) then $M \amalg N$ is
+closed (resp. a boundary).&lt;/li&gt;
+    &lt;li&gt;If $M$ is a boundary then $M$ is closed.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+  &lt;p&gt;Easy. (Note that we required $\B$ to be essentially small precisely
+so that the bordism classes form a set.)&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment definition&quot;&gt;
+  &lt;h6&gt;Definition&lt;/h6&gt;
+  &lt;p&gt;Let $\Omega(\B)$ denote the set of bordism classes of closed objects
+of $\B$. By points 4 and 6 of the lemma, coproduct in $\B$ induces
+a monoid structure on $\Omega(\B)$, with identity given by $\e$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h4&gt;Bordism of (structured) manifolds&lt;/h4&gt;
+
+&lt;p&gt;Let’s first discuss the type of “structure” we will allow on our
+manifolds.&lt;/p&gt;
+
+</description>
+      <pubDate>2014-06-08T22:24:25-04:00</pubDate>
+      <link>http://www.arponr.com/bordism-i-definitions</link>
+      <guid isPermaLink="true">http://www.arponr.com/bordism-i-definitions</guid>
+    </item>
+    
+    <item>
+      <title>Bundles and structure groups</title>
+      <description>&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt;&lt;/p&gt;
+</description>
+      <pubDate>2014-06-05T13:54:01-04:00</pubDate>
+      <link>http://www.arponr.com/bundles-structure-groups</link>
+      <guid isPermaLink="true">http://www.arponr.com/bundles-structure-groups</guid>
+    </item>
+    
+    <item>
+      <title>Finite presentation basics</title>
+      <description>&lt;p&gt;We recall the definitions and prove two basic statements about finite
+presentation, that “finitely presented implies always finitely
+presented”&lt;sup id=&quot;fnref:always&quot;&gt;&lt;a href=&quot;#fn:always&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and that it is a local property. The proofs in the
+setting of modules and in the setting of algebras are completely
+analogous, so we will abstract very slightly and address both at once.&lt;/p&gt;
+
+&lt;p&gt;Our notation is as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All rings and algebras are commutative with unit.&lt;/li&gt;
+  &lt;li&gt;For a ring $A$, let $\C_A$ denote either the category of
+$A$-modules or the category of $A$-algebras. All arrows indicate
+morphisms in $\C_A$.&lt;/li&gt;
+  &lt;li&gt;Let $\amalg$ denote the coproduct in $\C_A$, i.e., direct
+sum $\oplus$ for $A$-modules or tensor product $\otimes_A$ for
+$A$-algebras.&lt;/li&gt;
+  &lt;li&gt;For $C \in \obj(\C_A)$ and $n \in \N$ let $C^{\amalg
+n}$ denote the $n$-fold coproduct $C \amalg \cdots \amalg C$
+and $C^n$ denote the $n$-fold product $C \times \cdots \times
+C$.&lt;/li&gt;
+  &lt;li&gt;Let $F_A \in \obj(\C_A)$ denote the free object on one element,
+i.e., $F_A \iso A$ for $A$-modules and $F_A \iso A[t]$ for
+$A$-algebras. Thus for any $n \in \N$ there is an
+isomorphism $\mor_{\C_A}(F_A^{\amalg n},C) \iso C^n$ natural
+in $C \in \obj(\C_A)$.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now to the content. Fix a ring $A$ for the remainder.&lt;/p&gt;
+
+&lt;div class=&quot;environment definition&quot;&gt;
+  &lt;h6&gt;Definition&lt;/h6&gt;
+  &lt;p&gt;An object $C \in \obj(\C_A)$ is:&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;&lt;em&gt;finitely generated&lt;/em&gt; if for some $n \in \N$ there is a
+surjection $F_A^{\amalg n} \to M$;&lt;/li&gt;
+    &lt;li&gt;&lt;em&gt;finitely presented&lt;/em&gt; if for some $n \in \N$ there is a
+surjection $F_A^{\amalg n} \to M$ with finitely generated
+kernel.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment lemma&quot;&gt;
+  &lt;h6&gt;Lemma&lt;/h6&gt;
+  &lt;p&gt;Let $f \c C \to D$ and $g \c D \to E$ be morphisms in
+$\C_A$.  Define $h \ce g \circ f$. Then if $f$ is
+surjective, the canonical morphism $\ker(h) \to \ker(g)$ induced by
+$f$ is surjective. In particular, if $\ker(h)$ is finitely
+generated then so is $\ker(g)$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+  &lt;p&gt;Evident.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proposition&quot;&gt;
+  &lt;h6&gt;Proposition&lt;/h6&gt;
+  &lt;p&gt;(Finitely presented $\Rightarrow$ always finitely presented)
+Let $C \in \obj(\C_A)$ be finitely presented. If $\alpha \c D
+\to C$ is a surjection with $D$ finitely generated, then
+$\ker(\alpha)$ is finitely generated.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+  &lt;p&gt;By the previous lemma we may assume $D \iso F_A^{\amalg m}$. By
+definition we have a surjection $\beta \c F_A^{\amalg n} \to C$ with
+$\ker(\beta)$ finitely generated. Consider the diagram
+\[
+\begin{xy}
+\xymatrix {
+ &amp; F_A^{\amalg m} \ar@{&gt;&gt;}[dr]^\alpha &amp; \\
+ F_A^{\amalg m} \amalg F_A^{\amalg n}
+ \ar@{&gt;&gt;}[ur]^{\id\,\amalg\,\xi}
+ \ar@{&gt;&gt;}[dr]_{\eta\,\amalg\,\id}
+ \ar@{&gt;&gt;}[rr]^-\gamma
+ &amp; &amp; C, \\
+ &amp; F_A^{\amalg n} \ar@{&gt;&gt;}[ur]_\beta &amp;
+}
+\end{xy}
+\]
+where $\xi \c F_A^{\amalg n} \to F_A^{\amalg m}$ and $\eta \c
+F_A^{\amalg m} \to F_A^{\amalg n}$ are defined such that $\alpha
+\circ \xi = \beta$ and $\beta \circ \eta = \alpha$—which exist
+since free objects are projective in $\obj(\C_A)$—so that
+defining $\gamma \ce \alpha \amalg \beta$ makes the diagram
+commute. Now, if $t_1,\ldots,t_m$ are the canonical generators (in
+the appropriate sense according to $\C_A$) of $F_A^{\amalg
+m}$, then clearly $\ker(\gamma)$ is generated by $\ker(\beta)$
+and $\{t_i - \eta(t_i)\}_{1 \le i \le m}$. Thus $\ker(\beta)$
+being finitely generated implies $\ker(\gamma)$ is finitely
+generated, which implies $\ker(\alpha)$ is finitely generated by the
+previous lemma.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proposition&quot;&gt;
+  &lt;h6&gt;Proposition&lt;/h6&gt;
+  &lt;p&gt;(Finite generation and presentation are local)
+Let $C \in \obj(\C_A)$.&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;If $C$ is finitely generated (resp. presented), then for any $f
+\in A$ the localisation $C_f$ is finitely generated
+(resp. presented) in $\C_{A_f}$.&lt;/li&gt;
+    &lt;li&gt;If $f_1,\ldots,f_n \in A$ generate the unit ideal and
+$C_{f_i}$ is finitely generated (resp. presented) in
+$\C_{A_{f_i}}$ for each $i$, then $C$ is finitely
+generated (resp. presented).&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+  &lt;p&gt;We first address finite generation.&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;Observe $(F_A)_f \iso F_{A_f}$. Thus, since localisation is
+exact (and hence commutes with finite products), a surjection
+$F_A^{\amalg n} \to C$ localises to a surjection
+$F_{A_f}^{\amalg n} \to C_f$.&lt;/li&gt;
+    &lt;li&gt;Suppose $C_{f_i}$ is generated (in the appropriate sense) by
+$\{a_{i,j}/f_i^{r_{i,j}}\}_{1 \le j \le m_i}$ for each $i$.
+Take $R \ge \max\{r_{i,j}\}$. Then for all $i$ we have that
+$f_i^Ra$ is generated by $\{a_{i,j}\}$ for any $a \in
+A$. Since $f_1,\ldots,f_n$ generate the unit ideal, so do
+$f_1^R,\ldots,f_n^R$ and hence there exist $c_i \in A$ such
+that $\sum c_if_i^R = 1$. It is then clear that $\{c_i\} \cup
+\{a_{i,j}\}$ generates $C$.&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;p&gt;Now finite presentation. Recall since localisation commutes with
+kernels since it is exact.&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;This is immediate from localisation commuting with kernels and that
+we have proved (1) for finite generation.&lt;/li&gt;
+    &lt;li&gt;Since we have proved (2) for finite generation there is a
+surjection $\alpha \c F_A^{\amalg n} \to C$. Then for each $i$,
+$\alpha_{f_i} \c F_{A_{f_i}}^{\amalg n} \to C_{f_i}$ is a
+surjection, so by the first proposition (finitely presented implies
+always finitely presented) we know $\ker(\alpha_{f_i}) \iso
+\ker(\alpha)_{f_i}$ is finitely generated. By the statement (2)
+for finite generation this implies $\ker(\alpha)$ is finitely
+generated as desired.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ok that’s it! I mostly wanted to write this up because you can prove
+it in both settings at once, which I found fun. I thought a bit about
+axiomiatising the type of category one could prove this for, but I
+ended up wanting to assume a lot of stuff and it seemed like the
+exposition would get pretty ugly.&lt;/p&gt;
+
+&lt;div class=&quot;environment remark&quot;&gt;
+  &lt;h6&gt;Remark&lt;/h6&gt;
+  &lt;p&gt;This last proposition is what one needs to prove when showing that a
+morphism of schemes being of locally of finite type or locally of
+finite presentation is local on the source.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:always&quot;&gt;
+
+      &lt;p&gt;This catchy phrasing for the proposition is taken from &lt;a href=&quot;//math216.wordpress.com/&quot;&gt;Vakil’s
+notes&lt;/a&gt;. &lt;a href=&quot;#fnref:always&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+      <pubDate>2014-05-29T00:00:00-04:00</pubDate>
+      <link>http://www.arponr.com/finite-presentation-basics</link>
+      <guid isPermaLink="true">http://www.arponr.com/finite-presentation-basics</guid>
+    </item>
+    
+    <item>
+      <title>Base change of closed immersion</title>
+      <description>&lt;p&gt;Here begins my mathematical blogging. Just to get myself moving, let
+me start with something short and basic: understanding closed
+immersions of schemes a bit better. But I’m not going to use anything
+about schemes specifically today, so let me make the following
+definition.&lt;sup id=&quot;fnref:immersion-general&quot;&gt;&lt;a href=&quot;#fn:immersion-general&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;div class=&quot;environment definition&quot;&gt;
+  &lt;h6&gt;Definition&lt;/h6&gt;
+  &lt;p&gt;We say a morphism $i \c Z \to X$ of locally ringed spaces is a
+&lt;em&gt;closed immersion&lt;/em&gt; if:&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;the underlying map of spaces $\lv Z \rv \to \lv X \rv$ induces a
+homeomorphism of $\lv X \rv$ onto a closed subset of $\lv X
+\rv$;&lt;/li&gt;
+    &lt;li&gt;the underlying map of sheaves $\O_X \to i_*\O_Z$ is
+surjective.&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;p&gt;Recall also that:&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;the &lt;em&gt;ideal sheaf&lt;/em&gt; of $Z$ is defined as $\I \ce \ker(\O_X
+\to i_*\O_Z)$;&lt;/li&gt;
+    &lt;li&gt;the &lt;em&gt;closed subspace&lt;/em&gt; determined by $\I$ is defined as the
+locally ringed space $Z' \ce (\supp(\O_X/\I),
+\O_X/\I)$;&lt;/li&gt;
+    &lt;li&gt;the natural map $i' \c Z' \to X$ is a closed immersion with ideal
+sheaf $\I$;&lt;/li&gt;
+    &lt;li&gt;$i \c Z \to X$ in fact induces an isomorphism $h \c Z \to Z'$
+such that $i = i' \circ h$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment lemma&quot;&gt;
+  &lt;h6&gt;Lemma&lt;/h6&gt;
+  &lt;p&gt;If $i \c Z \to X$ is a closed immersion of locally ringed spaces,
+then $i$ is a monomorphism (in the category of locally ringed
+spaces).&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+  &lt;p&gt;By definition, the map of spaces $\lv Z \rv \to \lv X \rv$ is a
+monomorphism and the map of sheaves $\O_X \to i_*\O_Z$ is an
+epimorphism, so the claim is clear.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment lemma&quot;&gt;
+  &lt;h6&gt;Lemma&lt;/h6&gt;
+  &lt;p&gt;Let $i \c Z \to X$ be a closed immersion of locally ringed spaces,
+and let $\I$ be the corresponding ideal sheaf. Then a morphism
+of locally ringed spaces $f \c Y \to X$ factors through
+$i$—i.e., there exists $g \c Y \to Z$ such that $f = i \circ
+g$—if and only if the induced map $f^*\I \to f^*\O_X
+\iso \O_Y$ is zero. Such a factoring $g$ is unique if it
+exists.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+  &lt;p&gt;Uniqueness is immediate from $i$ being a monomorphism, which is the
+previous lemma, so we need only prove the existence statement. As
+recalled above, we can assume without loss of generality that $i$ is
+the inclusion of the closed subspace $Z \ce
+(\supp(\O_X/\I), \O_X/\I)$.&lt;/p&gt;
+
+  &lt;p&gt;($\Rightarrow$) Assume $f$ factors through $i$. By definition we
+have an exact sequence $0 \to \I \to \O_X \to i_*\O_Z \to
+0.$ Since $i^*$ is right-exact we get an exact sequence $i^*\I
+\to i^*\O_X \to i^*i_*\O_Z \to 0$, where the map $\O_Z
+\iso i^*\O_X \to i^*i_*\O_Z \iso \O_Z$ is an
+isomorphism. It follows that $i^*\I \to i^*\O_X$ is zero,
+and since $f^* = g^* \circ i^*$ this implies $f^*\I \to
+\O_Y$ is zero as well.&lt;/p&gt;
+
+  &lt;p&gt;($\Leftarrow$) Assume $f^*\I \to \O_Y$ is zero. Let $y
+\in \lv Y \rv$. Then the map on stalks $\I_{f(y)} \to
+\O_{X,f(y)} \to \O_{Y,y}$ is zero. Since $\O_{X,f(y)}
+\to \O_{Y,y}$ is a ring morphism this implies $\I_{f(y)} \ne
+\O_{X,f(y)}$, whence $f(y) \in
+\supp(\O_X/\I)$. Thus, on spaces, $\lv Y \rv \to \lv X
+\rv$ factors through $\lv Z \rv$. Then by adjunction the map
+$\I \to \O_X \to f_*\O_Y$ is zero, inducing a map on
+sheaves $i_*\O_Z \iso \O_X/\I \to \O_Y$. This
+defines the required map $g \c Y \to Z$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We have now characterised maps into closed subspaces in the way you’d
+expect: a map factors through a closed subspace if and only if the
+defining equations vanish on the domain space. This allows us to prove
+finally that closed immersions are stable under base change, as
+alluded to in the title, and moreover lets us see explicitly how the
+defining ideals behave under base change.&lt;/p&gt;
+
+&lt;div class=&quot;environment lemma&quot;&gt;
+  &lt;h6&gt;Lemma&lt;/h6&gt;
+  &lt;p&gt;Let $i \c Z \to X$ be a closed immersion of locally ringed spaces,
+and let $\I$ be the corresponding ideal sheaf. Let $f \c Y \to
+X$ be any morphism of locally ringed spaces. Let $\I'$ be the
+image of the map $f^*\I \to f^*\O_X \iso \O_Y$ and
+$i' \c Z' \to Y$ the closed subspace determined by $\I'$. Then
+we have a pullback diagram
+\[
+\begin{xy}
+\xymatrix {
+ Z' \ar[d]^g \ar[r]_{i'} &amp; Y \ar[d]_f \\
+ Z \ar[r]^i &amp; X.
+}
+\end{xy}
+\]&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+  &lt;p&gt;By the previous lemma, giving a morphism of locally ringed spaces $T
+\to Z'$ is equivalent to giving a morphism $a \c T \to Y$ such that
+the map $a^*\I' \to \O_T$ is zero. We claim this condition
+is equivalent to asking that $(f \circ a)^*\I \to \O_T$ is
+zero. Assuming this for the moment, this in turn is equivalent by the
+previous lemma to giving a morphism $b \c T \to Z$ such that $f
+\circ a = i \circ b$. Thus $Z'$ satisfies the necessary universal
+property (in particular the morphism $g$ is determined by the
+identity $Z' \to Z'$, i.e. it is the morphism $b$ corresponding to
+$a = i'$).&lt;/p&gt;
+
+  &lt;p&gt;To prove the claim assumed above, consider $(f \circ a)^*\I
+\iso a^*f^*\I \to a^*\I' \to \O_T$. By definition
+$f^*\I \to \I'$ is surjective, so since $a^*$ is
+right-exact $(f \circ a)^*\I \to a^*I'$ is surjective,
+hence an epimorphism. It is then immediate that $(f \circ a)^*\I
+\to \O_T$ is zero if and only if $a^*\I' \to \O_T$ is
+zero.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:immersion-general&quot;&gt;
+
+      &lt;p&gt;Though it suffices for this post, I’m pretty sure one wouldn’t
+actually want to use this definition in general. In fact, I’m
+curious to know a correct, general notion of closed immersion.&lt;/p&gt;
+
+      &lt;p&gt;The only setting other than the algebraic one where I’m certain
+the sheaf-theoretic perspective is really prominent is complex
+analysis, so this point got me to glance at &lt;a href=&quot;//books.google.com/books/about/Coherent_Analytic_Sheaves.html?id=HyCFQgAACAAJ&quot;&gt;Grauert-Remmert’s
+&lt;em&gt;Coherent Analytic Sheaves&lt;/em&gt;&lt;/a&gt;. From there I’ve
+gathered that complex analytic spaces are built locally out of
+closed subspaces of opens $U \subseteq \mathbb{C}^n$ which are cut
+out by finitely generated ideals of the sheaf of holomorphic
+functions on $U$. By &lt;a href=&quot;//en.wikipedia.org/wiki/Oka_coherence_theorem&quot;&gt;a theorem of Oka&lt;/a&gt; we can equivalently
+require that the ideals are coherent. So I’m guessing more
+generally one should require of a closed immersion of complex
+analytic spaces that it be cut out by a &lt;em&gt;finite type&lt;/em&gt; or
+&lt;em&gt;coherent&lt;/em&gt; ideal sheaf. (Of course this is just a complete guess
+based on a superficial reading of some definitions, so I’m still
+curious…)&lt;/p&gt;
+
+      &lt;p&gt;The &lt;a href=&quot;//stacks.math.columbia.edu/tag/01HK&quot;&gt;Stacks project&lt;/a&gt; requires that the
+ideal sheaf be locally generated by sections, but this doesn’t
+give the finiteness condition for the analytic setting. Lurie
+gives an amazingly general definition in &lt;a href=&quot;//www.math.harvard.edu/~lurie/papers/DAG-IX.pdf&quot;&gt;DAG IX&lt;/a&gt;, which I
+can’t currently parse. It seems like it’s supposed to work for the
+(derived) analytic setting too, since it’s treated in the paper.&lt;/p&gt;
+
+      &lt;p&gt;To be honest, I would hope there’s a general principle of what a
+closed immersion/subspace should mean, but it also seems a little
+crazy that it could automagically encode a finiteness
+condition. That was a long footnote. &lt;a href=&quot;#fnref:immersion-general&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+      <pubDate>2014-05-25T00:00:00-04:00</pubDate>
+      <link>http://www.arponr.com/base-change-closed-immersion</link>
+      <guid isPermaLink="true">http://www.arponr.com/base-change-closed-immersion</guid>
+    </item>
+    
+    <item>
+      <title>Dancepack</title>
+      <description>
+</description>
+      <pubDate>2014-05-21T00:00:00-04:00</pubDate>
+      <link>http://www.arponr.com/dancepack</link>
+      <guid isPermaLink="true">http://www.arponr.com/dancepack</guid>
+    </item>
+    
+    <item>
+      <title>Alpenglow</title>
+      <description>
+</description>
+      <pubDate>2014-05-21T00:00:00-04:00</pubDate>
+      <link>http://www.arponr.com/alpenglow</link>
+      <guid isPermaLink="true">http://www.arponr.com/alpenglow</guid>
+    </item>
+    
+    <item>
+      <title>Black River</title>
+      <description>&lt;p&gt;dark dark night and cold cold flow&lt;br /&gt;
+i’m still alone&lt;br /&gt;
+i guess that’s dope&lt;br /&gt;
+stay on this boat  &lt;/p&gt;
+
+&lt;p&gt;black black crow in white white snow&lt;br /&gt;
+i miss you so&lt;br /&gt;
+i guess that’s dope&lt;br /&gt;
+i’m drifting slow  &lt;/p&gt;
+
+&lt;p&gt;on this river&lt;br /&gt;
+on this black river&lt;br /&gt;
+where orange lights are few and far between&lt;br /&gt;
+stay in the current of time unseen  &lt;/p&gt;
+
+&lt;p&gt;dark dark stars and cold cold moon&lt;br /&gt;
+at the break of noon&lt;br /&gt;
+i’m lost at truth&lt;br /&gt;
+what’s there to do  &lt;/p&gt;
+
+&lt;p&gt;black black heart in white white dunes&lt;br /&gt;
+regret accrued&lt;br /&gt;
+i’m lost at truth&lt;br /&gt;
+i’ll float on through  &lt;/p&gt;
+
+&lt;p&gt;on this river&lt;br /&gt;
+on this black river&lt;br /&gt;
+where orange lights are few and far between&lt;br /&gt;
+stay in the current of time unseen  &lt;/p&gt;
+
+</description>
+      <pubDate>2014-05-14T00:00:00-04:00</pubDate>
+      <link>http://www.arponr.com/black-river</link>
+      <guid isPermaLink="true">http://www.arponr.com/black-river</guid>
+    </item>
+    
+    <item>
+      <title>Simple Song</title>
+      <description>
+</description>
+      <pubDate>2014-01-01T00:00:00-05:00</pubDate>
+      <link>http://www.arponr.com/simple-song</link>
+      <guid isPermaLink="true">http://www.arponr.com/simple-song</guid>
+    </item>
+    
+    <item>
+      <title>Numbers at Google</title>
+      <description>&lt;p&gt;This is a post about some numbers that I saw at work one day during my
+internship at Google. I present them to you without further ado.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;21:&lt;/strong&gt; I got to run a job with 21 terabytes of input. &lt;em&gt;Tera&lt;/em&gt;. And
+        that’s compressed.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;10000000000:&lt;/strong&gt; 21 TB means I got to compute statistics on data
+                 sets of size greater than 10 billion. &lt;em&gt;Billion&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;3:&lt;/strong&gt; It took fewer than 3 hours to run that job. I love MapReduce
+       and resources.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;23:&lt;/strong&gt; Later on, after realising I had made some stupid mistakes, I
+        needed to run that job again (and because it felt so damn
+        cool the first time, and I could, so why not). Anyway it
+        turns out the data was on some machines on the East Coast,
+        and the job was running on machines on the West
+        Coast. That’s efficiency. Well so I (and, by “I”, I mean
+        someone else on my team who actually knew what he was doing)
+        managed to get the job running next door to the data. And
+        for ten minutes or so, that 21 TB was being sent to the job
+        at more than 23 gigbatyes per second. &lt;em&gt;Giga&lt;/em&gt;. Holy
+        bandwidth, batman.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So it turns out working at Google indeed has perks. Those numbers are
+all due to some really smart people that work (or have worked)
+here. That’s nice to think about. It’s even nicer to stop thinking
+about that, look at those numbers, and just feel dope as hell, if
+only for a moment.&lt;/p&gt;
+
+&lt;p&gt;Perhaps two moments, though. A new number arrived the following day.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;30:&lt;/strong&gt; After tweaking some things, the job ran in less than 30
+        minutes. That’s some astounding stuff.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      <pubDate>2013-08-06T00:00:00-04:00</pubDate>
+      <link>http://www.arponr.com/google</link>
+      <guid isPermaLink="true">http://www.arponr.com/google</guid>
+    </item>
+    
+  </channel>
+</rss>
