@@ -158,7 +158,7 @@ ended up wanting to assume a lot of stuff and it seemed like the
 exposition would get pretty ugly.
 
 \begin{remark}
-This last proposition is what one needs to prove when showing that a
+\ref{fg-fp-local} is what one needs to prove when showing that a
 morphism of schemes being of locally of finite type or locally of
 finite presentation is local on the source.
 \end{remark}
