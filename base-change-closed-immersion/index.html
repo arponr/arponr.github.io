@@ -81,7 +81,7 @@ about schemes specifically today, so let me make the following
 definition.<sup id="fnref:immersion-general"><a href="#fn:immersion-general" class="footnote">1</a></sup></p>
 
 <div class="environment definition">
-  <h6>Definition</h6>
+  <h6>1. Definition</h6>
 
   <p>We say a morphism $i \c Z \to X$ of locally ringed spaces is a
 <em>closed immersion</em> if:</p>
@@ -110,7 +110,7 @@ such that $i = i' \circ h$.</li>
 </div>
 
 <div id="monomorphism" class="environment lemma">
-  <h6>1. Lemma</h6>
+  <h6>2. Lemma</h6>
 
   <p>If $i \c Z \to X$ is a closed immersion of locally ringed spaces,
 then $i$ is a monomorphism (in the category of locally ringed
@@ -126,7 +126,7 @@ epimorphism, so the claim is clear.</p>
 </div>
 
 <div id="factoring" class="environment lemma">
-  <h6>2. Lemma</h6>
+  <h6>3. Lemma</h6>
 
   <p>Let $i \c Z \to X$ be a closed immersion of locally ringed spaces,
 and let $\I$ be the corresponding ideal sheaf. Then a morphism
@@ -141,19 +141,22 @@ exists.</p>
   <h6>Proof</h6>
 
   <p>Uniqueness is immediate from $i$ being a monomorphism by
-<a href="#monomorphism">Lm. 1</a>, so we need only prove the existence statement. As
+<a href="#monomorphism">Lm. 3</a>, so we need only prove the existence statement. As
 recalled above, we can assume without loss of generality that $i$ is
 the inclusion of the closed subspace $Z \ce
 (\supp(\O_X/\I), \O_X/\I)$.</p>
 
-  <p>($\Rightarrow$) Assume $f$ factors through $i$. By definition we
-have an exact sequence $0 \to \I \to \O_X \to i_*\O_Z \to
-0.$ Since $i^*$ is right-exact we get an exact sequence $i^*\I
-\to i^*\O_X \to i^*i_*\O_Z \to 0$, where the map $\O_Z
-\iso i^*\O_X \to i^*i_*\O_Z \iso \O_Z$ is an
-isomorphism. It follows that $i^*\I \to i^*\O_X$ is zero,
-and since $f^* = g^* \circ i^*$ this implies $f^*\I \to
-\O_Y$ is zero as well.</p>
+  <p>($\Rightarrow$) Assume $f$ factors through $i$. By definition we have
+an exact sequence $0 \to \I \to \O_X \to i_*\O_Z \to 0.$ Since $i^*$
+is right-exact we get an exact sequence $i^*\I \to i^*\O_X \to i^*i_*\O_Z \to 0$,
+where the map
+\[
+\O_Z \iso i^*\O_X \to i^*i_*\O_Z
+\iso \O_Z
+\]
+is an isomorphism. It follows that $i^*\I \to i^*\O_X$ is
+zero, and since $f^* = g^* \circ i^*$ this implies $f^*\I \to \O_Y$ is
+zero as well.</p>
 
   <p>($\Leftarrow$) Assume $f^*\I \to \O_Y$ is zero. Let $y
 \in \lv Y \rv$. Then the map on stalks $\I_{f(y)} \to
@@ -175,7 +178,7 @@ alluded to in the title, and moreover lets us see explicitly how the
 defining ideals behave under base change.</p>
 
 <div class="environment lemma">
-  <h6>Lemma</h6>
+  <h6>4. Lemma</h6>
 
   <p>Let $i \c Z \to X$ be a closed immersion of locally ringed spaces,
 and let $\I$ be the corresponding ideal sheaf. Let $f \c Y \to
@@ -196,24 +199,25 @@ we have a pullback diagram
 <div class="environment proof">
   <h6>Proof</h6>
 
-  <p>By <a href="#factoring">Lm. 2</a>, giving a morphism of locally ringed spaces $T
+  <p>By <a href="#factoring">Lm. 4</a>, giving a morphism of locally ringed spaces $T
 \to Z'$ is equivalent to giving a morphism $a \c T \to Y$ such that
 the map $a^*\I' \to \O_T$ is zero. We claim this condition
 is equivalent to asking that $(f \circ a)^*\I \to \O_T$ is
 zero. Assuming this for the moment, this in turn is equivalent by
-<a href="#factoring">Lm. 2</a> to giving a morphism $b \c T \to Z$ such that $f
+<a href="#factoring">Lm. 4</a> to giving a morphism $b \c T \to Z$ such that $f
 \circ a = i \circ b$. Thus $Z'$ satisfies the necessary universal
 property (in particular the morphism $g$ is determined by the
 identity $Z' \to Z'$, i.e. it is the morphism $b$ corresponding to
 $a = i'$).</p>
 
-  <p>To prove the claim assumed above, consider $(f \circ a)^*\I
-\iso a^*f^*\I \to a^*\I' \to \O_T$. By definition
-$f^*\I \to \I'$ is surjective, so since $a^*$ is
-right-exact $(f \circ a)^*\I \to a^*I'$ is surjective,
-hence an epimorphism. It is then immediate that $(f \circ a)^*\I
-\to \O_T$ is zero if and only if $a^*\I' \to \O_T$ is
-zero.</p>
+  <p>To prove the claim assumed above, consider
+\[
+(f \circ a)^*\I \iso a^*f^*\I \to a^*\I' \to \O_T.
+\]
+By definition $f^*\I \to \I'$ is surjective, so since $a^*$ is
+right-exact, $(f \circ a)^*\I \to a^*I'$ is surjective, hence an
+epimorphism. It is then immediate that $(f \circ a)^*\I \to \O_T$ is
+zero if and only if $a^*\I' \to \O_T$ is zero.</p>
 </div>
 
 <div class="footnotes">
