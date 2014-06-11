@@ -1,7 +1,11 @@
-p, blockquote, ul, ol, div {
-    & + p, & + blockquote, & + div {
+p, blockquote, ul, ol, .environment {
+    & + p, & + blockquote, & + .environment {
         margin-top: 10px;
     }
+}
+
+.MathJax_Display {
+    margin: 10px 0 !important;
 }
 
 blockquote {

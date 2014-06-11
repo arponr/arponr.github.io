@@ -4,126 +4,8 @@
     <title>arponr</title>
     <description>blog by arpon</description>
     <link>http://www.arponr.com</link>
-    <lastBuildDate>2014-06-09T14:00:51-04:00</lastBuildDate>
+    <lastBuildDate>2014-06-11T08:27:26-04:00</lastBuildDate>
     <atom:link href="http://www.arponr.com/feed.xml" rel="self"/>
-    
-    <item>
-      <title>Bundles and structure groups</title>
-      <description>&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt;&lt;/p&gt;
-</description>
-      <pubDate>2014-06-09T13:09:15-04:00</pubDate>
-      <link>http://www.arponr.com/bundles-structure-groups</link>
-      <guid isPermaLink="true">http://www.arponr.com/bundles-structure-groups</guid>
-    </item>
-    
-    <item>
-      <title>Bordism I: definitions</title>
-      <description>&lt;p&gt;I’m trying to learn some stable homotopy theory this summer, and am
-starting out by reading about bordism. My first goal is to understand
-Thom’s computation of the unoriented bordism ring, i.e., the
-classification of unoriented compact smooth manifolds up to
-bordism. This post is just about the basic setup of the problem (with
-an eye towards other bordism problems as well). I’ve been following a
-couple of sets of notes by &lt;a href=&quot;//www-math.mit.edu/~hrm/papers/cobordism.pdf&quot;&gt;Haynes Miller&lt;/a&gt; and &lt;a href=&quot;//www.math.umass.edu/~weston/oldpapers/cobord.pdf&quot;&gt;Tom
-Weston&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h4&gt;Generalities&lt;/h4&gt;
-
-&lt;div class=&quot;environment definition&quot;&gt;
-  &lt;h6&gt;Definition&lt;/h6&gt;
-
-  &lt;p&gt;A &lt;em&gt;bordism category&lt;/em&gt; is a category $\B$ equipped
-with a functor $\d \c \B \to \B$ and natural transformation
-$\iota \c \d \to \id_\B$ such that:&lt;/p&gt;
-
-  &lt;ol&gt;
-    &lt;li&gt;$\B$ has finite coproducts $M \amalg N$, including an initial
-object $\e$;&lt;/li&gt;
-    &lt;li&gt;$\B$ is essentially small, i.e., has a small subcategory $\B_0$
-such that every $M \in \obj(\B)$ is isomorphic to some $M_0 \in
-\obj(\B_0)$;&lt;/li&gt;
-    &lt;li&gt;$\d$ and $\iota$ preserve coproducts;&lt;/li&gt;
-    &lt;li&gt;$\d\e \iso \e$ and $\d\d M \iso \e$ for all $M \in
-\obj(\B)$.&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment example&quot;&gt;
-  &lt;h6&gt;Example&lt;/h6&gt;
-
-  &lt;p&gt;Hopefully the notation is suggestive enough so that
-this motivating example is predictable. We take $\B$ to be the
-category $\Mfld$ of compact smooth manifolds (and smooth maps),
-$\d$ to be the boundary, and $\iota$ to be the inclusion of the
-boundary. Finite coproducts in $\Mfld$ are given by disjoint union,
-and $\e$ is the empty manifold. Note, $\Mfld$ is essentially
-small because every object can be embedded as a subset of
-$\R^\infty$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;In the remainder of this section we state some elementary facts about
-a general bordism category $\B$. Then in the next section we will
-address this main example (although in slightly more generality, by
-letting our manifolds have extra structure and working over a base
-space).&lt;/p&gt;
-
-&lt;div class=&quot;environment definitions&quot;&gt;
-  &lt;h6&gt;Definitions&lt;/h6&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;We say $M,N \in \obj(\B)$ are &lt;em&gt;bordant&lt;/em&gt;, and write $M \equiv N$,
-if there exist $U,V \in \obj(\B)$ such that $M \amalg \d U \iso N
-\amalg \d V$.&lt;/li&gt;
-    &lt;li&gt;The relation $\equiv$ is called &lt;em&gt;bordism&lt;/em&gt;.&lt;/li&gt;
-    &lt;li&gt;We say $M \in \obj(\B)$ is &lt;em&gt;closed&lt;/em&gt; if $\d M \iso \e$ and a
- &lt;em&gt;boundary&lt;/em&gt; if $M \equiv \e$.&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;Lemma&lt;/h6&gt;
-
-  &lt;p&gt;Let $K,L,M,N \in \obj(\B)$.&lt;/p&gt;
-
-  &lt;ol&gt;
-    &lt;li&gt;Bordism is an equivalence relation, whose equivalence classes form
-a set.&lt;/li&gt;
-    &lt;li&gt;$M \equiv N \implies \d M \iso \d N$.&lt;/li&gt;
-    &lt;li&gt;$\d M \equiv \e$.&lt;/li&gt;
-    &lt;li&gt;$K \equiv M, L \equiv N \implies K \amalg L \equiv M \amalg N$.&lt;/li&gt;
-    &lt;li&gt;If $M \equiv N$ then $M$ is closed (resp. a boundary) if and
-only if $N$ is closed (resp. a boundary).&lt;/li&gt;
-    &lt;li&gt;If $M,N$ are closed (resp. boundaries) then $M \amalg N$ is
-closed (resp. a boundary).&lt;/li&gt;
-    &lt;li&gt;If $M$ is a boundary then $M$ is closed.&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
-
-  &lt;p&gt;Easy. (Note that we required $\B$ to be essentially small precisely
-so that the bordism classes form a set.)&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment definition&quot;&gt;
-  &lt;h6&gt;Definition&lt;/h6&gt;
-
-  &lt;p&gt;Let $\Omega(\B)$ denote the set of bordism classes of closed objects
-of $\B$. By points 4 and 6 of the lemma, coproduct in $\B$ induces
-a monoid structure on $\Omega(\B)$, with identity given by $\e$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;h4&gt;Bordism of (structured) manifolds&lt;/h4&gt;
-
-&lt;p&gt;Let’s first discuss the type of “structure” we will allow on our
-manifolds.&lt;/p&gt;
-
-</description>
-      <pubDate>2014-06-09T13:09:15-04:00</pubDate>
-      <link>http://www.arponr.com/bordism-i-definitions</link>
-      <guid isPermaLink="true">http://www.arponr.com/bordism-i-definitions</guid>
-    </item>
     
     <item>
       <title>Finite presentation basics</title>
@@ -157,7 +39,7 @@ in $C \in \obj(\C_A)$.&lt;/li&gt;
 &lt;p&gt;Now to the content. Fix a ring $A$ for the remainder.&lt;/p&gt;
 
 &lt;div class=&quot;environment definition&quot;&gt;
-  &lt;h6&gt;Definition&lt;/h6&gt;
+  &lt;h6&gt;1. Definition&lt;/h6&gt;
 
   &lt;p&gt;An object $C \in \obj(\C_A)$ is:&lt;/p&gt;
 
@@ -171,7 +53,7 @@ kernel.&lt;/li&gt;
 &lt;/div&gt;
 
 &lt;div id=&quot;ker-surjection&quot; class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;1. Lemma&lt;/h6&gt;
+  &lt;h6&gt;2. Lemma&lt;/h6&gt;
 
   &lt;p&gt;Let $f \c C \to D$ and $g \c D \to E$ be morphisms in
 $\C_A$.  Define $h \ce g \circ f$. Then if $f$ is
@@ -189,7 +71,7 @@ generated then so is $\ker(g)$.&lt;/p&gt;
 &lt;p&gt;Now the first fact: once finitely presented, always finitely presented.&lt;/p&gt;
 
 &lt;div id=&quot;fp-implies-always-fp&quot; class=&quot;environment proposition&quot;&gt;
-  &lt;h6&gt;2. Proposition&lt;/h6&gt;
+  &lt;h6&gt;3. Proposition&lt;/h6&gt;
 
   &lt;p&gt;Let $C \in \obj(\C_A)$ be finitely presented. If $\alpha \c D
 \to C$ is a surjection with $D$ finitely generated, then
@@ -199,7 +81,7 @@ $\ker(\alpha)$ is finitely generated.&lt;/p&gt;
 &lt;div class=&quot;environment proof&quot;&gt;
   &lt;h6&gt;Proof&lt;/h6&gt;
 
-  &lt;p&gt;By &lt;a href=&quot;#ker-surjection&quot;&gt;Lm. 1&lt;/a&gt; we may assume $D \iso F_A^{\amalg m}$. By
+  &lt;p&gt;By &lt;a href=&quot;#ker-surjection&quot;&gt;Lm. 3&lt;/a&gt; we may assume $D \iso F_A^{\amalg m}$. By
 definition we have a surjection $\beta \c F_A^{\amalg n} \to C$ with
 $\ker(\beta)$ finitely generated. Consider the diagram
 \[
@@ -226,14 +108,14 @@ m}$, then clearly $\ker(\gamma)$ is generated by $\ker(\beta)$
 and $\{t_i - \eta(t_i)\}_{1 \le i \le m}$. Thus $\ker(\beta)$
 being finitely generated implies $\ker(\gamma)$ is finitely
 generated, which implies $\ker(\alpha)$ is finitely generated by
-&lt;a href=&quot;#ker-surjection&quot;&gt;Lm. 1&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&quot;#ker-surjection&quot;&gt;Lm. 3&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;This in turn allows us to prove the second fact: finite generation and
 presentation are local properties.&lt;/p&gt;
 
 &lt;div id=&quot;fg-fp-local&quot; class=&quot;environment proposition&quot;&gt;
-  &lt;h6&gt;3. Proposition&lt;/h6&gt;
+  &lt;h6&gt;4. Proposition&lt;/h6&gt;
 
   &lt;p&gt;Let $C \in \obj(\C_A)$.&lt;/p&gt;
 
@@ -258,13 +140,13 @@ generated (resp. presented).&lt;/li&gt;
 exact (and hence commutes with finite products), a surjection
 $F_A^{\amalg n} \to C$ localises to a surjection
 $F_{A_f}^{\amalg n} \to C_f$.&lt;/li&gt;
-    &lt;li&gt;Suppose $C_{f_i}$ is generated (in the appropriate sense) by
-$\{a_{i,j}/f_i^{r_{i,j}}\}_{1 \le j \le m_i}$ for each $i$.
-Take $R \ge \max\{r_{i,j}\}$. Then for all $i$ we have that
-$f_i^Ra$ is generated by $\{a_{i,j}\}$ for any $a \in
-A$. Since $f_1,\ldots,f_n$ generate the unit ideal, so do
-$f_1^R,\ldots,f_n^R$ and hence there exist $c_i \in A$ such
-that $\sum c_if_i^R = 1$. It is then clear that $\{c_i\} \cup
+    &lt;li&gt;Suppose for each $i$ that $C_{f_i}$ is generated (in the
+appropriate sense) by $\{a_{i,j}/f_i^{r_{i,j}}\}_{1 \le j \le
+m_i}$.  Take $R \ge \max\{r_{i,j}\}$. Then for all $i$ we have that
+$f_i^Ra$ is generated by $\{a_{i,j}\}$ for any $a \in A$. Since
+$f_1,\ldots,f_n$ generate the unit ideal, so do
+$f_1^R,\ldots,f_n^R$ and hence there exist $c_i \in A$ such that
+$\sum c_if_i^R = 1$. It is then clear that $\{c_i\} \cup
 \{a_{i,j}\}$ generates $C$.&lt;/li&gt;
   &lt;/ol&gt;
 
@@ -277,7 +159,7 @@ we have proved (i) for finite generation.&lt;/li&gt;
     &lt;li&gt;Since we have proved (ii) for finite generation there is a
 surjection $\alpha \c F_A^{\amalg n} \to C$. Then for each $i$,
 $\alpha_{f_i} \c F_{A_{f_i}}^{\amalg n} \to C_{f_i}$ is a
-surjection, so by &lt;a href=&quot;#fp-implies-always-fp&quot;&gt;Pr. 2&lt;/a&gt; we know
+surjection, so by &lt;a href=&quot;#fp-implies-always-fp&quot;&gt;Pr. 4&lt;/a&gt; we know
 $\ker(\alpha_{f_i}) \iso \ker(\alpha)_{f_i}$ is finitely
 generated. By statement (ii) for finite generation this implies
 $\ker(\alpha)$ is finitely generated as desired.&lt;/li&gt;
@@ -291,9 +173,9 @@ ended up wanting to assume a lot of stuff and it seemed like the
 exposition would get pretty ugly.&lt;/p&gt;
 
 &lt;div class=&quot;environment remark&quot;&gt;
-  &lt;h6&gt;Remark&lt;/h6&gt;
+  &lt;h6&gt;5. Remark&lt;/h6&gt;
 
-  &lt;p&gt;&lt;a href=&quot;#fg-fp-local&quot;&gt;Pr. 3&lt;/a&gt; is what one needs to prove when showing that a
+  &lt;p&gt;&lt;a href=&quot;#fg-fp-local&quot;&gt;Pr. 5&lt;/a&gt; is what one needs to prove when showing that a
 morphism of schemes being of locally of finite type or locally of
 finite presentation is local on the source.&lt;/p&gt;
 &lt;/div&gt;
@@ -322,7 +204,7 @@ about schemes specifically today, so let me make the following
 definition.&lt;sup id=&quot;fnref:immersion-general&quot;&gt;&lt;a href=&quot;#fn:immersion-general&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;div class=&quot;environment definition&quot;&gt;
-  &lt;h6&gt;Definition&lt;/h6&gt;
+  &lt;h6&gt;1. Definition&lt;/h6&gt;
 
   &lt;p&gt;We say a morphism $i \c Z \to X$ of locally ringed spaces is a
 &lt;em&gt;closed immersion&lt;/em&gt; if:&lt;/p&gt;
@@ -351,7 +233,7 @@ such that $i = i' \circ h$.&lt;/li&gt;
 &lt;/div&gt;
 
 &lt;div id=&quot;monomorphism&quot; class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;1. Lemma&lt;/h6&gt;
+  &lt;h6&gt;2. Lemma&lt;/h6&gt;
 
   &lt;p&gt;If $i \c Z \to X$ is a closed immersion of locally ringed spaces,
 then $i$ is a monomorphism (in the category of locally ringed
@@ -367,7 +249,7 @@ epimorphism, so the claim is clear.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div id=&quot;factoring&quot; class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;2. Lemma&lt;/h6&gt;
+  &lt;h6&gt;3. Lemma&lt;/h6&gt;
 
   &lt;p&gt;Let $i \c Z \to X$ be a closed immersion of locally ringed spaces,
 and let $\I$ be the corresponding ideal sheaf. Then a morphism
@@ -382,19 +264,22 @@ exists.&lt;/p&gt;
   &lt;h6&gt;Proof&lt;/h6&gt;
 
   &lt;p&gt;Uniqueness is immediate from $i$ being a monomorphism by
-&lt;a href=&quot;#monomorphism&quot;&gt;Lm. 1&lt;/a&gt;, so we need only prove the existence statement. As
+&lt;a href=&quot;#monomorphism&quot;&gt;Lm. 3&lt;/a&gt;, so we need only prove the existence statement. As
 recalled above, we can assume without loss of generality that $i$ is
 the inclusion of the closed subspace $Z \ce
 (\supp(\O_X/\I), \O_X/\I)$.&lt;/p&gt;
 
-  &lt;p&gt;($\Rightarrow$) Assume $f$ factors through $i$. By definition we
-have an exact sequence $0 \to \I \to \O_X \to i_*\O_Z \to
-0.$ Since $i^*$ is right-exact we get an exact sequence $i^*\I
-\to i^*\O_X \to i^*i_*\O_Z \to 0$, where the map $\O_Z
-\iso i^*\O_X \to i^*i_*\O_Z \iso \O_Z$ is an
-isomorphism. It follows that $i^*\I \to i^*\O_X$ is zero,
-and since $f^* = g^* \circ i^*$ this implies $f^*\I \to
-\O_Y$ is zero as well.&lt;/p&gt;
+  &lt;p&gt;($\Rightarrow$) Assume $f$ factors through $i$. By definition we have
+an exact sequence $0 \to \I \to \O_X \to i_*\O_Z \to 0.$ Since $i^*$
+is right-exact we get an exact sequence $i^*\I \to i^*\O_X \to i^*i_*\O_Z \to 0$,
+where the map
+\[
+\O_Z \iso i^*\O_X \to i^*i_*\O_Z
+\iso \O_Z
+\]
+is an isomorphism. It follows that $i^*\I \to i^*\O_X$ is
+zero, and since $f^* = g^* \circ i^*$ this implies $f^*\I \to \O_Y$ is
+zero as well.&lt;/p&gt;
 
   &lt;p&gt;($\Leftarrow$) Assume $f^*\I \to \O_Y$ is zero. Let $y
 \in \lv Y \rv$. Then the map on stalks $\I_{f(y)} \to
@@ -416,7 +301,7 @@ alluded to in the title, and moreover lets us see explicitly how the
 defining ideals behave under base change.&lt;/p&gt;
 
 &lt;div class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;Lemma&lt;/h6&gt;
+  &lt;h6&gt;4. Lemma&lt;/h6&gt;
 
   &lt;p&gt;Let $i \c Z \to X$ be a closed immersion of locally ringed spaces,
 and let $\I$ be the corresponding ideal sheaf. Let $f \c Y \to
@@ -437,24 +322,25 @@ we have a pullback diagram
 &lt;div class=&quot;environment proof&quot;&gt;
   &lt;h6&gt;Proof&lt;/h6&gt;
 
-  &lt;p&gt;By &lt;a href=&quot;#factoring&quot;&gt;Lm. 2&lt;/a&gt;, giving a morphism of locally ringed spaces $T
+  &lt;p&gt;By &lt;a href=&quot;#factoring&quot;&gt;Lm. 4&lt;/a&gt;, giving a morphism of locally ringed spaces $T
 \to Z'$ is equivalent to giving a morphism $a \c T \to Y$ such that
 the map $a^*\I' \to \O_T$ is zero. We claim this condition
 is equivalent to asking that $(f \circ a)^*\I \to \O_T$ is
 zero. Assuming this for the moment, this in turn is equivalent by
-&lt;a href=&quot;#factoring&quot;&gt;Lm. 2&lt;/a&gt; to giving a morphism $b \c T \to Z$ such that $f
+&lt;a href=&quot;#factoring&quot;&gt;Lm. 4&lt;/a&gt; to giving a morphism $b \c T \to Z$ such that $f
 \circ a = i \circ b$. Thus $Z'$ satisfies the necessary universal
 property (in particular the morphism $g$ is determined by the
 identity $Z' \to Z'$, i.e. it is the morphism $b$ corresponding to
 $a = i'$).&lt;/p&gt;
 
-  &lt;p&gt;To prove the claim assumed above, consider $(f \circ a)^*\I
-\iso a^*f^*\I \to a^*\I' \to \O_T$. By definition
-$f^*\I \to \I'$ is surjective, so since $a^*$ is
-right-exact $(f \circ a)^*\I \to a^*I'$ is surjective,
-hence an epimorphism. It is then immediate that $(f \circ a)^*\I
-\to \O_T$ is zero if and only if $a^*\I' \to \O_T$ is
-zero.&lt;/p&gt;
+  &lt;p&gt;To prove the claim assumed above, consider
+\[
+(f \circ a)^*\I \iso a^*f^*\I \to a^*\I' \to \O_T.
+\]
+By definition $f^*\I \to \I'$ is surjective, so since $a^*$ is
+right-exact, $(f \circ a)^*\I \to a^*I'$ is surjective, hence an
+epimorphism. It is then immediate that $(f \circ a)^*\I \to \O_T$ is
+zero if and only if $a^*\I' \to \O_T$ is zero.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;

@@ -11,7 +11,7 @@
 
 html {
   font-family: "calluna", serif;
-  font-size: 90%;
+  font-size: 92%;
   color: #302825;
   background: #fcfcfa; }
 
@@ -39,8 +39,11 @@ sup {
 sub {
   top: 0.5em; }
 
-p + p, p + blockquote, p + div, blockquote + p, blockquote + blockquote, blockquote + div, ul + p, ul + blockquote, ul + div, ol + p, ol + blockquote, ol + div, div + p, div + blockquote, div + div {
+p + p, p + blockquote, p + .environment, blockquote + p, blockquote + blockquote, blockquote + .environment, ul + p, ul + blockquote, ul + .environment, ol + p, ol + blockquote, ol + .environment, .environment + p, .environment + blockquote, .environment + .environment {
   margin-top: 10px; }
+
+.MathJax_Display {
+  margin: 10px 0 !important; }
 
 blockquote {
   font-family: "freight-sans-pro", sans-serif;
@@ -163,8 +166,8 @@ header h2 {
 .footnotes ol {
   list-style-type: decimal;
   margin-left: 15px;
-  font-size: 0.9rem;
-  line-height: 1.25em; }
+  font-size: 0.95rem;
+  line-height: 1.3em; }
 
 .playlist {
   list-style-type: none; }

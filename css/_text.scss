@@ -1,5 +1,5 @@
 .text {
-    line-height: 1.35em;
+    line-height: $line-text;
     text-align: justify;
 
     a:link, a:visited {
@@ -85,8 +85,8 @@
     ol {
         list-style-type: decimal;
         margin-left: 15px;
-        font-size: $size-small;
-        line-height: 1.25em;
+        font-size: $size-footnote;
+        line-height: $line-footnote;
     }
 }
 

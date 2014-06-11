@@ -3,18 +3,19 @@ class Jekyll::Converters::Markdown::TeXdown
     require 'kramdown'
     @config = config
     @environments = {
-      "align"       => [nil,           "Eq."],
-      "definition"  => ["Definition",  "Df."],
-      "definitions" => ["Definitions", "Df."],
-      "equation"    => [nil,           "Eq."],
-      "example"     => ["Example",     "Ex."],
-      "examples"    => ["Examples",    "Ex."],
-      "lemma"       => ["Lemma",       "Lm."],
-      "proof"       => ["Proof",       "Pf."],
-      "proposition" => ["Proposition", "Pr."],
-      "remark"      => ["Remark",      "Rm."],
-      "remarks"     => ["Remarks",     "Rm."],
-      "theorem"     => ["Theorem",     "Th."],
+      "align"       => [nil,           "Eq.", false],
+      "definition"  => ["Definition",  "Df.", true],
+      "definitions" => ["Definitions", "Df.", true],
+      "equation"    => [nil,           "Eq.", false],
+      "example"     => ["Example",     "Ex.", true],
+      "examples"    => ["Examples",    "Ex.", true],
+      "lemma"       => ["Lemma",       "Lm.", true],
+      "notation"    => ["Notation",    "Nt.", false],
+      "proof"       => ["Proof",       "Pf.", false],
+      "proposition" => ["Proposition", "Pr.", true],
+      "remark"      => ["Remark",      "Rm.", true],
+      "remarks"     => ["Remarks",     "Rm.", true],
+      "theorem"     => ["Theorem",     "Th.", true],
     }
   rescue LoadError
     STDERR.puts 'You are missing a library required for Markdown. Please run:'
@@ -31,7 +32,7 @@ class Jekyll::Converters::Markdown::TeXdown
       \\end\{\1\}
     }mx) do
       env, title, ref, content = $1, $2, $3, $4
-      env_name, env_label = @environments[env]
+      env_name, env_label, env_num = @environments[env]
       is_eqn = env_name.nil?
       has_title = !title.nil?
       has_ref = !ref.nil?
@@ -39,24 +40,28 @@ class Jekyll::Converters::Markdown::TeXdown
       output = ""
 
       if is_eqn
-        type = has_ref ? env : "#{env}*" 
+        type = (has_ref || env_num) ? env : "#{env}*" 
         output << "{::nomarkdown}<span id=#{$3}></span>{:/}" if has_ref
         output << "\\[\n\\begin{#{type}}\n"
-        if has_ref
+        if has_ref || env_num
           output << "\\tag{#{refnum}}\n"
-          refs[ref] = "#{env_label} #{refnum}"
           refnum += 1
         end
-        output << "#{$content}\n\\end{#{type}}\n\\]\n"
+        if has_ref
+          refs[ref] = "#{env_label} #{refnum}"
+        end
+        output << "#{content}\n\\end{#{type}}\n\\]\n"
       else
         output << "<div "
         output << "id=\"#{ref}\" " if has_ref
         output << "class=\"environment #{env}\">\n"
         output << "\#" * 6
-        if has_ref
+        if has_ref || env_num
           output << "#{refnum}. "
-          refs[ref] = "#{env_label} #{refnum}"
           refnum += 1
+        end
+        if has_ref
+          refs[ref] = "#{env_label} #{refnum}"
         end
         output << "#{env_name}"
         output << (has_title ? " (#{title})\n": "\n")
@@ -76,10 +81,10 @@ class Jekyll::Converters::Markdown::TeXdown
     input = input.gsub(/\\ref\{(.*?)\}/m) {"<a href=\"\##{$1}\">#{refs[$1]}</a>"}
     
     # inline math
-    input = input.gsub(/\$(.*?)\$/m) {|j| "{::nomarkdown}#{j}{:/}"}
+    input = input.gsub(/\$.*?\$/m) {|j| "{::nomarkdown}#{j}{:/}"}
 
     # display math
-    input = input.gsub(/\\\[\s+(.*?)\s+\\\]/m) {|j| "{::nomarkdown}#{j}{:/}"}
+    input = input.gsub(/\\\[.*?\\\]/m) {|j| "{::nomarkdown}#{j}{:/}"}
 
     Kramdown::Document.new(input, :auto_ids => false, :parse_block_html => true).to_html
   end

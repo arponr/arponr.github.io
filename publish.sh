@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd ~/Documents/code/site &&
+jekyll build &&
 git commit -a &&
 git branch -D master &&
 git checkout -b master &&
