@@ -4,7 +4,7 @@
     <title>arponr</title>
     <description>blog by arpon</description>
     <link>http://www.arponr.com</link>
-    <lastBuildDate>2014-06-11T08:27:26-04:00</lastBuildDate>
+    <lastBuildDate>Thu, 12 Jun 2014 09:34:34 -0400</lastBuildDate>
     <atom:link href="http://www.arponr.com/feed.xml" rel="self"/>
     
     <item>
@@ -19,21 +19,20 @@ analogous, so we will abstract very slightly and address both at once.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;All rings and algebras are commutative with unit.&lt;/li&gt;
-  &lt;li&gt;For a ring $A$, let $\C_A$ denote either the category of
-$A$-modules or the category of $A$-algebras. All arrows indicate
-morphisms in $\C_A$.&lt;/li&gt;
-  &lt;li&gt;Let $\amalg$ denote the coproduct in $\C_A$, i.e., direct
-sum $\oplus$ for $A$-modules or tensor product $\otimes_A$ for
+  &lt;li&gt;For a ring $A$, let $\C_A$ denote either the category of $A$-modules
+or the category of $A$-algebras. All arrows indicate morphisms in
+$\C_A$.&lt;/li&gt;
+  &lt;li&gt;Let $\amalg$ denote the coproduct in $\C_A$, i.e., direct sum
+$\oplus$ for $A$-modules or tensor product $\otimes_A$ for
 $A$-algebras.&lt;/li&gt;
-  &lt;li&gt;For $C \in \obj(\C_A)$ and $n \in \N$ let $C^{\amalg
-n}$ denote the $n$-fold coproduct $C \amalg \cdots \amalg C$
-and $C^n$ denote the $n$-fold product $C \times \cdots \times
-C$.&lt;/li&gt;
+  &lt;li&gt;For $C \in \obj(\C_A)$ and $n \in \N$ let $C^{\amalg n}$ denote the
+$n$-fold coproduct $C \amalg \cdots \amalg C$ and $C^n$ denote the
+$n$-fold product $C \times \cdots \times C$.&lt;/li&gt;
   &lt;li&gt;Let $F_A \in \obj(\C_A)$ denote the free object on one element,
-i.e., $F_A \iso A$ for $A$-modules and $F_A \iso A[t]$ for
-$A$-algebras. Thus for any $n \in \N$ there is an
-isomorphism $\mor_{\C_A}(F_A^{\amalg n},C) \iso C^n$ natural
-in $C \in \obj(\C_A)$.&lt;/li&gt;
+i.e., $F_A \iso$ $A$ for $A$-modules and $F_A \iso$ $A[t]$ for
+$A$-algebras. Thus for any $n \in \N$ there is an isomorphism
+$\mor_{\C_A}(F_A^{\amalg n},C) \iso$ $C^n$ natural in $C \in
+\obj(\C_A)$.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Now to the content. Fix a ring $A$ for the remainder.&lt;/p&gt;
@@ -44,22 +43,20 @@ in $C \in \obj(\C_A)$.&lt;/li&gt;
   &lt;p&gt;An object $C \in \obj(\C_A)$ is:&lt;/p&gt;
 
   &lt;ol&gt;
-    &lt;li&gt;&lt;em&gt;finitely generated&lt;/em&gt; if for some $n \in \N$ there is a
-surjection $F_A^{\amalg n} \to M$;&lt;/li&gt;
-    &lt;li&gt;&lt;em&gt;finitely presented&lt;/em&gt; if for some $n \in \N$ there is a
-surjection $F_A^{\amalg n} \to M$ with finitely generated
-kernel.&lt;/li&gt;
+    &lt;li&gt;&lt;em&gt;finitely generated&lt;/em&gt; if for some $n \in \N$ there is a surjection
+$F_A^{\amalg n} \to$ $M$;&lt;/li&gt;
+    &lt;li&gt;&lt;em&gt;finitely presented&lt;/em&gt; if for some $n \in \N$ there is a surjection
+$F_A^{\amalg n} \to$ $M$ with finitely generated kernel.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
 &lt;div id=&quot;ker-surjection&quot; class=&quot;environment lemma&quot;&gt;
   &lt;h6&gt;2. Lemma&lt;/h6&gt;
 
-  &lt;p&gt;Let $f \c C \to D$ and $g \c D \to E$ be morphisms in
-$\C_A$.  Define $h \ce g \circ f$. Then if $f$ is
-surjective, the canonical morphism $\ker(h) \to \ker(g)$ induced by
-$f$ is surjective. In particular, if $\ker(h)$ is finitely
-generated then so is $\ker(g)$.&lt;/p&gt;
+  &lt;p&gt;Let $f \c C \to$ $D$ and $g \c D \to$ $E$ be morphisms in $\C_A$.  Define
+$h \ce g \circ f$. Then if $f$ is surjective, the canonical morphism
+$\ker(h) \to$ $\ker(g)$ induced by $f$ is surjective. In particular, if
+$\ker(h)$ is finitely generated then so is $\ker(g)$.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;environment proof&quot;&gt;
@@ -68,21 +65,22 @@ generated then so is $\ker(g)$.&lt;/p&gt;
   &lt;p&gt;Evident.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Now the first fact: once finitely presented, always finitely presented.&lt;/p&gt;
+&lt;p&gt;Now the first fact: once finitely presented, always finitely
+presented.&lt;/p&gt;
 
 &lt;div id=&quot;fp-implies-always-fp&quot; class=&quot;environment proposition&quot;&gt;
   &lt;h6&gt;3. Proposition&lt;/h6&gt;
 
-  &lt;p&gt;Let $C \in \obj(\C_A)$ be finitely presented. If $\alpha \c D
-\to C$ is a surjection with $D$ finitely generated, then
-$\ker(\alpha)$ is finitely generated.&lt;/p&gt;
+  &lt;p&gt;Let $C \in \obj(\C_A)$ be finitely presented. If $\alpha \c D \to$ $C$
+is a surjection with $D$ finitely generated, then $\ker(\alpha)$ is
+finitely generated.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;environment proof&quot;&gt;
   &lt;h6&gt;Proof&lt;/h6&gt;
 
-  &lt;p&gt;By &lt;a href=&quot;#ker-surjection&quot;&gt;Lm. 3&lt;/a&gt; we may assume $D \iso F_A^{\amalg m}$. By
-definition we have a surjection $\beta \c F_A^{\amalg n} \to C$ with
+  &lt;p&gt;By &lt;a href=&quot;#ker-surjection&quot;&gt;Lm. 2&lt;/a&gt; we may assume $D \iso$ $F_A^{\amalg m}$. By
+definition we have a surjection $\beta \c F_A^{\amalg n} \to$ $C$ with
 $\ker(\beta)$ finitely generated. Consider the diagram
 \[
 \begin{xy}
@@ -97,18 +95,17 @@ $\ker(\beta)$ finitely generated. Consider the diagram
 }
 \end{xy}
 \]
-where $\xi \c F_A^{\amalg n} \to F_A^{\amalg m}$ and $\eta \c
-F_A^{\amalg m} \to F_A^{\amalg n}$ are defined such that $\alpha
-\circ \xi = \beta$ and $\beta \circ \eta = \alpha$—which exist
-since free objects are projective in $\obj(\C_A)$—so that
-defining $\gamma \ce \alpha \amalg \beta$ makes the diagram
-commute. Now, if $t_1,\ldots,t_m$ are the canonical generators (in
-the appropriate sense according to $\C_A$) of $F_A^{\amalg
-m}$, then clearly $\ker(\gamma)$ is generated by $\ker(\beta)$
-and $\{t_i - \eta(t_i)\}_{1 \le i \le m}$. Thus $\ker(\beta)$
-being finitely generated implies $\ker(\gamma)$ is finitely
-generated, which implies $\ker(\alpha)$ is finitely generated by
-&lt;a href=&quot;#ker-surjection&quot;&gt;Lm. 3&lt;/a&gt;.&lt;/p&gt;
+where $\xi \c F_A^{\amalg n} \to$ $F_A^{\amalg m}$ and $\eta \c
+F_A^{\amalg m} \to$ $F_A^{\amalg n}$ are defined such that $\alpha \circ
+\xi = \beta$ and $\beta \circ \eta = \alpha$—which exist since free
+objects are projective in $\obj(\C_A)$—so that defining $\gamma \ce
+\alpha \amalg \beta$ makes the diagram commute. Now, if
+$t_1,\ldots,t_m$ are the canonical generators (in the appropriate
+sense according to $\C_A$) of $F_A^{\amalg m}$, then clearly
+$\ker(\gamma)$ is generated by $\ker(\beta)$ and $\{t_i -
+\eta(t_i)\}_{1 \le i \le m}$. Thus $\ker(\beta)$ being finitely
+generated implies $\ker(\gamma)$ is finitely generated, which implies
+$\ker(\alpha)$ is finitely generated by &lt;a href=&quot;#ker-surjection&quot;&gt;Lm. 2&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;This in turn allows us to prove the second fact: finite generation and
@@ -120,13 +117,12 @@ presentation are local properties.&lt;/p&gt;
   &lt;p&gt;Let $C \in \obj(\C_A)$.&lt;/p&gt;
 
   &lt;ol&gt;
-    &lt;li&gt;If $C$ is finitely generated (resp. presented), then for any $f
-\in A$ the localisation $C_f$ is finitely generated
-(resp. presented) in $\C_{A_f}$.&lt;/li&gt;
-    &lt;li&gt;If $f_1,\ldots,f_n \in A$ generate the unit ideal and
-$C_{f_i}$ is finitely generated (resp. presented) in
-$\C_{A_{f_i}}$ for each $i$, then $C$ is finitely
-generated (resp. presented).&lt;/li&gt;
+    &lt;li&gt;If $C$ is finitely generated (resp. presented), then for any $f \in
+A$ the localisation $C_f$ is finitely generated (resp. presented)
+in $\C_{A_f}$.&lt;/li&gt;
+    &lt;li&gt;If $f_1,\ldots,f_n \in A$ generate the unit ideal and $C_{f_i}$ is
+finitely generated (resp. presented) in $\C_{A_{f_i}}$ for each
+$i$, then $C$ is finitely generated (resp. presented).&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
@@ -136,10 +132,10 @@ generated (resp. presented).&lt;/li&gt;
   &lt;p&gt;We first address finite generation.&lt;/p&gt;
 
   &lt;ol&gt;
-    &lt;li&gt;Observe $(F_A)_f \iso F_{A_f}$. Thus, since localisation is
-exact (and hence commutes with finite products), a surjection
-$F_A^{\amalg n} \to C$ localises to a surjection
-$F_{A_f}^{\amalg n} \to C_f$.&lt;/li&gt;
+    &lt;li&gt;Observe $(F_A)_f \iso$ $F_{A_f}$. Thus, since localisation is exact
+(and hence commutes with finite products), a surjection
+$F_A^{\amalg n} \to$ $C$ localises to a surjection $F_{A_f}^{\amalg
+n} \to$ $C_f$.&lt;/li&gt;
     &lt;li&gt;Suppose for each $i$ that $C_{f_i}$ is generated (in the
 appropriate sense) by $\{a_{i,j}/f_i^{r_{i,j}}\}_{1 \le j \le
 m_i}$.  Take $R \ge \max\{r_{i,j}\}$. Then for all $i$ we have that
@@ -157,10 +153,10 @@ kernels since it is exact.&lt;/p&gt;
     &lt;li&gt;This is immediate from localisation commuting with kernels and that
 we have proved (i) for finite generation.&lt;/li&gt;
     &lt;li&gt;Since we have proved (ii) for finite generation there is a
-surjection $\alpha \c F_A^{\amalg n} \to C$. Then for each $i$,
-$\alpha_{f_i} \c F_{A_{f_i}}^{\amalg n} \to C_{f_i}$ is a
-surjection, so by &lt;a href=&quot;#fp-implies-always-fp&quot;&gt;Pr. 4&lt;/a&gt; we know
-$\ker(\alpha_{f_i}) \iso \ker(\alpha)_{f_i}$ is finitely
+surjection $\alpha \c F_A^{\amalg n} \to$ $C$. Then for each $i$,
+$\alpha_{f_i} \c F_{A_{f_i}}^{\amalg n} \to$ $C_{f_i}$ is a
+surjection, so by &lt;a href=&quot;#fp-implies-always-fp&quot;&gt;Pr. 3&lt;/a&gt; we know
+$\ker(\alpha_{f_i}) \iso$ $\ker(\alpha)_{f_i}$ is finitely
 generated. By statement (ii) for finite generation this implies
 $\ker(\alpha)$ is finitely generated as desired.&lt;/li&gt;
   &lt;/ol&gt;
@@ -175,7 +171,7 @@ exposition would get pretty ugly.&lt;/p&gt;
 &lt;div class=&quot;environment remark&quot;&gt;
   &lt;h6&gt;5. Remark&lt;/h6&gt;
 
-  &lt;p&gt;&lt;a href=&quot;#fg-fp-local&quot;&gt;Pr. 5&lt;/a&gt; is what one needs to prove when showing that a
+  &lt;p&gt;&lt;a href=&quot;#fg-fp-local&quot;&gt;Pr. 4&lt;/a&gt; is what one needs to prove when showing that a
 morphism of schemes being of locally of finite type or locally of
 finite presentation is local on the source.&lt;/p&gt;
 &lt;/div&gt;
@@ -190,7 +186,7 @@ notes&lt;/a&gt;. &lt;a href=&quot;#fnref:always&quot; class=&quot;reversefootnot
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-      <pubDate>2014-05-29T00:00:00-04:00</pubDate>
+      <pubDate>Thu, 29 May 2014 21:00:00 -0400</pubDate>
       <link>http://www.arponr.com/finite-presentation-basics</link>
       <guid isPermaLink="true">http://www.arponr.com/finite-presentation-basics</guid>
     </item>
@@ -206,14 +202,14 @@ definition.&lt;sup id=&quot;fnref:immersion-general&quot;&gt;&lt;a href=&quot;#f
 &lt;div class=&quot;environment definition&quot;&gt;
   &lt;h6&gt;1. Definition&lt;/h6&gt;
 
-  &lt;p&gt;We say a morphism $i \c Z \to X$ of locally ringed spaces is a
+  &lt;p&gt;We say a morphism $i \c Z \to$ $X$ of locally ringed spaces is a
 &lt;em&gt;closed immersion&lt;/em&gt; if:&lt;/p&gt;
 
   &lt;ol&gt;
-    &lt;li&gt;the underlying map of spaces $\lv Z \rv \to \lv X \rv$ induces a
+    &lt;li&gt;the underlying map of spaces $\lv Z \rv \to$ $\lv X \rv$ induces a
 homeomorphism of $\lv X \rv$ onto a closed subset of $\lv X
 \rv$;&lt;/li&gt;
-    &lt;li&gt;the underlying map of sheaves $\O_X \to i_*\O_Z$ is
+    &lt;li&gt;the underlying map of sheaves $\O_X \to$ $i_*\O_Z$ is
 surjective.&lt;/li&gt;
   &lt;/ol&gt;
 
@@ -221,13 +217,13 @@ surjective.&lt;/li&gt;
 
   &lt;ol&gt;
     &lt;li&gt;the &lt;em&gt;ideal sheaf&lt;/em&gt; of $Z$ is defined as $\I \ce \ker(\O_X
-\to i_*\O_Z)$;&lt;/li&gt;
+\to$ $i_*\O_Z)$;&lt;/li&gt;
     &lt;li&gt;the &lt;em&gt;closed subspace&lt;/em&gt; determined by $\I$ is defined as the
 locally ringed space $Z' \ce (\supp(\O_X/\I),
 \O_X/\I)$;&lt;/li&gt;
-    &lt;li&gt;the natural map $i' \c Z' \to X$ is a closed immersion with ideal
+    &lt;li&gt;the natural map $i' \c Z' \to$ $X$ is a closed immersion with ideal
 sheaf $\I$;&lt;/li&gt;
-    &lt;li&gt;$i \c Z \to X$ in fact induces an isomorphism $h \c Z \to Z'$
+    &lt;li&gt;$i \c Z \to$ $X$ in fact induces an isomorphism $h \c Z \to$ $Z'$
 such that $i = i' \circ h$.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -235,7 +231,7 @@ such that $i = i' \circ h$.&lt;/li&gt;
 &lt;div id=&quot;monomorphism&quot; class=&quot;environment lemma&quot;&gt;
   &lt;h6&gt;2. Lemma&lt;/h6&gt;
 
-  &lt;p&gt;If $i \c Z \to X$ is a closed immersion of locally ringed spaces,
+  &lt;p&gt;If $i \c Z \to$ $X$ is a closed immersion of locally ringed spaces,
 then $i$ is a monomorphism (in the category of locally ringed
 spaces).&lt;/p&gt;
 &lt;/div&gt;
@@ -243,20 +239,20 @@ spaces).&lt;/p&gt;
 &lt;div class=&quot;environment proof&quot;&gt;
   &lt;h6&gt;Proof&lt;/h6&gt;
 
-  &lt;p&gt;By definition, the map of spaces $\lv Z \rv \to \lv X \rv$ is a
-monomorphism and the map of sheaves $\O_X \to i_*\O_Z$ is an
+  &lt;p&gt;By definition, the map of spaces $\lv Z \rv \to$ $\lv X \rv$ is a
+monomorphism and the map of sheaves $\O_X \to$ $i_*\O_Z$ is an
 epimorphism, so the claim is clear.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div id=&quot;factoring&quot; class=&quot;environment lemma&quot;&gt;
   &lt;h6&gt;3. Lemma&lt;/h6&gt;
 
-  &lt;p&gt;Let $i \c Z \to X$ be a closed immersion of locally ringed spaces,
+  &lt;p&gt;Let $i \c Z \to$ $X$ be a closed immersion of locally ringed spaces,
 and let $\I$ be the corresponding ideal sheaf. Then a morphism
-of locally ringed spaces $f \c Y \to X$ factors through
-$i$—i.e., there exists $g \c Y \to Z$ such that $f = i \circ
-g$—if and only if the induced map $f^*\I \to f^*\O_X
-\iso \O_Y$ is zero. Such a factoring $g$ is unique if it
+of locally ringed spaces $f \c Y \to$ $X$ factors through
+$i$—i.e., there exists $g \c Y \to$ $Z$ such that $f = i \circ
+g$—if and only if the induced map $f^*\I \to$ $f^*\O_X
+\iso$ $\O_Y$ is zero. Such a factoring $g$ is unique if it
 exists.&lt;/p&gt;
 &lt;/div&gt;
 
@@ -264,33 +260,24 @@ exists.&lt;/p&gt;
   &lt;h6&gt;Proof&lt;/h6&gt;
 
   &lt;p&gt;Uniqueness is immediate from $i$ being a monomorphism by
-&lt;a href=&quot;#monomorphism&quot;&gt;Lm. 3&lt;/a&gt;, so we need only prove the existence statement. As
+&lt;a href=&quot;#monomorphism&quot;&gt;Lm. 2&lt;/a&gt;, so we need only prove the existence statement. As
 recalled above, we can assume without loss of generality that $i$ is
 the inclusion of the closed subspace $Z \ce
 (\supp(\O_X/\I), \O_X/\I)$.&lt;/p&gt;
 
   &lt;p&gt;($\Rightarrow$) Assume $f$ factors through $i$. By definition we have
-an exact sequence $0 \to \I \to \O_X \to i_*\O_Z \to 0.$ Since $i^*$
-is right-exact we get an exact sequence $i^*\I \to i^*\O_X \to i^*i_*\O_Z \to 0$,
-where the map
-\[
-\O_Z \iso i^*\O_X \to i^*i_*\O_Z
-\iso \O_Z
-\]
-is an isomorphism. It follows that $i^*\I \to i^*\O_X$ is
-zero, and since $f^* = g^* \circ i^*$ this implies $f^*\I \to \O_Y$ is
+an exact sequence $0 \to$ $\I \to$ $\O_X \to$ $i_*\O_Z \to$ $0.$ Since $i^*$
+is right-exact we get an exact sequence $i^*\I \to$ $i^*\O_X \to$ $i^*i_*\O_Z \to$ $0$, where the map $\O_Z \iso$ $i^*\O_X \to$ $i^*i_*\O_Z
+\iso$ $\O_Z$ is an isomorphism. It follows that $i^*\I \to$ $i^*\O_X$ is
+zero, and since $f^* = g^* \circ i^*$ this implies $f^*\I \to$ $\O_Y$ is
 zero as well.&lt;/p&gt;
 
-  &lt;p&gt;($\Leftarrow$) Assume $f^*\I \to \O_Y$ is zero. Let $y
-\in \lv Y \rv$. Then the map on stalks $\I_{f(y)} \to
-\O_{X,f(y)} \to \O_{Y,y}$ is zero. Since $\O_{X,f(y)}
-\to \O_{Y,y}$ is a ring morphism this implies $\I_{f(y)} \ne
-\O_{X,f(y)}$, whence $f(y) \in
-\supp(\O_X/\I)$. Thus, on spaces, $\lv Y \rv \to \lv X
-\rv$ factors through $\lv Z \rv$. Then by adjunction the map
-$\I \to \O_X \to f_*\O_Y$ is zero, inducing a map on
-sheaves $i_*\O_Z \iso \O_X/\I \to \O_Y$. This
-defines the required map $g \c Y \to Z$.&lt;/p&gt;
+  &lt;p&gt;($\Leftarrow$) Assume $f^*\I \to$ $\O_Y$ is zero. Let $y \in \lv Y
+\rv$. Then the map on stalks $\I_{f(y)} \to$ $\O_{X,f(y)} \to$ $\O_{Y,y}$
+is zero. Since $\O_{X,f(y)} \to$ $\O_{Y,y}$ is a ring morphism this
+implies $\I_{f(y)} \ne \O_{X,f(y)}$, whence $f(y) \in
+\supp(\O_X/\I)$. Thus, on spaces, $\lv Y \rv \to$ $\lv X \rv$ factors
+through $\lv Z \rv$. Then by adjunction the map $\I \to$ $\O_X \to$ $f_*\O_Y$ is zero, inducing a map on sheaves $i_*\O_Z \iso$ $\O_X/\I \to$ $\O_Y$. This defines the required map $g \c Y \to$ $Z$.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;We have now characterised maps into closed subspaces in the way you’d
@@ -303,11 +290,10 @@ defining ideals behave under base change.&lt;/p&gt;
 &lt;div class=&quot;environment lemma&quot;&gt;
   &lt;h6&gt;4. Lemma&lt;/h6&gt;
 
-  &lt;p&gt;Let $i \c Z \to X$ be a closed immersion of locally ringed spaces,
-and let $\I$ be the corresponding ideal sheaf. Let $f \c Y \to
-X$ be any morphism of locally ringed spaces. Let $\I'$ be the
-image of the map $f^*\I \to f^*\O_X \iso \O_Y$ and
-$i' \c Z' \to Y$ the closed subspace determined by $\I'$. Then
+  &lt;p&gt;Let $i \c Z \to$ $X$ be a closed immersion of locally ringed spaces,
+and let $\I$ be the corresponding ideal sheaf. Let $f \c Y \to$ $X$ be any morphism of locally ringed spaces. Let $\I'$ be the
+image of the map $f^*\I \to$ $f^*\O_X \iso$ $\O_Y$ and
+$i' \c Z' \to$ $Y$ the closed subspace determined by $\I'$. Then
 we have a pullback diagram
 \[
 \begin{xy}
@@ -322,25 +308,22 @@ we have a pullback diagram
 &lt;div class=&quot;environment proof&quot;&gt;
   &lt;h6&gt;Proof&lt;/h6&gt;
 
-  &lt;p&gt;By &lt;a href=&quot;#factoring&quot;&gt;Lm. 4&lt;/a&gt;, giving a morphism of locally ringed spaces $T
-\to Z'$ is equivalent to giving a morphism $a \c T \to Y$ such that
-the map $a^*\I' \to \O_T$ is zero. We claim this condition
-is equivalent to asking that $(f \circ a)^*\I \to \O_T$ is
+  &lt;p&gt;By &lt;a href=&quot;#factoring&quot;&gt;Lm. 3&lt;/a&gt;, giving a morphism of locally ringed spaces $T
+\to$ $Z'$ is equivalent to giving a morphism $a \c T \to$ $Y$ such that
+the map $a^*\I' \to$ $\O_T$ is zero. We claim this condition
+is equivalent to asking that $(f \circ a)^*\I \to$ $\O_T$ is
 zero. Assuming this for the moment, this in turn is equivalent by
-&lt;a href=&quot;#factoring&quot;&gt;Lm. 4&lt;/a&gt; to giving a morphism $b \c T \to Z$ such that $f
+&lt;a href=&quot;#factoring&quot;&gt;Lm. 3&lt;/a&gt; to giving a morphism $b \c T \to$ $Z$ such that $f
 \circ a = i \circ b$. Thus $Z'$ satisfies the necessary universal
 property (in particular the morphism $g$ is determined by the
-identity $Z' \to Z'$, i.e. it is the morphism $b$ corresponding to
+identity $Z' \to$ $Z'$, i.e. it is the morphism $b$ corresponding to
 $a = i'$).&lt;/p&gt;
 
-  &lt;p&gt;To prove the claim assumed above, consider
-\[
-(f \circ a)^*\I \iso a^*f^*\I \to a^*\I' \to \O_T.
-\]
-By definition $f^*\I \to \I'$ is surjective, so since $a^*$ is
-right-exact, $(f \circ a)^*\I \to a^*I'$ is surjective, hence an
-epimorphism. It is then immediate that $(f \circ a)^*\I \to \O_T$ is
-zero if and only if $a^*\I' \to \O_T$ is zero.&lt;/p&gt;
+  &lt;p&gt;To prove the claim assumed above, consider $(f \circ a)^*\I \iso$ $a^*f^*\I \to$ $a^*\I' \to$ $\O_T$.  By definition $f^*\I \to$ $\I'$ is
+surjective, so since $a^*$ is right-exact, $(f \circ a)^*\I \to$ $a^*I'$
+is surjective, hence an epimorphism. It is then immediate that $(f
+\circ a)^*\I \to$ $\O_T$ is zero if and only if $a^*\I' \to$ $\O_T$ is
+zero.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
@@ -381,27 +364,27 @@ condition. That was a long footnote. &lt;a href=&quot;#fnref:immersion-general&q
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-      <pubDate>2014-05-25T00:00:00-04:00</pubDate>
+      <pubDate>Sun, 25 May 2014 22:30:00 -0400</pubDate>
       <link>http://www.arponr.com/base-change-closed-immersion</link>
       <guid isPermaLink="true">http://www.arponr.com/base-change-closed-immersion</guid>
-    </item>
-    
-    <item>
-      <title>Dancepack</title>
-      <description>
-</description>
-      <pubDate>2014-05-21T00:00:00-04:00</pubDate>
-      <link>http://www.arponr.com/dancepack</link>
-      <guid isPermaLink="true">http://www.arponr.com/dancepack</guid>
     </item>
     
     <item>
       <title>Alpenglow</title>
       <description>
 </description>
-      <pubDate>2014-05-21T00:00:00-04:00</pubDate>
+      <pubDate>Wed, 21 May 2014 13:00:00 -0400</pubDate>
       <link>http://www.arponr.com/alpenglow</link>
       <guid isPermaLink="true">http://www.arponr.com/alpenglow</guid>
+    </item>
+    
+    <item>
+      <title>Dancepack</title>
+      <description>
+</description>
+      <pubDate>Wed, 21 May 2014 12:30:00 -0400</pubDate>
+      <link>http://www.arponr.com/dancepack</link>
+      <guid isPermaLink="true">http://www.arponr.com/dancepack</guid>
     </item>
     
     <item>
@@ -437,7 +420,7 @@ where orange lights are few and far between&lt;br /&gt;
 stay in the current of time unseen  &lt;/p&gt;
 
 </description>
-      <pubDate>2014-05-14T00:00:00-04:00</pubDate>
+      <pubDate>Wed, 14 May 2014 16:20:00 -0400</pubDate>
       <link>http://www.arponr.com/black-river</link>
       <guid isPermaLink="true">http://www.arponr.com/black-river</guid>
     </item>
@@ -446,7 +429,7 @@ stay in the current of time unseen  &lt;/p&gt;
       <title>Simple Song</title>
       <description>
 </description>
-      <pubDate>2014-01-01T00:00:00-05:00</pubDate>
+      <pubDate>Wed, 01 Jan 2014 20:00:00 -0500</pubDate>
       <link>http://www.arponr.com/simple-song</link>
       <guid isPermaLink="true">http://www.arponr.com/simple-song</guid>
     </item>
@@ -489,9 +472,9 @@ only for a moment.&lt;/p&gt;
         minutes. That’s some astounding stuff.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-      <pubDate>2013-08-06T00:00:00-04:00</pubDate>
-      <link>http://www.arponr.com/google</link>
-      <guid isPermaLink="true">http://www.arponr.com/google</guid>
+      <pubDate>Tue, 06 Aug 2013 22:40:00 -0400</pubDate>
+      <link>http://www.arponr.com/numbers-at-google</link>
+      <guid isPermaLink="true">http://www.arponr.com/numbers-at-google</guid>
     </item>
     
   </channel>

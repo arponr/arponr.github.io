@@ -110,8 +110,7 @@ header h2 {
     width: 138.33333px; }
 
 .text {
-  line-height: 1.35em;
-  text-align: justify; }
+  line-height: 1.35em; }
   .text a:link, .text a:visited {
     text-decoration: underline;
     color: #100805; }
@@ -166,8 +165,8 @@ header h2 {
 .footnotes ol {
   list-style-type: decimal;
   margin-left: 15px;
-  font-size: 0.95rem;
-  line-height: 1.3em; }
+  font-size: 0.9rem;
+  line-height: 1.25em; }
 
 .playlist {
   list-style-type: none; }
