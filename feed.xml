@@ -7,15 +7,15 @@ layout: none
     <title>{{ site.name }}</title>
     <description>blog by arpon</description>
     <link>{{ site.url }}</link>
-    <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
     <atom:link href="{{ site.url }}/feed.xml" rel="self"/>
     {% for post in site.posts limit:25 %}
     <item>
-      <title>{{ post.title }}</title>
+      <title>{{ post.title | xml_escape }}</title>
       <description>{{ post.content | xml_escape }}</description>
-      <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
       <link>{{ site.url }}{{ post.permalink }}</link>
-      <guid isPermaLink="true">{{ site.url }}{{ post.permalink }}</guid>
+      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
     </item>
     {% endfor %}
   </channel>

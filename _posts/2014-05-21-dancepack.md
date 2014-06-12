@@ -1,6 +1,7 @@
 ---
 layout: playlist
 section: blog
+date: 2014-05-21 11:30:00 -0500
 title: Dancepack
 permalink: /dancepack
 desc: A pack for dancing.

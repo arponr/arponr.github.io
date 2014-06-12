@@ -2,6 +2,7 @@
 layout: text
 math: true
 section: blog
+date: 2014-05-25 21:30:00 -0500
 title: Base change of closed immersion
 permalink: /base-change-closed-immersion
 desc: First math post. Basic scheme theory as indicated by title.
@@ -76,27 +77,20 @@ the inclusion of the closed subspace $Z \ce
 
 ($\Rightarrow$) Assume $f$ factors through $i$. By definition we have
 an exact sequence $0 \to \I \to \O_X \to i_*\O_Z \to 0.$ Since $i^*$
-is right-exact we get an exact sequence $i^*\I \to i^*\O_X \to i^*i_*\O_Z \to 0$,
-where the map
-\[
-\O_Z \iso i^*\O_X \to i^*i_*\O_Z
-\iso \O_Z
-\]
-is an isomorphism. It follows that $i^*\I \to i^*\O_X$ is
+is right-exact we get an exact sequence $i^*\I \to i^*\O_X \to
+i^*i_*\O_Z \to 0$, where the map $\O_Z \iso i^*\O_X \to i^*i_*\O_Z
+\iso \O_Z$ is an isomorphism. It follows that $i^*\I \to i^*\O_X$ is
 zero, and since $f^* = g^* \circ i^*$ this implies $f^*\I \to \O_Y$ is
 zero as well.
 
-($\Leftarrow$) Assume $f^*\I \to \O_Y$ is zero. Let $y
-\in \lv Y \rv$. Then the map on stalks $\I_{f(y)} \to
-\O_{X,f(y)} \to \O_{Y,y}$ is zero. Since $\O_{X,f(y)}
-\to \O_{Y,y}$ is a ring morphism this implies $\I_{f(y)} \ne
-\O_{X,f(y)}$, whence $f(y) \in
-\supp(\O_X/\I)$. Thus, on spaces, $\lv Y \rv \to \lv X
-\rv$ factors through $\lv Z \rv$. Then by adjunction the map
-$\I \to \O_X \to f_*\O_Y$ is zero, inducing a map on
-sheaves $i_*\O_Z \iso \O_X/\I \to \O_Y$. This
-defines the required map $g \c Y \to Z$.
-\end{proof}
+($\Leftarrow$) Assume $f^*\I \to \O_Y$ is zero. Let $y \in \lv Y
+\rv$. Then the map on stalks $\I_{f(y)} \to \O_{X,f(y)} \to \O_{Y,y}$
+is zero. Since $\O_{X,f(y)} \to \O_{Y,y}$ is a ring morphism this
+implies $\I_{f(y)} \ne \O_{X,f(y)}$, whence $f(y) \in
+\supp(\O_X/\I)$. Thus, on spaces, $\lv Y \rv \to \lv X \rv$ factors
+through $\lv Z \rv$. Then by adjunction the map $\I \to \O_X \to
+f_*\O_Y$ is zero, inducing a map on sheaves $i_*\O_Z \iso \O_X/\I \to
+\O_Y$. This defines the required map $g \c Y \to Z$.  \end{proof}
 
 We have now characterised maps into closed subspaces in the way you'd
 expect: a map factors through a closed subspace if and only if the
@@ -134,14 +128,12 @@ property (in particular the morphism $g$ is determined by the
 identity $Z' \to Z'$, i.e. it is the morphism $b$ corresponding to
 $a = i'$).
 
-To prove the claim assumed above, consider
-\[
-(f \circ a)^*\I \iso a^*f^*\I \to a^*\I' \to \O_T.
-\]
-By definition $f^*\I \to \I'$ is surjective, so since $a^*$ is
-right-exact, $(f \circ a)^*\I \to a^*I'$ is surjective, hence an
-epimorphism. It is then immediate that $(f \circ a)^*\I \to \O_T$ is
-zero if and only if $a^*\I' \to \O_T$ is zero.  \end{proof}
+To prove the claim assumed above, consider $(f \circ a)^*\I \iso
+a^*f^*\I \to a^*\I' \to \O_T$.  By definition $f^*\I \to \I'$ is
+surjective, so since $a^*$ is right-exact, $(f \circ a)^*\I \to a^*I'$
+is surjective, hence an epimorphism. It is then immediate that $(f
+\circ a)^*\I \to \O_T$ is zero if and only if $a^*\I' \to \O_T$ is
+zero.  \end{proof}
 
 
 [^immersion-general]:

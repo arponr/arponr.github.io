@@ -1,6 +1,7 @@
 ---
 layout: playlist
 section: blog
+date: 2014-05-21 12:00:00 -0500
 title: Alpenglow
 permalink: /alpenglow
 desc: These are beautiful.

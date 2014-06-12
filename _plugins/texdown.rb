@@ -44,8 +44,8 @@ class Jekyll::Converters::Markdown::TeXdown
         output << "{::nomarkdown}<span id=#{$3}></span>{:/}" if has_ref
         output << "\\[\n\\begin{#{type}}\n"
         if has_ref || env_num
-          output << "\\tag{#{refnum}}\n"
           refnum += 1
+          output << "\\tag{#{refnum}}\n"
         end
         if has_ref
           refs[ref] = "#{env_label} #{refnum}"
@@ -57,8 +57,8 @@ class Jekyll::Converters::Markdown::TeXdown
         output << "class=\"environment #{env}\">\n"
         output << "\#" * 6
         if has_ref || env_num
-          output << "#{refnum}. "
           refnum += 1
+          output << "#{refnum}. "
         end
         if has_ref
           refs[ref] = "#{env_label} #{refnum}"
@@ -75,13 +75,17 @@ class Jekyll::Converters::Markdown::TeXdown
 
   def convert(input)
     # environments
-    input, refnum, refs = handle_environments(input, 1, Hash.new("???"))
+    input, refnum, refs = handle_environments(input, 0, Hash.new("???"))
 
     #references
     input = input.gsub(/\\ref\{(.*?)\}/m) {"<a href=\"\##{$1}\">#{refs[$1]}</a>"}
     
     # inline math
-    input = input.gsub(/\$.*?\$/m) {|j| "{::nomarkdown}#{j}{:/}"}
+    breaks = ["\\to", "\\iso"]
+    input = input.gsub(/\$.*?\$/m) do |j|
+      j = j.gsub(/(\s+#{Regexp.union(breaks)})\s+([^\$])/m, "\\1$ $\\2")
+      "{::nomarkdown}#{j}{:/}"
+    end
 
     # display math
     input = input.gsub(/\\\[.*?\\\]/m) {|j| "{::nomarkdown}#{j}{:/}"}

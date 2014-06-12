@@ -1,6 +1,7 @@
 ---
 layout: playlist
 section: blog
+date: 2014-01-01 20:00:00 -0500
 title: Simple Song
 permalink: /simple-song
 desc: A playlist worth posting.

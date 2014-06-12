@@ -3,6 +3,8 @@ url: http://www.arponr.com
 
 markdown: TeXdown
 
+permalink: /:title
+
 exclude: ["publish.sh"]
 
 

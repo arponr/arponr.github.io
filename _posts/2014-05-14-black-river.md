@@ -1,6 +1,7 @@
 ---
 layout: text
 section: blog
+date: 2014-05-14 15:20:00 -0500
 title: Black River
 permalink: /black-river
 desc: First full (draft of a) set of lyrics.
