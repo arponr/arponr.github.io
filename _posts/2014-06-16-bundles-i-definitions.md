@@ -279,5 +279,8 @@ $\{U_i\}$ of $X$ and isomorphisms of right $\G$-sheaves $\E|_{U_i}
 $\E$ has structure group $\G$ is immediate from \ref{auto-left}.
 \end{proof}
 
-Ok that's it for now. Next time we talk about the classification of
-bundles.
+Now, I've said that we've *generalised* the notion of fibre bundle
+with this notion of bundles as sheaves. But we've been proceeding on
+analogies alone. So though I've hinted at it in \ref{bundle-example},
+I haven't actually proved in what sense this is a generalisation. But
+I'll save that for the next post.
