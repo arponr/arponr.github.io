@@ -2,6 +2,7 @@
 
 cd ~/Documents/code/site &&
 jekyll build &&
+git add _site &&
 git commit -a &&
 git branch -D master &&
 git checkout -b master &&
