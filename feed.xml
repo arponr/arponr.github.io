@@ -4,7 +4,7 @@
     <title>arponr</title>
     <description>blog by arpon</description>
     <link>http://www.arponr.com</link>
-    <lastBuildDate>Mon, 16 Jun 2014 16:17:09 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 16 Jun 2014 17:15:17 -0400</lastBuildDate>
     <atom:link href="http://www.arponr.com/feed.xml" rel="self"/>
     
     <item>
@@ -302,8 +302,11 @@ $\{U_i\}$ of $X$ and isomorphisms of right $\G$-sheaves $\E|_{U_i}
 $\E$ has structure group $\G$ is immediate from &lt;a href=&quot;#auto-left&quot;&gt;Lm. 12&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Ok that’s it for now. Next time we talk about the classification of
-bundles.&lt;/p&gt;
+&lt;p&gt;Now, I’ve said that we’ve &lt;em&gt;generalised&lt;/em&gt; the notion of fibre bundle
+with this notion of bundles as sheaves. But we’ve been proceeding on
+analogies alone. So though I’ve hinted at it in &lt;a href=&quot;#bundle-example&quot;&gt;Ex. 8&lt;/a&gt;,
+I haven’t actually proved in what sense this is a generalisation. But
+I’ll save that for the next post.&lt;/p&gt;
 </description>
       <pubDate>Mon, 16 Jun 2014 17:10:00 -0400</pubDate>
       <link>http://www.arponr.com/bundles-i-definitions</link>
