@@ -11,7 +11,7 @@
 
 html {
   font-family: "calluna", serif;
-  font-size: 92%;
+  font-size: 14px;
   color: #302825;
   background: #fcfcfa; }
 
@@ -27,7 +27,7 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
-  font-size: 1rem; }
+  font-size: 14px; }
 
 sup, sub {
   vertical-align: baseline;
@@ -42,9 +42,6 @@ sub {
 p + p, p + blockquote, p + .environment, blockquote + p, blockquote + blockquote, blockquote + .environment, ul + p, ul + blockquote, ul + .environment, ol + p, ol + blockquote, ol + .environment, .environment + p, .environment + blockquote, .environment + .environment {
   margin-top: 10px; }
 
-.MathJax_Display {
-  margin: 10px 0 !important; }
-
 blockquote {
   font-family: "freight-sans-pro", sans-serif;
   color: #706865;
@@ -54,21 +51,21 @@ figure img {
   max-width: 100%; }
 figure figcaption {
   font-family: "freight-sans-pro", sans-serif;
-  font-size: 0.9rem;
+  font-size: 13px;
   color: #706865;
   text-align: center;
   margin-top: 5px; }
 
 .wrap {
   position: relative;
-  width: 460px;
+  width: 450px;
   margin: 30px auto; }
 
 nav {
   height: 20px;
   border-bottom: 1px solid #c0b8b5;
   font-family: "freight-sans-pro", sans-serif;
-  font-size: 0.9rem;
+  font-size: 13px;
   color: #706865;
   text-transform: uppercase; }
   nav li {
@@ -84,33 +81,35 @@ nav {
         color: #302825; }
 
 header h1 {
-  font-size: 1.5rem; }
+  font-size: 21px; }
 header h2 {
   margin-top: 2px;
   font-family: "freight-sans-pro", sans-serif;
+  font-size: 14px;
   color: #706865; }
 
 .stream li {
   margin-bottom: 15px;
-  width: 306.66667px; }
+  width: 300px; }
   .stream li .desc, .stream li .date {
     font-family: "freight-sans-pro", sans-serif; }
   .stream li .date {
     color: #706865;
-    font-size: 0.9rem;
+    font-size: 13px;
     width: 80px;
     float: left; }
   .stream li .title {
     display: block;
     margin-left: 80px; }
   .stream li .desc {
+    font-size: 14px;
     display: none;
     position: absolute;
-    left: 321.66667px;
-    width: 138.33333px; }
+    left: 315px;
+    width: 135px; }
 
 .text {
-  line-height: 1.35em; }
+  line-height: 1.4em; }
   .text a:link, .text a:visited {
     text-decoration: underline;
     color: #100805; }
@@ -127,7 +126,7 @@ header h2 {
       position: relative;
       left: -10px; }
   .text h4 {
-    font-size: 1.15rem;
+    font-size: 15px;
     font-variant: small-caps;
     text-align: center;
     margin-bottom: 10px; }
@@ -139,9 +138,21 @@ header h2 {
       content: '.\00a0'; }
     .text h6, .text h6 + p {
       display: inline; }
+  .text hr {
+    width: 15%;
+    height: 1px;
+    margin: 20px auto;
+    border: 0;
+    background: #c0b8b5; }
+
+.MathJax_Display {
+  margin: 8px 0 !important; }
+  .MathJax_Display * {
+    color: #302825 !important; }
 
 .environment {
-  position: relative; }
+  position: relative;
+  margin-left: 10px; }
   .environment:before {
     content: '';
     width: 1px;
@@ -165,8 +176,8 @@ header h2 {
 .footnotes ol {
   list-style-type: decimal;
   margin-left: 15px;
-  font-size: 0.9rem;
-  line-height: 1.25em; }
+  font-size: 13px;
+  line-height: 1.3em; }
 
 .playlist {
   list-style-type: none; }

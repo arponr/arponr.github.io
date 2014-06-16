@@ -16,8 +16,7 @@
     <script type="text/javascript" src="/js/Hyphenator.js"></script>
 
     
-    <script type="text/javascript"
-            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+    <script type="text/javascript" src="http://beta.mathjax.org/mathjax/latest/MathJax.js?config=/js/jax-config.js"></script>
     
 
     <script type="text/javascript" src="/js/j.js"></script>
@@ -125,8 +124,8 @@ monomorphism and the map of sheaves $\O_X \to$ $i_*\O_Z$ is an
 epimorphism, so the claim is clear.</p>
 </div>
 
-<div id="factoring" class="environment lemma">
-  <h6>3. Lemma</h6>
+<div id="factoring" class="environment proposition">
+  <h6>3. Proposition</h6>
 
   <p>Let $i \c Z \to$ $X$ be a closed immersion of locally ringed spaces,
 and let $\I$ be the corresponding ideal sheaf. Then a morphism
@@ -168,8 +167,8 @@ finally that closed immersions are stable under base change, as
 alluded to in the title, and moreover lets us see explicitly how the
 defining ideals behave under base change.</p>
 
-<div class="environment lemma">
-  <h6>4. Lemma</h6>
+<div class="environment proposition">
+  <h6>4. Proposition</h6>
 
   <p>Let $i \c Z \to$ $X$ be a closed immersion of locally ringed spaces,
 and let $\I$ be the corresponding ideal sheaf. Let $f \c Y \to$ $X$ be any morphism of locally ringed spaces. Let $\I'$ be the
@@ -189,22 +188,25 @@ we have a pullback diagram
 <div class="environment proof">
   <h6>Proof</h6>
 
-  <p>By <a href="#factoring">Lm. 3</a>, giving a morphism of locally ringed spaces $T
+  <p>By <a href="#factoring">Pr. 3</a>, giving a morphism of locally ringed spaces $T
 \to$ $Z'$ is equivalent to giving a morphism $a \c T \to$ $Y$ such that
 the map $a^*\I' \to$ $\O_T$ is zero. We claim this condition
 is equivalent to asking that $(f \circ a)^*\I \to$ $\O_T$ is
 zero. Assuming this for the moment, this in turn is equivalent by
-<a href="#factoring">Lm. 3</a> to giving a morphism $b \c T \to$ $Z$ such that $f
+<a href="#factoring">Pr. 3</a> to giving a morphism $b \c T \to$ $Z$ such that $f
 \circ a = i \circ b$. Thus $Z'$ satisfies the necessary universal
 property (in particular the morphism $g$ is determined by the
 identity $Z' \to$ $Z'$, i.e. it is the morphism $b$ corresponding to
 $a = i'$).</p>
 
-  <p>To prove the claim assumed above, consider $(f \circ a)^*\I \iso$ $a^*f^*\I \to$ $a^*\I' \to$ $\O_T$.  By definition $f^*\I \to$ $\I'$ is
-surjective, so since $a^*$ is right-exact, $(f \circ a)^*\I \to$ $a^*I'$
-is surjective, hence an epimorphism. It is then immediate that $(f
-\circ a)^*\I \to$ $\O_T$ is zero if and only if $a^*\I' \to$ $\O_T$ is
-zero.</p>
+  <p>To prove the claim assumed above, consider
+\[
+(f \circ a)^*\I \iso a^*f^*\I \to a^*\I' \to \O_T.
+\]
+By definition $f^*\I \to$ $\I'$ is surjective, so since $a^*$ is
+right-exact, $(f \circ a)^*\I \to$ $a^*I'$ is surjective, hence an
+epimorphism. It is then immediate that $(f \circ a)^*\I \to$ $\O_T$ is
+zero if and only if $a^*\I' \to$ $\O_T$ is zero.</p>
 </div>
 
 <div class="footnotes">
