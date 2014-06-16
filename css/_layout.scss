@@ -4,10 +4,6 @@ p, blockquote, ul, ol, .environment {
     }
 }
 
-.MathJax_Display {
-    margin: 10px 0 !important;
-}
-
 blockquote {
     font-family: $sans;
     color: $color-light;
@@ -70,6 +66,7 @@ header {
     h2 {
         margin-top: 2px;
         font-family: $sans;
+        font-size: $size-medium;
         color: $color-light;
     }
 }
@@ -95,6 +92,7 @@ header {
     }
 
     .desc {
+        font-size: $size-medium;
         display: none;
         position: absolute;
         left: $col2 + $stream-margin;

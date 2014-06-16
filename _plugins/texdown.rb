@@ -41,7 +41,9 @@ class Jekyll::Converters::Markdown::TeXdown
 
       if is_eqn
         type = (has_ref || env_num) ? env : "#{env}*" 
-        output << "{::nomarkdown}<span id=#{$3}></span>{:/}" if has_ref
+        if has_ref
+          output << "{::nomarkdown}<span id=#{$3}></span>{:/}"
+        end
         output << "\\[\n\\begin{#{type}}\n"
         if has_ref || env_num
           refnum += 1
@@ -50,10 +52,12 @@ class Jekyll::Converters::Markdown::TeXdown
         if has_ref
           refs[ref] = "#{env_label} #{refnum}"
         end
-        output << "#{content}\n\\end{#{type}}\n\\]\n"
+        output << "#{content}\n\\end{#{type}}\n\\]"
       else
         output << "<div "
-        output << "id=\"#{ref}\" " if has_ref
+        if has_ref
+          output << "id=\"#{ref}\" "
+        end
         output << "class=\"environment #{env}\">\n"
         output << "\#" * 6
         if has_ref || env_num

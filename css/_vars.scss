@@ -1,11 +1,11 @@
 $serif: "calluna", serif;
 $sans: "freight-sans-pro", sans-serif;
 
-$size-base: 1rem;
-$size-small: .9rem;
-$size-footnote: .9rem;
-$size-big: 1.15rem;
-$size-huge: 1.5rem;
+$size-base: 14px;
+$size-small: 13px;
+$size-medium: 14px;
+$size-large: 15px;
+$size-huge: 21px;
 
 $color-background: #fcfcfa;
 $color-base: #302825;
@@ -15,7 +15,7 @@ $color-link: #100805;
 $border-light: #c0b8b5;
 $border-dark: #706865;
 
-$width: 460px;
+$width: 450px;
 $col1: 80px;
 $col2: $width * 2/3;
 
@@ -28,5 +28,5 @@ $playlist-line: 1.2em;
 $env-border-cut: 8px;
 $env-border-offset: 10px;
 
-$line-text: 1.35em;
-$line-footnote: 1.25em;
+$line-text: 1.4em;
+$line-footnote: 1.3em;

@@ -29,7 +29,7 @@
     }
 
     h4 {
-        font-size: $size-big;
+        font-size: $size-large;
         font-variant: small-caps;
         text-align: center;
         margin-bottom: 10px;
@@ -50,10 +50,27 @@
             display: inline;
         }
     }
+
+    hr {
+        width: 15%;
+        height: 1px;
+        margin: 20px auto;
+        border: 0;
+        background: $border-light;
+    }
+}
+
+.MathJax_Display {
+    margin: 8px 0 !important;
+
+    & * {
+        color: $color-base !important;
+    }
 }
 
 .environment {
     position: relative;
+    margin-left: $env-border-offset;
 
     &:before {
         content: '';
@@ -84,7 +101,7 @@
     ol {
         list-style-type: decimal;
         margin-left: 15px;
-        font-size: $size-footnote;
+        font-size: $size-small;
         line-height: $line-footnote;
     }
 }

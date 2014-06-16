@@ -58,7 +58,7 @@ monomorphism and the map of sheaves $\O_X \to i_*\O_Z$ is an
 epimorphism, so the claim is clear.
 \end{proof}
 
-\begin{lemma}{factoring}
+\begin{proposition}{factoring}
 Let $i \c Z \to X$ be a closed immersion of locally ringed spaces,
 and let $\I$ be the corresponding ideal sheaf. Then a morphism
 of locally ringed spaces $f \c Y \to X$ factors through
@@ -66,7 +66,7 @@ $i$---i.e., there exists $g \c Y \to Z$ such that $f = i \circ
 g$---if and only if the induced map $f^*\I \to f^*\O_X
 \iso \O_Y$ is zero. Such a factoring $g$ is unique if it
 exists.
-\end{lemma}
+\end{proposition}
 
 \begin{proof}
 Uniqueness is immediate from $i$ being a monomorphism by
@@ -99,7 +99,7 @@ finally that closed immersions are stable under base change, as
 alluded to in the title, and moreover lets us see explicitly how the
 defining ideals behave under base change.
 
-\begin{lemma}
+\begin{proposition}
 Let $i \c Z \to X$ be a closed immersion of locally ringed spaces,
 and let $\I$ be the corresponding ideal sheaf. Let $f \c Y \to
 X$ be any morphism of locally ringed spaces. Let $\I'$ be the
@@ -114,7 +114,7 @@ we have a pullback diagram
 }
 \end{xy}
 \]
-\end{lemma}
+\end{proposition}
 
 \begin{proof}
 By \ref{factoring}, giving a morphism of locally ringed spaces $T
@@ -128,12 +128,15 @@ property (in particular the morphism $g$ is determined by the
 identity $Z' \to Z'$, i.e. it is the morphism $b$ corresponding to
 $a = i'$).
 
-To prove the claim assumed above, consider $(f \circ a)^*\I \iso
-a^*f^*\I \to a^*\I' \to \O_T$.  By definition $f^*\I \to \I'$ is
-surjective, so since $a^*$ is right-exact, $(f \circ a)^*\I \to a^*I'$
-is surjective, hence an epimorphism. It is then immediate that $(f
-\circ a)^*\I \to \O_T$ is zero if and only if $a^*\I' \to \O_T$ is
-zero.  \end{proof}
+To prove the claim assumed above, consider
+\[
+(f \circ a)^*\I \iso a^*f^*\I \to a^*\I' \to \O_T.
+\]
+By definition $f^*\I \to \I'$ is surjective, so since $a^*$ is
+right-exact, $(f \circ a)^*\I \to a^*I'$ is surjective, hence an
+epimorphism. It is then immediate that $(f \circ a)^*\I \to \O_T$ is
+zero if and only if $a^*\I' \to \O_T$ is zero.
+\end{proof}
 
 
 [^immersion-general]:
