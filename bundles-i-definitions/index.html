@@ -23,33 +23,41 @@
   </head>
 
   <body class="math">
-    <nav class="wrap">
-      <ul>
-        <li>
-          <a href="/notes/">notes</a></li>
-        <li class="active">
-          <a href="/blog/">blog</a></li>
-        <li>
-          <a href="/">about</a></li>
-      </ul>
-      arponr
-    </nav>
+    <div class="wrap grid">
+      <div class="col col-1-4">
+        <nav class="sec">
+          <ul>
+            <li class="name"><a href="/">Arpon Raksit</a></li>
+            <li>
+              <a href="/posts/">posts</a></li>
+            <ul>
+              <li class="active">
+                <a href="/posts/math/">math</a></li>
+              <li>
+                <a href="/posts/writing/">writing</a></li>
+            </ul>
+            <li>
+              <a href="/notes/">notes</a></li>
+          </ul>
+        </nav>
+      </div>
 
-    <header class="wrap">
-      <h1>Bundles I: definitions</h1>
-      
-      <h2>
-        16 Jun 2014
-        &mdash; 
-        Principal bundles and structure groups of fibre bundles, placed in the more general context of sheaves and torsors.
-      </h2>
-      
-    </header>
+      <div class="col col-3-4">
+        
+        <header class="sec">
+          
+          <h1>Bundles I: definitions</h1>
+          
+          
+          <h2>16 Jun 2014</h2>
+          
+        </header>
+        
 
 
     
 
-    <article class="wrap text hyphenate">
+    <section class="sec text">
       
       <div class="preamble">
         $$
@@ -124,7 +132,7 @@ t_{ij} \c U_i \cap U_j \to \aut(F),
 \]
 where $\aut(F)$ denotes the group of homeomorphisms of $F$ with
 itself, such that the automorphism $\phi_i\phi_j^{-1}$ of $(U_i \cap
-U_j) \times F$ is given by $\id \times t_{ij}$.</li>
+U_j) \times F$ is given by $(u,f) \mapsto (u, t_{ij}(u)(f))$.</li>
     <li>A fibre bundle $\pi \c E \to$ $X$ with <em>structure group $G$</em>, or a
 <em>$G$-bundle</em>, is one where the fibre $F$ is equipped with a left
 $G$-action and $\pi$ is equipped with a trivialisation for which the
@@ -250,7 +258,7 @@ the uniqueness of $g$ is immediate from the uniqueness of the $g_i$.</p>
 
 <p>Let’s bring things back down to bundles for a second.</p>
 
-<div class="environment definition">
+<div id="map-sheaf" class="environment definition">
   <h6>7. Definition</h6>
 
   <p>To any space $Y$ we can associate a sheaf of sets $\u{Y}$ on $X$: the
@@ -380,8 +388,9 @@ analogies alone. So though I’ve hinted at it in <a href="#bundle-example">Ex. 
 I haven’t actually proved in what sense this is a generalisation. But
 I’ll save that for the next post.</p>
 
-    </article>
+    </section>
 
+    </div>
   </body>
 </html>
 
