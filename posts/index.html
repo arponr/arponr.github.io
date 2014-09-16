@@ -1,0 +1,17 @@
+---
+layout: page
+section: posts
+title: Posts
+---
+
+<ul class="sec stream">
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <time class="date">{{ post.date | date_to_string }}</time>
+    <!-- <div class="desc"> -->
+    <!--   {{ post.desc }} -->
+    <!-- </div> -->
+  </li>
+  {% endfor %}
+</ul>
