@@ -1,6 +1,6 @@
 ---
 layout: text
-section: blog
+section: writing
 date: 2014-05-14 15:20:00 -0500
 title: Black River
 permalink: /black-river

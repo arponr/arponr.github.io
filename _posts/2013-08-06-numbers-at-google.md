@@ -1,6 +1,6 @@
 ---
 layout: text
-section: blog
+section: writing
 date: 2013-08-06 21:40:00 -0500
 title: Numbers at Google
 permalink: /numbers-at-google

@@ -5,7 +5,7 @@ p, blockquote, ul, ol, .environment {
 }
 
 blockquote {
-    font-family: $sans;
+    font-style: italic;
     color: $color-light;
     text-align: right;
 }
@@ -16,7 +16,6 @@ figure {
     }
 
     figcaption {
-        font-family: $sans;
         font-size: $size-small;
         color: $color-light;
         text-align: center;
@@ -25,77 +24,79 @@ figure {
 }
 
 .wrap {
-    position: relative;
     width: $width;
-    margin: 30px auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sec {
+    margin: 40px 0;
 }
 
 nav {
-    height: $nav-height;
-    border-bottom: 1px solid $border-light;
-    font-family: $sans;
-    font-size: $size-small;
+    position: fixed;
+    font-family: $mono;
     color: $color-light;
-    text-transform: uppercase;
+    font-size: $size-small;
+
+    .name {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
 
     li {
-        display: inline;
-        float: right;
-        margin-left: 15px;
-        height: $nav-height;
+        margin-bottom: 10px;
 
         a:link, a:visited {
             color: $color-light;
         }
 
         &.active {
-            border-bottom: 1pt solid $border-dark;
-
             a:link, a:visited {
                 color: $color-base;
             }
         }
     }
+
+    ul > ul {
+        margin-left: 10px;
+    }
 }
 
 header {
     h1 {
+        font-weight: 700;
         font-size: $size-huge;
     }
 
     h2 {
-        margin-top: 2px;
-        font-family: $sans;
-        font-size: $size-medium;
+        margin-top: 4px;
         color: $color-light;
     }
 }
 
 .stream li {
-    margin-bottom: $stream-margin;
-    width: $col2;
+    margin-bottom: 20px;
 
-    .desc, .date {
-        font-family: $sans;
+    a {
+        display: block;
+        height: 100%;
+
+        &:hover {
+            .title {
+                text-decoration: underline;
+            }
+        }
     }
 
     .date {
-        color: $color-light;
-        font-size: $size-small;
-        width: $col1;
-        float: left;
-    }
-
-    .title {
         display: block;
-        margin-left: $col1;
+        margin-top: 4px;
+        font-size: $size-medium;
+        color: $color-light;
     }
 
     .desc {
-        font-size: $size-medium;
-        display: none;
-        position: absolute;
-        left: $col2 + $stream-margin;
-        width: $width - $col2 - $stream-margin;
+        color: $color-light;
     }
 }

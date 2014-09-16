@@ -23,25 +23,33 @@
   </head>
 
   <body{% if page.math %} class="math"{% endif %}>
-    <nav class="wrap">
-      <ul>
-        <li{% if page.section == "notes" %} class="active"{% endif %}>
-          <a href="/notes/">notes</a></li>
-        <li{% if page.section == "blog" %} class="active"{% endif %}>
-          <a href="/blog/">blog</a></li>
-        <li{% if page.section == "about" %} class="active"{% endif %}>
-          <a href="/">about</a></li>
-      </ul>
-      arponr
-    </nav>
+    <div class="wrap grid">
+      <div class="col col-1-4">
+        <nav class="sec">
+          <ul>
+            <li class="name{% if page.section == "about" %} active{% endif %}"><a href="/">Arpon Raksit</a></li>
+            <li{% if page.section == "posts" %} class="active"{% endif %}>
+              <a href="/posts/">posts</a></li>
+            <ul>
+              <li{% if page.section == "math" %} class="active"{% endif %}>
+                <a href="/posts/math/">math</a></li>
+              <li{% if page.section == "writing" %} class="active"{% endif %}>
+                <a href="/posts/writing/">writing</a></li>
+            </ul>
+            <li{% if page.section == "notes" %} class="active"{% endif %}>
+              <a href="/notes/">notes</a></li>
+          </ul>
+        </nav>
+      </div>
 
-    <header class="wrap">
-      <h1>{{ page.title }}</h1>
-      {% if page.date or page.desc %}
-      <h2>
-        {% if page.date %}{{ page.date | date_to_string }}{% endif %}
-        {% if page.date and page.desc %}&mdash; {% endif %}
-        {% if page.desc %}{{ page.desc }}{% endif %}
-      </h2>
-      {% endif %}
-    </header>
+      <div class="col col-3-4">
+        {% if page.title or page.date %}
+        <header class="sec">
+          {% if page.title %}
+          <h1>{{ page.title }}</h1>
+          {% endif %}
+          {% if page.date %}
+          <h2>{{ page.date | date_to_string }}</h2>
+          {% endif %}
+        </header>
+        {% endif %}

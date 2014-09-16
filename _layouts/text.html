@@ -1,7 +1,7 @@
 {% include header.html %}
 
     {% if page.banner_url %}
-    <figure class="wrap">
+    <figure class="sec">
       <img src="/images/{{ page.banner_url }}" alt="{{ page.banner_alt }}">
       <figcaption>
         {{ page.banner_cap }}
@@ -9,7 +9,7 @@
     </figure>
     {% endif %}
 
-    <article class="wrap text hyphenate">
+    <section class="sec text">
       {% if page.preamble %}
       <div class="preamble">
         $$
@@ -20,6 +20,6 @@
       </div>
       {% endif %}
       {{ content }}
-    </article>
+    </section>
 
 {% include footer.html %}

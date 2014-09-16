@@ -1,7 +1,7 @@
 ---
 layout: text
 math: true
-section: blog
+section: math
 date: 2014-06-16 16:10:00 -0500
 title: "Bundles I: definitions"
 permalink: /bundles-i-definitions
@@ -60,7 +60,7 @@ Let $F$ be a space and $G$ a topological group.
   \]
   where $\aut(F)$ denotes the group of homeomorphisms of $F$ with
   itself, such that the automorphism $\phi_i\phi_j^{-1}$ of $(U_i \cap
-  U_j) \times F$ is given by $\id \times t_{ij}$.
+  U_j) \times F$ is given by $(u,f) \mapsto (u, t_{ij}(u)(f))$.
 - A fibre bundle $\pi \c E \to X$ with *structure group $G$*, or a
   *$G$-bundle*, is one where the fibre $F$ is equipped with a left
   $G$-action and $\pi$ is equipped with a trivialisation for which the
@@ -172,7 +172,7 @@ the uniqueness of $g$ is immediate from the uniqueness of the $g_i$.
 
 Let's bring things back down to bundles for a second.
 
-\begin{definition}
+\begin{definition}{map-sheaf}
 To any space $Y$ we can associate a sheaf of sets $\u{Y}$ on $X$: the
 *sheaf of continuous maps to $Y$*, given by the assignment
 \[

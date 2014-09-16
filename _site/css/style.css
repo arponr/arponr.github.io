@@ -1,3 +1,17 @@
+.grid .col {
+  float: left;
+  position: relative;
+  height: 100%;
+  min-height: 1px; }
+.grid .col-1-4 {
+  width: 25%; }
+.grid .col-2-4 {
+  width: 50%; }
+.grid .col-3-4 {
+  width: 75%; }
+.grid .col-4-4 {
+  width: 100%; }
+
 * {
   margin: 0;
   padding: 0;
@@ -10,10 +24,11 @@
     outline: none; }
 
 html {
-  font-family: "calluna", serif;
-  font-size: 14px;
+  font-family: Times New Roman, Times, serif;
+  font-size: 15px;
+  line-height: 1;
   color: #302825;
-  background: #fcfcfa; }
+  background: white; }
 
 body {
   overflow-y: scroll; }
@@ -27,7 +42,7 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
-  font-size: 14px; }
+  font-size: 15px; }
 
 sup, sub {
   vertical-align: baseline;
@@ -43,73 +58,67 @@ p + p, p + blockquote, p + .environment, blockquote + p, blockquote + blockquote
   margin-top: 10px; }
 
 blockquote {
-  font-family: "freight-sans-pro", sans-serif;
+  font-style: italic;
   color: #706865;
   text-align: right; }
 
 figure img {
   max-width: 100%; }
 figure figcaption {
-  font-family: "freight-sans-pro", sans-serif;
   font-size: 13px;
   color: #706865;
   text-align: center;
   margin-top: 5px; }
 
 .wrap {
-  position: relative;
-  width: 450px;
-  margin: 30px auto; }
+  width: 640px;
+  margin: 0 auto;
+  position: relative; }
+
+.sec {
+  margin: 40px 0; }
 
 nav {
-  height: 20px;
-  border-bottom: 1px solid #c0b8b5;
-  font-family: "freight-sans-pro", sans-serif;
-  font-size: 13px;
+  position: fixed;
+  font-family: "adaptive-mono", monospace;
   color: #706865;
-  text-transform: uppercase; }
+  font-size: 13px; }
+  nav .name {
+    text-transform: uppercase;
+    margin-bottom: 10px; }
   nav li {
-    display: inline;
-    float: right;
-    margin-left: 15px;
-    height: 20px; }
+    margin-bottom: 10px; }
     nav li a:link, nav li a:visited {
       color: #706865; }
-    nav li.active {
-      border-bottom: 1pt solid #706865; }
-      nav li.active a:link, nav li.active a:visited {
-        color: #302825; }
+    nav li.active a:link, nav li.active a:visited {
+      color: #302825; }
+  nav ul > ul {
+    margin-left: 10px; }
 
 header h1 {
-  font-size: 21px; }
+  font-weight: 700;
+  font-size: 22px; }
 header h2 {
-  margin-top: 2px;
-  font-family: "freight-sans-pro", sans-serif;
-  font-size: 14px;
+  margin-top: 4px;
   color: #706865; }
 
 .stream li {
-  margin-bottom: 15px;
-  width: 300px; }
-  .stream li .desc, .stream li .date {
-    font-family: "freight-sans-pro", sans-serif; }
-  .stream li .date {
-    color: #706865;
-    font-size: 13px;
-    width: 80px;
-    float: left; }
-  .stream li .title {
+  margin-bottom: 20px; }
+  .stream li a {
     display: block;
-    margin-left: 80px; }
-  .stream li .desc {
+    height: 100%; }
+    .stream li a:hover .title {
+      text-decoration: underline; }
+  .stream li .date {
+    display: block;
+    margin-top: 4px;
     font-size: 14px;
-    display: none;
-    position: absolute;
-    left: 315px;
-    width: 135px; }
+    color: #706865; }
+  .stream li .desc {
+    color: #706865; }
 
 .text {
-  line-height: 1.4em; }
+  line-height: 1.3em; }
   .text a:link, .text a:visited {
     text-decoration: underline;
     color: #100805; }
@@ -126,7 +135,7 @@ header h2 {
       position: relative;
       left: -10px; }
   .text h4 {
-    font-size: 15px;
+    font-size: 13px;
     font-variant: small-caps;
     text-align: center;
     margin-bottom: 10px; }
@@ -156,11 +165,11 @@ header h2 {
   .environment:before {
     content: '';
     width: 1px;
-    height: calc(100% - 8px);
+    height: calc(100% - 6px);
     background: #c0b8b5;
     position: absolute;
     left: -10px;
-    top: 4px; }
+    top: 3px; }
 
 .preamble {
   display: none; }
@@ -170,14 +179,14 @@ header h2 {
   display: block;
   background: #c0b8b5;
   height: 1px;
-  width: 80px;
+  width: 75px;
   margin-top: 30px;
   margin-bottom: 10px; }
 .footnotes ol {
   list-style-type: decimal;
   margin-left: 15px;
   font-size: 13px;
-  line-height: 1.3em; }
+  line-height: 1.2em; }
 
 .playlist {
   list-style-type: none; }
@@ -188,7 +197,7 @@ header h2 {
     line-height: 1.2em;
     position: relative; }
     .playlist li:before {
-      font-family: "freight-sans-pro", sans-serif;
+      font-family: "adaptive-mono", monospace;
       content: counter(song);
       counter-increment: song;
       position: absolute;
@@ -206,7 +215,7 @@ header h2 {
       right: -29px; }
 
 .song-meta {
-  font-family: "freight-sans-pro", sans-serif;
+  font-family: "adaptive-mono", monospace;
   color: #706865; }
 
 .spotify iframe {

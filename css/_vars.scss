@@ -1,32 +1,39 @@
-$serif: "calluna", serif;
-$sans: "freight-sans-pro", sans-serif;
+$serif: Times New Roman, Times, serif;
+$mono: "adaptive-mono", monospace;
 
-$size-base: 14px;
+$size-base: 15px;
 $size-small: 13px;
+$size-tiny: 12px;
 $size-medium: 14px;
-$size-large: 15px;
-$size-huge: 21px;
+$size-large: 13px;
+$size-huge: 22px;
 
-$color-background: #fcfcfa;
+$line-base-unitless: 1;
+$line-base: $size-base * $line-base-unitless;
+
+$color-background: #ffffff;
 $color-base: #302825;
 $color-light: #706865;
 $color-link: #100805;
 
+$accent-dark: #407050;
+$accent-light: #80a090;
+
 $border-light: #c0b8b5;
 $border-dark: #706865;
 
-$width: 450px;
-$col1: 80px;
-$col2: $width * 2/3;
+$width: 640px;
+$col1: 75px;
+$col2: 375px;
 
 $nav-height: 20px;
-$stream-margin: 15px;
+$stream-margin: 20px;
 
 $playlist-margin: 30px;
 $playlist-line: 1.2em;
 
-$env-border-cut: 8px;
+$env-border-cut: 6px;
 $env-border-offset: 10px;
 
-$line-text: 1.4em;
-$line-footnote: 1.3em;
+$line-text: 1.3em;
+$line-footnote: 1.2em;

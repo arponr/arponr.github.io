@@ -8,10 +8,9 @@ MathJax.Hub.Config({
     },
     jax: ["input/TeX", "output/HTML-CSS"],
     "HTML-CSS": {
-        scale: 95,
-        availableFonts: [],
         imageFont: null,
-        webFont: "Neo-Euler",
+        webFont: "STIX-Web",
+        scale: 95,
         mtextFontInherit: true
     },
     showMathMenu: false,
@@ -24,7 +23,7 @@ MathJax.Hub.Config({
             opname: ["\\operatorname{\\text{#1}}{}\\!", 1],
             mathcal: ["\\mathscr{#1}", 1],
             mathrm: ["\\text{#1}", 1],
-            iso: "\\mathrel{\\large\\simeq}"
+            iso: "\\simeq",
         }
     }
 });

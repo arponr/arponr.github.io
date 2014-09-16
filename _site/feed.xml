@@ -4,7 +4,7 @@
     <title>arponr</title>
     <description>blog by arpon</description>
     <link>http://www.arponr.com</link>
-    <lastBuildDate>Mon, 16 Jun 2014 17:15:17 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2014 01:22:15 -0400</lastBuildDate>
     <atom:link href="http://www.arponr.com/feed.xml" rel="self"/>
     
     <item>
@@ -52,7 +52,7 @@ t_{ij} \c U_i \cap U_j \to \aut(F),
 \]
 where $\aut(F)$ denotes the group of homeomorphisms of $F$ with
 itself, such that the automorphism $\phi_i\phi_j^{-1}$ of $(U_i \cap
-U_j) \times F$ is given by $\id \times t_{ij}$.&lt;/li&gt;
+U_j) \times F$ is given by $(u,f) \mapsto (u, t_{ij}(u)(f))$.&lt;/li&gt;
     &lt;li&gt;A fibre bundle $\pi \c E \to$ $X$ with &lt;em&gt;structure group $G$&lt;/em&gt;, or a
 &lt;em&gt;$G$-bundle&lt;/em&gt;, is one where the fibre $F$ is equipped with a left
 $G$-action and $\pi$ is equipped with a trivialisation for which the
@@ -87,7 +87,7 @@ with the following definitions as our basic tools.&lt;/p&gt;
   &lt;ul&gt;
     &lt;li&gt;A &lt;em&gt;$\G$-sheaf&lt;/em&gt; on $X$ is a sheaf of sets $\E$ on $X$ together with
 a right action $\E \times \G \to$ $\E$ of $\G$. A &lt;em&gt;morphism of
-$\G$-sheaves&lt;/em&gt; $\E \to$ $\E'$ on $X$ is a morphism of sheaves of sets
+$\G$-sheaves&lt;/em&gt; $\E \to$ $\E&#39;$ on $X$ is a morphism of sheaves of sets
 which commutes with the $\G$-actions.&lt;/li&gt;
     &lt;li&gt;A &lt;em&gt;$\G$-pseudotorsor&lt;/em&gt; is $\G$-sheaf $\E$ such that for all $U
 \subseteq X$ open, either $\E(U)$ is empty or the action of $\G(U)$
@@ -178,7 +178,7 @@ the uniqueness of $g$ is immediate from the uniqueness of the $g_i$.&lt;/p&gt;
 
 &lt;p&gt;Let’s bring things back down to bundles for a second.&lt;/p&gt;
 
-&lt;div class=&quot;environment definition&quot;&gt;
+&lt;div id=&quot;map-sheaf&quot; class=&quot;environment definition&quot;&gt;
   &lt;h6&gt;7. Definition&lt;/h6&gt;
 
   &lt;p&gt;To any space $Y$ we can associate a sheaf of sets $\u{Y}$ on $X$: the
@@ -527,12 +527,12 @@ surjective.&lt;/li&gt;
     &lt;li&gt;the &lt;em&gt;ideal sheaf&lt;/em&gt; of $Z$ is defined as $\I \ce \ker(\O_X
 \to$ $i_*\O_Z)$;&lt;/li&gt;
     &lt;li&gt;the &lt;em&gt;closed subspace&lt;/em&gt; determined by $\I$ is defined as the
-locally ringed space $Z' \ce (\supp(\O_X/\I),
+locally ringed space $Z&#39; \ce (\supp(\O_X/\I),
 \O_X/\I)$;&lt;/li&gt;
-    &lt;li&gt;the natural map $i' \c Z' \to$ $X$ is a closed immersion with ideal
+    &lt;li&gt;the natural map $i&#39; \c Z&#39; \to$ $X$ is a closed immersion with ideal
 sheaf $\I$;&lt;/li&gt;
-    &lt;li&gt;$i \c Z \to$ $X$ in fact induces an isomorphism $h \c Z \to$ $Z'$
-such that $i = i' \circ h$.&lt;/li&gt;
+    &lt;li&gt;$i \c Z \to$ $X$ in fact induces an isomorphism $h \c Z \to$ $Z&#39;$
+such that $i = i&#39; \circ h$.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
@@ -599,14 +599,14 @@ defining ideals behave under base change.&lt;/p&gt;
   &lt;h6&gt;4. Proposition&lt;/h6&gt;
 
   &lt;p&gt;Let $i \c Z \to$ $X$ be a closed immersion of locally ringed spaces,
-and let $\I$ be the corresponding ideal sheaf. Let $f \c Y \to$ $X$ be any morphism of locally ringed spaces. Let $\I'$ be the
+and let $\I$ be the corresponding ideal sheaf. Let $f \c Y \to$ $X$ be any morphism of locally ringed spaces. Let $\I&#39;$ be the
 image of the map $f^*\I \to$ $f^*\O_X \iso$ $\O_Y$ and
-$i' \c Z' \to$ $Y$ the closed subspace determined by $\I'$. Then
+$i&#39; \c Z&#39; \to$ $Y$ the closed subspace determined by $\I&#39;$. Then
 we have a pullback diagram
 \[
 \begin{xy}
 \xymatrix {
- Z' \ar[d]^g \ar[r]_{i'} &amp; Y \ar[d]_f \\
+ Z&#39; \ar[d]^g \ar[r]_{i&#39;} &amp; Y \ar[d]_f \\
  Z \ar[r]^i &amp; X.
 }
 \end{xy}
@@ -617,24 +617,24 @@ we have a pullback diagram
   &lt;h6&gt;Proof&lt;/h6&gt;
 
   &lt;p&gt;By &lt;a href=&quot;#factoring&quot;&gt;Pr. 3&lt;/a&gt;, giving a morphism of locally ringed spaces $T
-\to$ $Z'$ is equivalent to giving a morphism $a \c T \to$ $Y$ such that
-the map $a^*\I' \to$ $\O_T$ is zero. We claim this condition
+\to$ $Z&#39;$ is equivalent to giving a morphism $a \c T \to$ $Y$ such that
+the map $a^*\I&#39; \to$ $\O_T$ is zero. We claim this condition
 is equivalent to asking that $(f \circ a)^*\I \to$ $\O_T$ is
 zero. Assuming this for the moment, this in turn is equivalent by
 &lt;a href=&quot;#factoring&quot;&gt;Pr. 3&lt;/a&gt; to giving a morphism $b \c T \to$ $Z$ such that $f
-\circ a = i \circ b$. Thus $Z'$ satisfies the necessary universal
+\circ a = i \circ b$. Thus $Z&#39;$ satisfies the necessary universal
 property (in particular the morphism $g$ is determined by the
-identity $Z' \to$ $Z'$, i.e. it is the morphism $b$ corresponding to
-$a = i'$).&lt;/p&gt;
+identity $Z&#39; \to$ $Z&#39;$, i.e. it is the morphism $b$ corresponding to
+$a = i&#39;$).&lt;/p&gt;
 
   &lt;p&gt;To prove the claim assumed above, consider
 \[
-(f \circ a)^*\I \iso a^*f^*\I \to a^*\I' \to \O_T.
+(f \circ a)^*\I \iso a^*f^*\I \to a^*\I&#39; \to \O_T.
 \]
-By definition $f^*\I \to$ $\I'$ is surjective, so since $a^*$ is
-right-exact, $(f \circ a)^*\I \to$ $a^*I'$ is surjective, hence an
+By definition $f^*\I \to$ $\I&#39;$ is surjective, so since $a^*$ is
+right-exact, $(f \circ a)^*\I \to$ $a^*I&#39;$ is surjective, hence an
 epimorphism. It is then immediate that $(f \circ a)^*\I \to$ $\O_T$ is
-zero if and only if $a^*\I' \to$ $\O_T$ is zero.&lt;/p&gt;
+zero if and only if $a^*\I&#39; \to$ $\O_T$ is zero.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
@@ -681,24 +681,6 @@ condition. That was a long footnote. &lt;a href=&quot;#fnref:immersion-general&q
     </item>
     
     <item>
-      <title>Alpenglow</title>
-      <description>
-</description>
-      <pubDate>Wed, 21 May 2014 13:00:00 -0400</pubDate>
-      <link>http://www.arponr.com/alpenglow</link>
-      <guid isPermaLink="true">http://www.arponr.com/alpenglow</guid>
-    </item>
-    
-    <item>
-      <title>Dancepack</title>
-      <description>
-</description>
-      <pubDate>Wed, 21 May 2014 12:30:00 -0400</pubDate>
-      <link>http://www.arponr.com/dancepack</link>
-      <guid isPermaLink="true">http://www.arponr.com/dancepack</guid>
-    </item>
-    
-    <item>
       <title>Black River</title>
       <description>&lt;p&gt;dark dark night and cold cold flow&lt;br /&gt;
 i’m still alone&lt;br /&gt;
@@ -734,15 +716,6 @@ stay in the current of time unseen  &lt;/p&gt;
       <pubDate>Wed, 14 May 2014 16:20:00 -0400</pubDate>
       <link>http://www.arponr.com/black-river</link>
       <guid isPermaLink="true">http://www.arponr.com/black-river</guid>
-    </item>
-    
-    <item>
-      <title>Simple Song</title>
-      <description>
-</description>
-      <pubDate>Wed, 01 Jan 2014 20:00:00 -0500</pubDate>
-      <link>http://www.arponr.com/simple-song</link>
-      <guid isPermaLink="true">http://www.arponr.com/simple-song</guid>
     </item>
     
     <item>

@@ -1,9 +1,9 @@
 jQuery ->
-    $(".stream li").each ->
-        $(this).hover ->
-            $(this).find(".desc").toggle()
-            return
-        return
+    # $(".stream li").each ->
+    #     $(this).hover ->
+    #         $(this).find(".desc").toggle()
+    #         return
+    #     return
 
     # if !$(document.body).hasClass("math")
     #     Hyphenator.run()

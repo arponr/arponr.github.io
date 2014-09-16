@@ -1,7 +1,7 @@
 ---
 layout: text
 math: true
-section: blog
+section: math
 date: 2014-05-25 21:30:00 -0500
 title: Base change of closed immersion
 permalink: /base-change-closed-immersion

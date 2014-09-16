@@ -24,14 +24,16 @@ notes:
         completion of a metric space
 ---
 
-<ul class="stream">
+<ul class="sec stream">
   {% for entry in page.notes %}
   <li>
-    <div class="desc">
-      {{ entry.desc }}
-    </div>
-    <time class="date">{{ entry.date }}</time>
-    <a class="title" href="/notes/{{ entry.url }}">{{ entry.title }}</a>
+    <a href="{{ entry.url }}">
+      <div class="title">{{ entry.title }}</div>
+      <time class="date">{{ entry.date | date_to_string }}</time>
+      <!-- <div class="desc"> -->
+      <!--   {{ entry.desc }} -->
+      <!-- </div> -->
+    </a>
   </li>
   {% endfor %}
 </ul>

@@ -1,7 +1,7 @@
 ---
 layout: text
 math: true
-section: blog
+section: math
 date: 2014-05-29 20:00:00 -0500
 title: Finite presentation basics
 permalink: /finite-presentation-basics
