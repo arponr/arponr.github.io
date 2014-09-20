@@ -96,8 +96,7 @@ nav {
     margin-left: 10px; }
 
 header h1 {
-  font-weight: 700;
-  font-size: 22px; }
+  font-size: 23px; }
 header h2 {
   margin-top: 4px;
   color: #706865; }
@@ -135,12 +134,11 @@ header h2 {
       position: relative;
       left: -10px; }
   .text h4 {
-    font-size: 13px;
-    font-variant: small-caps;
-    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
     margin-bottom: 10px; }
     * + .text h4 {
-      margin-top: 20px; }
+      margin-top: 30px; }
   .text h6 {
     font-weight: bold; }
     .text h6:after {
