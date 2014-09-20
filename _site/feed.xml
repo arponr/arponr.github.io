@@ -4,8 +4,970 @@
     <title>arponr</title>
     <description>blog by arpon</description>
     <link>http://www.arponr.com</link>
-    <lastBuildDate>Tue, 16 Sep 2014 01:33:44 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 20 Sep 2014 17:45:03 -0400</lastBuildDate>
     <atom:link href="http://www.arponr.com/feed.xml" rel="self"/>
+    
+    <item>
+      <title>Hotel</title>
+      <description>&lt;p&gt;Waft up into the atmosphere with all the other in-flight scents, for
+some precisely prescribed but immaterial length of time, drifting and
+swirling and who knows what goes on at those altitudes, till the
+prescription runs out and you are sucked down into the world. Fall
+through infinity—fractals of branching passages, vague semiotics and
+cordoned sinusoids—till infinity spits you out in front of
+Arrivals. Watch sinister, swarthy creatures slouching by towards
+Departures while you wait to diffuse into some vehicle which barely
+stops and then flows, onward, submerged in a viscous
+cavalcade. Surface and emerge, finally, at your destination. The night
+is dark red and pulsing.&lt;/p&gt;
+
+&lt;p&gt;Come inside, welcome. This hotel is nestled at the heart of me.&lt;/p&gt;
+
+&lt;h4&gt;Floor Eleven&lt;/h4&gt;
+
+&lt;p&gt;It’s October of 2004, and the hallway is lined with those lurid
+lockers, the ones which send the average American hurtling back in
+fits of nostalgia toward some teenage point in spacetime. Only this is
+one of my not-even-teen years, and it’s right here and now.&lt;/p&gt;
+
+&lt;p&gt;Look at me—no, not at me, at not-even-teen me—leaning like I must
+have seen on tv against an orange locker adjacent to her orange
+locker. I’m fidgeting, imperceptibly I hope, maybe even just
+inwardly. A pen full of red ink comes out of my pocket and into my
+hand and begins to fidget with me. What am I saying?&lt;/p&gt;
+
+&lt;p&gt;“. . . .”&lt;/p&gt;
+
+&lt;p&gt;I capital-L Like, a.k.a. like-like, her. Who knows why. Are we even
+friends? Seriously, what am I saying? That capital-L has planted
+itself right inside me, its roots reach far deeper than my sorry logic
+could ever dig.&lt;/p&gt;
+
+&lt;p&gt;“. . . .”&lt;/p&gt;
+
+&lt;p&gt;My neck squirms, eyes wander, searching for some wit or charm or
+something, but I find something else: the pen explodes. The idiomatic
+“explosion” is more metaphoric than literal though, the spray of ink
+scrawny and pathetic, yet in perfectly catastrophic trajectory,
+existing in all the wrong places and moments.&lt;/p&gt;
+
+&lt;p&gt;I am too young for innuendo to apply. This is real.&lt;/p&gt;
+
+&lt;p&gt;Dear god, I am bleeding all over her and her baby-blue North Face
+fleece. So many dreams shatter around me as my glossy oxygenated red
+struggles to harmonize with her soft baby-blue, like some grotesque
+hall of inconsistently colored mirrors. My neck snaps into place, eyes
+freeze, and, as neck- and eye-mobility appear to be gradually
+transferred over to her, she slowly lifts her heavy gaze from her
+orange locker. The gaze, expressing and therefore evoking terror,
+thuds down onto me. I need to react. I Like her so much I’m
+bleeding. I need a reaction.&lt;/p&gt;
+
+&lt;p&gt;I laugh. I double over, laughing.&lt;/p&gt;
+
+&lt;p&gt;Her terror metamorphoses in between eye-blinks, into anger, then
+sadness, then disgust, all those feelings I decide between mirroring
+eye-blinks I had always wanted from her. Yes, of course, I hate her
+with all my heart.&lt;/p&gt;
+
+&lt;p&gt;“. . . .”&lt;/p&gt;
+
+&lt;p&gt;Does she say something? A ventricle is pounding at my ear, and I am
+far too busy with my laughter. The school bell interposes to notify us
+the day is over, cackling along with me as my brand new nemesis storms
+off into the afternoon.&lt;/p&gt;
+
+&lt;hr /&gt;
+</description>
+      <pubDate>Sat, 20 Sep 2014 01:50:22 -0400</pubDate>
+      <link>http://www.arponr.com/hotel</link>
+      <guid isPermaLink="true">http://www.arponr.com/hotel</guid>
+    </item>
+    
+    <item>
+      <title>Structures on manifolds</title>
+      <description>&lt;p&gt;I’m trying to learn some stable homotopy theory this summer, and am
+starting out by reading about bordism. My first goal is to understand
+Thom’s computation of the unoriented bordism ring, i.e., the
+classification of unoriented compact smooth manifolds up to
+bordism. I’ve been following a couple of sets of notes by &lt;a href=&quot;//www-math.mit.edu/~hrm/papers/cobordism.pdf&quot;&gt;Haynes
+Miller&lt;/a&gt; and &lt;a href=&quot;//www.math.umass.edu/~weston/oldpapers/cobord.pdf&quot;&gt;Tom Weston&lt;/a&gt;. I’m hoping to keep my own
+detailed notes along the way, which I’ll probably put up at the end of
+the summer. But I’ll try to post about some of it here as I go, too.&lt;/p&gt;
+
+&lt;p&gt;This post is the result of me getting rather confused about the
+various bordism problems about “strucured” manifolds, and is
+essentially just an attempt to sort out how I should think about these
+“structures”. The structure comes from the stable normal bundle, so we
+begin there.&lt;/p&gt;
+
+&lt;div class=&quot;environment notation&quot;&gt;
+  &lt;h6&gt;Notation&lt;/h6&gt;
+
+  &lt;p&gt;Let $TM$ denote the tangent bundle of a smooth manifold $M$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;normal-bundle&quot; class=&quot;environment definition&quot;&gt;
+  &lt;h6&gt;1. Definition&lt;/h6&gt;
+
+  &lt;p&gt;Let $i \c M \to$ $N$ be an immersion of smooth manifolds. The &lt;em&gt;normal
+bundle&lt;/em&gt; $\nu_i$ of $i$ (or of $M$ in $N$) is the vector bundle on $M$
+defined by the short exact sequence $0 \to$ $TM \to$ $i^*TN \to$ $\nu_i \to$ $0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;normal-composition&quot; class=&quot;environment proposition&quot;&gt;
+  &lt;h6&gt;2. Proposition&lt;/h6&gt;
+
+  &lt;p&gt;Let $i \c L \to$ $M$ and $j \c M \to$ $N$ be immersions of smooth
+manifolds. Let $k \ce j \circ i$. Then there is a short exact sequence
+\[
+0 \to \nu_i \to \nu_k \to i^*\nu_j \to 0
+\]
+of bundles on $L$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+
+  &lt;p&gt;Since pullback of vector bundles is exact we have
+\[
+i^*\nu_j \iso i^*\l(\f{j^*TN}{TM}\r) \iso \f{k^*TN}{i^*TM} \iso
+\f{k^*TN/TL}{i^*TM/TL} \iso \f{\nu_k}{\nu_i}.
+\]&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;stable-normal&quot; class=&quot;environment definition&quot;&gt;
+  &lt;h6&gt;3. Definition&lt;/h6&gt;
+
+  &lt;p&gt;Let $M$ be a compact smooth manifold. Let $[\xi] \in [M, BO]$ be the
+homotopy class classifying the tangent bundle $TM \to$ $M$ (stably). The
+&lt;em&gt;stable normal bundle&lt;/em&gt; $\nu_M$ of $M$ is defined as the inverse of
+$[\xi]$ in the group $[M, BO] \iso$ $\wt{KO}(M)$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;normal-classifies-stable&quot; class=&quot;environment remark&quot;&gt;
+  &lt;h6&gt;4. Remark&lt;/h6&gt;
+
+  &lt;p&gt;Note if $i \c M \to$ $\R^n$ is an immersion (which always exists!) then
+by definition we have a short exact sequence
+\[
+0 \to TM \to i^*T\R^n \to \nu_i \to 0.
+\]
+Since $T\R^n$ is trivial it follows that $\nu_i$ is inverse to $TM$ in
+$\wt{KO}(M)$. Thus the stable classifying map $M \to$ $BO$ of $\nu_i$
+determines the homotopy class of the stable normal bundle $\nu_M$
+(hence the terminology). But note that, by definition, $\nu_M$ does
+not depend on the choice of dimension $n$ and immersion $i$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment notation&quot;&gt;
+  &lt;h6&gt;Notation&lt;/h6&gt;
+
+  &lt;p&gt;Suppose we have maps $a,b,c \c X \to$ $Y$. We denote a homotopy $h \c X
+\times I \to$ $Y$ from $a$ to $b$ by by $h \c a \to$ $b$. We denote the
+composition of homotopies $h \c a \to$ $b$ and $k \c b \to$ $c$ by $k *
+h$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;f-structure-prelim&quot; class=&quot;environment definitions&quot;&gt;
+  &lt;h6&gt;5. Definitions&lt;/h6&gt;
+
+  &lt;p&gt;Let $f \c B \to$ $BO$ be any map and $g \c M \to$ $BO$ a map from a
+compact smooth manifold $M$. An &lt;em&gt;$f$-structure&lt;/em&gt; on $g$ is an
+equivalence class of homotopy lifts $(\bar g, h)$ of $g$, where&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;a &lt;em&gt;homotopy lift&lt;/em&gt; of $g$ is a map $\bar g \c M \to$ $B$ and a homotopy
+$h \c f \circ \bar g \to$ $g$;&lt;/li&gt;
+    &lt;li&gt;two pairs $(\bar g_1, h_1)$ and $(\bar g_2, h_2)$ are equivalent if
+and only if there is a homotopy $\bar h \c \bar g_1 \to$ $\bar g_2$
+such that $h_2 * (f \circ \bar h) = h_1$.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;f-structure-bijection&quot; class=&quot;environment lemma&quot;&gt;
+  &lt;h6&gt;6. Lemma&lt;/h6&gt;
+
+  &lt;p&gt;Let $f \c B \to$ $BO$ and $g \c M \to$ $BO$ as in
+&lt;a href=&quot;#f-structure-prelim&quot;&gt;Df. 5&lt;/a&gt;. Then:&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;a homotopy $k \c g \to$ $g&#39;$ determines a bijection $\theta_k$
+between the $f$-structures on $g$ and $g&#39;$;&lt;/li&gt;
+    &lt;li&gt;if $k&#39; \c g&#39; \to$ $g&#39;&#39;$ is another homotopy, then the bijections
+determined by $k$, $k&#39;$, and $k&#39;&#39; \ce k&#39; * k$ commute:
+\[
+\begin{xy}
+\xymatrix {
+  \{f\text{-structures on }g\} \ar@{&lt;-&gt;}[r]_{\theta_k}
+  \ar@{&lt;-&gt;}[dr]_{\theta_{k&#39;&#39;}} &amp;
+  \{f\text{-structures on }g&#39;\} \ar@{&lt;-&gt;}[d]_{\theta_{k&#39;}} \\
+  &amp; \{f\text{-structures on }g&#39;&#39;\}.
+}
+\end{xy}
+\]&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+
+  &lt;p&gt;It suffices to simply give any maps $\theta_k$ satisfying (ii), since
+then bijectivity is immediate from taking inverse homotopies. Let $k
+\c g \to$ $g&#39;$ be a homotopy. There is a map from homotopy lifts of $g$
+to homotopy lifts of $g&#39;$ via $(\bar g, h) \mapsto (\bar g, k *
+h)$. This evidently respects the equivalence relation so this descends
+to give the map $\theta_k$. Property (ii) then clearly holds.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;f-structure&quot; class=&quot;environment definitions&quot;&gt;
+  &lt;h6&gt;7. Definitions&lt;/h6&gt;
+
+  &lt;p&gt;Let $f \c B \to$ $BO$ be a map and $\xi \in [M, BO]$ a stable vector
+bundle on a compact smooth manifold $M$. An &lt;em&gt;$f$-structure&lt;/em&gt; on $\xi$
+is an equivalence class of pairs $(g,\sigma)$, where&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;$g$ is a map $M \to$ $BO$ classifying $\xi$, i.e. $[g] = \xi$, and
+$\sigma$ is an $f$-structure on $g$;&lt;/li&gt;
+    &lt;li&gt;two pairs $(g,\sigma)$ and $(g&#39;,\sigma&#39;)$ are equivalent if and only
+if there is a homotopy $k \c g \to$ $g&#39;$ such that $\sigma&#39; =
+\theta_k(\sigma)$; here $\theta_k$ is as defined by
+&lt;a href=&quot;#f-structure-bijection&quot;&gt;Lm. 6&lt;/a&gt;, which also shows that this is in fact
+an equivalence relation.&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p&gt;An &lt;em&gt;$f$-structure&lt;/em&gt; on $M$ is an $f$-structure on its stable normal
+bundle $\nu_M$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;f-structure-reform&quot; class=&quot;environment remarks&quot;&gt;
+  &lt;h6&gt;8. Remarks&lt;/h6&gt;
+
+  &lt;p&gt;Note, since the $\theta_k$ are bijections, &lt;a href=&quot;#f-structure&quot;&gt;Df. 7&lt;/a&gt; is
+equivalent to saying that an $f$-structure on $\xi$ is an
+$f$-structure on $g$ for any fixed $g \c M \to$ $BO$ clasifying $\xi$.
+In the case that $f$ is a fibration we may reformulate this
+further. Fix a $g \c M \to$ $BO$ classifying $\xi$.&lt;/p&gt;
+
+  &lt;p&gt;Let $\sigma$ be an $f$-structure on $g$ determined by a homotopy lift
+$(\bar g, h)$. The homotopy $h \c f \circ \bar g \to$ $g$ can be lifted,
+since $f$ is a fibration, to a homotopy $\bar h \c \bar g \to$ $\bar g&#39;$
+so that we have equality $f \circ \bar g&#39; = g$ on the nose. By
+&lt;a href=&quot;#f-structure-prelim&quot;&gt;Df. 5&lt;/a&gt;, $\bar h$ gives an equivalence between the
+homotopy lifts $(\bar g, h)$ and $(\bar g&#39;, \id_g)$, where $\id_g$ is
+the constant homotopy.&lt;/p&gt;
+
+  &lt;p&gt;So any $f$-structure $\sigma$ has a representative $(\bar g, h)$
+where $h = \id_g$. Observe that two lifts $(\bar g_1, \id_g)$ and
+$(\bar g_2, \id_g)$ are equivalent if and only if there is a homotopy
+$\bar h \c \bar g_1 \to$ $\bar g_2$ such that $f \circ \bar h =
+\id_g$, which precisely says that $\bar h$ is a &lt;em&gt;fibrewise
+homotopy&lt;/em&gt;. So finally, we may say (when $f$ is a fibration) that an
+$f$-structure on $\xi$ is a fibrewise homotopy class of
+lifts $\bar g$ in the diagram
+&lt;span id=f-structure-lift&gt;&lt;/span&gt;\[
+\begin{equation}
+\tag{9}
+\begin{xy}
+\xymatrix {
+  &amp; B \ar[d]_{f} \\
+  M \ar@{--&gt;}[ur]^{\bar g} \ar[r]^g &amp; BO;
+}
+\end{xy}
+\end{equation}
+\]
+remember that here $g$ is any fixed map $M \to$ $BO$ classifying $\xi$,
+and these lifts are on the nose, not up to homotopy.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;f-examples&quot; class=&quot;environment examples&quot;&gt;
+  &lt;h6&gt;10. Examples&lt;/h6&gt;
+
+  &lt;p&gt;Why should we care about fibrations $B \to$ $BO$? Well, maybe the
+primary class of examples will answer that. Whenever we have a
+morphism of topological groups $\phi \c G \to$ $O$ we get a fibration $f
+\ce B\phi \c BG \to$ $BO$. In particular if we have a sequence of
+morphisms
+\[
+\begin{xy}
+\xymatrix {
+  G(0) \ar[r] \ar[d] &amp; G(1) \ar[r] \ar[d] &amp; G(2) \ar[r] \ar[d] &amp;
+  \cdots \ar[d] \\
+  O(0) \ar[r] &amp; O(1) \ar[r] &amp; O(2) \ar[r] &amp; \cdots
+}
+\end{xy}
+\]
+we get a morphism $\colim_n G(n) \ec G \to$ $O \ce \colim_n O(n)$.&lt;/p&gt;
+
+  &lt;p&gt;Now, let’ consider &lt;a href=&quot;#f-structure&quot;&gt;Df. 7&lt;/a&gt; in the situation of a map $f \c
+BG \to$ $BO$. What is a homotopy lift $(\bar g, h)$ of a map $g \c M \to$ $BO$? Well $\bar g \c M \to$ $BG$ classifies a principal $G$-bundle, and
+the homotopy $h \c f \circ \bar g \to$ $g$ specifies a reduction to $G$
+of the structure group of the stable bundle $\xi$ classified by
+$g$. And two homotopy lifts are equivalent when they induce isomorphic
+reductions to $G$. Thus, for this class of examples, an $f$-structure
+on a stable bundle $\xi$ is precisely an isomorphism class of
+reductions of $\xi$ to a $G$-bundle.&lt;/p&gt;
+
+  &lt;p&gt;So in this situation we will abusively refer to $f$-structures (on
+bundles and manifolds) as &lt;em&gt;$G$-structures&lt;/em&gt;. Here are some important
+subexamples:&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;The most basic case comes from the identity $\id \c O \to$ $O$,
+inducing $f = \id \c BO \to$ $BO$. It is immediate from the
+reformulated definition of $f$-structures in
+&lt;a href=&quot;#f-structure-reform&quot;&gt;Rm. 8&lt;/a&gt; that very vector bundle on a compact
+smooth manifold, and hence every compact smooth manifold, has a
+unique $O$-structure. (And of course you’d expect there to be a
+unique reduction of structure group from $O$ to $O$.)&lt;/li&gt;
+    &lt;li&gt;Slightly less trivially we have the inclusion $SO \to$ $O$ coming
+from the inclusions $SO(n) \to$ $O(n)$. This induces the two-to-one
+cover $BSO \to$ $BO$ arising from a choice of orientation. Indeed an
+$SO$-structure on a manifold is precisely an orientation. Given the
+discussion above, this should be believable, since giving an
+orientation on a $k$-dimensional is equivalent to giving a
+reduction of structure group to $SO(k)$. But we’re working stably
+so there are some more details to this. We’ll work through these
+details below since for me this example provides the most
+intuition.&lt;/li&gt;
+    &lt;li&gt;The inclusions $U(n) \to$ $O(2n)$ give a morphism $U \to$ $O$ and hence
+a fibration $BU \to$ $BO$. A $U$-structure on a manifold is called an
+&lt;em&gt;almost-complex structure&lt;/em&gt;. This gives rise to the setting of
+complex bordism, which is supposed to be extremely important;
+hopefully I will be posting about that later on this summer.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For the remainder let $M$ denote a compact smooth manifold and $f \c
+BSO \to$ $BO$ the map discussed in &lt;a href=&quot;#f-examples&quot;&gt;Ex. 10&lt;/a&gt;. We’ll finish the
+post by proving that $SO$-structures and orientations on $M$ are the
+same thing, as promised above.&lt;/p&gt;
+
+&lt;div id=&quot;normal-orient&quot; class=&quot;environment lemma&quot;&gt;
+  &lt;h6&gt;11. Lemma&lt;/h6&gt;
+
+  &lt;p&gt;Let $i \c M \to$ $\R^n$ be an immersion. Then giving an orientation on
+$M$ is equivalent to giving an orientation on the normal bundle
+$\nu_i$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+
+  &lt;p&gt;By &lt;a href=&quot;#normal-bundle&quot;&gt;Df. 1&lt;/a&gt; of $\nu_i$ we have an exact sequence $0 \to$ $TM
+\to$ $i^*T\R^n \to$ $\nu_i \to$ $0$. There is a canonical trivialisation and
+orientation of $T\R^n$, so orienting $\nu_i$ is equivalent to
+orienting $TM$. But it is well known that giving an orientation on $M$
+is equivalent to giving an orientation on $TM$, so then we’re done.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;SO-orientation&quot; class=&quot;environment proposition&quot;&gt;
+  &lt;h6&gt;12. Proposition&lt;/h6&gt;
+
+  &lt;p&gt;Giving an $SO$-structure on $M$ is equivalent to giving an orientation
+on $M$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+
+  &lt;p&gt;Fix an immersion $i \c M \to$ $\R^n$. Let $p \ce \dim(\nu_i)$ Let $g_0
+\c M \to$ $BO(p)$ be a map classifying $\nu_i$ and let $g$ be the
+composition $M \to$ $BO(p) \to$ $BO$. Recall from
+&lt;a href=&quot;#normal-classifies-stable&quot;&gt;Rm. 4&lt;/a&gt; that $[g] = \nu_M$, and hence by
+&lt;a href=&quot;#f-structure-reform&quot;&gt;Rm. 8&lt;/a&gt; that giving an $SO$-structure on $M$ is
+equivalent to giving an $SO$-structure on $g$. Combining this with
+&lt;a href=&quot;#normal-orient&quot;&gt;Lm. 11&lt;/a&gt;, we just left to show that giving an
+$SO$-structure on $g$ is equivalent to giving an orientation on
+$\nu_i$.&lt;/p&gt;
+
+  &lt;p&gt;($\Rightarrow$) Suppose we have an $SO$-structure $\sigma$ on $g$,
+represented by a homotopy lift $(\bar g, h)$. Since $M$ is compact,
+and hence $M \times I$ is compact too, there must be some finite $q
+\in \N$ such that the map $\bar g \c M \to$ $BSO$ factors through
+$BSO(q)$ and the homotopy $h \c f \circ \bar g \to$ $g$ factors through
+$BO(q)$. In particular we have that the factoring $g \c M \to$ $BO(q)$
+classifies the vector bundle $\nu_i \oplus \uR^{q-p}$, where $\uR$
+denotes the one-dimensional trivial bundle. Now the map $M \to$ $BSO(q)$
+classifies an oriented vector bundle $\mu$ and the homotopy $h$ gives
+an isomorphism of unoriented vector bundles $\mu \iso$ $\nu_i \oplus
+\uR^{q-p}$. With this isomorphism, the orientation on $\mu$ determines
+an orientation on $\nu_i \oplus \uR^{q-p}$, and since $\uR^{q-p}$ is
+canonically oriented this specifies an orientation on $\nu_i$.&lt;/p&gt;
+
+  &lt;p&gt;We need to check this does not depend on the representative $(\bar g,
+h)$. Note that taking $q$ larger in the previous paragraph does not
+affect the resulting orientation on $\nu_i$ since the map $BSO(q) \to$ $BSO(q+1)$ by definition classifies $\xi \mapsto \xi \oplus \uR$ with
+$\uR$ given its canonical orientation. Thus, given another
+representing pair $(\bar g&#39;, h&#39;)$ of $\sigma$ we may also assume $\bar
+g&#39;$ factors through $BSO(q)$ and $h$ factors through $BO(q)$. Since
+$(\bar g, h)$ and $(\bar g&#39;, h&#39;)$ are equivalent homotopy lifts we by
+definition have a homotopy $\bar h \c \bar g \to$ $\bar g&#39;$ such that
+$h&#39; * (f \circ \bar h) = h$. I.e., if $\bar g&#39; \c M \to$ $BSO(q)$
+classifies the oriented bundle $\mu&#39;$, then we have specified an
+isomorphism $\mu \iso$ $\mu&#39;$ of oriented vector bundles which commutes
+with the (unoriented) isomorphisms $\mu \iso$ $\nu_i \oplus \uR^{q-p}$
+and $\mu&#39; \iso$ $\nu_i \oplus \uR^{q-p}$. It follows that the induced
+orientations on $\nu_i$ will agree.&lt;/p&gt;
+
+  &lt;p&gt;($\Leftarrow$) Suppose we have an orientation on $\nu_i$. This is
+equivalent to specifying a reduction of structure group of $\nu_i$ to
+$SO(p)$, that is, an oriented $p$-dimensional vector bundle $\mu$ and
+an isomorphism of unoriented bundles $\alpha \c \mu \iso$ $\nu_i$. Of
+course this is equivalent to a map $\bar g_0 \c M \to$ $BSO(p)$ and a
+homotopy $h_0 \c f \circ \bar g_0 \to$ $g_0$. By composing with the maps
+$BSO(p) \to$ $BSO$ and $BO(p) \to$ $BO$ we get a homotopy lift $(\bar g,
+h)$ of $g$ defining an $SO$-structure on $g$.&lt;/p&gt;
+
+  &lt;p&gt;We need to check this does not depend on the choice of $\mu$ and
+$\alpha$. Clearly another oriented bundle $\mu&#39;$ and isomorphism
+$\alpha&#39; \c \mu&#39; \iso$ $\nu_i$ induces the same orientation on $\nu_i$
+if and only if there is an isomorphism $\beta \c \mu \iso$ $\mu&#39;$ of
+oriented bundles such that $\alpha&#39; \circ \beta = \alpha$. If $\mu&#39;$
+and $\alpha&#39;$ correspond to a map $\bar g_0&#39; \c M \to$ $BSO(p)$ and
+homotopy $h_0&#39; \c f \circ \bar g_0&#39; \to$ $g_0$ this is equivalent to
+asking for a homotopy $\bar h \c \bar g_0 \to$ $\bar g_0&#39;$ such that
+$h_0&#39; * (f \circ \bar h) = h_0$. Again composing with $BSO(p) \to$ $BSO$
+and $BO(p) \to$ $BO$, this precisely determines an equivalence of the
+homotopy lifts $(\bar g, h)$ and $(\bar g&#39;, h&#39;)$. Hence the resulting
+$SO$-structure is well-defined.&lt;/p&gt;
+
+  &lt;p&gt;The two constructions are evidently mutually inverse, so we win.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment remark&quot;&gt;
+  &lt;h6&gt;13. Remark&lt;/h6&gt;
+
+  &lt;p&gt;Hopefully the argument in &lt;a href=&quot;#SO-orientation&quot;&gt;Pr. 12&lt;/a&gt; has made it more clear
+why we always need to specify our homotopy $f \circ \bar g \to$ $g$, and
+why the notion of equivalence of homotopy lifts is as it is in
+&lt;a href=&quot;#f-structure-prelim&quot;&gt;Df. 5&lt;/a&gt;. In particular, observe that the commuting
+condition on homotopies in the equivalence of homotopy lifts is
+absolutely key. For example, suppose $\eta$ is an orientable bundle
+and $\xi \iso$ $\eta$ an isomorphism of unoriented bundles. The two
+orientations on $\eta$ might in fact give isomorphic oriented bundles,
+but tautologically won’t induce the same orientation on $\xi$ via the
+isomorphism $\xi \iso$ $\eta$. In this case the necessary commuting
+condition isn’t satisfied. (Note, the two orientations on any
+orientable bundle are always &lt;em&gt;stably&lt;/em&gt; isomorphic, since multiplication
+by $-1$ on $\uR$ gives an orientation reversing isomorphism $\eta
+\oplus \uR \iso$ $\eta \oplus \uR$.)&lt;/p&gt;
+&lt;/div&gt;
+
+</description>
+      <pubDate>Mon, 15 Sep 2014 22:52:33 -0400</pubDate>
+      <link>http://www.arponr.com/structures-on-manifolds</link>
+      <guid isPermaLink="true">http://www.arponr.com/structures-on-manifolds</guid>
+    </item>
+    
+    <item>
+      <title>Homotopy (co)limits aren&#39;t (co)limits in the homotopy category</title>
+      <description>&lt;p&gt;I find it really nice to be able to think about things via universal
+properties. In particular I know and love how to do this for limits
+and colimits in ordinary categories. But in homotopy theory things
+these notions need to be fixed slightly, since they’re not homotopy
+invariant. (The canonical example in the familiar realm of spaces is
+that $D^n \from S^{n-1} \to$ $D^n$ has pushout $S^n$ but $* \from
+S^{n-1} \to$ $*$ has pushout $*$.) This leads one to define homotopy
+limits and homotopy colimits, which are homotopy invariant. But how do
+I think of these via universal properties? Not understanding these
+things all too well, and seeking to retreat into familiar territory,
+I’m tempted to just think of them as limits as colimits in the
+homotopy category. But this is so, so wrong! This post contains two
+examples I found on &lt;a href=&quot;http://mathoverflow.net/questions/10364/categorical-homotopy-colimits&quot;&gt;the&lt;/a&gt; &lt;a href=&quot;http://math.stackexchange.com/questions/70028/homotopy-pushouts-and-induced-maps/&quot;&gt;internet&lt;/a&gt; which helped hammer
+this point home.&lt;/p&gt;
+
+&lt;div class=&quot;environment notation&quot;&gt;
+  &lt;h6&gt;Notation&lt;/h6&gt;
+
+  &lt;p&gt;Let $\H$ denote the homotopy category of pointed spaces (for
+definiteness maybe take this to be pointed CW complexes and maps up to
+homotopy). For $X,Y \in \H$ denote $\hom_\H(X,Y)$ by $[X,Y]$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment example&quot;&gt;
+  &lt;h6&gt;1. Example (A colimit which doesn’t exist)&lt;/h6&gt;
+
+  &lt;p&gt;Consider the diagram
+\[
+\begin{xy}
+  \xymatrix{
+    S^1 \ar[r]_i \ar[d]^f &amp; D^2 \\ S^1. &amp;
+  }
+\end{xy}
+\]
+where $i$ is the canonical inclusion and $f$ is a degree $2$ map. We
+know this diagram has a homotopy pushout: we can replace $f$ by a
+cofibration and then just take an ordinary pushout. But we can show
+that this diagram has no colimit in $\H$. Suppose there were a pushout
+$X \in \H$: then for $Y \in \H$ we have
+\[
+[X,Y] \iso [S^1,Y] \times_{[S^1, Y]} [D^2,Y] \iso \pi_1(Y)
+\times_{\pi_1(Y)} *
+\]
+where the map $\pi_1(Y) \to$ $\pi_1(Y)$ is multiplication by $2$ by
+definition of $f$. Thus $[X,Y] \iso$ $\pi_1(Y)[2]$, the $2$-torsion of
+$\pi_1(Y)$. We will prove that this functor $Y \mapsto \pi_1(Y)[2]$
+cannot be corepresentable.&lt;/p&gt;
+
+  &lt;p&gt;First, we have $[X,S^0] \iso$ $\pi_1(S^0)[2] \iso$ $0$
+implying $X$ is connected. Thus for $G$ a (discrete) group,
+considering the classification of principal $G$-bundles
+(i.e. $G$-coverings) gives isomorphisms
+\[
+\hom_\Grp(\pi_1(X),G) \iso H^1(X;G) \iso [X;BG] \iso \pi_1(BG)[2] \iso
+G[2],
+\]
+natural in $G$. By Yoneda this implies $\pi_1(X) \iso$ $\Z/2$. It
+follows that we can construct maps $\RP^2 \to$ $X \to$ $\RP^\infty \iso$ $K(\Z/2,1)$ which are isomorphisms on $\pi_1$, and hence isomorphisms
+on $H_1(-;\Z)$. Since $H_2(\RP^2;\Z) \iso$ $0 \iso$ $H_2(\RP^\infty;\Z)$
+it follows by the universal coefficient theorem that the composition
+$\RP^2 \to$ $\RP^\infty$ is an isomorphism on $H^2(-;\Z)$. But this is
+impossible, for
+\[
+H^2(X;\Z) \iso [X,K(\Z,2)] \iso \pi_1(K(\Z,2))[2] \iso 0.
+\]&lt;/p&gt;
+&lt;/div&gt;
+
+</description>
+      <pubDate>Mon, 15 Sep 2014 22:52:27 -0400</pubDate>
+      <link>http://www.arponr.com/hocolim-arent-colimho</link>
+      <guid isPermaLink="true">http://www.arponr.com/hocolim-arent-colimho</guid>
+    </item>
+    
+    <item>
+      <title>Bundles II: comparisons</title>
+      <description>&lt;p&gt;This is a continuation of the &lt;a href=&quot;/bundles-i-definitions&quot;&gt;previous post&lt;/a&gt;, in which we
+defined a sheaf-theoretic notion of &lt;em&gt;bundle&lt;/em&gt; over a
+space, in analogy with the notion of fibre bundles. This time we
+deal with a couple of comparison problems. Namely, we discuss:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;why our notion of bundle is in fact a strict generalisation of the
+notion of fibre bundle;&lt;/li&gt;
+  &lt;li&gt;the “change of fibre”, or “associated bundle”, construction.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;We start by defining the categories which will feature in our
+comparisons. We fix a space $X$ as we did last time.&lt;/p&gt;
+
+&lt;div id=&quot;fibre-bundle-cat&quot; class=&quot;environment definitions&quot;&gt;
+  &lt;h6&gt;1. Definitions&lt;/h6&gt;
+
+  &lt;p&gt;Let $G$ be a topological group and $F$ a left
+$G$-space. &lt;a href=&quot;/bundles-i-definitions/#bundles-structure-groups&quot;&gt;Recall&lt;/a&gt; that a $G$-bundle on $X$ with fibre
+$F$ is a fibre bundle $\pi \c E \to$ $X$ with fibre $F$ equipped with a
+trivialisation $\{(U_i,\kappa_i)\}$ with transition maps in $G$. We
+define a &lt;em&gt;morphism of $G$-bundles with fibre $F$&lt;/em&gt; to be a continous
+map $\lambda \c E \to$ $E&#39;$ over $X$ and a common refinement $\{V_j\}$ of
+$\{U_i\}$ and $\{U&#39;_{i&#39;}\}$ satisfying the following condition. For
+any $i,i&#39;,j$ such that $V_j \subseteq U_i$ and $V_j \subseteq
+U&#39;_{i&#39;}$, the map
+\[
+\begin{xy}
+  \xymatrix{
+    V_j \times F \ar[r]^{\kappa_i^{-1}} &amp;
+    \pi^{-1}(V_j) \ar[r]^{\lambda} &amp;
+    \pi&#39;^{-1}(V_j) \ar[r]^{\kappa&#39;_{i&#39;}} &amp;
+    V_j \times F
+  }
+\end{xy}
+\]
+is an automorphism of the form $(v,f) \mapsto (v, g(v)f)$, where $g$
+is a map $V_j \to$ $G$.&lt;/p&gt;
+
+  &lt;p&gt;This defines the &lt;em&gt;category $\Bun_G(X;F)$ of $G$-bundles on
+$X$ with fibre $F$&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;bundle-sheaf-cat&quot; class=&quot;environment definitions&quot;&gt;
+  &lt;h6&gt;2. Definitions&lt;/h6&gt;
+
+  &lt;p&gt;Let $\G$ be a sheaf of groups on $X$ and $\F$ a left
+$\G$-sheaf. &lt;a href=&quot;/bundles-i-definitions/#bundle-sheaf&quot;&gt;Recall&lt;/a&gt; that a $\G$-bundle on $X$ with
+fibre $\F$ is a bundle $\E$ on $X$ with fibre $\F$ equipped with a
+trivialisation $\{(U_i,\kappa_i)\}$ with transition morphisms in
+$\G$. We define a &lt;em&gt;morphism of $\G$-bundles with fibre $\F$&lt;/em&gt; to be a
+morphism $\lambda \c \E \to$ $\E&#39;$ of sheaves on $X$ and a common
+refinement $\{V_j\}$ of $\{U_i\}$ and $\{U&#39;_{i&#39;}\}$ satisfying the
+following condition. For any $i,i&#39;,j$ such that $V_j \subseteq U_i$
+and $V_j \subseteq U&#39;_{i&#39;}$, the map
+\[
+\begin{xy}
+  \xymatrix{
+    \F|_{V_j} \ar[r]^{\kappa_i^{-1}} &amp;
+    \E|_{V_j} \ar[r]^{\lambda} &amp;
+    \E&#39;|_{V_j} \ar[r]^{\kappa&#39;_{i&#39;}} &amp;
+    \F|_{V_j}
+  }
+\end{xy}
+\]
+is an automorphism given by the action of an element of $\G(V_j)$.&lt;/p&gt;
+
+  &lt;p&gt;This defines the &lt;em&gt;category $\Bun_\G(X;\F)$ of $\G$-bundles on
+$X$ with fibre $\F$&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment remark&quot;&gt;
+  &lt;h6&gt;3. Remark&lt;/h6&gt;
+
+  &lt;p&gt;Note that all morphisms of $G$-bundles with fibre $F$ and morphisms of
+$\G$-bundles with fibre $\F$ are isomorphisms (i.e. $\Bun_G(X;F)$ and
+$\Bun_\G(X;\F)$ are groupoids). These are the notions of isomorphism
+we will use for these objects.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment remark&quot;&gt;
+  &lt;h6&gt;4. Remark&lt;/h6&gt;
+
+  &lt;p&gt;It follows from a &lt;a href=&quot;/bundles-i-definitions/#auto-left&quot;&gt;lemma&lt;/a&gt; from last time that if $\lambda \c
+\E \to$ $\E&#39;$ is a morphism of sheaves on $X$ with $\E,\E&#39;$ both
+principal $\G$-bundles (i.e. $\G$-torsors) then $\lambda$ is a morphism
+in $\Bun_\G(X;\G)$ if and only if $\lambda$ is a morphism of right
+$\G$-sheaves.&lt;/p&gt;
+
+  &lt;p&gt;After proving a similar (also easy) lemma for principal $G$-bundles,
+we can also see that a continuous map $\lambda \c E \to$ $E&#39;$ over $X$
+between principal $G$-bundles $E \to$ $X$ and $E&#39; \to$ $X$ is a morphism
+in $\Bun_G(X;G)$ if and only if it is $G$-equivariant.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We now show that the topological $\Bun_G(X;F)$ is really a special
+case of the sheaf-theoretic $\Bun_\G(X;\F)$. &lt;a href=&quot;/bundles-i-definitions/#map-sheaf&quot;&gt;Recall&lt;/a&gt; that
+to a space $Y$ we may associate the sheaf $\u{Y}$ on $X$ of continuous
+maps to $Y$.&lt;/p&gt;
+
+&lt;div class=&quot;environment proposition&quot;&gt;
+  &lt;h6&gt;5. Proposition&lt;/h6&gt;
+
+  &lt;p&gt;Let $G$ be a topological group and $F$ a left $G$-space. Taking
+sheaves of sections defines an equivalence of categories
+\[
+\Bun_G(X;F) \iso \Bun_{\u{G}}(X;\u{F}).
+\]&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+
+  &lt;p&gt;Before beginning observe that the action of $G$ on $F$ certainly
+defines an action of $\u{G}$ on $\u{F}$, so the right-hand category is
+indeed defined.&lt;/p&gt;
+
+  &lt;p&gt;Now, we first show that sheaves of sections in fact defines a functor
+$\Bun_G(X;F) \to$ $\Bun_{\u{G}}(X;\u{F})$. Let $\pi \c E \to$ $X$ be a
+$G$-bundle with fibre $F$ and trivialisation $\{(U_i,\kappa_i)\}$. Let
+$\E$ denote the sheaf of sections of $\pi$. A section of $U \times F
+\to$ $U$ is simply a continuous map $U \to$ $F$, so composition with the
+homeomorphisms $\kappa_i \c \pi^{-1}(U_i) \to$ $U_i \times F$ over $U_i$
+determine isomorphisms $\u{\kappa}_i \c \E|_{U_i} \to$ $\u{F}|_{U_i}$. Then the resulting transition morphism $\u{t}_{ij} \ce
+\u{\kappa}_i\u{\kappa}_j^{-1}$ is composition with the transition map
+$\kappa_i\kappa_j^{-1}$, which is of the form
+\[
+(U_i \cap U_j) \times F \to (U_i \cap U_j) \times F, \quad
+(u,f) \mapsto (u, t_{ij}(u)f)
+\]
+for some map $t_{ij} \c U_i \cap U_j \to$ $G$ since $\pi$ has structure
+group $G$. Thus $\u{t}_{ij}$ is given by the action of $t_{ij} \in
+\u{G}(U_i \cap U_j)$. So indeed $\E$ equipped with the trivialisation
+$\{(U_i, \u{\kappa}_i)\}$ is a $\u{G}$-bundle with fibre $\u{F}$.&lt;/p&gt;
+
+  &lt;p&gt;This defines the functor on objects. For morphisms, a map $\lambda \c
+E \to$ $E&#39;$ over $X$ defines (again via composition) a morphism of
+sheaves $\u{\lambda} \c \E \to$ $\E&#39;$. That the common refinement and
+condition defining a morphism in $\Bun_G(X;F)$ imply the condition
+defining a morphism in $\Bun_{\u{G}}(X;\u{F})$ is the same as the
+argument above showing that $\E$ has structure group $\u{G}$ if $\pi$
+has structure group $G$.&lt;/p&gt;
+
+  &lt;p&gt;We now sketch why this actually gives an equivalence:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Essential surjectivity: Suppose we have a $\u{G}$-bundle $\E$ with
+fibre $\F$ and trivialisation $\{(U_i, \kappa_i)\}$ with transition
+morphisms given by the action of $t_{ij} \in \u{G}(U_i \cap
+U_j)$. We form a $G$-bundle $\pi \c E \to$ $X$ with fibre $F$ by
+gluing the trivial bundles $U_i \times F$ over each $U_i$ along the
+transition maps $t_{ij}$. (This will be possible because they come
+from transitions on $\E$ and hence satisfy the cocycle condition.)
+It’s clear that the sheaf of sections of $\pi$ will be isomorphic to
+$\E$.&lt;/li&gt;
+    &lt;li&gt;Full-faithfulness: This follows from the fact that the morphisms in
+$\Bun_G(X;F)$ are determined by the automorphisms of $V_j \times F$
+which appear in &lt;a href=&quot;#fibre-bundle-cat&quot;&gt;Df. 1&lt;/a&gt;, and the morphisms in
+$\Bun_{\u{G}}(X;\u{F})$ are determined by the automorphisms of
+$\F|_{V_j}$ appearing in &lt;a href=&quot;#bundle-sheaf-cat&quot;&gt;Df. 2&lt;/a&gt;. Both automorphisms
+determine and are determined by an element of $\u{G}(V_j)$, which
+implies full-faithfulness.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So any work we do in studying $\Bun_\G(X;\F)$ for general $\G,\F$ will
+in particular give results for $\Bun_G(X;F)$ for general $G,F$ as
+well. As a first example we discuss “change of fibre” for bundles,
+which will allow us to relate bundles with arbitrary fibre to
+principal bundles. This is also known as the “associated bundle”
+construction.&lt;/p&gt;
+
+&lt;div class=&quot;environment definition&quot;&gt;
+  &lt;h6&gt;6. Definition&lt;/h6&gt;
+
+  &lt;p&gt;Let $\G$ be a sheaf of groups on $X$ and $\F$ a $\G$-sheaf. The action
+of $\G$ on $\F$ is called &lt;em&gt;faithful&lt;/em&gt; if the induced morphism of
+sheaves $\G \to$ $\saut_X(\F)$ is injective.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proposition&quot;&gt;
+  &lt;h6&gt;7. Proposition&lt;/h6&gt;
+
+  &lt;p&gt;Let $\G$ be a sheaf of groups on $X$ and $\F,\F&#39;$ be two left
+$\G$-sheaves. If the action of $\G$ on $\F$ is faithful, then there is
+a functor
+\[
+\Theta_{\F,\F&#39;} \c \Bun_\G(X;\F) \to \Bun_\G(X;\F&#39;).
+\]
+If the action of $\G$ on $\F&#39;$ is also faithful then $\Theta_{\F,\F&#39;}$
+and $\Theta_{\F&#39;,\F}$ are quasi-inverse equivalences.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+
+  &lt;p&gt;We first define $\Theta_{\F,\F&#39;}$ on objects. Let $\E$ be a
+$\G$-bundle on $X$ with fibre $\F$, equipped with trivialisation
+$\{(U_i, \kappa_i)\}$ and transition morphisms $\tau_{ij} \in \G(U_i
+\cap U_j)$.&lt;/p&gt;
+&lt;/div&gt;
+
+</description>
+      <pubDate>Mon, 15 Sep 2014 22:52:15 -0400</pubDate>
+      <link>http://www.arponr.com/bundles-ii-comparisons</link>
+      <guid isPermaLink="true">http://www.arponr.com/bundles-ii-comparisons</guid>
+    </item>
+    
+    <item>
+      <title>Finland</title>
+      <description>&lt;p&gt;Today I woke up in Finland, somewhere, in the grass. To be fair, I did
+yesterday too, and the day before that, and . . . well, not to
+infinity, as far as I know. I guess I don’t really know what I mean by
+&lt;em&gt;today&lt;/em&gt;, though, or &lt;em&gt;yesterday&lt;/em&gt; or &lt;em&gt;the day before that&lt;/em&gt; or
+. . . . What I mean is, for some time now I have been falling asleep
+and waking up in the grass, somewhere in Finland.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I arrived here in June on a red-eye. My plane landed at sunrise, my
+eyes were red. With me I had:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a pair of pants, on the darker end of khaki;&lt;/li&gt;
+  &lt;li&gt;a pair of boxers underneath;&lt;/li&gt;
+  &lt;li&gt;a short-sleeved t-shirt, grey and decorated with some made-up
+emblem;&lt;/li&gt;
+  &lt;li&gt;a long-sleeved button-up shirt, made of faded blue flannel;&lt;/li&gt;
+  &lt;li&gt;a jacket, darker blue and sort of rugged—or maybe that’s just how
+it made me feel;&lt;/li&gt;
+  &lt;li&gt;a pair of sneakers, bright red;&lt;/li&gt;
+  &lt;li&gt;a pair of socks underneath;&lt;/li&gt;
+  &lt;li&gt;an old black backpack, containing my passport, my boarding pass,
+a collection of short stories by Haruki Murakami, a black leather
+notebook, and a couple of mechanical pencils.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The backpack was on my back, the jacket under my arm, and the
+remaining items covered my body, so that I would not be considered
+indecent. In particular, I left behind anything that could tell me the
+time.&lt;/p&gt;
+
+&lt;p&gt;I planned to leave here at sunset, which should be sometime in August.&lt;/p&gt;
+
+&lt;p&gt;Perhaps this informs my confusion about &lt;em&gt;today&lt;/em&gt; and &lt;em&gt;yesterday&lt;/em&gt;, and
+all those words that have to do with &lt;em&gt;days&lt;/em&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I wasn’t hungry when I woke up today. To be fair, I wasn’t yesterday
+either, or the day before that . . . and that same spiel about today
+and yesterday and time and the sun of the Finnish summer.&lt;/p&gt;
+
+&lt;p&gt;So I just lay in the grass, letting myself wake up, one bone at a
+time. The grass here is lush, green, soft, warm, beautiful, and so
+on. It’s grass that you can lie in, where you can bathe in the
+tireless summer sun, float down into a dreamless sleep and drift
+somewhere, some place.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Some place empty, but not cold or dark for even here the sun has not
+set—does time even pass?—you are fixed here, and unsure if that or
+anything else will ever change, so you wait, the sun overhead, and you
+wait, and finally the sun has poured into you all that it could and
+you wake up, in Finland, somewhere, slowly, one bone at a time.&lt;/em&gt;&lt;/p&gt;
+</description>
+      <pubDate>Mon, 15 Sep 2014 22:51:52 -0400</pubDate>
+      <link>http://www.arponr.com/finland</link>
+      <guid isPermaLink="true">http://www.arponr.com/finland</guid>
+    </item>
+    
+    <item>
+      <title>Invertible modules</title>
+      <description>&lt;p&gt;Let $A$ be a commutative ring.&lt;/p&gt;
+
+&lt;div id=&quot;trivial-point-to-open&quot; class=&quot;environment lemma&quot;&gt;
+  &lt;h6&gt;1. Lemma&lt;/h6&gt;
+
+  &lt;p&gt;Let $M$ be a finitely generated $A$-module. If $M_\p \iso$ $0$ for
+  some $\p \in \Spec(A)$, then $M_f \iso$ $0$ for some $f \in A - \p$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+
+  &lt;p&gt;Choose generators $x_1,\ldots,x_n \in M$. If $M_\p \iso$ $0$ then
+  there are $f_1,\ldots,f_n \in A - \p$ such that $f_ix_i = 0$ for $1
+  \le i \le n$. Taking $f \ce \prod_{i=1}^n f_i \in A - \p$, we have
+  $fM \iso$ $0 \implies M_f \iso$ $0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;locally-free-point-to-open&quot; class=&quot;environment lemma&quot;&gt;
+  &lt;h6&gt;2. Lemma&lt;/h6&gt;
+
+  &lt;p&gt;Let $M$ be a finitely generated $A$-module. Then $M$ is locally free
+  of finite rank if and only if $M_\p$ is a finite free $A_\p$-module
+  for each $\p \in \Spec(A)$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+
+  &lt;p&gt;The only if direction is obvious, so assume $M_\p$ is a finite free
+  $A_\p$-module for each $\p \in \Spec(A)$. Fixing $\p \in \Spec(A)$,
+  it suffices to show there exists $f \in A - \p$ such that $M_f$ is a
+  free $A_f$-module. We have an isomorphism $A_\p^n \iso$ $M_\p$,
+  which without loss of generality is the localisation of a morphism
+  $\alpha \c A^n \to$ $M$. It follows from &lt;a href=&quot;#trivial-point-to-open&quot;&gt;Lm. 1&lt;/a&gt;
+  that since $\alpha_\p$ is an isomorphim, so is $\alpha_f$ for some
+  $f \in A - \p$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment definition&quot;&gt;
+  &lt;h6&gt;3. Definition&lt;/h6&gt;
+
+  &lt;p&gt;We say an $A$-module $M$ is &lt;em&gt;invertible&lt;/em&gt; if there exists an
+  $A$-module $N$ and an isomorphism $M \otimes_A N \iso$ $A$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;invertible-module-finitely-generated&quot; class=&quot;environment lemma&quot;&gt;
+  &lt;h6&gt;4. Lemma&lt;/h6&gt;
+
+  &lt;p&gt;An invertible $A$-module $M$ is finitely generated.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+
+  &lt;p&gt;Assume we have an $A$-module $N$ and an isomorphism $\alpha \c A
+  \iso$ $M \otimes_A N$. Observe the image of $\alpha$ must be
+  generated by a single element of $M \otimes_A N$, so $\alpha$ must
+  factor through an isomorphism $\beta \c A \iso$ $M_0 \otimes_A N$
+  for some finitely generated submodule $M_0 \subseteq M$. Then we
+  have an isomorphism
+  \[
+  \begin{xy}
+  \xymatrix{
+    M \ar[d]^{\sim} \ar[rrr]^{\sim} &amp; &amp; &amp; M_0 \ar[d]^{\sim} \\ M
+    \otimes_A A \ar[r]^-{\id \otimes \beta} &amp; M \otimes_A M_0
+    \otimes_A N \ar[r]^-{\sim} &amp; M \otimes_A N \otimes_A M_0
+    \ar[r]^-{\alpha^{-1} \otimes \id} &amp; A \otimes_A M_0.
+  }
+  \end{xy}
+  \]&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;invertible-locally-free&quot; class=&quot;environment lemma&quot;&gt;
+  &lt;h6&gt;5. Lemma&lt;/h6&gt;
+
+  &lt;p&gt;An $A$-module $M$ is invertible if and only if $M$ is locally free
+  of rank $1$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+
+  &lt;p&gt;First assume $M$ is invertible: there is an $A$-module $N$ such that
+  $M \otimes_A N \iso$ $A$. Fix any $\p \in \Spec(A)$. By
+  &lt;a href=&quot;#locally-free-point-to-open&quot;&gt;Lm. 2&lt;/a&gt; it suffices to show $M_\p$ is free
+  of rank $1$ over $A_\p$. We have
+  \[
+  M_\p \otimes_{A_\p} N_\p \iso (M \otimes N)_\p \iso A_\p,
+  \]
+  i.e. $M_\p$ is invertible. Thus we are reduced to the case that $A$
+  is a local ring. Let $\m \in \Spec(A)$ denote the maximal ideal and
+  $k \ce A/\m$ the residue field. We have
+  \[
+  (M \otimes_A k) \otimes_k (N \otimes_A k) \iso M \otimes_A N
+  \otimes_A k \iso k,
+  \]
+  i.e. $M \otimes_A k$ is an invertible $k$-module. But $k$ is a field
+  so obviously this implies $M/\m M \iso$ $M \otimes_A k \iso$ $k$. Let $x
+  \in M$ be a lift of a generator of $M/\m M$ and $\alpha \c A \to$ $M$
+  the map defined by $1 \mapsto x$. By construction the induced map
+  $\alpha \otimes k \c k \to$ $M \otimes_A k$ is an isomorphism.  Then
+  Nakayama’s lemma implies $\alpha$ is an isomorphism.&lt;/p&gt;
+
+  &lt;p&gt;Conversely, assume $M$ is locally free of rank $1$. Let $M^\vee \ce
+  \hom_A(M, A)$ denote the dual of $M$ and consider the canonical
+  evaluation map $M \otimes_A M^\vee \to$ $A$. By hypothesis this
+  morphism locally looks like\footnote{I’m also using that locally
+    free implies finitely presented, which implies that dualising will
+    commute with localisation.} evaluation $A \otimes_A A^\vee \to$ $A$,
+  which is clearly an isomorphism. This finishes the proof.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment definition&quot;&gt;
+  &lt;h6&gt;6. Definition&lt;/h6&gt;
+
+  &lt;p&gt;It follows from &lt;a href=&quot;#invertible-module-finitely-generated&quot;&gt;Lm. 4&lt;/a&gt; that the
+  collection $\Pic(A)$ of isomorphism classes of invertible modules
+  forms a set. Under tensor product $\Pic(A)$ forms an abelian group
+  called the &lt;em&gt;Picard group&lt;/em&gt; of $A$. Note that by the proof of
+  &lt;a href=&quot;#invertible-locally-free&quot;&gt;Lm. 5&lt;/a&gt; the inverse in $\Pic(A)$ of (the
+  isomorphism class) of an invertible module $L$ is given by (the
+  isomorphism class of) the dual $L^\vee$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;graded-ring-invertible-components&quot; class=&quot;environment lemma&quot;&gt;
+  &lt;h6&gt;7. Lemma&lt;/h6&gt;
+
+  &lt;p&gt;Let $A_*$ be a graded ring. Let $\otimes$ denote
+  $\otimes_{A_0}$. Assume there is an isomorphism of $A_0$-modules
+  $A_1 \otimes A_{-1} \iso$ $A_0$. Then for $n \ge 1$ we have
+  \[
+  A_n \iso A_1^{\otimes n} \quad\text{and}\quad
+  A_{-n} \iso A_{-1}^{\otimes n} \iso (A_1^\vee)^{\otimes n}.
+  \]&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;environment proof&quot;&gt;
+  &lt;h6&gt;Proof&lt;/h6&gt;
+
+  &lt;p&gt;We prove the first isomorphism by induction; the second is
+  symmetric. The case $n=1$ is tautological. Let $n &gt;
+  1$. Multiplication gives a map $A_1^{\otimes n} \to$ $A_n$. An inverse
+  map is given by
+  \[
+  A_n \iso A_n \otimes A_0 \iso A_n \otimes A_{-1} \otimes A_1 \to
+  A_{n-1} \otimes A_1 \iso A_1^{\otimes n},
+  \]
+  the last isomorphism coming from the inductive hypothesis. The case
+  $n \le -1$ is symmetric.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+      <pubDate>Tue, 19 Aug 2014 00:00:00 -0400</pubDate>
+      <link>http://www.arponr.com/invertible-modules</link>
+      <guid isPermaLink="true">http://www.arponr.com/invertible-modules</guid>
+    </item>
     
     <item>
       <title>Bundles I: definitions</title>
