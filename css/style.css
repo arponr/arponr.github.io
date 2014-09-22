@@ -80,7 +80,7 @@ figure figcaption {
 
 nav {
   position: fixed;
-  font-family: "adaptive-mono", monospace;
+  font-family: Courier, monospace;
   color: #706865;
   font-size: 13px; }
   nav .name {
@@ -93,7 +93,7 @@ nav {
     nav li.active a:link, nav li.active a:visited {
       color: #302825; }
   nav ul > ul {
-    margin-left: 10px; }
+    margin-left: 15px; }
 
 header h1 {
   font-size: 23px; }
@@ -195,7 +195,7 @@ header h2 {
     line-height: 1.2em;
     position: relative; }
     .playlist li:before {
-      font-family: "adaptive-mono", monospace;
+      font-family: Courier, monospace;
       content: counter(song);
       counter-increment: song;
       position: absolute;
@@ -213,7 +213,7 @@ header h2 {
       right: -29px; }
 
 .song-meta {
-  font-family: "adaptive-mono", monospace;
+  font-family: Courier, monospace;
   color: #706865; }
 
 .spotify iframe {
