@@ -13,7 +13,7 @@
     right         : 0;
     bottom        : 0;
     left          : 0;
-    padding-right: 20px;
+    padding-right: 25px;
 }
 
 .nano > .nano-content:focus {
@@ -29,7 +29,7 @@
 }
 
 .nano > .nano-pane {
-    background : #aaaaaa;
+    background : #dddddd;
     position   : absolute;
     width      : 7px;
     right      : 5px;
@@ -47,7 +47,7 @@
 }
 
 .nano > .nano-pane > .nano-slider {
-    background: #444444;
+    background: #aaaaaa;
     position              : relative;
     margin                : 0;
     -moz-border-radius    : 3px;
