@@ -1,11 +1,6 @@
 .text {
     line-height: $line-text;
 
-    a:link, a:visited {
-        text-decoration: underline;
-        color: $color-link;
-    }
-
     ul, ol {
         margin-left: 35px;
 
@@ -28,28 +23,6 @@
         }
     }
 
-    h4 {
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-
-        * + & {
-            margin-top: 30px;
-        }
-    }
-
-    h6 {
-        font-weight: bold;
-
-        &:after {
-            content: '.\00a0';
-        }
-
-        &, & + p {
-            display: inline;
-        }
-    }
-
     hr {
         width: 15%;
         height: 1px;
@@ -68,17 +41,23 @@
 }
 
 .environment {
-    position: relative;
-    margin-left: $env-border-offset;
+    .environment_label {
+        float: left;
+        padding-right: 5px;
+    }
 
-    &:before {
-        content: '';
-        width: 1px;
-        height: calc(100% - #{$env-border-cut});
-        background: $border-light;
-        position: absolute;
-        left: -$env-border-offset;
-        top: $env-border-cut / 2;
+    .environment_body {
+        overflow: hidden;
+    }
+
+    .environment_header {
+        &, p, & + p {
+            display: inline;
+        }
+    }
+
+    .environment_label, .environment_header {
+        font-weight: 700;
     }
 }
 
@@ -92,66 +71,15 @@
         display: block;
         background: $border-light;
         height: 1px;
-        width: $col1;
+        width: 75px;
         margin-top: 30px;
         margin-bottom: 10px;
     }
 
     ol {
         list-style-type: decimal;
-        margin-left: 15px;
-        font-size: $size-small;
+        margin-left: 20px;
+        font-size: $size-medium;
         line-height: $line-footnote;
     }
-}
-
-.playlist {
-    list-style-type: none;
-
-    &.start {
-        counter-reset: song;
-    }
-
-    li {
-        margin-bottom: 20px;
-        line-height: $playlist-line;
-        position: relative;
-
-        &:before {
-            font-family: $mono;
-            content: counter(song);
-            counter-increment: song;
-            position: absolute;
-            top: $playlist-line;
-        }
-    }
-
-    &.left {
-        float: left;
-        margin-left: $playlist-margin;
-
-        li:before {
-            left: -$playlist-margin + 1px;
-        }
-    }
-
-    &.right {
-        float: right;
-        margin-right: $playlist-margin;
-        text-align: right;
-
-        li:before {
-            right: -$playlist-margin + 1px;
-        }
-    }
-}
-
-.song-meta {
-    font-family: $mono;
-    color: $color-light;
-}
-
-.spotify iframe {
-    width: 100%;
-    height: 80px;
 }

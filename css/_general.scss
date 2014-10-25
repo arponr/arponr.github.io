@@ -14,16 +14,16 @@
     }
 }
 
+html, body {
+    height: 100%;
+}
+
 html {
     font-family: $serif;
     font-size: $size-base;
     line-height: $line-base-unitless;
     color: $color-base;
-    background: $color-background;
-}
-
-body {
-    overflow-y: scroll;
+    background: $background-base;
 }
 
 a:link, a:visited {
@@ -52,3 +52,4 @@ sup {
 sub {
     top: 0.5em;
 }
+

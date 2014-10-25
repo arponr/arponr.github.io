@@ -4,643 +4,804 @@
     <title>arponr</title>
     <description>blog by arpon</description>
     <link>http://www.arponr.com</link>
-    <lastBuildDate>Mon, 22 Sep 2014 07:54:58 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 25 Oct 2014 18:25:28 -0400</lastBuildDate>
     <atom:link href="http://www.arponr.com/feed.xml" rel="self"/>
     
     <item>
-      <title>Invertible modules</title>
-      <description>&lt;p&gt;Let $A$ be a commutative ring.&lt;/p&gt;
-
-&lt;div id=&quot;trivial-point-to-open&quot; class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;1. Lemma&lt;/h6&gt;
-
-  &lt;p&gt;Let $M$ be a finitely generated $A$-module. If $M_\p \iso$ $0$ for
-  some $\p \in \Spec(A)$, then $M_f \iso$ $0$ for some $f \in A - \p$.&lt;/p&gt;
+      <title>Pulling back a Galois correspondence</title>
+      <description>&lt;div class=&quot;environment definition&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;1.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Definition.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;For $G$ a topological group, we denote by $\Sub_G$ the
+set of open normal subgroups of $G$, which is a poset under
+inclusion.&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
+&lt;div id=&quot;main&quot; class=&quot;environment proposition&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;2.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Proposition.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Let $G$ be a profinite group. Suppose we have a
+morphism of topological groups $\phi \c A \to$ $G$ such that for
+every $N \in \Sub_G$ the induced map $\phi_N \c A/\phi^{-1}(N) \to$ $G/N$ is an isomorphism. Then:&lt;/p&gt;
 
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
+    &lt;div id=&quot;preimage-injective&quot; class=&quot;environment&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;2.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
 
-  &lt;p&gt;Choose generators $x_1,\ldots,x_n \in M$. If $M_\p \iso$ $0$ then
-  there are $f_1,\ldots,f_n \in A - \p$ such that $f_ix_i = 0$ for $1
-  \le i \le n$. Taking $f \ce \prod_{i=1}^n f_i \in A - \p$, we have
-  $fM \iso$ $0 \implies M_f \iso$ $0$.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;the preimage map $\Sub_G \to$ $\Sub_A$,
+defined by $N \mapsto \phi^{-1}(N)$, is injective;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;join-preserved&quot; class=&quot;environment&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;2.2.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+
+        &lt;/div&gt;
+        &lt;p&gt;$\phi^{-1}(N_1N_2) =
+\phi^{-1}(N_1)\phi^{-1}(N_2)$ for $N_1,N_2 \in \Sub_G$.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;environment proof&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;2.3.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+          &lt;p&gt;Proof.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;Let $N_1,N_2 \in \Sub_G$. To prove &lt;a href=&quot;#preimage-injective&quot;&gt;(2.1)&lt;/a&gt; It
+suffices to show that $N_1 \subseteq N_2$ if $\phi^{-1}(N_1)
+\subseteq \phi^{-1}(N_2)$, so assume the latter. Then&lt;/p&gt;
+
+        &lt;p&gt;&lt;span id=intersection-preserved&gt;&lt;/span&gt;&lt;/p&gt;
+
+$$
+\tag{2.3.1}
+\phi^{-1}(N_1 \cap N_2) = \phi^{-1}(N_1) \cap \phi^{-1}(N_2) =
+\phi^{-1}(N_2).$$
+
+        &lt;p&gt;Now consider the commutative diagram&lt;/p&gt;
+
+$$
+\begin{xy}
+\xymatrix{
+  A \ar[d]^\phi \ar[r] &amp;
+  A/\phi^{-1}(N_1 \cap N_2) \ar[d]^{\phi_{N_1 \cap N_2}} \ar[r]
+    &amp;
+  A/\phi^{-1}(N_2) \ar[d]^{\phi_{N_2}} \\
+  G \ar[r] &amp;
+  G/(N_1 \cap N_2) \ar[r] &amp;
+  G/N_2
+}
+\end{xy}
+$$
+
+        &lt;p&gt;with the horizontal maps the projections. In the right-hand
+square, the vertical maps are isomorphisms by hypothesis, and
+the top horizontal map is an isomorphism by
+&lt;a href=&quot;#intersection-preserved&quot;&gt;(2.3.1)&lt;/a&gt;; thus the bottom horizontal map is an
+isomorphism, which implies $N_1 \subseteq N_2$.&lt;/p&gt;
+
+        &lt;p&gt;We now prove &lt;a href=&quot;#join-preserved&quot;&gt;(2.2)&lt;/a&gt;. Certainly $\phi^{-1}(N_1N_2)
+\supseteq \phi^{-1}(N_1)\phi^{-1}(N_2)$. And it’s fairly easy to
+see we have the sequence of identifications&lt;/p&gt;
+
+$$
+\frac{\phi^{-1}(N_1)\phi^{-1}(N_2)}{\phi^{-1}(N_1)} \iso
+\frac{\phi^{-1}(N_2)}{\phi^{-1}(N_1) \cap \phi^{-1}(N_2)} =
+\frac{\phi^{-1}(N_2)}{\phi^{-1}(N_1 \cap N_2)} =
+\phi_{N_1 \cap N_2}^{-1}\l( \frac{N_1}{N_1 \cap N_2} \r) \iso 
+\phi_{N_1}^{-1}\l( \frac{N_1N_2}{N_1} \r) =
+\frac{\phi^{-1}(N_1N_2)}{\phi^{-1}(N_1)}.
+$$
+
+        &lt;p&gt;But since $\phi^{-1}(N_1)$ has finite index in $A$, it follows that&lt;/p&gt;
+
+$$
+[\phi^{-1}(N_1N_2) : \phi^{-1}(N_1)\phi^{-1}(N_2)] =
+\l[ \frac{\phi^{-1}(N_1N_2)}{\phi^{-1}(N_1)} :
+\frac{\phi^{-1}(N_1)\phi^{-1}(N_2)}{\phi^{-1}(N_1)} \r] = 1,
+$$
+
+        &lt;p&gt;proving the desired claim.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
+&lt;div class=&quot;environment example&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;3.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Example.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;If we take $G$ to be a Galois group in &lt;a href=&quot;#main&quot;&gt;(2)&lt;/a&gt;, then the
+proposition says that when we have a suitable morphism $A \to$ $G$,
+the Galois theory described by $G$ is in fact controlled by
+$A$. This is what I meant by “pulling back a Galois correspondence”
+in the title. Let’s state this in more detail in the motivating
+example.&lt;/p&gt;
 
-&lt;div id=&quot;locally-free-point-to-open&quot; class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;2. Lemma&lt;/h6&gt;
+    &lt;p&gt;Let $K$ be a non-archimedean local field. Let $K^\ab$ be a maximal
+abelian extension of $K$. The Galois group $G \ce \Gal(K^\ab/K)$ is
+a profinite group, and Galois theory tells us that the poset
+$\Sub_G$ is anti-equivalent to the poset $\Ab_K$ of finite abelian
+extensions of $K$, i.e. the set of finite subextensions of $K^\ab$
+ordered by inclusion.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; The “reciprocity” statement in local
+class field theory asserts:&lt;/p&gt;
 
-  &lt;p&gt;Let $M$ be a finitely generated $A$-module. Then $M$ is locally free
-  of finite rank if and only if $M_\p$ is a finite free $A_\p$-module
-  for each $\p \in \Spec(A)$.&lt;/p&gt;
+    &lt;div class=&quot;environment&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;3.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+
+        &lt;/div&gt;
+        &lt;p&gt;the existence of a morphism $\phi_K \c K^\times \to$ $\Gal(K^\ab/K)$ satisfying the hypothesis of &lt;a href=&quot;#main&quot;&gt;(2)&lt;/a&gt;;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;environment&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;3.2.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+
+        &lt;/div&gt;
+        &lt;p&gt;if $N \ce \Stab_L \in \Sub_G$ is the subgroup corresponding to a
+finite abelian extension $K \inj L$, then $\phi_K^{-1}(N)$ is
+the &lt;em&gt;norm group&lt;/em&gt; $N_{L/K}(L^\times) \subseteq K^\times$.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Thus, putting &lt;a href=&quot;#main&quot;&gt;(2)&lt;/a&gt; and Galois theory together gives us that the
+poset $\Ab_K$ is anti-equivalent to the poset of norm groups in
+$K^\times$ by the correspondence $L \mapsto
+N_{L/K}(L^\times)$. Then there is an “existence” theorem in local
+class field theory stating that the norm groups are precisely the
+open subgroups of finite index in $K^\times$.&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
-
-  &lt;p&gt;The only if direction is obvious, so assume $M_\p$ is a finite free
-  $A_\p$-module for each $\p \in \Spec(A)$. Fixing $\p \in \Spec(A)$,
-  it suffices to show there exists $f \in A - \p$ such that $M_f$ is a
-  free $A_f$-module. We have an isomorphism $A_\p^n \iso$ $M_\p$,
-  which without loss of generality is the localisation of a morphism
-  $\alpha \c A^n \to$ $M$. It follows from &lt;a href=&quot;#trivial-point-to-open&quot;&gt;Lm. 1&lt;/a&gt;
-  that since $\alpha_\p$ is an isomorphim, so is $\alpha_f$ for some
-  $f \in A - \p$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment definition&quot;&gt;
-  &lt;h6&gt;3. Definition&lt;/h6&gt;
-
-  &lt;p&gt;We say an $A$-module $M$ is &lt;em&gt;invertible&lt;/em&gt; if there exists an
-  $A$-module $N$ and an isomorphism $M \otimes_A N \iso$ $A$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;invertible-module-finitely-generated&quot; class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;4. Lemma&lt;/h6&gt;
-
-  &lt;p&gt;An invertible $A$-module $M$ is finitely generated.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
-
-  &lt;p&gt;Assume we have an $A$-module $N$ and an isomorphism $\alpha \c A
-  \iso$ $M \otimes_A N$. Observe the image of $\alpha$ must be
-  generated by a single element of $M \otimes_A N$, so $\alpha$ must
-  factor through an isomorphism $\beta \c A \iso$ $M_0 \otimes_A N$
-  for some finitely generated submodule $M_0 \subseteq M$. Then we
-  have an isomorphism
-  \[
-  \begin{xy}
-  \xymatrix{
-    M \ar[d]^{\sim} \ar[rrr]^{\sim} &amp; &amp; &amp; M_0 \ar[d]^{\sim} \\ M
-    \otimes_A A \ar[r]^-{\id \otimes \beta} &amp; M \otimes_A M_0
-    \otimes_A N \ar[r]^-{\sim} &amp; M \otimes_A N \otimes_A M_0
-    \ar[r]^-{\alpha^{-1} \otimes \id} &amp; A \otimes_A M_0.
-  }
-  \end{xy}
-  \]&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;invertible-locally-free&quot; class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;5. Lemma&lt;/h6&gt;
-
-  &lt;p&gt;An $A$-module $M$ is invertible if and only if $M$ is locally free
-  of rank $1$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
-
-  &lt;p&gt;First assume $M$ is invertible: there is an $A$-module $N$ such that
-  $M \otimes_A N \iso$ $A$. Fix any $\p \in \Spec(A)$. By
-  &lt;a href=&quot;#locally-free-point-to-open&quot;&gt;Lm. 2&lt;/a&gt; it suffices to show $M_\p$ is free
-  of rank $1$ over $A_\p$. We have
-  \[
-  M_\p \otimes_{A_\p} N_\p \iso (M \otimes N)_\p \iso A_\p,
-  \]
-  i.e. $M_\p$ is invertible. Thus we are reduced to the case that $A$
-  is a local ring. Let $\m \in \Spec(A)$ denote the maximal ideal and
-  $k \ce A/\m$ the residue field. We have
-  \[
-  (M \otimes_A k) \otimes_k (N \otimes_A k) \iso M \otimes_A N
-  \otimes_A k \iso k,
-  \]
-  i.e. $M \otimes_A k$ is an invertible $k$-module. But $k$ is a field
-  so obviously this implies $M/\m M \iso$ $M \otimes_A k \iso$ $k$. Let $x
-  \in M$ be a lift of a generator of $M/\m M$ and $\alpha \c A \to$ $M$
-  the map defined by $1 \mapsto x$. By construction the induced map
-  $\alpha \otimes k \c k \to$ $M \otimes_A k$ is an isomorphism.  Then
-  Nakayama’s lemma implies $\alpha$ is an isomorphism.&lt;/p&gt;
-
-  &lt;p&gt;Conversely, assume $M$ is locally free of rank $1$. Let $M^\vee \ce
-  \hom_A(M, A)$ denote the dual of $M$ and consider the canonical
-  evaluation map $M \otimes_A M^\vee \to$ $A$. By hypothesis this
-  morphism locally looks like\footnote{I’m also using that locally
-    free implies finitely presented, which implies that dualising will
-    commute with localisation.} evaluation $A \otimes_A A^\vee \to$ $A$,
-  which is clearly an isomorphism. This finishes the proof.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment definition&quot;&gt;
-  &lt;h6&gt;6. Definition&lt;/h6&gt;
-
-  &lt;p&gt;It follows from &lt;a href=&quot;#invertible-module-finitely-generated&quot;&gt;Lm. 4&lt;/a&gt; that the
-  collection $\Pic(A)$ of isomorphism classes of invertible modules
-  forms a set. Under tensor product $\Pic(A)$ forms an abelian group
-  called the &lt;em&gt;Picard group&lt;/em&gt; of $A$. Note that by the proof of
-  &lt;a href=&quot;#invertible-locally-free&quot;&gt;Lm. 5&lt;/a&gt; the inverse in $\Pic(A)$ of (the
-  isomorphism class) of an invertible module $L$ is given by (the
-  isomorphism class of) the dual $L^\vee$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;graded-ring-invertible-components&quot; class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;7. Lemma&lt;/h6&gt;
-
-  &lt;p&gt;Let $A_*$ be a graded ring. Let $\otimes$ denote
-  $\otimes_{A_0}$. Assume there is an isomorphism of $A_0$-modules
-  $A_1 \otimes A_{-1} \iso$ $A_0$. Then for $n \ge 1$ we have
-  \[
-  A_n \iso A_1^{\otimes n} \quad\text{and}\quad
-  A_{-n} \iso A_{-1}^{\otimes n} \iso (A_1^\vee)^{\otimes n}.
-  \]&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
-
-  &lt;p&gt;We prove the first isomorphism by induction; the second is
-  symmetric. The case $n=1$ is tautological. Let $n &gt;
-  1$. Multiplication gives a map $A_1^{\otimes n} \to$ $A_n$. An inverse
-  map is given by
-  \[
-  A_n \iso A_n \otimes A_0 \iso A_n \otimes A_{-1} \otimes A_1 \to
-  A_{n-1} \otimes A_1 \iso A_1^{\otimes n},
-  \]
-  the last isomorphism coming from the inductive hypothesis. The case
-  $n \le -1$ is symmetric.&lt;/p&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;I just made up this terminology, who cares. What I mean is when
+  you view the posets as categories, there is a contravariant
+  equivalence. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-      <pubDate>Tue, 19 Aug 2014 00:00:00 -0400</pubDate>
+      <pubDate>Sat, 25 Oct 2014 17:30:00 -0400</pubDate>
+      <link>http://www.arponr.com/galois-pull-back</link>
+      <guid isPermaLink="true">http://www.arponr.com/galois-pull-back</guid>
+    </item>
+    
+    <item>
+      <title>Invertible modules</title>
+      <description>&lt;div class=&quot;environment notation&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;1.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Notation.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Let $A$ be a commutative ring.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;trivial-point-to-open&quot; class=&quot;environment lemma&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;2.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Lemma.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Let $M$ be a finitely generated
+$A$-module. If $M_\p \iso$ $0$ for some $\p \in \Spec(A)$, then $M_f
+\iso$ $0$ for some $f \in A - \p$.&lt;/p&gt;
+
+    &lt;div class=&quot;environment proof&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;2.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+          &lt;p&gt;Proof.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;Choose generators $x_1,\ldots,x_n \in M$. If $M_\p \iso$ $0$ then there are $f_1,\ldots,f_n \in A - \p$ such that $f_ix_i
+= 0$ for $1 \le i \le n$. Taking $f \ce \prod_{i=1}^n f_i \in
+A - \p$, we have $fM \iso$ $0 \implies M_f \iso$ $0$.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;locally-free-point-to-open&quot; class=&quot;environment lemma&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;3.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Lemma.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Let $M$ be a finitely generated
+$A$-module. Then $M$ is locally free of finite rank if and only if
+$M_\p$ is a finite free $A_\p$-module for each $\p \in \Spec(A)$.&lt;/p&gt;
+
+    &lt;div class=&quot;environment proof&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;3.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+          &lt;p&gt;Proof.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The only if direction is obvious, so assume $M_\p$ is a
+finite free $A_\p$-module for each $\p \in \Spec(A)$. Fixing $\p
+\in \Spec(A)$, it suffices to show there exists $f \in A - \p$
+such that $M_f$ is a free $A_f$-module. We have an isomorphism
+$A_\p^n \iso$ $M_\p$, which without loss of generality is the
+localisation of a morphism $\alpha \c A^n \to$ $M$. It follows
+from &lt;a href=&quot;#trivial-point-to-open&quot;&gt;(2)&lt;/a&gt; that since $\alpha_\p$ is an
+isomorphim, so is $\alpha_f$ for some $f \in A - \p$.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;environment definition&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;4.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Definition.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;We say an $A$-module $M$ is &lt;em&gt;invertible&lt;/em&gt; if there
+exists an $A$-module $N$ and an isomorphism $M \otimes_A N \iso$ $A$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;invertible-module-finitely-generated&quot; class=&quot;environment lemma&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;5.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Lemma.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;An invertible
+$A$-module $M$ is finitely generated.&lt;/p&gt;
+
+    &lt;div class=&quot;environment proof&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;5.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+          &lt;p&gt;Proof.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;Assume we have an $A$-module $N$ and an isomorphism
+$\alpha \c A \iso$ $M \otimes_A N$. Observe the image of $\alpha$
+must be generated by a single element of $M \otimes_A N$, so
+$\alpha$ must factor through an isomorphism $\beta \c A \iso$ $M_0
+\otimes_A N$ for some finitely generated submodule $M_0
+\subseteq M$. Then we have an isomorphism&lt;/p&gt;
+
+$$
+\begin{xy}
+\xymatrix{
+  M \ar[d]^{\sim} \ar[r]^{\sim} &amp;
+  M_0 \ar[d]_{\sim} \\
+  M \otimes_A A \ar[d]^{\sim}_{\id \otimes \beta} &amp;
+  A \otimes_A M_0 \ar[d]_{\sim}^{\alpha \otimes \id} \\
+  M \otimes_A M_0 \otimes_A N \ar[r]^{\sim} &amp;
+  M \otimes_A N \otimes_A M_0,
+}
+\end{xy}
+$$
+
+        &lt;p&gt;implying $M$ is finitely generated.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;invertible-locally-free&quot; class=&quot;environment lemma&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;6.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Lemma.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;An $A$-module $M$ is invertible if
+and only if $M$ is locally free of rank $1$.&lt;/p&gt;
+
+    &lt;div class=&quot;environment proof&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;6.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+          &lt;p&gt;Proof.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;First assume $M$ is invertible: there is an $A$-module
+$N$ such that $M \otimes_A N \iso$ $A$. Fix any $\p \in
+\Spec(A)$. By &lt;a href=&quot;#locally-free-point-to-open&quot;&gt;(3)&lt;/a&gt; it suffices to show
+$M_\p$ is free of rank $1$ over $A_\p$. We have&lt;/p&gt;
+
+$$
+M_\p \otimes_{A_\p} N_\p \iso (M \otimes N)_\p \iso A_\p,
+$$
+
+        &lt;p&gt;i.e. $M_\p$ is invertible. Thus we are reduced to the case that
+$A$ is a local ring. Let $\m \in \Spec(A)$ denote the maximal
+ideal and $k \ce A/\m$ the residue field. We have&lt;/p&gt;
+
+$$
+(M \otimes_A k) \otimes_k (N \otimes_A k) \iso M \otimes_A N
+\otimes_A k \iso k,
+$$
+
+        &lt;p&gt;i.e. $M \otimes_A k$ is an invertible $k$-module. But $k$ is a
+field so obviously this implies $M/\m M \iso$ $M \otimes_A k \iso$ $k$. Let $x \in M$ be a lift of a generator of $M/\m M$ and
+$\alpha \c A \to$ $M$ the map defined by $1 \mapsto x$. By
+construction the induced map $\alpha \otimes k \c k \to$ $M
+\otimes_A k$ is an isomorphism.  Then Nakayama’s lemma implies
+$\alpha$ is an isomorphism.&lt;/p&gt;
+
+        &lt;p&gt;Conversely, assume $M$ is locally free of rank $1$. Let $M^\vee
+\ce \hom_A(M, A)$ denote the dual of $M$ and consider the
+canonical evaluation map $M \otimes_A M^\vee \to$ $A$. By
+hypothesis this morphism locally looks like evaluation $A
+\otimes_A A^\vee \to$ $A$, which is clearly an
+isomorphism.&lt;sup id=&quot;fnref:locfree-fp&quot;&gt;&lt;a href=&quot;#fn:locfree-fp&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; This finishes the proof.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;environment definition&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;7.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Definition.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;It follows from &lt;a href=&quot;#invertible-module-finitely-generated&quot;&gt;(5)&lt;/a&gt;
+that the collection $\Pic(A)$ of isomorphism classes of invertible
+modules forms a set. Under tensor product $\Pic(A)$ forms an
+abelian group called the &lt;em&gt;Picard group&lt;/em&gt; of $A$. Note that by the
+proof of &lt;a href=&quot;#invertible-locally-free&quot;&gt;(6)&lt;/a&gt; the inverse in $\Pic(A)$ of (the
+isomorphism class) of an invertible module $L$ is given by (the
+isomorphism class of) the dual $L^\vee$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;graded-ring-invertible-components&quot; class=&quot;environment lemma&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;8.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Lemma.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Let $A_*$ be a graded
+ring. Let $\otimes$ denote $\otimes_{A_0}$. Assume there is an
+isomorphism of $A_0$-modules $A_1 \otimes A_{-1} \iso$ $A_0$. Then
+for $n \ge 1$ we have&lt;/p&gt;
+
+$$
+A_n \iso A_1^{\otimes n} \quad\text{and}\quad
+A_{-n} \iso A_{-1}^{\otimes n} \iso (A_1^\vee)^{\otimes n}.
+$$
+
+    &lt;div class=&quot;environment proof&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;8.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+          &lt;p&gt;Proof.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;We prove the first isomorphism by induction; the second
+is symmetric. The case $n=1$ is tautological. Let $n &gt;
+1$. Multiplication gives a map $A_1^{\otimes n} \to$ $A_n$. An
+inverse map is given by&lt;/p&gt;
+
+$$
+A_n \iso A_n \otimes A_0 \iso A_n \otimes A_{-1} \otimes A_1 \to
+A_{n-1} \otimes A_1 \iso A_1^{\otimes n},
+$$
+
+        &lt;p&gt;the last isomorphism coming from the inductive hypothesis.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:locfree-fp&quot;&gt;
+
+      &lt;p&gt;I’m using here that locally free implies finitely presented, which
+implies that dualising will commute with localisation. &lt;a href=&quot;#fnref:locfree-fp&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+      <pubDate>Tue, 19 Aug 2014 20:29:00 -0400</pubDate>
       <link>http://www.arponr.com/invertible-modules</link>
       <guid isPermaLink="true">http://www.arponr.com/invertible-modules</guid>
     </item>
     
     <item>
-      <title>Bundles I: definitions</title>
-      <description>&lt;p&gt;I decided to sit down and understand how structure groups of fibre
-bundles work. Principal bundles in particular seem like fairly
-ubiquitous objects, and they’ll come up right away in the upcoming
-posts about bordism. So I thought I’d work through the basics
-carefully and write it down.&lt;/p&gt;
+      <title>Homotopy (co)limits aren&#39;t (co)limits in the homotopy category</title>
+      <description>&lt;div class=&quot;environment&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;1.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
 
-&lt;p&gt;It struck me that much of the discussion can be translated immediately
-to the more general setting of sheaves, so for fun that’s how I’ll
-approach things. Of course I’ll point out throughout how the more
-familiar setting of bundles fits into the picture.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;It’s really nice to be able to think about things via universal
+properties, and I in particular know and love how to do this for
+limits and colimits in ordinary categories. But in homotopy theory
+things these notions need to be fixed slightly, since they’re not
+homotopy invariant. The canonical example in the familiar realm of
+spaces is that $D^n \from S^{n-1} \to$ $D^n$ has pushout $S^n$ but $*
+\from S^{n-1} \to$ $*$ has pushout $*$.&lt;/p&gt;
 
-&lt;p&gt;The aim of this first post is just to set things up.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;We begin by defining the motivating players advertised in the title:
-bundles and structure groups.&lt;/p&gt;
-
+    &lt;p&gt;This is what leads one to define homotopy limits and homotopy
+colimits, which &lt;em&gt;are&lt;/em&gt; homotopy invariant. But, not understanding
+these things all too well, and seeking to retreat into familiar
+territory, I’m tempted to just think of them as limits as colimits
+in the homotopy category. But this is so, so wrong! The example
+above already shows that, but I wanted to write down a perhaps even
+more severe example I learned from &lt;a href=&quot;http://mathoverflow.net/questions/10364/categorical-homotopy-colimits&quot;&gt;the internet&lt;/a&gt; which
+helped hammer this point home.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class=&quot;environment notation&quot;&gt;
-  &lt;h6&gt;Notation&lt;/h6&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;2.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Notation.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Let $\H$ denote the homotopy category of pointed spaces
+(for definiteness maybe take this to be pointed CW complexes and
+maps up to homotopy). For $X,Y \in \H$ denote $\hom_\H(X,Y)$ by
+$[X,Y]$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;environment example&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;3.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Example (a colimit which doesn’t exist).&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Consider the diagram&lt;/p&gt;
 
-  &lt;p&gt;Fix a topological space $X$ until further notice.&lt;/p&gt;
+$$
+\begin{xy}
+\xymatrix{
+ S^1 \ar[r]_i \ar[d]^f &amp; D^2 \\ S^1. &amp;
+}
+\end{xy}
+$$
+
+    &lt;p&gt;where $i$ is the canonical inclusion and $f$ is a degree $2$ map. We
+know this diagram has a homotopy pushout: we can replace $f$ by a
+cofibration and then just take an ordinary pushout. But we can show
+that this diagram has no colimit in $\H$. Suppose there were a
+pushout $X \in \H$: then for $Y \in \H$ we have&lt;/p&gt;
+
+$$
+[X,Y] \iso [S^1,Y] \times_{[S^1, Y]} [D^2,Y] \iso \pi_1(Y)
+\times_{\pi_1(Y)} *
+$$
+
+    &lt;p&gt;where the map $\pi_1(Y) \to$ $\pi_1(Y)$ is multiplication by $2$ by
+definition of $f$. Thus $[X,Y] \iso$ $\pi_1(Y)[2]$, the $2$-torsion of
+$\pi_1(Y)$. We will prove that this functor $Y \mapsto \pi_1(Y)[2]$
+cannot be corepresentable.&lt;/p&gt;
+
+    &lt;p&gt;First, we have $[X,S^0] \iso$ $\pi_1(S^0)[2] \iso$ $0$ implying $X$ is
+connected. Thus for $G$ a (discrete) group, considering the
+classification of principal $G$-bundles (i.e. $G$-coverings) gives
+isomorphisms&lt;/p&gt;
+
+$$
+\hom_\Grp(\pi_1(X),G) \iso H^1(X;G) \iso [X;BG] \iso \pi_1(BG)[2]
+\iso G[2],
+$$
+
+    &lt;p&gt;natural in $G$. By Yoneda this implies $\pi_1(X) \iso$ $\Z/2$. It
+follows that we can construct maps $\RP^2 \to$ $X \to$ $\RP^\infty \iso$ $K(\Z/2,1)$ which are isomorphisms on $\pi_1$, and hence isomorphisms
+on $H_1(-;\Z)$. Since $H_2(\RP^2;\Z) \iso$ $0 \iso$ $H_2(\RP^\infty;\Z)$
+it follows by the universal coefficient theorem that the composition
+$\RP^2 \to$ $\RP^\infty$ is an isomorphism on $H^2(-;\Z)$. But this is
+impossible, for&lt;/p&gt;
+
+$$
+H^2(X;\Z) \iso [X,K(\Z,2)] \iso \pi_1(K(\Z,2))[2] \iso 0.
+$$
+  &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;bundles-structure-groups&quot; class=&quot;environment definitions&quot;&gt;
-  &lt;h6&gt;1. Definitions&lt;/h6&gt;
-
-  &lt;p&gt;Let $F$ be a space and $G$ a topological group.&lt;/p&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;A &lt;em&gt;fibre bundle&lt;/em&gt; over $X$ with &lt;em&gt;fibre&lt;/em&gt; $F$ is a map $\pi \c E \to$ $X$
-such that there is an open cover $\{U_i\}$ of $X$ and homeomorphisms
-$\phi_i \c \pi^{-1}(U_i) \to$ $U_i \times F$ over $X$ for each $i$. In
-particular the fibre $\pi^{-1}(x)$ is homeomorphic to $F$ for every
-$x \in X$.&lt;/li&gt;
-    &lt;li&gt;Such data $\{(U_i,\phi_i)\}$ is called a &lt;em&gt;trivialisation&lt;/em&gt; of the
-fibre bundle. The &lt;em&gt;transition maps&lt;/em&gt; associated to a trivialisation
-are the maps
-\[
-t_{ij} \c U_i \cap U_j \to \aut(F),
-\]
-where $\aut(F)$ denotes the group of homeomorphisms of $F$ with
-itself, such that the automorphism $\phi_i\phi_j^{-1}$ of $(U_i \cap
-U_j) \times F$ is given by $(u,f) \mapsto (u, t_{ij}(u)(f))$.&lt;/li&gt;
-    &lt;li&gt;A fibre bundle $\pi \c E \to$ $X$ with &lt;em&gt;structure group $G$&lt;/em&gt;, or a
-&lt;em&gt;$G$-bundle&lt;/em&gt;, is one where the fibre $F$ is equipped with a left
-$G$-action and $\pi$ is equipped with a trivialisation for which the
-transition maps $t_{ij}$ factor through the action $G \to$ $\aut(F)$.&lt;/li&gt;
-    &lt;li&gt;A $G$-bundle is &lt;em&gt;principal&lt;/em&gt; if $G$ acts simply transitively on the
-fibre $F$, i.e., $F$ is homeomorphic as a left $G$-space to $G$
-(which is a left $G$-space via left multiplication).&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;principal-right-action&quot; class=&quot;environment remark&quot;&gt;
-  &lt;h6&gt;2. Remark&lt;/h6&gt;
-
-  &lt;p&gt;Note that a &lt;em&gt;trivial&lt;/em&gt; principal $G$-bundle $X \times G$ has both a
-left and a right $G$-action, via left and right multiplication on $G$.
-Since these two actions commute and a principal $G$-bundle $\pi \c E
-\to$ $X$ locally looks like $U \times G$ as a left $G$-space, the right
-actions on $U \times G$ will glue together to give a global right
-$G$-action on $E$ which preserves fibres. I.e., any principal
-$G$-bundle is a right $G$-space over $X$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;These are the type of objects we should have in the back of our mind
-throughout. We will generalise them using the language of sheaves,
-with the following definitions as our basic tools.&lt;/p&gt;
-
-&lt;div class=&quot;environment definitions&quot;&gt;
-  &lt;h6&gt;3. Definitions&lt;/h6&gt;
-
-  &lt;p&gt;Let $\G$ be a sheaf of groups on $X$.&lt;/p&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;A &lt;em&gt;$\G$-sheaf&lt;/em&gt; on $X$ is a sheaf of sets $\E$ on $X$ together with
-a right action $\E \times \G \to$ $\E$ of $\G$. A &lt;em&gt;morphism of
-$\G$-sheaves&lt;/em&gt; $\E \to$ $\E&#39;$ on $X$ is a morphism of sheaves of sets
-which commutes with the $\G$-actions.&lt;/li&gt;
-    &lt;li&gt;A &lt;em&gt;$\G$-pseudotorsor&lt;/em&gt; is $\G$-sheaf $\E$ such that for all $U
-\subseteq X$ open, either $\E(U)$ is empty or the action of $\G(U)$
-on $\E(U)$ is simply transitive. A $\G$-pseudotorsor $\E$ is a
-&lt;em&gt;$\G$-torsor&lt;/em&gt; if moreover $\E(U_i)$ is nonempty for all $i$ in some
-open cover $\{U_i\}$ of $X$. A &lt;em&gt;morphism of $\G$-pseudotorsors or
-$\G$-torsors&lt;/em&gt; is simply a morphism of the underlying $\G$-sheaves.&lt;/li&gt;
-    &lt;li&gt;There is a &lt;em&gt;trivial $\G$-torsor&lt;/em&gt; on $X$ given by $\G$ equipped with
-the action given by right multiplication. A $\G$-sheaf $\E$ is
-called &lt;em&gt;trivial&lt;/em&gt; if there is an isomorphism of $\G$-sheaves $\E \iso$ $\G$.&lt;/li&gt;
-    &lt;li&gt;Note that if $\E$ is a $\G$-sheaf, then $\E|_U$ is a $\G|_U$-sheaf
-on $U$ for any $U \subseteq X$. If $P$ is some property which can be
-enjoyed by $\H$-sheaves on $Y$ for any sheaf of groups $\H$ on any
-space $Y$—e.g. the properties of being a pseudotorsor, or torsor,
-or trivial—then we say a $\G$-sheaf $\E$ on $X$ &lt;em&gt;locally has the
-property&lt;/em&gt; $P$ if the $\G|_{U_i}$ sheaf $\E|_{U_i}$ has the property
-$P$ for all $i$ in some open cover $\{U_i\}$ of $X$. The same goes
-for morphisms of $\G$-sheaves.&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment remark&quot;&gt;
-  &lt;h6&gt;4. Remark&lt;/h6&gt;
-
-  &lt;p&gt;Note we should really have called these &lt;em&gt;right&lt;/em&gt; $\G$-sheaves,
-$\G$-pseudotorsors, and $\G$-torsors. Of course we can analogously
-define &lt;em&gt;left&lt;/em&gt; $\G$-sheaves, $\G$-pseudotorsors, and $\G$-torsors. We
-will need to distinguish between the two later on (as we needed to
-distinguish between left and right $G$-spaces for bundles above), but
-until then we agree to leave the modifier “right” implicit.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;torsor-equiv&quot; class=&quot;environment remarks&quot;&gt;
-  &lt;h6&gt;5. Remarks&lt;/h6&gt;
-
-  &lt;p&gt;Observe that any morphism of $\G$-torsors is an isomorphism, since
-clearly it must locally be an isomorphism. So suppose $\E$ is a
-$\G$-pseudotorsor with a section $s \in \E(U)$ for some $U \subseteq
-X$ open. Then there is a morphism of $\G|_U$-torsors $\G|_U \to$ $\E|_U$
-on $U$ given by
-\[
-\G(V) \ni 1 \mapsto s|_V \in \E(V), \quad V \subseteq U\text{ open}.
-\]
-As just observed this must an isomorphism. I.e., any global section
-trivialises a pseudotorsor, and in particilar a pseudotorsor is a
-torsor if and only if it is locally trivial. In fact, any $\G$-sheaf
-is a $\G$-torsor if and only if it’s locally trivial. This is
-immediate from the preceding discussion and the following lemma, that
-being a pseudotorsor or torsor is a local condition.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;torsor-local&quot; class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;6. Lemma&lt;/h6&gt;
-
-  &lt;p&gt;If a $\G$-sheaf $\E$ on $X$ is locally a $\G$-pseudotorsor
-(resp. $\G$-torsor), then $\E$ is a $\G$-pseudotorsor
-(resp. $\G$-torsor).&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
-
-  &lt;p&gt;It’s clear that the statement for $\G$-torsors follows immediately
-from the statement for pseudotorsors, so we need only prove the
-latter. Assume $\E|_{U_i}$ is a $\G|_{U_i}$-pseudotorsor for all $i$
-in an open cover $\{U_i\}$ of $X$. Let $V \subseteq X$ such that
-$\E(V)$ is nonempty. Let $s, t \in \E(V)$. We need to show there is a
-unique $g \in \G(V)$ such that $t = sg$. Write
-\[
-V_i \ce V \cap U_i, \quad V_{ij} \ce V \cap U_i \cap U_j,
-\]
-\[
-s_i \ce s|_{V_i}, \quad s_{ij} \ce s|_{V_{ij}}, \quad t_i \ce
-t|_{V_i}, \quad t_{ij} \ce t|_{V_{ij}}
-\]
-for all $i,j$ where these
-intersections are nonempty. Since $\E|_{U_i}$ is a
-$\G|_{U_i}$-pseudotorsor, there is a unique $g_i \in \G(V_i)$ such
-that $t_i = s_ig_i$; then
-\[
-s_{ij}g_i|_{V_{ij}} = t_{ij} = s_{ij}g_j|_{V_{ij}},
-\]
-so uniqueness also implies $g_i|_{V_{ij}} = g_j|_{V_{ij}}$. Since the
-$V_i$ cover $V$, the $g_i$ glue to $g \in \G(V)$. The equation $t =
-sg$ holds when restricted to each $V_i$ and thus must hold on $V$, and
-the uniqueness of $g$ is immediate from the uniqueness of the $g_i$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Let’s bring things back down to bundles for a second.&lt;/p&gt;
-
-&lt;div id=&quot;map-sheaf&quot; class=&quot;environment definition&quot;&gt;
-  &lt;h6&gt;7. Definition&lt;/h6&gt;
-
-  &lt;p&gt;To any space $Y$ we can associate a sheaf of sets $\u{Y}$ on $X$: the
-&lt;em&gt;sheaf of continuous maps to $Y$&lt;/em&gt;, given by the assignment
-\[
-U \mapsto \hom_\Top(U,Y), \quad U \subseteq X \text{ open}.
-\]&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;bundle-example&quot; class=&quot;environment example&quot;&gt;
-  &lt;h6&gt;8. Example&lt;/h6&gt;
-
-  &lt;p&gt;Let $G$ be a topological group. Then $\u{G}$ is in fact a sheaf of
-groups. If $\pi \c E \to$ $X$ is a right $G$-space over $X$ (a space
-over $X$ with a right $G$-action preserving fibres) then the sheaf
-$\E$ of continuous sections of $\pi$ is a $\u{G}$-sheaf in a canonical
-manner. By &lt;a href=&quot;#principal-right-action&quot;&gt;Rm. 2&lt;/a&gt;, any principal $G$-bundle
-gives an example of such a $\pi \c E \to$ $X$. In this case we will
-moreover have that $\E$ is locally trivial, and hence a $\u{G}$-torsor
-by &lt;a href=&quot;#torsor-equiv&quot;&gt;Rm. 5&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We next generalise the main definitions we began with in
-&lt;a href=&quot;#bundles-structure-groups&quot;&gt;Df. 1&lt;/a&gt;. I’m not sure if there’s standard
-terminology for some of these things so I’m just sticking with the
-terminology for fibre bundles.&lt;/p&gt;
-
-&lt;div class=&quot;environment definition&quot;&gt;
-  &lt;h6&gt;9. Definition&lt;/h6&gt;
-
-  &lt;p&gt;If $\E$ is a sheaf of sets on $X$ then we have a &lt;em&gt;sheaf of
-automorphisms&lt;/em&gt; $\saut_X(\E)$ on $X$ which to every open $U \subseteq
-X$ assigns the set $\aut(\E|_U)$ of isomorphisms $\E|_U \to$ $\E|_U$
-of sheaves on $U$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment remark&quot;&gt;
-  &lt;h6&gt;10. Remark&lt;/h6&gt;
-
-  &lt;p&gt;If $G$ is a topological group and $F$ a space then giving a $G$-action
-on a space $F$ is equivalent to giving a continuous map $G \to$ $\aut(F)$. Observe similarly that if $\G$ is a sheaf of groups on
-$X$ and $\F$ a sheaf of sets on $X$ then giving a left $\G$-action on
-$\F$ is equivalent to giving a morphism of sheaves $\G \to$ $\saut_X(\E)$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;bundle-sheaf&quot; class=&quot;environment definition&quot;&gt;
-  &lt;h6&gt;11. Definition&lt;/h6&gt;
-
-  &lt;p&gt;Let $\F$ be a sheaf of sets on $X$ and $\G$ a sheaf of groups on $X$.&lt;/p&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;A &lt;em&gt;bundle&lt;/em&gt; over $X$ with &lt;em&gt;fibre&lt;/em&gt; $\F$ is a sheaf of sets $\E$ on $X$
-such that there is an open cover $\{U_i\}$ of $X$ and isomorphisms
-$\phi_i \c \E|_{U_i} \to$ $\F|_{U_i}$ for each $i$.&lt;/li&gt;
-    &lt;li&gt;Such data $\{(U_i,\phi_i)\}$ is called a &lt;em&gt;trivialisation&lt;/em&gt; of the
-bundle. The &lt;em&gt;transition morpshisms&lt;/em&gt; associated to a trivialisation
-are the automorphisms $t_{ij} \ce \phi_i\phi_j^{-1}$ of $\F|_{U_i
-\cap U_j}$.&lt;/li&gt;
-    &lt;li&gt;A bundle $\E$ on $X$ with &lt;em&gt;structure group $\G$&lt;/em&gt;, or a
-&lt;em&gt;$\G$-bundle&lt;/em&gt;, is one where the fibre $\F$ is equipped with a left
-$\G$-action and $\E$ is equipped with a trivialisation for which the
-transition morphisms $t_{ij}$ lie in the image of $\G(U_i \cap U_j)
-\to$ $\saut_X(\F)(U_i \cap U_j)$.&lt;/li&gt;
-    &lt;li&gt;A $\G$-bundle is &lt;em&gt;principal&lt;/em&gt; if $\F$ is isomorphic as a left
-$\G$-sheaf to $\G$ (which is a left $\G$-sheaf via left
-multiplication).&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;p&gt;In fact we could have left that last definition out, since according
-to &lt;a href=&quot;#principal-equals-torsor&quot;&gt;Pr. 13&lt;/a&gt; below, we have already defined it!&lt;/p&gt;
-
-&lt;div id=&quot;auto-left&quot; class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;12. Lemma&lt;/h6&gt;
-
-  &lt;p&gt;Let $\G$ be a sheaf of groups on $X$. Any morphism of right
-$\G$-sheaves $t \c \G \to$ $\G$ is given by left multiplication by some
-$g \in \G(X)$:
-\[
-t_U \c\  \G(U) \ni h \mapsto g|_Uh \in \G(U), \quad U \subseteq X \text{
-open}.
-\]&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
-
-  &lt;p&gt;Let $1_U \in \G(U)$ denote the unit for $U \subseteq X$ open. Let $g
-\ce t_X(1_X) \in \G(X)$. Since $1_X|_U = 1_U$ and $t$ is a morphism of
-right $\G$-sheaves we have for any $U \subseteq X$ open and $h \in
-\G(U)$:
-\[
-t_U(h) = t_U(1_U) \cdot h = t_X(1_X)|_U \cdot h = g|_Uh.
-\]&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;principal-equals-torsor&quot; class=&quot;environment proposition&quot;&gt;
-  &lt;h6&gt;13. Proposition&lt;/h6&gt;
-
-  &lt;p&gt;Let $\G$ be a sheaf of groups on $X$. A sheaf of sets $\E$ on $X$ is a
-principal $\G$-bundle if and only if it is a right $\G$-torsor.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
-
-  &lt;p&gt;($\Rightarrow$) Let $\E$ be a principal $\G$-bundle sheaf. So we have
-an open cover $\{U_i\}$ of $X$ and isomorphisms $\E|_{U_i} \iso$ $\G|_{U_i}$ such that the transition morphisms $t_{ij}$ are given by
-left multiplication by some $g_{ij} \in \G(U_i \cap U_j)$. Since left
-and right multiplication commute, the right actions of $\G|_{U_i}$ on
-$\E|_{U_i}$ via right-multiplication will glue together to give a
-global right action of $\G$ on $\E$ (this is precisely analogous to
-&lt;a href=&quot;#principal-right-action&quot;&gt;Rm. 2&lt;/a&gt;). Thus $\E$ is a right $\G$-sheaf, and
-since $\E$ is by construction locally trivial it must be a $\G$-torsor
-by &lt;a href=&quot;#torsor-equiv&quot;&gt;Rm. 5&lt;/a&gt;.&lt;/p&gt;
-
-  &lt;p&gt;($\Leftarrow$) Suppose $\E$ is a right $\G$-torsor. By
-&lt;a href=&quot;#torsor-equiv&quot;&gt;Rm. 5&lt;/a&gt; it is locally trivial: there is an open cover
-$\{U_i\}$ of $X$ and isomorphisms of right $\G$-sheaves $\E|_{U_i}
-\iso$ $\G|_{U_i}$. So $\E$ is a bundle sheaf with fibre $\G$. Then that
-$\E$ has structure group $\G$ is immediate from &lt;a href=&quot;#auto-left&quot;&gt;Lm. 12&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Now, I’ve said that we’ve &lt;em&gt;generalised&lt;/em&gt; the notion of fibre bundle
-with this notion of bundles as sheaves. But we’ve been proceeding on
-analogies alone. So though I’ve hinted at it in &lt;a href=&quot;#bundle-example&quot;&gt;Ex. 8&lt;/a&gt;,
-I haven’t actually proved in what sense this is a generalisation. But
-I’ll save that for the next post.&lt;/p&gt;
 </description>
-      <pubDate>Mon, 16 Jun 2014 17:10:00 -0400</pubDate>
-      <link>http://www.arponr.com/bundles-i-definitions</link>
-      <guid isPermaLink="true">http://www.arponr.com/bundles-i-definitions</guid>
+      <pubDate>Sat, 05 Jul 2014 14:30:00 -0400</pubDate>
+      <link>http://www.arponr.com/hocolim-arent-colimho</link>
+      <guid isPermaLink="true">http://www.arponr.com/hocolim-arent-colimho</guid>
     </item>
     
     <item>
       <title>Finite presentation basics</title>
-      <description>&lt;p&gt;We recall the definitions and prove two basic statements about finite
-presentation, that “finitely presented implies always finitely
-presented”&lt;sup id=&quot;fnref:always&quot;&gt;&lt;a href=&quot;#fn:always&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and that it is a local property. The proofs in the
-setting of modules and in the setting of algebras are completely
-analogous, so we will abstract very slightly and address both at once.&lt;/p&gt;
+      <description>&lt;div class=&quot;environment&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;1.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
 
-&lt;p&gt;Our notation is as follows:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;All rings and algebras are commutative with unit.&lt;/li&gt;
-  &lt;li&gt;For a ring $A$, let $\C_A$ denote either the category of $A$-modules
-or the category of $A$-algebras. All arrows indicate morphisms in
-$\C_A$.&lt;/li&gt;
-  &lt;li&gt;Let $\amalg$ denote the coproduct in $\C_A$, i.e., direct sum
+    &lt;/div&gt;
+    &lt;p&gt;We recall the definitions and prove two basic statements about
+finite presentation, that “finitely presented implies always
+finitely presented”&lt;sup id=&quot;fnref:always&quot;&gt;&lt;a href=&quot;#fn:always&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and that it is a local property. The
+proofs in the setting of modules and in the setting of algebras are
+completely analogous, so we will abstract very slightly and address
+both at once.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;environment notation&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;2.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Notation.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;All rings and algebras are commutative with unit.&lt;/li&gt;
+      &lt;li&gt;For a ring $A$, let $\C_A$ denote either the category of
+$A$-modules or the category of $A$-algebras. All arrows indicate
+morphisms in $\C_A$.&lt;/li&gt;
+      &lt;li&gt;Let $\amalg$ denote the coproduct in $\C_A$, i.e., direct sum
 $\oplus$ for $A$-modules or tensor product $\otimes_A$ for
 $A$-algebras.&lt;/li&gt;
-  &lt;li&gt;For $C \in \obj(\C_A)$ and $n \in \N$ let $C^{\amalg n}$ denote the
-$n$-fold coproduct $C \amalg \cdots \amalg C$ and $C^n$ denote the
-$n$-fold product $C \times \cdots \times C$.&lt;/li&gt;
-  &lt;li&gt;Let $F_A \in \obj(\C_A)$ denote the free object on one element,
+      &lt;li&gt;For $C \in \obj(\C_A)$ and $n \in \N$ let $C^{\amalg n}$ denote
+the $n$-fold coproduct $C \amalg \cdots \amalg C$ and $C^n$
+denote the $n$-fold product $C \times \cdots \times C$.&lt;/li&gt;
+      &lt;li&gt;Let $F_A \in \obj(\C_A)$ denote the free object on one element,
 i.e., $F_A \iso$ $A$ for $A$-modules and $F_A \iso$ $A[t]$ for
 $A$-algebras. Thus for any $n \in \N$ there is an isomorphism
 $\hom_{\C_A}(F_A^{\amalg n},C) \iso$ $C^n$ natural in $C \in
 \obj(\C_A)$.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;/ul&gt;
 
-&lt;p&gt;Now to the content. Fix a ring $A$ for the remainder.&lt;/p&gt;
-
+    &lt;p&gt;And now fix a ring $A$ for the remainder.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class=&quot;environment definition&quot;&gt;
-  &lt;h6&gt;1. Definition&lt;/h6&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;3.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Definition.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;An object $C \in \obj(\C_A)$ is:&lt;/p&gt;
 
-  &lt;p&gt;An object $C \in \obj(\C_A)$ is:&lt;/p&gt;
-
-  &lt;ol&gt;
-    &lt;li&gt;&lt;em&gt;finitely generated&lt;/em&gt; if for some $n \in \N$ there is a surjection
-$F_A^{\amalg n} \to$ $M$;&lt;/li&gt;
-    &lt;li&gt;&lt;em&gt;finitely presented&lt;/em&gt; if for some $n \in \N$ there is a surjection
-$F_A^{\amalg n} \to$ $M$ with finitely generated kernel.&lt;/li&gt;
-  &lt;/ol&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;em&gt;finitely generated&lt;/em&gt; if for some $n \in \N$ there is a
+surjection $F_A^{\amalg n} \to$ $M$;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;finitely presented&lt;/em&gt; if for some $n \in \N$ there is a
+surjection $F_A^{\amalg n} \to$ $M$ with finitely generated
+kernel.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;ker-surjection&quot; class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;2. Lemma&lt;/h6&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;4.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Lemma.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Let $f \c C \to$ $D$ and $g \c D \to$ $E$ be
+morphisms in $\C_A$.  Define $h \ce g \circ f$. Then if $f$ is
+surjective, the canonical morphism $\ker(h) \to$ $\ker(g)$ induced by
+$f$ is surjective. In particular, if $\ker(h)$ is finitely
+generated then so is $\ker(g)$.&lt;/p&gt;
 
-  &lt;p&gt;Let $f \c C \to$ $D$ and $g \c D \to$ $E$ be morphisms in $\C_A$.  Define
-$h \ce g \circ f$. Then if $f$ is surjective, the canonical morphism
-$\ker(h) \to$ $\ker(g)$ induced by $f$ is surjective. In particular, if
-$\ker(h)$ is finitely generated then so is $\ker(g)$.&lt;/p&gt;
+    &lt;div class=&quot;environment proof&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;4.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+          &lt;p&gt;Proof.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;Evident.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
-
-  &lt;p&gt;Evident.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Now the first fact: once finitely presented, always finitely
-presented.&lt;/p&gt;
-
 &lt;div id=&quot;fp-implies-always-fp&quot; class=&quot;environment proposition&quot;&gt;
-  &lt;h6&gt;3. Proposition&lt;/h6&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;5.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Proposition.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Let $C \in \obj(\C_A)$ be
+finitely presented. If $\alpha \c D \to$ $C$ is a surjection with $D$
+finitely generated, then $\ker(\alpha)$ is finitely generated.&lt;/p&gt;
 
-  &lt;p&gt;Let $C \in \obj(\C_A)$ be finitely presented. If $\alpha \c D \to$ $C$
-is a surjection with $D$ finitely generated, then $\ker(\alpha)$ is
-finitely generated.&lt;/p&gt;
-&lt;/div&gt;
+    &lt;div class=&quot;environment proof&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;5.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+          &lt;p&gt;Proof.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;By &lt;a href=&quot;#ker-surjection&quot;&gt;(4)&lt;/a&gt; we may assume $D \iso$ $F_A^{\amalg
+m}$. By definition we have a surjection $\beta \c F_A^{\amalg n}
+\to$ $C$ with $\ker(\beta)$ finitely generated. Consider the
+diagram&lt;/p&gt;
 
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
-
-  &lt;p&gt;By &lt;a href=&quot;#ker-surjection&quot;&gt;Lm. 2&lt;/a&gt; we may assume $D \iso$ $F_A^{\amalg m}$. By
-definition we have a surjection $\beta \c F_A^{\amalg n} \to$ $C$ with
-$\ker(\beta)$ finitely generated. Consider the diagram
-\[
+$$
 \begin{xy}
 \xymatrix {
- &amp; F_A^{\amalg m} \ar@{&gt;&gt;}[dr]^\alpha &amp; \\
- F_A^{\amalg m} \amalg F_A^{\amalg n}
- \ar@{&gt;&gt;}[ur]^{\id\,\amalg\,\xi}
- \ar@{&gt;&gt;}[dr]_{\eta\,\amalg\,\id}
- \ar@{&gt;&gt;}[rr]^-\gamma
- &amp; &amp; C, \\
- &amp; F_A^{\amalg n} \ar@{&gt;&gt;}[ur]_\beta &amp;
+  &amp;
+  F_A^{\amalg m} \ar@{&gt;&gt;}[dr]^\alpha &amp;
+  \\
+  F_A^{\amalg m} \amalg F_A^{\amalg n}
+    \ar@{&gt;&gt;}[ur]^{\id\,\amalg\,\xi}
+    \ar@{&gt;&gt;}[dr]_{\eta\,\amalg\,\id}
+    \ar@{&gt;&gt;}[rr]^-\gamma &amp;
+  &amp;
+  C, \\
+  &amp;
+  F_A^{\amalg n} \ar@{&gt;&gt;}[ur]_\beta &amp;
 }
 \end{xy}
-\]
-where $\xi \c F_A^{\amalg n} \to$ $F_A^{\amalg m}$ and $\eta \c
-F_A^{\amalg m} \to$ $F_A^{\amalg n}$ are defined such that $\alpha \circ
-\xi = \beta$ and $\beta \circ \eta = \alpha$—which exist since free
-objects are projective in $\C_A$—so that defining $\gamma \ce \alpha
-\amalg \beta$ makes the diagram commute. Now, if $t_1,\ldots,t_m$ are
-the canonical generators (in the appropriate sense according to
-$\C_A$) of $F_A^{\amalg m}$, then clearly $\ker(\gamma)$ is generated
-by $\ker(\beta)$ and $\{t_i - \eta(t_i)\}_{1 \le i \le m}$. Thus
-$\ker(\beta)$ being finitely generated implies $\ker(\gamma)$ is
-finitely generated, which implies $\ker(\alpha)$ is finitely generated
-by &lt;a href=&quot;#ker-surjection&quot;&gt;Lm. 2&lt;/a&gt;.&lt;/p&gt;
+$$
+
+        &lt;p&gt;where $\xi \c F_A^{\amalg n} \to$ $F_A^{\amalg m}$ and $\eta \c
+F_A^{\amalg m} \to$ $F_A^{\amalg n}$ are defined such that $\alpha
+\circ \xi = \beta$ and $\beta \circ \eta = \alpha$—which exist
+since free objects are projective in $\C_A$—so that defining
+$\gamma \ce \alpha \amalg \beta$ makes the diagram commute. Now,
+if $t_1,\ldots,t_m$ are the canonical generators (in the
+appropriate sense according to $\C_A$) of $F_A^{\amalg m}$, then
+clearly $\ker(\gamma)$ is generated by $\ker(\beta)$ and
+$\{t_i - \eta(t_i)\}_{1 \le i \le m}$. Thus $\ker(\beta)$ being
+finitely generated implies $\ker(\gamma)$ is finitely generated,
+which implies $\ker(\alpha)$ is finitely generated by
+&lt;a href=&quot;#ker-surjection&quot;&gt;(4)&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;p&gt;This in turn allows us to prove the second fact: finite generation and
-presentation are local properties.&lt;/p&gt;
-
 &lt;div id=&quot;fg-fp-local&quot; class=&quot;environment proposition&quot;&gt;
-  &lt;h6&gt;4. Proposition&lt;/h6&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;6.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Proposition.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Let $C \in \obj(\C_A)$.&lt;/p&gt;
 
-  &lt;p&gt;Let $C \in \obj(\C_A)$.&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;If $C$ is finitely generated (resp. presented), then for any $f
+\in A$ the localisation $C_f$ is finitely generated
+(resp. presented) in $\C_{A_f}$.&lt;/li&gt;
+      &lt;li&gt;If $f_1,\ldots,f_n \in A$ generate the unit ideal and $C_{f_i}$
+is finitely generated (resp. presented) in $\C_{A_{f_i}}$ for
+each $i$, then $C$ is finitely generated (resp. presented).&lt;/li&gt;
+    &lt;/ol&gt;
 
-  &lt;ol&gt;
-    &lt;li&gt;If $C$ is finitely generated (resp. presented), then for any $f \in
-A$ the localisation $C_f$ is finitely generated (resp. presented)
-in $\C_{A_f}$.&lt;/li&gt;
-    &lt;li&gt;If $f_1,\ldots,f_n \in A$ generate the unit ideal and $C_{f_i}$ is
-finitely generated (resp. presented) in $\C_{A_{f_i}}$ for each
-$i$, then $C$ is finitely generated (resp. presented).&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
+    &lt;div class=&quot;environment proof&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;6.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+          &lt;p&gt;Proof.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;We first address finite generation.&lt;/p&gt;
 
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
-
-  &lt;p&gt;We first address finite generation.&lt;/p&gt;
-
-  &lt;ol&gt;
-    &lt;li&gt;Observe $(F_A)_f \iso$ $F_{A_f}$. Thus, since localisation is exact
-(and hence commutes with finite products), a surjection
-$F_A^{\amalg n} \to$ $C$ localises to a surjection $F_{A_f}^{\amalg
-n} \to$ $C_f$.&lt;/li&gt;
-    &lt;li&gt;Suppose for each $i$ that $C_{f_i}$ is generated (in the
+        &lt;ol&gt;
+          &lt;li&gt;Observe $(F_A)_f \iso$ $F_{A_f}$. Thus, since localisation is
+exact (and hence commutes with finite products), a surjection
+$F_A^{\amalg n} \to$ $C$ localises to a surjection
+$F_{A_f}^{\amalg n} \to$ $C_f$.&lt;/li&gt;
+          &lt;li&gt;Suppose for each $i$ that $C_{f_i}$ is generated (in the
 appropriate sense) by $\{a_{i,j}/f_i^{r_{i,j}}\}_{1 \le j \le
-m_i}$.  Take $R \ge \max\{r_{i,j}\}$. Then for all $i$ we have that
-$f_i^Ra$ is generated by $\{a_{i,j}\}$ for any $a \in A$. Since
-$f_1,\ldots,f_n$ generate the unit ideal, so do
-$f_1^R,\ldots,f_n^R$ and hence there exist $c_i \in A$ such that
-$\sum c_if_i^R = 1$. It is then clear that $\{c_i\} \cup
+m_i}$.  Take $R \ge \max\{r_{i,j}\}$. Then for all $i$ we
+have that $f_i^Ra$ is generated by $\{a_{i,j}\}$ for any $a
+\in A$. Since $f_1,\ldots,f_n$ generate the unit ideal, so do
+$f_1^R,\ldots,f_n^R$ and hence there exist $c_i \in A$ such
+that $\sum c_if_i^R = 1$. It is then clear that $\{c_i\} \cup
 \{a_{i,j}\}$ generates $C$.&lt;/li&gt;
-  &lt;/ol&gt;
+        &lt;/ol&gt;
 
-  &lt;p&gt;Now finite presentation. Recall that localisation commutes with
+        &lt;p&gt;Now finite presentation. Recall that localisation commutes with
 kernels since it is exact.&lt;/p&gt;
 
-  &lt;ol&gt;
-    &lt;li&gt;This is immediate from localisation commuting with kernels and that
-we have proved (i) for finite generation.&lt;/li&gt;
-    &lt;li&gt;Since we have proved (ii) for finite generation there is a
-surjection $\alpha \c F_A^{\amalg n} \to$ $C$. Then for each $i$,
-\[
+        &lt;ol&gt;
+          &lt;li&gt;This is immediate from localisation commuting with kernels
+and that we have proved (i) for finite generation.&lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;Since we have proved (ii) for finite generation there is a
+surjection $\alpha \c F_A^{\amalg n} \to$ $C$. Then for each $i$,&lt;/p&gt;
+
+$$
 \alpha_{f_i} \c F_{A_{f_i}}^{\amalg n} \to C_{f_i}
-\]
-is a surjection, so by &lt;a href=&quot;#fp-implies-always-fp&quot;&gt;Pr. 3&lt;/a&gt; we know
+$$
+
+            &lt;p&gt;is a surjection, so by &lt;a href=&quot;#fp-implies-always-fp&quot;&gt;(5)&lt;/a&gt; we know
 $\ker(\alpha_{f_i}) \iso$ $\ker(\alpha)_{f_i}$ is finitely
-generated. By statement (ii) for finite generation this implies
-$\ker(\alpha)$ is finitely generated as desired.&lt;/li&gt;
-  &lt;/ol&gt;
+generated. By statement (ii) for finite generation this
+implies $\ker(\alpha)$ is finitely generated as desired.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
+&lt;div class=&quot;environment&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;7.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
 
-&lt;p&gt;Ok that’s it! I mostly wanted to write this up because you can prove
-it in both settings at once, which I found fun. I thought a bit about
-axiomiatising the type of category one could prove this for, but I
-ended up wanting to assume a lot of stuff and it seemed like the
-exposition would get pretty ugly.&lt;/p&gt;
-
+    &lt;/div&gt;
+    &lt;p&gt;Ok that’s it! I mostly wanted to write this up because you can
+prove it in both settings at once, which I found fun. I thought a
+bit about axiomiatising the type of category one could prove this
+for, but I ended up wanting to assume a lot of stuff and it seemed
+like the exposition would get pretty ugly.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class=&quot;environment remark&quot;&gt;
-  &lt;h6&gt;5. Remark&lt;/h6&gt;
-
-  &lt;p&gt;&lt;a href=&quot;#fg-fp-local&quot;&gt;Pr. 4&lt;/a&gt; is what one needs to prove when showing that a
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;8.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Remark.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;&lt;a href=&quot;#fg-fp-local&quot;&gt;(6)&lt;/a&gt; is what one needs to prove when showing that a
 morphism of schemes being of locally of finite type or locally of
 finite presentation is local on the source.&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
@@ -660,140 +821,199 @@ notes&lt;/a&gt;. &lt;a href=&quot;#fnref:always&quot; class=&quot;reversefootnot
     
     <item>
       <title>Base change of closed immersion</title>
-      <description>&lt;p&gt;Here begins my mathematical blogging. Just to get myself moving, let
-me start with something short and basic: understanding closed
-immersions of schemes a bit better. But I’m not going to use anything
-about schemes specifically today, so let me make the following
-definition.&lt;sup id=&quot;fnref:immersion-general&quot;&gt;&lt;a href=&quot;#fn:immersion-general&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+      <description>&lt;div class=&quot;environment&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;1.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
 
+    &lt;/div&gt;
+    &lt;p&gt;Here begins my mathematical blogging. Just to get myself moving,
+let me start with something short and basic: understanding closed
+immersions of schemes a bit better. But I’m not going to use
+anything about schemes specifically today, so let me make the
+following definition.&lt;sup id=&quot;fnref:immersion-general&quot;&gt;&lt;a href=&quot;#fn:immersion-general&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class=&quot;environment definition&quot;&gt;
-  &lt;h6&gt;1. Definition&lt;/h6&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;2.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Definition.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;We say a morphism $i \c Z \to$ $X$ of locally ringed
+spaces is a &lt;em&gt;closed immersion&lt;/em&gt; if:&lt;/p&gt;
 
-  &lt;p&gt;We say a morphism $i \c Z \to$ $X$ of locally ringed spaces is a
-&lt;em&gt;closed immersion&lt;/em&gt; if:&lt;/p&gt;
-
-  &lt;ol&gt;
-    &lt;li&gt;the underlying map of spaces $\lv Z \rv \to$ $\lv X \rv$ induces a
+    &lt;ol&gt;
+      &lt;li&gt;the underlying map of spaces $\lv Z \rv \to$ $\lv X \rv$ induces a
 homeomorphism of $\lv X \rv$ onto a closed subset of $\lv X
 \rv$;&lt;/li&gt;
-    &lt;li&gt;the underlying map of sheaves $\O_X \to$ $i_*\O_Z$ is
+      &lt;li&gt;the underlying map of sheaves $\O_X \to$ $i_*\O_Z$ is
 surjective.&lt;/li&gt;
-  &lt;/ol&gt;
+    &lt;/ol&gt;
 
-  &lt;p&gt;Recall also that:&lt;/p&gt;
+    &lt;p&gt;Recall also that:&lt;/p&gt;
 
-  &lt;ol&gt;
-    &lt;li&gt;the &lt;em&gt;ideal sheaf&lt;/em&gt; of $Z$ is defined as $\I \ce \ker(\O_X
-\to$ $i_*\O_Z)$;&lt;/li&gt;
-    &lt;li&gt;the &lt;em&gt;closed subspace&lt;/em&gt; determined by $\I$ is defined as the
-locally ringed space $Z&#39; \ce (\supp(\O_X/\I),
-\O_X/\I)$;&lt;/li&gt;
-    &lt;li&gt;the natural map $i&#39; \c Z&#39; \to$ $X$ is a closed immersion with ideal
-sheaf $\I$;&lt;/li&gt;
-    &lt;li&gt;$i \c Z \to$ $X$ in fact induces an isomorphism $h \c Z \to$ $Z&#39;$
+    &lt;ol&gt;
+      &lt;li&gt;the &lt;em&gt;ideal sheaf&lt;/em&gt; of $Z$ is defined as $\I \ce \ker(\O_X \to$ $i_*\O_Z)$;&lt;/li&gt;
+      &lt;li&gt;the &lt;em&gt;closed subspace&lt;/em&gt; determined by $\I$ is defined as the
+locally ringed space $Z&#39; \ce (\supp(\O_X/\I), \O_X/\I)$;&lt;/li&gt;
+      &lt;li&gt;the natural map $i&#39; \c Z&#39; \to$ $X$ is a closed immersion with
+ideal sheaf $\I$;&lt;/li&gt;
+      &lt;li&gt;$i \c Z \to$ $X$ in fact induces an isomorphism $h \c Z \to$ $Z&#39;$
 such that $i = i&#39; \circ h$.&lt;/li&gt;
-  &lt;/ol&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;monomorphism&quot; class=&quot;environment lemma&quot;&gt;
-  &lt;h6&gt;2. Lemma&lt;/h6&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;3.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Lemma.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;If $i \c Z \to$ $X$ is a closed immersion of
+locally ringed spaces, then $i$ is a monomorphism (in the category
+of locally ringed spaces).&lt;/p&gt;
 
-  &lt;p&gt;If $i \c Z \to$ $X$ is a closed immersion of locally ringed spaces,
-then $i$ is a monomorphism (in the category of locally ringed
-spaces).&lt;/p&gt;
+    &lt;div class=&quot;environment proof&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;3.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+          &lt;p&gt;Proof.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;By definition, the map of spaces $\lv Z \rv \to$ $\lv X
+\rv$ is a monomorphism and the map of sheaves $\O_X \to$ $i_*\O_Z$
+is an epimorphism, so the claim is clear.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
-
-  &lt;p&gt;By definition, the map of spaces $\lv Z \rv \to$ $\lv X \rv$ is a
-monomorphism and the map of sheaves $\O_X \to$ $i_*\O_Z$ is an
-epimorphism, so the claim is clear.&lt;/p&gt;
-&lt;/div&gt;
-
 &lt;div id=&quot;factoring&quot; class=&quot;environment proposition&quot;&gt;
-  &lt;h6&gt;3. Proposition&lt;/h6&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;4.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Proposition.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Let $i \c Z \to$ $X$ be a closed immersion of
+locally ringed spaces, and let $\I$ be the corresponding ideal
+sheaf. Then a morphism of locally ringed spaces $f \c Y \to$ $X$
+factors through $i$—i.e., there exists $g \c Y \to$ $Z$ such that
+$f = i \circ g$—if and only if the induced map $f^*\I \to$ $f^*\O_X
+\iso$ $\O_Y$ is zero. Such a factoring $g$ is unique if it exists.&lt;/p&gt;
 
-  &lt;p&gt;Let $i \c Z \to$ $X$ be a closed immersion of locally ringed spaces,
-and let $\I$ be the corresponding ideal sheaf. Then a morphism
-of locally ringed spaces $f \c Y \to$ $X$ factors through
-$i$—i.e., there exists $g \c Y \to$ $Z$ such that $f = i \circ
-g$—if and only if the induced map $f^*\I \to$ $f^*\O_X
-\iso$ $\O_Y$ is zero. Such a factoring $g$ is unique if it
-exists.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
-
-  &lt;p&gt;Uniqueness is immediate from $i$ being a monomorphism by
-&lt;a href=&quot;#monomorphism&quot;&gt;Lm. 2&lt;/a&gt;, so we need only prove the existence statement. As
-recalled above, we can assume without loss of generality that $i$ is
-the inclusion of the closed subspace $Z \ce
+    &lt;div class=&quot;environment proof&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;4.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+          &lt;p&gt;Proof.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;Uniqueness is immediate from $i$ being a monomorphism by
+&lt;a href=&quot;#monomorphism&quot;&gt;(3)&lt;/a&gt;, so we need only prove the existence statement. As
+recalled above, we can assume without loss of generality that
+$i$ is the inclusion of the closed subspace $Z \ce
 (\supp(\O_X/\I), \O_X/\I)$.&lt;/p&gt;
 
-  &lt;p&gt;($\Rightarrow$) Assume $f$ factors through $i$. By definition we have
-an exact sequence $0 \to$ $\I \to$ $\O_X \to$ $i_*\O_Z \to$ $0.$ Since $i^*$
-is right-exact we get an exact sequence $i^*\I \to$ $i^*\O_X \to$ $i^*i_*\O_Z \to$ $0$, where the map $\O_Z \iso$ $i^*\O_X \to$ $i^*i_*\O_Z
-\iso$ $\O_Z$ is an isomorphism. It follows that $i^*\I \to$ $i^*\O_X$ is
-zero, and since $f^* = g^* \circ i^*$ this implies $f^*\I \to$ $\O_Y$ is
-zero as well.&lt;/p&gt;
+        &lt;p&gt;($\Rightarrow$) Assume $f$ factors through $i$. By definition we
+have an exact sequence $0 \to$ $\I \to$ $\O_X \to$ $i_*\O_Z \to$ $0.$
+Since $i^*$ is right-exact we get an exact sequence $i^*\I \to$ $i^*\O_X \to$ $i^*i_*\O_Z \to$ $0$, where the map $\O_Z \iso$ $i^*\O_X
+\to$ $i^*i_*\O_Z \iso$ $\O_Z$ is an isomorphism. It follows that
+$i^*\I \to$ $i^*\O_X$ is zero, and since $f^* = g^* \circ i^*$
+this implies $f^*\I \to$ $\O_Y$ is zero as well.&lt;/p&gt;
 
-  &lt;p&gt;($\Leftarrow$) Assume $f^*\I \to$ $\O_Y$ is zero. Let $y \in \lv Y
-\rv$. Then the map on stalks $\I_{f(y)} \to$ $\O_{X,f(y)} \to$ $\O_{Y,y}$
-is zero. Since $\O_{X,f(y)} \to$ $\O_{Y,y}$ is a ring morphism this
-implies $\I_{f(y)} \ne \O_{X,f(y)}$, whence $f(y) \in
-\supp(\O_X/\I)$. Thus, on spaces, $\lv Y \rv \to$ $\lv X \rv$ factors
-through $\lv Z \rv$. Then by adjunction the map $\I \to$ $\O_X \to$ $f_*\O_Y$ is zero, inducing a map on sheaves $i_*\O_Z \iso$ $\O_X/\I \to$ $\O_Y$. This defines the required map $g \c Y \to$ $Z$.&lt;/p&gt;
+        &lt;p&gt;($\Leftarrow$) Assume $f^*\I \to$ $\O_Y$ is zero. Let $y \in \lv Y
+\rv$. Then the map on stalks $\I_{f(y)} \to$ $\O_{X,f(y)} \to$ $\O_{Y,y}$ is zero. Since $\O_{X,f(y)} \to$ $\O_{Y,y}$ is a ring
+morphism this implies $\I_{f(y)} \ne \O_{X,f(y)}$, whence $f(y)
+\in \supp(\O_X/\I)$. Thus, on spaces, $\lv Y \rv \to$ $\lv X \rv$
+factors through $\lv Z \rv$. Then by adjunction the map $\I \to$ $\O_X \to$ $f_*\O_Y$ is zero, inducing a map on sheaves $i_*\O_Z
+\iso$ $\O_X/\I \to$ $\O_Y$. This defines the required map $g \c Y
+\to$ $Z$.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
+&lt;div class=&quot;environment&quot;&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;5.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
 
-&lt;p&gt;We have now characterised maps into closed subspaces in the way you’d
-expect: a map factors through a closed subspace if and only if the
-defining equations vanish on the domain space. This allows us to prove
-finally that closed immersions are stable under base change, as
-alluded to in the title, and moreover lets us see explicitly how the
-defining ideals behave under base change.&lt;/p&gt;
-
+    &lt;/div&gt;
+    &lt;p&gt;We have now characterised maps into closed subspaces in the way
+you’d expect: a map factors through a closed subspace if and only
+if the defining equations vanish on the domain space. This allows
+us to prove finally that closed immersions are stable under base
+change, as alluded to in the title, and moreover lets us see
+explicitly how the defining ideals behave under base change.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class=&quot;environment proposition&quot;&gt;
-  &lt;h6&gt;4. Proposition&lt;/h6&gt;
+  &lt;div class=&quot;environment_label&quot;&gt;
+    &lt;p&gt;6.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;environment_body&quot;&gt;
+    &lt;div class=&quot;environment_header&quot;&gt;
+      &lt;p&gt;Proposition.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Let $i \c Z \to$ $X$ be a closed immersion of locally
+ringed spaces, and let $\I$ be the corresponding ideal sheaf. Let
+$f \c Y \to$ $X$ be any morphism of locally ringed spaces. Let $\I&#39;$
+be the image of the map $f^*\I \to$ $f^*\O_X \iso$ $\O_Y$ and $i&#39; \c Z&#39;
+\to$ $Y$ the closed subspace determined by $\I&#39;$. Then we have a
+pullback diagram&lt;/p&gt;
 
-  &lt;p&gt;Let $i \c Z \to$ $X$ be a closed immersion of locally ringed spaces,
-and let $\I$ be the corresponding ideal sheaf. Let $f \c Y \to$ $X$ be any morphism of locally ringed spaces. Let $\I&#39;$ be the
-image of the map $f^*\I \to$ $f^*\O_X \iso$ $\O_Y$ and
-$i&#39; \c Z&#39; \to$ $Y$ the closed subspace determined by $\I&#39;$. Then
-we have a pullback diagram
-\[
+$$
 \begin{xy}
 \xymatrix {
- Z&#39; \ar[d]^g \ar[r]_{i&#39;} &amp; Y \ar[d]_f \\
- Z \ar[r]^i &amp; X.
+  Z&#39; \ar[d]^g \ar[r]_{i&#39;} &amp;
+  Y \ar[d]_f \\
+  Z \ar[r]^i &amp;
+  X.
 }
 \end{xy}
-\]&lt;/p&gt;
-&lt;/div&gt;
+$$
 
-&lt;div class=&quot;environment proof&quot;&gt;
-  &lt;h6&gt;Proof&lt;/h6&gt;
+    &lt;div class=&quot;environment proof&quot;&gt;
+      &lt;div class=&quot;environment_label&quot;&gt;
+        &lt;p&gt;6.1.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;environment_body&quot;&gt;
+        &lt;div class=&quot;environment_header&quot;&gt;
+          &lt;p&gt;Proof.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;By &lt;a href=&quot;#factoring&quot;&gt;(4)&lt;/a&gt;, giving a morphism of locally ringed spaces
+$T \to$ $Z&#39;$ is equivalent to giving a morphism $a \c T \to$ $Y$
+such that the map $a^*\I&#39; \to$ $\O_T$ is zero. We claim this
+condition is equivalent to asking that $(f \circ a)^*\I \to$ $\O_T$ is zero. Assuming this for the moment, this in turn is
+equivalent by &lt;a href=&quot;#factoring&quot;&gt;(4)&lt;/a&gt; to giving a morphism $b \c T \to$ $Z$
+such that $f \circ a = i \circ b$. Thus $Z&#39;$ satisfies the
+necessary universal property (in particular the morphism $g$ is
+determined by the identity $Z&#39; \to$ $Z&#39;$, i.e. it is the morphism
+$b$ corresponding to $a = i&#39;$).&lt;/p&gt;
 
-  &lt;p&gt;By &lt;a href=&quot;#factoring&quot;&gt;Pr. 3&lt;/a&gt;, giving a morphism of locally ringed spaces $T
-\to$ $Z&#39;$ is equivalent to giving a morphism $a \c T \to$ $Y$ such that
-the map $a^*\I&#39; \to$ $\O_T$ is zero. We claim this condition
-is equivalent to asking that $(f \circ a)^*\I \to$ $\O_T$ is
-zero. Assuming this for the moment, this in turn is equivalent by
-&lt;a href=&quot;#factoring&quot;&gt;Pr. 3&lt;/a&gt; to giving a morphism $b \c T \to$ $Z$ such that $f
-\circ a = i \circ b$. Thus $Z&#39;$ satisfies the necessary universal
-property (in particular the morphism $g$ is determined by the
-identity $Z&#39; \to$ $Z&#39;$, i.e. it is the morphism $b$ corresponding to
-$a = i&#39;$).&lt;/p&gt;
+        &lt;p&gt;To prove the claim assumed above, consider&lt;/p&gt;
 
-  &lt;p&gt;To prove the claim assumed above, consider
-\[
+$$
 (f \circ a)^*\I \iso a^*f^*\I \to a^*\I&#39; \to \O_T.
-\]
-By definition $f^*\I \to$ $\I&#39;$ is surjective, so since $a^*$ is
+$$
+
+        &lt;p&gt;By definition $f^*\I \to$ $\I&#39;$ is surjective, so since $a^*$ is
 right-exact, $(f \circ a)^*\I \to$ $a^*I&#39;$ is surjective, hence an
-epimorphism. It is then immediate that $(f \circ a)^*\I \to$ $\O_T$ is
-zero if and only if $a^*\I&#39; \to$ $\O_T$ is zero.&lt;/p&gt;
+epimorphism. It is then immediate that $(f \circ a)^*\I \to$ $\O_T$ is zero if and only if $a^*\I&#39; \to$ $\O_T$ is zero.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
@@ -829,7 +1049,17 @@ can’t currently parse. It seems like it’s supposed to work for the
       &lt;p&gt;To be honest, I would hope there’s a general principle of what a
 closed immersion/subspace should mean, but it also seems a little
 crazy that it could automagically encode a finiteness
-condition. That was a long footnote. &lt;a href=&quot;#fnref:immersion-general&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+condition. That was a long footnote.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;Update (14/06/03):&lt;/strong&gt; So I actually asked Lurie about this and
+cleared things up. I was confused above because there are actually
+two distinct issues involved. The general definition of closed
+immersion above is fine, but you then have to ask: if I have a
+closed immersion of locally ringed spaces $Z \to$ $X$ and I know $X$
+is a scheme, when is $Z$ a scheme? And then the answer is: if and
+only if the ideal sheaf is quasicoherent. And if I replace scheme
+by complex analtic space then it’s if and only if the ideal sheaf
+is coherent. Etc. &lt;a href=&quot;#fnref:immersion-general&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -840,41 +1070,39 @@ condition. That was a long footnote. &lt;a href=&quot;#fnref:immersion-general&q
     </item>
     
     <item>
-      <title>Black River</title>
-      <description>&lt;p&gt;dark dark night and cold cold flow&lt;br /&gt;
-i’m still alone&lt;br /&gt;
-i guess that’s dope&lt;br /&gt;
-stay on this boat  &lt;/p&gt;
-
-&lt;p&gt;black black crow in white white snow&lt;br /&gt;
-i miss you so&lt;br /&gt;
-i guess that’s dope&lt;br /&gt;
-i’m drifting slow  &lt;/p&gt;
-
-&lt;p&gt;on this river&lt;br /&gt;
-on this black river&lt;br /&gt;
-where orange lights are few and far between&lt;br /&gt;
-stay in the current of time unseen  &lt;/p&gt;
-
-&lt;p&gt;dark dark stars and cold cold moon&lt;br /&gt;
-at the break of noon&lt;br /&gt;
-i’m lost at truth&lt;br /&gt;
-what’s there to do  &lt;/p&gt;
-
-&lt;p&gt;black black heart in white white dunes&lt;br /&gt;
-regret accrued&lt;br /&gt;
-i’m lost at truth&lt;br /&gt;
-i’ll float on through  &lt;/p&gt;
-
-&lt;p&gt;on this river&lt;br /&gt;
-on this black river&lt;br /&gt;
-where orange lights are few and far between&lt;br /&gt;
-stay in the current of time unseen  &lt;/p&gt;
-
+      <title>Vector fields &amp; the J-homomorphism</title>
+      <description>
 </description>
-      <pubDate>Wed, 14 May 2014 16:20:00 -0400</pubDate>
-      <link>http://www.arponr.com/black-river</link>
-      <guid isPermaLink="true">http://www.arponr.com/black-river</guid>
+      <pubDate>Fri, 09 May 2014 00:00:00 -0400</pubDate>
+      <link>http://www.arponr.com</link>
+      <guid isPermaLink="true">http://www.arponr.com/pdf-vfields</guid>
+    </item>
+    
+    <item>
+      <title>Defining the cotangent complex</title>
+      <description>
+</description>
+      <pubDate>Tue, 17 Dec 2013 00:00:00 -0500</pubDate>
+      <link>http://www.arponr.com</link>
+      <guid isPermaLink="true">http://www.arponr.com/pdf-cotangent</guid>
+    </item>
+    
+    <item>
+      <title>The Dold-Kan correspondence</title>
+      <description>
+</description>
+      <pubDate>Sat, 26 Oct 2013 00:00:00 -0400</pubDate>
+      <link>http://www.arponr.com</link>
+      <guid isPermaLink="true">http://www.arponr.com/pdf-doldkan</guid>
+    </item>
+    
+    <item>
+      <title>Completion of metric spaces</title>
+      <description>
+</description>
+      <pubDate>Thu, 03 Oct 2013 00:00:00 -0400</pubDate>
+      <link>http://www.arponr.com</link>
+      <guid isPermaLink="true">http://www.arponr.com/pdf-completion</guid>
     </item>
     
     <item>

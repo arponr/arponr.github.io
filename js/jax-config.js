@@ -4,14 +4,17 @@
 MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     tex2jax: {
-        inlineMath: [["$", "$"]]
+        inlineMath: [["$", "$"]],
     },
     jax: ["input/TeX", "output/HTML-CSS"],
     "HTML-CSS": {
         imageFont: null,
         webFont: "STIX-Web",
-        scale: 95,
-        mtextFontInherit: true
+        scale: 100,
+        linebreaks: {
+            automatic: true,
+            width: "75% container"
+        }
     },
     showMathMenu: false,
     TeX: {
@@ -20,10 +23,13 @@ MathJax.Hub.Config({
         },
         extensions: ["AMSmath.js", "AMSsymbols.js", "/js/xypic.js"],
         Macros: {
-            opname: ["\\operatorname{\\text{#1}}{}\\!", 1],
+            opname: ["\\operatorname{#1}", 1],
             mathcal: ["\\mathscr{#1}", 1],
-            mathrm: ["\\text{#1}", 1],
             iso: "\\simeq",
+            c: "\\colon",
+            ce: "\\mathrel{:=}",
+            l: "\\left",
+            r: "\\right",
         }
     }
 });

@@ -1,7 +1,7 @@
 name: arponr
 url: http://www.arponr.com
 
-markdown: TeXdown
+markdown: Kramdown
 
 permalink: /:title
 

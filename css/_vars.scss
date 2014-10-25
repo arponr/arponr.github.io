@@ -1,38 +1,39 @@
 $serif: Times New Roman, Times, serif;
 $mono: Courier, monospace;
 
-$size-base: 15px;
+$size-base: 17px;
 $size-small: 13px;
-$size-medium: 14px;
-$size-large: 18px;
-$size-huge: 23px;
+$size-medium: 15px;
+$size-large: 24px;
 
 $line-base-unitless: 1;
 $line-base: $size-base * $line-base-unitless;
 
-$color-background: #ffffff;
+$background-base: #ffffff;
+$background-dark: #f8f8f8;
+
 $color-base: #302825;
 $color-light: #706865;
 $color-link: #100805;
 
 $accent-dark: #407050;
-$accent-light: #80a090;
+$accent-light: #c7480a;
 
 $border-light: #c0b8b5;
 $border-dark: #706865;
 
-$width: 640px;
-$col1: 75px;
-$col2: 375px;
+$width-side: 350px;
+$width-browse-bar: 50px;
+$width-main: 550px;
 
-$nav-height: 20px;
-$stream-margin: 20px;
+$line-text: 1.35;
+$line-footnote: 1.2;
+$line-header: 1.2;
 
-$playlist-margin: 30px;
-$playlist-line: 1.2em;
-
-$env-border-cut: 6px;
-$env-border-offset: 10px;
-
-$line-text: 1.3em;
-$line-footnote: 1.2em;
+@mixin rotate($deg) {
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}

@@ -1,99 +1,135 @@
-class Jekyll::Converters::Markdown::TeXdown
-  def initialize(config)
-    require 'kramdown'
-    @config = config
-    @environments = {
-      "align"       => [nil,           "Eq.", false],
-      "definition"  => ["Definition",  "Df.", true],
-      "definitions" => ["Definitions", "Df.", true],
-      "equation"    => [nil,           "Eq.", false],
-      "example"     => ["Example",     "Ex.", true],
-      "examples"    => ["Examples",    "Ex.", true],
-      "lemma"       => ["Lemma",       "Lm.", true],
-      "notation"    => ["Notation",    "Nt.", false],
-      "proof"       => ["Proof",       "Pf.", false],
-      "proposition" => ["Proposition", "Pr.", true],
-      "remark"      => ["Remark",      "Rm.", true],
-      "remarks"     => ["Remarks",     "Rm.", true],
-      "theorem"     => ["Theorem",     "Th.", true],
-    }
-  rescue LoadError
-    STDERR.puts 'You are missing a library required for Markdown. Please run:'
-    STDERR.puts '  $ [sudo] gem install kramdown'
-    raise FatalException.new("Missing dependency: kramdown")
-  end
+module Jekyll
+  class TeXdown < Converter
+    safe true
+    priority :low
 
-  def handle_environments(input, refnum, refs)
-    input = input.gsub(%r{
-      \\begin\{(#{Regexp.union(@environments.keys)})\}\s*
-      (?:\[\s*(.*?)\s*\])?\s*
-      (?:\{\s*(.*?)\s*\})?\s*
-      (.*?)\s*
-      \\end\{\1\}
-    }mx) do
-      env, title, ref, content = $1, $2, $3, $4
-      env_name, env_label, env_num = @environments[env]
-      is_eqn = env_name.nil?
-      has_title = !title.nil?
-      has_ref = !ref.nil?
+    def matches(ext)
+      ext =~ /^\.td$/i
+    end
 
-      output = ""
+    def output_ext(ext)
+      ".html"
+    end
 
-      if is_eqn
-        type = (has_ref || env_num) ? env : "#{env}*" 
-        if has_ref
-          output << "{::nomarkdown}<span id=#{$3}></span>{:/}"
-        end
-        output << "\\[\n\\begin{#{type}}\n"
-        if has_ref || env_num
-          refnum += 1
-          output << "\\tag{#{refnum}}\n"
-        end
-        if has_ref
-          refs[ref] = "#{env_label} #{refnum}"
-        end
-        output << "#{content}\n\\end{#{type}}\n\\]"
-      else
-        output << "<div "
-        if has_ref
-          output << "id=\"#{ref}\" "
-        end
-        output << "class=\"environment #{env}\">\n"
-        output << "\#" * 6
-        if has_ref || env_num
-          refnum += 1
-          output << "#{refnum}. "
-        end
-        if has_ref
-          refs[ref] = "#{env_label} #{refnum}"
-        end
-        output << "#{env_name}"
-        output << (has_title ? " (#{title})\n": "\n")
-        content, refnum, refs = handle_environments(content, refnum, refs)
-        output << "\n#{content}\n</div>"
+    def initialize(config)
+      require 'kramdown'
+    rescue LoadError
+      STDERR.puts 'You are missing a library required for Markdown. Please run:'
+      STDERR.puts '  $ [sudo] gem install kramdown'
+      raise FatalException.new("Missing dependency: kramdown")
+    end
+
+    def convert(input)
+      output = texdown(input)
+      
+      # inline math
+      breaks = ["\\to", "\\iso"]
+      output = output.gsub(/([^\$])(\$[^\$]+\$)([^\$])/m) do
+        left, math, right = $1, $2, $3
+        math = math.gsub(/(\s+#{Regexp.union(breaks)})\s+([^\$])/m, "\\1$ $\\2")
+        "#{left}{::nomarkdown}#{math}{:/}#{right}"
       end
-      output
-    end
-    [input, refnum, refs]
-  end
 
-  def convert(input)
-    # environments
-    input, refnum, refs = handle_environments(input, 0, Hash.new("???"))
+      # display math
+      output = output.gsub(/\$\$[^\$]+\$\$/m) do |math|
+        "{::nomarkdown}\n#{math}\n{:/}"
+      end
 
-    #references
-    input = input.gsub(/\\ref\{(.*?)\}/m) {"<a href=\"\##{$1}\">#{refs[$1]}</a>"}
-    
-    # inline math
-    breaks = ["\\to", "\\iso"]
-    input = input.gsub(/\$.*?\$/m) do |j|
-      j = j.gsub(/(\s+#{Regexp.union(breaks)})\s+([^\$])/m, "\\1$ $\\2")
-      "{::nomarkdown}#{j}{:/}"
+      return Kramdown::Document.new(output, :auto_ids => false, :parse_block_html => true).to_html
     end
 
-    # display math
-    input = input.gsub(/\\\[.*?\\\]/m) {|j| "{::nomarkdown}#{j}{:/}"}
+    def texdown(input)
+      processed, tag_hash = texdown_process(input, "", Hash.new("???"))
+      output = processed.gsub(/#([\w-]+)/) do
+        "<a href=\"\##{$1}\">(#{tag_hash[$1]})</a>"
+      end
+      return output
+    end
 
-    Kramdown::Document.new(input, :auto_ids => false, :parse_block_html => true).to_html
+    def texdown_process(input, label_prefix, tag_hash)
+      index = 0
+      output = input.gsub(%r{
+        (?:
+           \$\$\s*(?:\#([\w-]+))([^\$]+)\$\$
+        )
+        |
+        (?:
+           ^--\s*                           # "--" starts environment
+           (?:                              # optional environment meta info:
+              (.*?)?\s*                     #   - type (e.g. Definition)
+              (?:\((.*?)\))?\s*             #   - desc (e.g. Hilbert Basis Thm)
+              (?:\#([\w-]+))?               #   - tag  (e.g. #hilbert-basis)
+           :)?\s*                           #   - ending with ":"
+           (                                # body:
+              (?:.*)                        #   - first line
+              (?:(?:\n[[:blank:]]+.*)|\n)*  #   - subsequent (indented) lines
+           )
+        )
+      }x) do
+        index += 1
+        label = "#{label_prefix}#{index}"
+        eq_tag, eq_inner, type, desc, tag, inner = [$1, $2, $3, $4, $5, $6, $7].map do |x|
+          x.nil? || x.empty? ? nil : x.strip()
+        end
+
+        if !eq_tag.nil?
+          tag_hash[eq_tag] = label
+          next build_equation(eq_tag, eq_inner, label)
+        end
+        if !tag.nil?
+          tag_hash[tag] = label
+        end
+        stripped = inner.strip().gsub(/^[[:blank:]]{,3}/, "")
+        body, tag_hash = texdown_process(stripped, "#{label}.", tag_hash)
+        build_environment(type, desc, tag, body.strip(), label)
+      end
+      return output, tag_hash
+    end
+
+    def build_environment(type, desc, tag, body, label)
+      output = ""
+      output << "<div "
+      if !tag.nil?
+        output << "id=\"#{tag}\" "
+      end
+      output << "class=\"environment"
+      if !type.nil?
+        dashed = type.downcase.gsub(/[[:blank:]]/, "-")
+        output << " #{dashed}"
+      end
+      output << "\">\n"
+
+      output << "<div class=\"environment_label\">\n"
+      output << "{::nomarkdown}#{label}.{:/}"
+      output << "\n</div>\n"
+
+      output << "<div class=\"environment_body\">\n"
+      output << "<div class=\"environment_header\">\n"
+      if !type.nil? || !desc.nil?
+        if tag == "preimage-injective"
+          puts type.length
+        end
+        if !type.nil?
+          output << "#{type}"
+        end
+        if !desc.nil?
+          output << " (#{desc})"
+        end
+        output << "."
+      end
+      output << "\n</div>\n"
+
+      output << "#{body}\n</div>\n</div>\n"
+      return output
+    end
+
+    def build_equation(tag, inner, label)
+      output = ""
+      output << "{::nomarkdown}<span id=#{tag}></span>{:/}\n\n" # two newlines is imperative
+      output << "\$\$\n"
+      output << "\\tag{#{label}}\n"
+      output << inner
+      output << "\$\$\n"
+    end
   end
 end

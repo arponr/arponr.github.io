@@ -16,86 +16,139 @@ figure {
     }
 
     figcaption {
-        font-size: $size-small;
+        font-size: $size-medium;
         color: $color-light;
         text-align: center;
-        margin-top: 5px;
+        margin-top: 8px;
     }
 }
 
-.wrap {
-    width: $width;
-    margin: 0 auto;
-    position: relative;
+.side, .browse-bar, .main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
 }
 
-.sec {
-    margin: 40px 0;
+.side, .browse-bar {
+    background: $background-dark;
 }
 
-nav {
-    position: fixed;
-    font-family: $mono;
-    color: $color-light;
-    font-size: $size-small;
+.browse-bar {
+    left: 0;
+    width: $width-browse-bar;
+    cursor: pointer;
 
-    .name {
-        text-transform: uppercase;
-        margin-bottom: 10px;
+    .browse {
+        position: absolute;
+        top: 50%;
+        @include rotate(90deg);
     }
 
-    li {
-        margin-bottom: 10px;
+    &:hover .browse {
+        color: $accent-light;
+    }
+}
 
-        a:link, a:visited {
-            color: $color-light;
+.side, .main {
+    padding-left: 20px;
+}
+
+.side {
+    left: -$width-side;
+    width: $width-side;
+}
+
+.main {
+    left: $width-browse-bar;
+    right: 0;
+}
+
+.section {
+    &:first-child, & + .section {
+        margin-top: 60px;
+    }
+
+    &:last-child {
+        margin-bottom: 60px;
+    }
+}
+
+.side-content {
+    .nav li {
+        font-size: 15px;
+        display: inline;
+
+        & + li {
+            margin-left: 10px;
         }
 
-        &.active {
-            a:link, a:visited {
-                color: $color-base;
-            }
+        a:hover {
+            color: $accent-light;
         }
-    }
-
-    ul > ul {
-        margin-left: 15px;
     }
 }
 
-header {
-    h1 {
-        font-size: $size-huge;
-    }
+.entries li {
+    line-height: $line-header;
 
-    h2 {
-        margin-top: 4px;
-        color: $color-light;
-    }
-}
-
-.stream li {
-    margin-bottom: 20px;
-
-    a {
-        display: block;
-        height: 100%;
-
-        &:hover {
-            .title {
-                text-decoration: underline;
-            }
-        }
+    & + li {
+        margin-top: 30px;
     }
 
     .date {
-        display: block;
-        margin-top: 4px;
-        font-size: $size-medium;
+        float: left;
+        padding-right: 8px;
+        margin-top: 1px;
+        font-size: $size-small;
         color: $color-light;
     }
 
+    .link {
+        display: block;
+        overflow: hidden;
+
+        &:hover .title {
+            color: $accent-light;
+        }
+    }
+
+    .title {
+        margin-bottom: 5px;
+    }
+
     .desc {
+        font-size: $size-medium;
         color: $color-light;
     }
 }
+
+
+.main-content {
+    width: $width-main;
+    margin: 0 auto;
+
+    header {
+        h1 {
+            font-size: $size-large;
+            line-height: $line-header
+        }
+
+        h2 {
+            margin-top: 8px;
+            color: $color-light;
+        }
+    }
+
+    .button {
+        cursor: pointer;
+    }
+
+    .button, a:link, a:visited {
+        color: $accent-light;
+    }
+
+    .button:hover, a:hover {
+        text-decoration: underline;
+    }
+}
+

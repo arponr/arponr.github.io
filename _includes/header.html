@@ -12,44 +12,67 @@
     <!-- <script type="text/javascript" src="//use.typekit.net/cen6cew.js"></script> -->
     <!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
 
-    <!-- <script type="text/javascript" src="/js/jquery.js"></script> -->
-    <!-- <script type="text/javascript" src="/js/Hyphenator.js"></script> -->
+    <script type="text/javascript" src="/js/jquery-min.js"></script>
+    <script type="text/javascript" src="/js/jquery.nanoscroller.js"></script>
+    <script type="text/javascript" src="/js/ui.js"></script>
 
     {% if page.math %}
     <script type="text/javascript" src="http://beta.mathjax.org/mathjax/latest/MathJax.js?config={{ site.baseurl }}/js/jax-config.js"></script>
     {% endif %}
-
-    <script type="text/javascript" src="/js/j.js"></script>
   </head>
 
   <body{% if page.math %} class="math"{% endif %}>
-    <div class="wrap grid">
-      <div class="col col-1-4">
-        <nav class="sec">
-          <ul>
-            <li class="name{% if page.section == "about" %} active{% endif %}"><a href="/">Arpon Raksit</a></li>
-            <li{% if page.section == "posts" %} class="active"{% endif %}>
-              <a href="/posts/">posts</a></li>
-            <ul>
-              <li{% if page.section == "math" %} class="active"{% endif %}>
-                <a href="/posts/math/">math</a></li>
-              <li{% if page.section == "writing" %} class="active"{% endif %}>
-                <a href="/posts/writing/">writing</a></li>
-            </ul>
-            <li{% if page.section == "notes" %} class="active"{% endif %}>
-              <a href="/notes/">notes</a></li>
+    <div class="side">
+      <div class="nano">
+        <div class="side-content nano-content">
+          <ul class="section nav">
+            <li><a href="/">Home</a></li>
           </ul>
-        </nav>
-      </div>
 
-      <div class="col col-3-4">
-        {% if page.title or page.date %}
-        <header class="sec">
-          {% if page.title %}
-          <h1>{{ page.title }}</h1>
-          {% endif %}
-          {% if page.date %}
-          <h2>{{ page.date | date_to_string }}</h2>
-          {% endif %}
-        </header>
-        {% endif %}
+          <ul class="section entries">
+            {% for entry in site.posts %}
+            <li>
+              <time class="date">
+                {{ entry.date | date: "%y/%m/%d" }}
+                {%if entry.file_url%}
+                <br>PDF
+                {% endif %}
+              </time>
+              <a class="link" href="{% if entry.file_url %}/files/{{ entry.file_url }}{% else %}{{ entry.url }}{% endif %}">
+                <div class="title">{{ entry.title }}</div>
+                <div class="desc">
+                  {{ entry.desc }}
+                </div>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="browse-bar side-toggle">
+      <div class="browse-bar-content">
+        <div class="browse">Browse</div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="nano">
+        <div class="main-content nano-content">
+          <header class="section">
+            {% if page.title == "About" %}
+            <h1>I am Arpon Raksit and trying (to try) my best to
+              understand and create interesting things. Welcome to the
+              closet in which I stash any
+              minimal <span class="side-toggle button">progress</span> which occurs
+              towards these ends.</h1>
+            {% else %}
+            {% if page.title %}
+            <h1>{{ page.title }}</h1>
+            {% endif %}
+            {% if page.date %}
+            <h2>{{ page.date | date: "%Y, %B %d" }}</h2>
+            {% endif %}
+            {% endif %}
+          </header>
