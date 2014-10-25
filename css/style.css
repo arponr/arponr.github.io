@@ -1,16 +1,58 @@
-.grid .col {
-  float: left;
+.nano {
   position: relative;
+  width: 100%;
   height: 100%;
-  min-height: 1px; }
-.grid .col-1-4 {
-  width: 25%; }
-.grid .col-2-4 {
-  width: 50%; }
-.grid .col-3-4 {
-  width: 75%; }
-.grid .col-4-4 {
-  width: 100%; }
+  overflow: hidden; }
+
+.nano > .nano-content {
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-right: 20px; }
+
+.nano > .nano-content:focus {
+  outline: thin dotted; }
+
+.nano > .nano-content::-webkit-scrollbar {
+  visibility: hidden; }
+
+.has-scrollbar > .nano-content::-webkit-scrollbar {
+  visibility: visible; }
+
+.nano > .nano-pane {
+  background: #aaaaaa;
+  position: absolute;
+  width: 7px;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+  visibility: hidden\9;
+  /* Target only IE7 and IE8 with this hack */
+  opacity: .01;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+.nano > .nano-pane > .nano-slider {
+  background: #444444;
+  position: relative;
+  margin: 0;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+
+.nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
+  visibility: visible\9;
+  /* Target only IE7 and IE8 with this hack */
+  opacity: 0.99; }
 
 * {
   margin: 0;
@@ -23,15 +65,15 @@
   *:focus {
     outline: none; }
 
+html, body {
+  height: 100%; }
+
 html {
   font-family: Times New Roman, Times, serif;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1;
   color: #302825;
   background: white; }
-
-body {
-  overflow-y: scroll; }
 
 a:link, a:visited {
   text-decoration: none;
@@ -42,7 +84,7 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
-  font-size: 15px; }
+  font-size: 17px; }
 
 sup, sub {
   vertical-align: baseline;
@@ -65,62 +107,97 @@ blockquote {
 figure img {
   max-width: 100%; }
 figure figcaption {
-  font-size: 13px;
+  font-size: 15px;
   color: #706865;
   text-align: center;
-  margin-top: 5px; }
+  margin-top: 8px; }
 
-.wrap {
-  width: 640px;
-  margin: 0 auto;
-  position: relative; }
+.side, .browse-bar, .main {
+  position: absolute;
+  top: 0;
+  bottom: 0; }
 
-.sec {
-  margin: 40px 0; }
+.side, .browse-bar {
+  background: #f8f8f8; }
 
-nav {
-  position: fixed;
-  font-family: Courier, monospace;
-  color: #706865;
-  font-size: 13px; }
-  nav .name {
-    text-transform: uppercase;
-    margin-bottom: 10px; }
-  nav li {
-    margin-bottom: 10px; }
-    nav li a:link, nav li a:visited {
-      color: #706865; }
-    nav li.active a:link, nav li.active a:visited {
-      color: #302825; }
-  nav ul > ul {
-    margin-left: 15px; }
+.browse-bar {
+  left: 0;
+  width: 50px;
+  cursor: pointer; }
+  .browse-bar .browse {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .browse-bar:hover .browse {
+    color: #c7480a; }
 
-header h1 {
-  font-size: 23px; }
-header h2 {
-  margin-top: 4px;
-  color: #706865; }
+.side, .main {
+  padding-left: 20px; }
 
-.stream li {
-  margin-bottom: 20px; }
-  .stream li a {
-    display: block;
-    height: 100%; }
-    .stream li a:hover .title {
-      text-decoration: underline; }
-  .stream li .date {
-    display: block;
-    margin-top: 4px;
-    font-size: 14px;
+.side {
+  left: -350px;
+  width: 350px; }
+
+.main {
+  left: 50px;
+  right: 0; }
+
+.section:first-child, .section + .section {
+  margin-top: 60px; }
+.section:last-child {
+  margin-bottom: 60px; }
+
+.side-content .nav li {
+  font-size: 15px;
+  display: inline; }
+  .side-content .nav li + li {
+    margin-left: 10px; }
+  .side-content .nav li a:hover {
+    color: #c7480a; }
+
+.entries li {
+  line-height: 1.2; }
+  .entries li + li {
+    margin-top: 30px; }
+  .entries li .date {
+    float: left;
+    padding-right: 8px;
+    margin-top: 1px;
+    font-size: 13px;
     color: #706865; }
-  .stream li .desc {
+  .entries li .link {
+    display: block;
+    overflow: hidden; }
+    .entries li .link:hover .title {
+      color: #c7480a; }
+  .entries li .title {
+    margin-bottom: 5px; }
+  .entries li .desc {
+    font-size: 15px;
     color: #706865; }
+
+.main-content {
+  width: 550px;
+  margin: 0 auto; }
+  .main-content header h1 {
+    font-size: 24px;
+    line-height: 1.2; }
+  .main-content header h2 {
+    margin-top: 8px;
+    color: #706865; }
+  .main-content .button {
+    cursor: pointer; }
+  .main-content .button, .main-content a:link, .main-content a:visited {
+    color: #c7480a; }
+  .main-content .button:hover, .main-content a:hover {
+    text-decoration: underline; }
 
 .text {
-  line-height: 1.3em; }
-  .text a:link, .text a:visited {
-    text-decoration: underline;
-    color: #100805; }
+  line-height: 1.35; }
   .text ul, .text ol {
     margin-left: 35px; }
     .text ul li, .text ol li {
@@ -133,18 +210,6 @@ header h2 {
       content: "\2014";
       position: relative;
       left: -10px; }
-  .text h4 {
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 10px; }
-    * + .text h4 {
-      margin-top: 30px; }
-  .text h6 {
-    font-weight: bold; }
-    .text h6:after {
-      content: '.\00a0'; }
-    .text h6, .text h6 + p {
-      display: inline; }
   .text hr {
     width: 15%;
     height: 1px;
@@ -157,17 +222,15 @@ header h2 {
   .MathJax_Display * {
     color: #302825 !important; }
 
-.environment {
-  position: relative;
-  margin-left: 10px; }
-  .environment:before {
-    content: '';
-    width: 1px;
-    height: calc(100% - 6px);
-    background: #c0b8b5;
-    position: absolute;
-    left: -10px;
-    top: 3px; }
+.environment .environment_label {
+  float: left;
+  padding-right: 5px; }
+.environment .environment_body {
+  overflow: hidden; }
+.environment .environment_header, .environment .environment_header p, .environment .environment_header + p {
+  display: inline; }
+.environment .environment_label, .environment .environment_header {
+  font-weight: 700; }
 
 .preamble {
   display: none; }
@@ -182,40 +245,6 @@ header h2 {
   margin-bottom: 10px; }
 .footnotes ol {
   list-style-type: decimal;
-  margin-left: 15px;
-  font-size: 13px;
-  line-height: 1.2em; }
-
-.playlist {
-  list-style-type: none; }
-  .playlist.start {
-    counter-reset: song; }
-  .playlist li {
-    margin-bottom: 20px;
-    line-height: 1.2em;
-    position: relative; }
-    .playlist li:before {
-      font-family: Courier, monospace;
-      content: counter(song);
-      counter-increment: song;
-      position: absolute;
-      top: 1.2em; }
-  .playlist.left {
-    float: left;
-    margin-left: 30px; }
-    .playlist.left li:before {
-      left: -29px; }
-  .playlist.right {
-    float: right;
-    margin-right: 30px;
-    text-align: right; }
-    .playlist.right li:before {
-      right: -29px; }
-
-.song-meta {
-  font-family: Courier, monospace;
-  color: #706865; }
-
-.spotify iframe {
-  width: 100%;
-  height: 80px; }
+  margin-left: 20px;
+  font-size: 15px;
+  line-height: 1.2; }

@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>arponr | Invertible modules</title>
-    <meta property="og:title" content="Invertible modules"/>
+    <title>arponr | Pulling back a Galois correspondence</title>
+    <meta property="og:title" content="Pulling back a Galois correspondence"/>
     <meta property="og:site_name" content="arponr"/>
 
     <link href="/css/style.css" rel="stylesheet" type="text/css">
@@ -186,10 +186,10 @@
           <header class="section">
             
             
-            <h1>Invertible modules</h1>
+            <h1>Pulling back a Galois correspondence</h1>
             
             
-            <h2>2014, August 19</h2>
+            <h2>2014, October 25</h2>
             
             
           </header>
@@ -202,267 +202,198 @@
       <div class="preamble">
         $$
         
-        \newcommand{ \c }{ \colon }
+        \newcommand{ \inj }{ \hookrightarrow }
         
-        \newcommand{ \ce }{ \mathrel{:=} }
+        \newcommand{ \Sub }{ \opname{Sub} }
         
-        \newcommand{ \id }{ \mathrm{id} }
+        \newcommand{ \Gal }{ \opname{Gal} }
         
-        \newcommand{ \Spec }{ \opname{Spec} }
+        \newcommand{ \Stab }{ \opname{Stab} }
         
-        \newcommand{ \Pic }{ \opname{Pic} }
+        \newcommand{ \ab }{ \mathrm{ab} }
         
-        \newcommand{ \p }{ \mathfrak{p} }
-        
-        \newcommand{ \m }{ \mathfrak{m} }
+        \newcommand{ \Ab }{ \mathrm{Ab} }
         
         $$
       </div>
       
-      <div class="environment notation">
+      <div class="environment definition">
   <div class="environment_label">
     <p>1.</p>
   </div>
   <div class="environment_body">
     <div class="environment_header">
-      <p>Notation.</p>
+      <p>Definition.</p>
     </div>
-    <p>Let $A$ be a commutative ring.</p>
+    <p>For $G$ a topological group, we denote by $\Sub_G$ the
+set of open normal subgroups of $G$, which is a poset under
+inclusion.</p>
   </div>
 </div>
-<div id="trivial-point-to-open" class="environment lemma">
+<div id="main" class="environment proposition">
   <div class="environment_label">
     <p>2.</p>
   </div>
   <div class="environment_body">
     <div class="environment_header">
-      <p>Lemma.</p>
+      <p>Proposition.</p>
     </div>
-    <p>Let $M$ be a finitely generated
-$A$-module. If $M_\p \iso$ $0$ for some $\p \in \Spec(A)$, then $M_f
-\iso$ $0$ for some $f \in A - \p$.</p>
+    <p>Let $G$ be a profinite group. Suppose we have a
+morphism of topological groups $\phi \c A \to$ $G$ such that for
+every $N \in \Sub_G$ the induced map $\phi_N \c A/\phi^{-1}(N) \to$ $G/N$ is an isomorphism. Then:</p>
 
-    <div class="environment proof">
+    <div id="preimage-injective" class="environment">
       <div class="environment_label">
         <p>2.1.</p>
       </div>
       <div class="environment_body">
         <div class="environment_header">
+
+        </div>
+        <p>the preimage map $\Sub_G \to$ $\Sub_A$,
+defined by $N \mapsto \phi^{-1}(N)$, is injective;</p>
+      </div>
+    </div>
+    <div id="join-preserved" class="environment">
+      <div class="environment_label">
+        <p>2.2.</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>$\phi^{-1}(N_1N_2) =
+\phi^{-1}(N_1)\phi^{-1}(N_2)$ for $N_1,N_2 \in \Sub_G$.</p>
+      </div>
+    </div>
+    <div class="environment proof">
+      <div class="environment_label">
+        <p>2.3.</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
           <p>Proof.</p>
         </div>
-        <p>Choose generators $x_1,\ldots,x_n \in M$. If $M_\p \iso$ $0$ then there are $f_1,\ldots,f_n \in A - \p$ such that $f_ix_i
-= 0$ for $1 \le i \le n$. Taking $f \ce \prod_{i=1}^n f_i \in
-A - \p$, we have $fM \iso$ $0 \implies M_f \iso$ $0$.</p>
+        <p>Let $N_1,N_2 \in \Sub_G$. To prove <a href="#preimage-injective">(2.1)</a> It
+suffices to show that $N_1 \subseteq N_2$ if $\phi^{-1}(N_1)
+\subseteq \phi^{-1}(N_2)$, so assume the latter. Then</p>
+
+        <p><span id=intersection-preserved></span></p>
+
+$$
+\tag{2.3.1}
+\phi^{-1}(N_1 \cap N_2) = \phi^{-1}(N_1) \cap \phi^{-1}(N_2) =
+\phi^{-1}(N_2).$$
+
+        <p>Now consider the commutative diagram</p>
+
+$$
+\begin{xy}
+\xymatrix{
+  A \ar[d]^\phi \ar[r] &
+  A/\phi^{-1}(N_1 \cap N_2) \ar[d]^{\phi_{N_1 \cap N_2}} \ar[r]
+    &
+  A/\phi^{-1}(N_2) \ar[d]^{\phi_{N_2}} \\
+  G \ar[r] &
+  G/(N_1 \cap N_2) \ar[r] &
+  G/N_2
+}
+\end{xy}
+$$
+
+        <p>with the horizontal maps the projections. In the right-hand
+square, the vertical maps are isomorphisms by hypothesis, and
+the top horizontal map is an isomorphism by
+<a href="#intersection-preserved">(2.3.1)</a>; thus the bottom horizontal map is an
+isomorphism, which implies $N_1 \subseteq N_2$.</p>
+
+        <p>We now prove <a href="#join-preserved">(2.2)</a>. Certainly $\phi^{-1}(N_1N_2)
+\supseteq \phi^{-1}(N_1)\phi^{-1}(N_2)$. And it’s fairly easy to
+see we have the sequence of identifications</p>
+
+$$
+\frac{\phi^{-1}(N_1)\phi^{-1}(N_2)}{\phi^{-1}(N_1)} \iso
+\frac{\phi^{-1}(N_2)}{\phi^{-1}(N_1) \cap \phi^{-1}(N_2)} =
+\frac{\phi^{-1}(N_2)}{\phi^{-1}(N_1 \cap N_2)} =
+\phi_{N_1 \cap N_2}^{-1}\l( \frac{N_1}{N_1 \cap N_2} \r) \iso 
+\phi_{N_1}^{-1}\l( \frac{N_1N_2}{N_1} \r) =
+\frac{\phi^{-1}(N_1N_2)}{\phi^{-1}(N_1)}.
+$$
+
+        <p>But since $\phi^{-1}(N_1)$ has finite index in $A$, it follows that</p>
+
+$$
+[\phi^{-1}(N_1N_2) : \phi^{-1}(N_1)\phi^{-1}(N_2)] =
+\l[ \frac{\phi^{-1}(N_1N_2)}{\phi^{-1}(N_1)} :
+\frac{\phi^{-1}(N_1)\phi^{-1}(N_2)}{\phi^{-1}(N_1)} \r] = 1,
+$$
+
+        <p>proving the desired claim.</p>
       </div>
     </div>
   </div>
 </div>
-<div id="locally-free-point-to-open" class="environment lemma">
+<div class="environment example">
   <div class="environment_label">
     <p>3.</p>
   </div>
   <div class="environment_body">
     <div class="environment_header">
-      <p>Lemma.</p>
+      <p>Example.</p>
     </div>
-    <p>Let $M$ be a finitely generated
-$A$-module. Then $M$ is locally free of finite rank if and only if
-$M_\p$ is a finite free $A_\p$-module for each $\p \in \Spec(A)$.</p>
+    <p>If we take $G$ to be a Galois group in <a href="#main">(2)</a>, then the
+proposition says that when we have a suitable morphism $A \to$ $G$,
+the Galois theory described by $G$ is in fact controlled by
+$A$. This is what I meant by “pulling back a Galois correspondence”
+in the title. Let’s state this in more detail in the motivating
+example.</p>
 
-    <div class="environment proof">
+    <p>Let $K$ be a non-archimedean local field. Let $K^\ab$ be a maximal
+abelian extension of $K$. The Galois group $G \ce \Gal(K^\ab/K)$ is
+a profinite group, and Galois theory tells us that the poset
+$\Sub_G$ is anti-equivalent to the poset $\Ab_K$ of finite abelian
+extensions of $K$, i.e. the set of finite subextensions of $K^\ab$
+ordered by inclusion.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> The “reciprocity” statement in local
+class field theory asserts:</p>
+
+    <div class="environment">
       <div class="environment_label">
         <p>3.1.</p>
       </div>
       <div class="environment_body">
         <div class="environment_header">
-          <p>Proof.</p>
+
         </div>
-        <p>The only if direction is obvious, so assume $M_\p$ is a
-finite free $A_\p$-module for each $\p \in \Spec(A)$. Fixing $\p
-\in \Spec(A)$, it suffices to show there exists $f \in A - \p$
-such that $M_f$ is a free $A_f$-module. We have an isomorphism
-$A_\p^n \iso$ $M_\p$, which without loss of generality is the
-localisation of a morphism $\alpha \c A^n \to$ $M$. It follows
-from <a href="#trivial-point-to-open">(2)</a> that since $\alpha_\p$ is an
-isomorphim, so is $\alpha_f$ for some $f \in A - \p$.</p>
+        <p>the existence of a morphism $\phi_K \c K^\times \to$ $\Gal(K^\ab/K)$ satisfying the hypothesis of <a href="#main">(2)</a>;</p>
       </div>
     </div>
-  </div>
-</div>
-<div class="environment definition">
-  <div class="environment_label">
-    <p>4.</p>
-  </div>
-  <div class="environment_body">
-    <div class="environment_header">
-      <p>Definition.</p>
-    </div>
-    <p>We say an $A$-module $M$ is <em>invertible</em> if there
-exists an $A$-module $N$ and an isomorphism $M \otimes_A N \iso$ $A$.</p>
-  </div>
-</div>
-<div id="invertible-module-finitely-generated" class="environment lemma">
-  <div class="environment_label">
-    <p>5.</p>
-  </div>
-  <div class="environment_body">
-    <div class="environment_header">
-      <p>Lemma.</p>
-    </div>
-    <p>An invertible
-$A$-module $M$ is finitely generated.</p>
-
-    <div class="environment proof">
+    <div class="environment">
       <div class="environment_label">
-        <p>5.1.</p>
+        <p>3.2.</p>
       </div>
       <div class="environment_body">
         <div class="environment_header">
-          <p>Proof.</p>
+
         </div>
-        <p>Assume we have an $A$-module $N$ and an isomorphism
-$\alpha \c A \iso$ $M \otimes_A N$. Observe the image of $\alpha$
-must be generated by a single element of $M \otimes_A N$, so
-$\alpha$ must factor through an isomorphism $\beta \c A \iso$ $M_0
-\otimes_A N$ for some finitely generated submodule $M_0
-\subseteq M$. Then we have an isomorphism</p>
-
-$$
-\begin{xy}
-\xymatrix{
-  M \ar[d]^{\sim} \ar[r]^{\sim} &
-  M_0 \ar[d]_{\sim} \\
-  M \otimes_A A \ar[d]^{\sim}_{\id \otimes \beta} &
-  A \otimes_A M_0 \ar[d]_{\sim}^{\alpha \otimes \id} \\
-  M \otimes_A M_0 \otimes_A N \ar[r]^{\sim} &
-  M \otimes_A N \otimes_A M_0,
-}
-\end{xy}
-$$
-
-        <p>implying $M$ is finitely generated.</p>
+        <p>if $N \ce \Stab_L \in \Sub_G$ is the subgroup corresponding to a
+finite abelian extension $K \inj L$, then $\phi_K^{-1}(N)$ is
+the <em>norm group</em> $N_{L/K}(L^\times) \subseteq K^\times$.</p>
       </div>
     </div>
-  </div>
-</div>
-<div id="invertible-locally-free" class="environment lemma">
-  <div class="environment_label">
-    <p>6.</p>
-  </div>
-  <div class="environment_body">
-    <div class="environment_header">
-      <p>Lemma.</p>
-    </div>
-    <p>An $A$-module $M$ is invertible if
-and only if $M$ is locally free of rank $1$.</p>
-
-    <div class="environment proof">
-      <div class="environment_label">
-        <p>6.1.</p>
-      </div>
-      <div class="environment_body">
-        <div class="environment_header">
-          <p>Proof.</p>
-        </div>
-        <p>First assume $M$ is invertible: there is an $A$-module
-$N$ such that $M \otimes_A N \iso$ $A$. Fix any $\p \in
-\Spec(A)$. By <a href="#locally-free-point-to-open">(3)</a> it suffices to show
-$M_\p$ is free of rank $1$ over $A_\p$. We have</p>
-
-$$
-M_\p \otimes_{A_\p} N_\p \iso (M \otimes N)_\p \iso A_\p,
-$$
-
-        <p>i.e. $M_\p$ is invertible. Thus we are reduced to the case that
-$A$ is a local ring. Let $\m \in \Spec(A)$ denote the maximal
-ideal and $k \ce A/\m$ the residue field. We have</p>
-
-$$
-(M \otimes_A k) \otimes_k (N \otimes_A k) \iso M \otimes_A N
-\otimes_A k \iso k,
-$$
-
-        <p>i.e. $M \otimes_A k$ is an invertible $k$-module. But $k$ is a
-field so obviously this implies $M/\m M \iso$ $M \otimes_A k \iso$ $k$. Let $x \in M$ be a lift of a generator of $M/\m M$ and
-$\alpha \c A \to$ $M$ the map defined by $1 \mapsto x$. By
-construction the induced map $\alpha \otimes k \c k \to$ $M
-\otimes_A k$ is an isomorphism.  Then Nakayama’s lemma implies
-$\alpha$ is an isomorphism.</p>
-
-        <p>Conversely, assume $M$ is locally free of rank $1$. Let $M^\vee
-\ce \hom_A(M, A)$ denote the dual of $M$ and consider the
-canonical evaluation map $M \otimes_A M^\vee \to$ $A$. By
-hypothesis this morphism locally looks like evaluation $A
-\otimes_A A^\vee \to$ $A$, which is clearly an
-isomorphism.<sup id="fnref:locfree-fp"><a href="#fn:locfree-fp" class="footnote">1</a></sup> This finishes the proof.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="environment definition">
-  <div class="environment_label">
-    <p>7.</p>
-  </div>
-  <div class="environment_body">
-    <div class="environment_header">
-      <p>Definition.</p>
-    </div>
-    <p>It follows from <a href="#invertible-module-finitely-generated">(5)</a>
-that the collection $\Pic(A)$ of isomorphism classes of invertible
-modules forms a set. Under tensor product $\Pic(A)$ forms an
-abelian group called the <em>Picard group</em> of $A$. Note that by the
-proof of <a href="#invertible-locally-free">(6)</a> the inverse in $\Pic(A)$ of (the
-isomorphism class) of an invertible module $L$ is given by (the
-isomorphism class of) the dual $L^\vee$.</p>
-  </div>
-</div>
-<div id="graded-ring-invertible-components" class="environment lemma">
-  <div class="environment_label">
-    <p>8.</p>
-  </div>
-  <div class="environment_body">
-    <div class="environment_header">
-      <p>Lemma.</p>
-    </div>
-    <p>Let $A_*$ be a graded
-ring. Let $\otimes$ denote $\otimes_{A_0}$. Assume there is an
-isomorphism of $A_0$-modules $A_1 \otimes A_{-1} \iso$ $A_0$. Then
-for $n \ge 1$ we have</p>
-
-$$
-A_n \iso A_1^{\otimes n} \quad\text{and}\quad
-A_{-n} \iso A_{-1}^{\otimes n} \iso (A_1^\vee)^{\otimes n}.
-$$
-
-    <div class="environment proof">
-      <div class="environment_label">
-        <p>8.1.</p>
-      </div>
-      <div class="environment_body">
-        <div class="environment_header">
-          <p>Proof.</p>
-        </div>
-        <p>We prove the first isomorphism by induction; the second
-is symmetric. The case $n=1$ is tautological. Let $n >
-1$. Multiplication gives a map $A_1^{\otimes n} \to$ $A_n$. An
-inverse map is given by</p>
-
-$$
-A_n \iso A_n \otimes A_0 \iso A_n \otimes A_{-1} \otimes A_1 \to
-A_{n-1} \otimes A_1 \iso A_1^{\otimes n},
-$$
-
-        <p>the last isomorphism coming from the inductive hypothesis.</p>
-      </div>
-    </div>
+    <p>Thus, putting <a href="#main">(2)</a> and Galois theory together gives us that the
+poset $\Ab_K$ is anti-equivalent to the poset of norm groups in
+$K^\times$ by the correspondence $L \mapsto
+N_{L/K}(L^\times)$. Then there is an “existence” theorem in local
+class field theory stating that the norm groups are precisely the
+open subgroups of finite index in $K^\times$.</p>
   </div>
 </div>
 <div class="footnotes">
   <ol>
-    <li id="fn:locfree-fp">
-
-      <p>I’m using here that locally free implies finitely presented, which
-implies that dualising will commute with localisation. <a href="#fnref:locfree-fp" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1">
+      <p>I just made up this terminology, who cares. What I mean is when
+  you view the posets as categories, there is a contravariant
+  equivalence. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>

@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>arponr | Numbers at Google</title>
-    <meta property="og:title" content="Numbers at Google"/>
+    <title>arponr | Homotopy (co)limits aren't (co)limits in the homotopy category</title>
+    <meta property="og:title" content="Homotopy (co)limits aren't (co)limits in the homotopy category"/>
     <meta property="og:site_name" content="arponr"/>
 
     <link href="/css/style.css" rel="stylesheet" type="text/css">
@@ -17,9 +17,11 @@
     <script type="text/javascript" src="/js/ui.js"></script>
 
     
+    <script type="text/javascript" src="http://beta.mathjax.org/mathjax/latest/MathJax.js?config=/js/jax-config.js"></script>
+    
   </head>
 
-  <body>
+  <body class="math">
     <div class="side">
       <div class="nano">
         <div class="side-content nano-content">
@@ -184,10 +186,10 @@
           <header class="section">
             
             
-            <h1>Numbers at Google</h1>
+            <h1>Homotopy (co)limits aren't (co)limits in the homotopy category</h1>
             
             
-            <h2>2013, August 06</h2>
+            <h2>2014, July 05</h2>
             
             
           </header>
@@ -197,41 +199,129 @@
 
     <section class="section text">
       
-      <p>This is a post about some numbers that I saw at work one day during my
-internship at Google. I present them to you without further ado.</p>
+      <div class="preamble">
+        $$
+        
+        \newcommand{ \c }{ \colon }
+        
+        \newcommand{ \ce }{ \mathrel{:=} }
+        
+        \newcommand{ \from }{ \leftarrow }
+        
+        \newcommand{ \u }[ 1 ]{ \underline{#1} }
+        
+        \newcommand{ \id }{ \opname{id} }
+        
+        \newcommand{ \hom }{ \opname{hom} }
+        
+        \newcommand{ \Grp }{ \mathrm{Grp} }
+        
+        \newcommand{ \H }{ \mathcal{H} }
+        
+        \newcommand{ \Z }{ \mathbb{Z} }
+        
+        \newcommand{ \RP }{ \mathbb{RP} }
+        
+        $$
+      </div>
+      
+      <div class="environment">
+  <div class="environment_label">
+    <p>1.</p>
+  </div>
+  <div class="environment_body">
+    <div class="environment_header">
 
-<ul>
-  <li><strong>21:</strong> I got to run a job with 21 terabytes of input. <em>Tera</em>. And
-        that’s compressed.</li>
-  <li><strong>10000000000:</strong> 21 TB means I got to compute statistics on data
-                 sets of size greater than 10 billion. <em>Billion</em>.</li>
-  <li><strong>3:</strong> It took fewer than 3 hours to run that job. I love MapReduce
-       and resources.</li>
-  <li><strong>23:</strong> Later on, after realising I had made some stupid mistakes, I
-        needed to run that job again (and because it felt so damn
-        cool the first time, and I could, so why not). Anyway it
-        turns out the data was on some machines on the East Coast,
-        and the job was running on machines on the West
-        Coast. That’s efficiency. Well so I (and, by “I”, I mean
-        someone else on my team who actually knew what he was doing)
-        managed to get the job running next door to the data. And
-        for ten minutes or so, that 21 TB was being sent to the job
-        at more than 23 gigbatyes per second. <em>Giga</em>. Holy
-        bandwidth, batman.</li>
-</ul>
+    </div>
+    <p>It’s really nice to be able to think about things via universal
+properties, and I in particular know and love how to do this for
+limits and colimits in ordinary categories. But in homotopy theory
+things these notions need to be fixed slightly, since they’re not
+homotopy invariant. The canonical example in the familiar realm of
+spaces is that $D^n \from S^{n-1} \to$ $D^n$ has pushout $S^n$ but $*
+\from S^{n-1} \to$ $*$ has pushout $*$.</p>
 
-<p>So it turns out working at Google indeed has perks. Those numbers are
-all due to some really smart people that work (or have worked)
-here. That’s nice to think about. It’s even nicer to stop thinking
-about that, look at those numbers, and just feel dope as hell, if
-only for a moment.</p>
+    <p>This is what leads one to define homotopy limits and homotopy
+colimits, which <em>are</em> homotopy invariant. But, not understanding
+these things all too well, and seeking to retreat into familiar
+territory, I’m tempted to just think of them as limits as colimits
+in the homotopy category. But this is so, so wrong! The example
+above already shows that, but I wanted to write down a perhaps even
+more severe example I learned from <a href="http://mathoverflow.net/questions/10364/categorical-homotopy-colimits">the internet</a> which
+helped hammer this point home.</p>
+  </div>
+</div>
+<div class="environment notation">
+  <div class="environment_label">
+    <p>2.</p>
+  </div>
+  <div class="environment_body">
+    <div class="environment_header">
+      <p>Notation.</p>
+    </div>
+    <p>Let $\H$ denote the homotopy category of pointed spaces
+(for definiteness maybe take this to be pointed CW complexes and
+maps up to homotopy). For $X,Y \in \H$ denote $\hom_\H(X,Y)$ by
+$[X,Y]$.</p>
+  </div>
+</div>
+<div class="environment example">
+  <div class="environment_label">
+    <p>3.</p>
+  </div>
+  <div class="environment_body">
+    <div class="environment_header">
+      <p>Example (a colimit which doesn’t exist).</p>
+    </div>
+    <p>Consider the diagram</p>
 
-<p>Perhaps two moments, though. A new number arrived the following day.</p>
+$$
+\begin{xy}
+\xymatrix{
+ S^1 \ar[r]_i \ar[d]^f & D^2 \\ S^1. &
+}
+\end{xy}
+$$
 
-<ul>
-  <li><strong>30:</strong> After tweaking some things, the job ran in less than 30
-        minutes. That’s some astounding stuff.</li>
-</ul>
+    <p>where $i$ is the canonical inclusion and $f$ is a degree $2$ map. We
+know this diagram has a homotopy pushout: we can replace $f$ by a
+cofibration and then just take an ordinary pushout. But we can show
+that this diagram has no colimit in $\H$. Suppose there were a
+pushout $X \in \H$: then for $Y \in \H$ we have</p>
+
+$$
+[X,Y] \iso [S^1,Y] \times_{[S^1, Y]} [D^2,Y] \iso \pi_1(Y)
+\times_{\pi_1(Y)} *
+$$
+
+    <p>where the map $\pi_1(Y) \to$ $\pi_1(Y)$ is multiplication by $2$ by
+definition of $f$. Thus $[X,Y] \iso$ $\pi_1(Y)[2]$, the $2$-torsion of
+$\pi_1(Y)$. We will prove that this functor $Y \mapsto \pi_1(Y)[2]$
+cannot be corepresentable.</p>
+
+    <p>First, we have $[X,S^0] \iso$ $\pi_1(S^0)[2] \iso$ $0$ implying $X$ is
+connected. Thus for $G$ a (discrete) group, considering the
+classification of principal $G$-bundles (i.e. $G$-coverings) gives
+isomorphisms</p>
+
+$$
+\hom_\Grp(\pi_1(X),G) \iso H^1(X;G) \iso [X;BG] \iso \pi_1(BG)[2]
+\iso G[2],
+$$
+
+    <p>natural in $G$. By Yoneda this implies $\pi_1(X) \iso$ $\Z/2$. It
+follows that we can construct maps $\RP^2 \to$ $X \to$ $\RP^\infty \iso$ $K(\Z/2,1)$ which are isomorphisms on $\pi_1$, and hence isomorphisms
+on $H_1(-;\Z)$. Since $H_2(\RP^2;\Z) \iso$ $0 \iso$ $H_2(\RP^\infty;\Z)$
+it follows by the universal coefficient theorem that the composition
+$\RP^2 \to$ $\RP^\infty$ is an isomorphism on $H^2(-;\Z)$. But this is
+impossible, for</p>
+
+$$
+H^2(X;\Z) \iso [X,K(\Z,2)] \iso \pi_1(K(\Z,2))[2] \iso 0.
+$$
+  </div>
+</div>
+
 
     </section>
 
