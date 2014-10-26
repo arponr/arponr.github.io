@@ -18,10 +18,9 @@ MathJax.Hub.Config({
     },
     showMathMenu: false,
     TeX: {
-        equationNumbers: {
-            autoNumber: "AMS"
-        },
         extensions: ["AMSmath.js", "AMSsymbols.js", "/js/xypic.js"],
+        TagSide: "left",
+        TagIndent: "0em",
         Macros: {
             opname: ["\\operatorname{#1}", 1],
             mathcal: ["\\mathscr{#1}", 1],
