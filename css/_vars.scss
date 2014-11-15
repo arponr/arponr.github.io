@@ -13,27 +13,16 @@ $background-base: #ffffff;
 $background-dark: #f8f8f8;
 
 $color-base: #302825;
-$color-light: #706865;
-$color-link: #100805;
+$color-light: #656870;
 
 $accent-dark: #407050;
 $accent-light: #c7480a;
 
-$border-light: #c0b8b5;
+$border-light: #c5c8d0;
 $border-dark: #706865;
 
-$width-side: 350px;
-$width-browse-bar: 50px;
 $width-main: 550px;
 
 $line-text: 1.35;
 $line-footnote: 1.2;
 $line-header: 1.2;
-
-@mixin rotate($deg) {
-    -webkit-transform: rotate($deg);
-    -moz-transform: rotate($deg);
-    -ms-transform: rotate($deg);
-    -o-transform: rotate($deg);
-    transform: rotate($deg);
-}

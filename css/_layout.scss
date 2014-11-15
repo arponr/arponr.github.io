@@ -23,69 +23,50 @@ figure {
     }
 }
 
-.side, .browse-bar, .main {
-    position: absolute;
-    top: 0;
-    bottom: 0;
+.wrap {
+    width: $width-main;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
-.side, .browse-bar {
-    background: $background-dark;
-}
+nav {
+    font-size: $size-medium;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border-light;
 
-.browse-bar {
-    left: 0;
-    width: $width-browse-bar;
-    cursor: pointer;
-
-    .browse {
-        position: absolute;
-        top: 50%;
-        @include rotate(90deg);
-    }
-
-    &:hover .browse {
-        color: $accent-light;
-    }
-}
-
-.side, .main {
-    padding-left: 20px;
-}
-
-.side {
-    left: -$width-side;
-    width: $width-side;
-}
-
-.main {
-    left: $width-browse-bar;
-    right: 0;
-}
-
-.section {
-    &:first-child, & + .section {
-        margin-top: 60px;
-    }
-
-    &:last-child {
-        margin-bottom: 60px;
-    }
-}
-
-.side-content {
-    .nav li {
-        font-size: 15px;
+    li {
         display: inline;
 
         & + li {
-            margin-left: 10px;
-        }
-
-        a:hover {
-            color: $accent-light;
+            margin-left: 15px;
         }
     }
+
+    a:link, a:visited {
+        color: $color-light;
+    }
+
+    a:hover {
+        color: $color-base;
+    }
+}
+
+header {
+    margin-top: 30px;
+
+    h1 {
+        font-size: $size-large;
+        line-height: $line-header
+    }
+
+    h2 {
+        margin-top: 8px;
+        color: $color-light;
+    }
+}
+
+.section {
+    margin-top: 40px;
 }
 
 .entries li {
@@ -97,10 +78,10 @@ figure {
 
     .date {
         float: left;
-        padding-right: 8px;
+        padding-right: 10px;
         margin-top: 1px;
         font-size: $size-small;
-        color: $color-light;
+        // color: $color-light;
     }
 
     .link {
@@ -108,7 +89,7 @@ figure {
         overflow: hidden;
 
         &:hover .title {
-            color: $accent-light;
+            text-decoration: underline;
         }
     }
 
@@ -122,33 +103,8 @@ figure {
     }
 }
 
-
-.main-content {
-    width: $width-main;
-    margin: 0 auto;
-
-    header {
-        h1 {
-            font-size: $size-large;
-            line-height: $line-header
-        }
-
-        h2 {
-            margin-top: 8px;
-            color: $color-light;
-        }
-    }
-
-    .button {
-        cursor: pointer;
-    }
-
-    .button, a:link, a:visited {
-        color: $accent-light;
-    }
-
-    .button:hover, a:hover {
-        text-decoration: underline;
-    }
+.button {
+    cursor: pointer;
 }
+
 

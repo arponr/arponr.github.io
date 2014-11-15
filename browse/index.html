@@ -1,0 +1,22 @@
+---
+layout: page
+---
+
+<ul class="entries">
+{% for entry in site.posts %}
+<li>
+  <time class="date">
+    {{ entry.date | date: "%y/%m/%d" }}
+    {%if entry.file_url%}
+    <br>PDF
+    {% endif %}
+  </time>
+  <a class="link" href="{% if entry.file_url %}/files/{{ entry.file_url }}{% else %}{{ entry.url }}{% endif %}">
+    <div class="title">{{ entry.title }}</div>
+    <div class="desc">
+      {{ entry.desc }}
+    </div>
+  </a>
+</li>
+{% endfor %}
+</ul>

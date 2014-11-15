@@ -4,8 +4,709 @@
     <title>arponr</title>
     <description>blog by arpon</description>
     <link>http://www.arponr.com</link>
-    <lastBuildDate>Sat, 25 Oct 2014 20:09:02 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 15 Nov 2014 10:27:11 -0500</lastBuildDate>
     <atom:link href="http://www.arponr.com/feed.xml" rel="self"/>
+    
+    <item>
+      <title>Structures on manifolds</title>
+      <description>&lt;p&gt;I’m trying to learn some stable homotopy theory this summer, and am
+starting out by reading about bordism. My first goal is to understand
+Thom’s computation of the unoriented bordism ring, i.e., the
+classification of unoriented compact smooth manifolds up to
+bordism. I’ve been following a couple of sets of notes by &lt;a href=&quot;//www-math.mit.edu/~hrm/papers/cobordism.pdf&quot;&gt;Haynes
+Miller&lt;/a&gt; and &lt;a href=&quot;//www.math.umass.edu/~weston/oldpapers/cobord.pdf&quot;&gt;Tom Weston&lt;/a&gt;. I’m hoping to keep my own
+detailed notes along the way, which I’ll probably put up at the end of
+the summer. But I’ll try to post about some of it here as I go, too.&lt;/p&gt;
+
+&lt;p&gt;This post is the result of me getting rather confused about the
+various bordism problems about “strucured” manifolds, and is
+essentially just an attempt to sort out how I should think about these
+“structures”. The structure comes from the stable normal bundle, so we
+begin there.&lt;/p&gt;
+
+&lt;p&gt;\begin{notation}
+Let $TM$ denote the tangent bundle of a smooth manifold $M$.
+\end{notation}&lt;/p&gt;
+
+&lt;p&gt;\begin{definition}{normal-bundle}
+Let $i \c M \to N$ be an immersion of smooth manifolds. The &lt;em&gt;normal
+bundle&lt;/em&gt; $\nu_i$ of $i$ (or of $M$ in $N$) is the vector bundle on $M$
+defined by the short exact sequence $0 \to TM \to i^*TN \to \nu_i \to
+0$.
+\end{definition}&lt;/p&gt;
+
+&lt;p&gt;\begin{proposition}{normal-composition}
+Let $i \c L \to M$ and $j \c M \to N$ be immersions of smooth
+manifolds. Let $k \ce j \circ i$. Then there is a short exact sequence
+[
+0 \to \nu_i \to \nu_k \to i^*\nu_j \to 0
+]
+of bundles on $L$.
+\end{proposition}&lt;/p&gt;
+
+&lt;p&gt;\begin{proof}
+Since pullback of vector bundles is exact we have
+[
+i^&lt;em&gt;\nu_j \iso i^&lt;/em&gt;\l(\f{j^&lt;em&gt;TN}{TM}\r) \iso \f{k^&lt;/em&gt;TN}{i^&lt;em&gt;TM} \iso
+\f{k^&lt;/em&gt;TN/TL}{i^*TM/TL} \iso \f{\nu_k}{\nu_i}.
+]
+\end{proof}&lt;/p&gt;
+
+&lt;p&gt;\begin{definition}{stable-normal}
+Let $M$ be a compact smooth manifold. Let $[\xi] \in [M, BO]$ be the
+homotopy class classifying the tangent bundle $TM \to M$ (stably). The
+&lt;em&gt;stable normal bundle&lt;/em&gt; $\nu_M$ of $M$ is defined as the inverse of
+$[\xi]$ in the group $[M, BO] \iso \wt{KO}(M)$.
+\end{definition}&lt;/p&gt;
+
+&lt;p&gt;\begin{remark}{normal-classifies-stable}
+Note if $i \c M \to \R^n$ is an immersion (which always exists!) then
+by definition we have a short exact sequence
+[
+0 \to TM \to i^*T\R^n \to \nu_i \to 0.
+]
+Since $T\R^n$ is trivial it follows that $\nu_i$ is inverse to $TM$ in
+$\wt{KO}(M)$. Thus the stable classifying map $M \to BO$ of $\nu_i$
+determines the homotopy class of the stable normal bundle $\nu_M$
+(hence the terminology). But note that, by definition, $\nu_M$ does
+not depend on the choice of dimension $n$ and immersion $i$.
+\end{remark}&lt;/p&gt;
+
+&lt;p&gt;\begin{notation}
+Suppose we have maps $a,b,c \c X \to Y$. We denote a homotopy $h \c X
+\times I \to Y$ from $a$ to $b$ by by $h \c a \to b$. We denote the
+composition of homotopies $h \c a \to b$ and $k \c b \to c$ by $k *
+h$.
+\end{notation}&lt;/p&gt;
+
+&lt;p&gt;\begin{definitions}{f-structure-prelim}
+Let $f \c B \to BO$ be any map and $g \c M \to BO$ a map from a
+compact smooth manifold $M$. An &lt;em&gt;$f$-structure&lt;/em&gt; on $g$ is an
+equivalence class of homotopy lifts $(\bar g, h)$ of $g$, where&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a &lt;em&gt;homotopy lift&lt;/em&gt; of $g$ is a map $\bar g \c M \to B$ and a homotopy
+$h \c f \circ \bar g \to g$;&lt;/li&gt;
+  &lt;li&gt;two pairs $(\bar g_1, h_1)$ and $(\bar g_2, h_2)$ are equivalent if
+and only if there is a homotopy $\bar h \c \bar g_1 \to \bar g_2$
+such that $h_2 * (f \circ \bar h) = h_1$.
+\end{definitions}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;\begin{lemma}{f-structure-bijection}
+Let $f \c B \to BO$ and $g \c M \to BO$ as in
+\ref{f-structure-prelim}. Then:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;a homotopy $k \c g \to g’$ determines a bijection $\theta_k$
+between the $f$-structures on $g$ and $g’$;&lt;/li&gt;
+  &lt;li&gt;if $k’ \c g’ \to g’’$ is another homotopy, then the bijections
+determined by $k$, $k’$, and $k’’ \ce k’ * k$ commute:
+[
+\begin{xy}
+\xymatrix {
+  {f\text{-structures on }g} \ar@{&amp;lt;-&amp;gt;}[r]&lt;em&gt;{\theta_k}
+  \ar@{&amp;lt;-&amp;gt;}[dr]&lt;/em&gt;{\theta&lt;em&gt;{k’’}} &amp;amp;
+  {f\text{-structures on }g’} \ar@{&amp;lt;-&amp;gt;}[d]&lt;/em&gt;{\theta_{k’}} &lt;br /&gt;
+  &amp;amp; {f\text{-structures on }g’’}.
+}
+\end{xy}
+]
+\end{lemma}&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;\begin{proof}
+It suffices to simply give any maps $\theta_k$ satisfying (ii), since
+then bijectivity is immediate from taking inverse homotopies. Let $k
+\c g \to g’$ be a homotopy. There is a map from homotopy lifts of $g$
+to homotopy lifts of $g’$ via $(\bar g, h) \mapsto (\bar g, k *
+h)$. This evidently respects the equivalence relation so this descends
+to give the map $\theta_k$. Property (ii) then clearly holds.
+\end{proof}&lt;/p&gt;
+
+&lt;p&gt;\begin{definitions}{f-structure}
+Let $f \c B \to BO$ be a map and $\xi \in [M, BO]$ a stable vector
+bundle on a compact smooth manifold $M$. An &lt;em&gt;$f$-structure&lt;/em&gt; on $\xi$
+is an equivalence class of pairs $(g,\sigma)$, where&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$g$ is a map $M \to BO$ classifying $\xi$, i.e. $[g] = \xi$, and
+$\sigma$ is an $f$-structure on $g$;&lt;/li&gt;
+  &lt;li&gt;two pairs $(g,\sigma)$ and $(g’,\sigma’)$ are equivalent if and only
+if there is a homotopy $k \c g \to g’$ such that $\sigma’ =
+\theta_k(\sigma)$; here $\theta_k$ is as defined by
+\ref{f-structure-bijection}, which also shows that this is in fact
+an equivalence relation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An &lt;em&gt;$f$-structure&lt;/em&gt; on $M$ is an $f$-structure on its stable normal
+bundle $\nu_M$.
+\end{definitions}&lt;/p&gt;
+
+&lt;p&gt;\begin{remarks}{f-structure-reform}
+Note, since the $\theta_k$ are bijections, \ref{f-structure} is
+equivalent to saying that an $f$-structure on $\xi$ is an
+$f$-structure on $g$ for any fixed $g \c M \to BO$ clasifying $\xi$.
+In the case that $f$ is a fibration we may reformulate this
+further. Fix a $g \c M \to BO$ classifying $\xi$.&lt;/p&gt;
+
+&lt;p&gt;Let $\sigma$ be an $f$-structure on $g$ determined by a homotopy lift
+$(\bar g, h)$. The homotopy $h \c f \circ \bar g \to g$ can be lifted,
+since $f$ is a fibration, to a homotopy $\bar h \c \bar g \to \bar g’$
+so that we have equality $f \circ \bar g’ = g$ on the nose. By
+\ref{f-structure-prelim}, $\bar h$ gives an equivalence between the
+homotopy lifts $(\bar g, h)$ and $(\bar g’, \id_g)$, where $\id_g$ is
+the constant homotopy.&lt;/p&gt;
+
+&lt;p&gt;So any $f$-structure $\sigma$ has a representative $(\bar g, h)$
+where $h = \id_g$. Observe that two lifts $(\bar g_1, \id_g)$ and
+$(\bar g_2, \id_g)$ are equivalent if and only if there is a homotopy
+$\bar h \c \bar g_1 \to \bar g_2$ such that $f \circ \bar h =
+\id_g$, which precisely says that $\bar h$ is a &lt;em&gt;fibrewise
+homotopy&lt;/em&gt;. So finally, we may say (when $f$ is a fibration) that an
+$f$-structure on $\xi$ is a fibrewise homotopy class of
+lifts $\bar g$ in the diagram
+\begin{equation}{f-structure-lift}
+\begin{xy}
+\xymatrix {
+  &amp;amp; B \ar[d]_{f} &lt;br /&gt;
+  M \ar@{–&amp;gt;}[ur]^{\bar g} \ar[r]^g &amp;amp; BO;
+}
+\end{xy}
+\end{equation}
+remember that here $g$ is any fixed map $M \to BO$ classifying $\xi$,
+and these lifts are on the nose, not up to homotopy.
+\end{remarks}&lt;/p&gt;
+
+&lt;p&gt;\begin{examples}{f-examples}
+Why should we care about fibrations $B \to BO$? Well, maybe the
+primary class of examples will answer that. Whenever we have a
+morphism of topological groups $\phi \c G \to O$ we get a fibration $f
+\ce B\phi \c BG \to BO$. In particular if we have a sequence of
+morphisms
+[
+\begin{xy}
+\xymatrix {
+  G(0) \ar[r] \ar[d] &amp;amp; G(1) \ar[r] \ar[d] &amp;amp; G(2) \ar[r] \ar[d] &amp;amp;
+  \cdots \ar[d] &lt;br /&gt;
+  O(0) \ar[r] &amp;amp; O(1) \ar[r] &amp;amp; O(2) \ar[r] &amp;amp; \cdots
+}
+\end{xy}
+]
+we get a morphism $\colim_n G(n) \ec G \to O \ce \colim_n O(n)$.&lt;/p&gt;
+
+&lt;p&gt;Now, let’ consider \ref{f-structure} in the situation of a map $f \c
+BG \to BO$. What is a homotopy lift $(\bar g, h)$ of a map $g \c M \to
+BO$? Well $\bar g \c M \to BG$ classifies a principal $G$-bundle, and
+the homotopy $h \c f \circ \bar g \to g$ specifies a reduction to $G$
+of the structure group of the stable bundle $\xi$ classified by
+$g$. And two homotopy lifts are equivalent when they induce isomorphic
+reductions to $G$. Thus, for this class of examples, an $f$-structure
+on a stable bundle $\xi$ is precisely an isomorphism class of
+reductions of $\xi$ to a $G$-bundle.&lt;/p&gt;
+
+&lt;p&gt;So in this situation we will abusively refer to $f$-structures (on
+bundles and manifolds) as &lt;em&gt;$G$-structures&lt;/em&gt;. Here are some important
+subexamples:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The most basic case comes from the identity $\id \c O \to O$,
+inducing $f = \id \c BO \to BO$. It is immediate from the
+reformulated definition of $f$-structures in
+\ref{f-structure-reform} that very vector bundle on a compact
+smooth manifold, and hence every compact smooth manifold, has a
+unique $O$-structure. (And of course you’d expect there to be a
+unique reduction of structure group from $O$ to $O$.)&lt;/li&gt;
+  &lt;li&gt;Slightly less trivially we have the inclusion $SO \to O$ coming
+from the inclusions $SO(n) \to O(n)$. This induces the two-to-one
+cover $BSO \to BO$ arising from a choice of orientation. Indeed an
+$SO$-structure on a manifold is precisely an orientation. Given the
+discussion above, this should be believable, since giving an
+orientation on a $k$-dimensional is equivalent to giving a
+reduction of structure group to $SO(k)$. But we’re working stably
+so there are some more details to this. We’ll work through these
+details below since for me this example provides the most
+intuition.&lt;/li&gt;
+  &lt;li&gt;The inclusions $U(n) \to O(2n)$ give a morphism $U \to O$ and hence
+a fibration $BU \to BO$. A $U$-structure on a manifold is called an
+&lt;em&gt;almost-complex structure&lt;/em&gt;. This gives rise to the setting of
+complex bordism, which is supposed to be extremely important;
+hopefully I will be posting about that later on this summer.
+\end{examples}&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For the remainder let $M$ denote a compact smooth manifold and $f \c
+BSO \to BO$ the map discussed in \ref{f-examples}. We’ll finish the
+post by proving that $SO$-structures and orientations on $M$ are the
+same thing, as promised above.&lt;/p&gt;
+
+&lt;p&gt;\begin{lemma}{normal-orient}
+Let $i \c M \to \R^n$ be an immersion. Then giving an orientation on
+$M$ is equivalent to giving an orientation on the normal bundle
+$\nu_i$.
+\end{lemma}&lt;/p&gt;
+
+&lt;p&gt;\begin{proof}
+By \ref{normal-bundle} of $\nu_i$ we have an exact sequence $0 \to TM
+\to i^*T\R^n \to \nu_i \to 0$. There is a canonical trivialisation and
+orientation of $T\R^n$, so orienting $\nu_i$ is equivalent to
+orienting $TM$. But it is well known that giving an orientation on $M$
+is equivalent to giving an orientation on $TM$, so then we’re done.
+\end{proof}&lt;/p&gt;
+
+&lt;p&gt;\begin{proposition}{SO-orientation}
+Giving an $SO$-structure on $M$ is equivalent to giving an orientation
+on $M$.
+\end{proposition}&lt;/p&gt;
+
+&lt;p&gt;\begin{proof}
+Fix an immersion $i \c M \to \R^n$. Let $p \ce \dim(\nu_i)$ Let $g_0
+\c M \to BO(p)$ be a map classifying $\nu_i$ and let $g$ be the
+composition $M \to BO(p) \to BO$. Recall from
+\ref{normal-classifies-stable} that $[g] = \nu_M$, and hence by
+\ref{f-structure-reform} that giving an $SO$-structure on $M$ is
+equivalent to giving an $SO$-structure on $g$. Combining this with
+\ref{normal-orient}, we just left to show that giving an
+$SO$-structure on $g$ is equivalent to giving an orientation on
+$\nu_i$.&lt;/p&gt;
+
+&lt;p&gt;($\Rightarrow$) Suppose we have an $SO$-structure $\sigma$ on $g$,
+represented by a homotopy lift $(\bar g, h)$. Since $M$ is compact,
+and hence $M \times I$ is compact too, there must be some finite $q
+\in \N$ such that the map $\bar g \c M \to BSO$ factors through
+$BSO(q)$ and the homotopy $h \c f \circ \bar g \to g$ factors through
+$BO(q)$. In particular we have that the factoring $g \c M \to BO(q)$
+classifies the vector bundle $\nu_i \oplus \uR^{q-p}$, where $\uR$
+denotes the one-dimensional trivial bundle. Now the map $M \to BSO(q)$
+classifies an oriented vector bundle $\mu$ and the homotopy $h$ gives
+an isomorphism of unoriented vector bundles $\mu \iso \nu_i \oplus
+\uR^{q-p}$. With this isomorphism, the orientation on $\mu$ determines
+an orientation on $\nu_i \oplus \uR^{q-p}$, and since $\uR^{q-p}$ is
+canonically oriented this specifies an orientation on $\nu_i$.&lt;/p&gt;
+
+&lt;p&gt;We need to check this does not depend on the representative $(\bar g,
+h)$. Note that taking $q$ larger in the previous paragraph does not
+affect the resulting orientation on $\nu_i$ since the map $BSO(q) \to
+BSO(q+1)$ by definition classifies $\xi \mapsto \xi \oplus \uR$ with
+$\uR$ given its canonical orientation. Thus, given another
+representing pair $(\bar g’, h’)$ of $\sigma$ we may also assume $\bar
+g’$ factors through $BSO(q)$ and $h$ factors through $BO(q)$. Since
+$(\bar g, h)$ and $(\bar g’, h’)$ are equivalent homotopy lifts we by
+definition have a homotopy $\bar h \c \bar g \to \bar g’$ such that
+$h’ * (f \circ \bar h) = h$. I.e., if $\bar g’ \c M \to BSO(q)$
+classifies the oriented bundle $\mu’$, then we have specified an
+isomorphism $\mu \iso \mu’$ of oriented vector bundles which commutes
+with the (unoriented) isomorphisms $\mu \iso \nu_i \oplus \uR^{q-p}$
+and $\mu’ \iso \nu_i \oplus \uR^{q-p}$. It follows that the induced
+orientations on $\nu_i$ will agree.&lt;/p&gt;
+
+&lt;p&gt;($\Leftarrow$) Suppose we have an orientation on $\nu_i$. This is
+equivalent to specifying a reduction of structure group of $\nu_i$ to
+$SO(p)$, that is, an oriented $p$-dimensional vector bundle $\mu$ and
+an isomorphism of unoriented bundles $\alpha \c \mu \iso \nu_i$. Of
+course this is equivalent to a map $\bar g_0 \c M \to BSO(p)$ and a
+homotopy $h_0 \c f \circ \bar g_0 \to g_0$. By composing with the maps
+$BSO(p) \to BSO$ and $BO(p) \to BO$ we get a homotopy lift $(\bar g,
+h)$ of $g$ defining an $SO$-structure on $g$.&lt;/p&gt;
+
+&lt;p&gt;We need to check this does not depend on the choice of $\mu$ and
+$\alpha$. Clearly another oriented bundle $\mu’$ and isomorphism
+$\alpha’ \c \mu’ \iso \nu_i$ induces the same orientation on $\nu_i$
+if and only if there is an isomorphism $\beta \c \mu \iso \mu’$ of
+oriented bundles such that $\alpha’ \circ \beta = \alpha$. If $\mu’$
+and $\alpha’$ correspond to a map $\bar g_0’ \c M \to BSO(p)$ and
+homotopy $h_0’ \c f \circ \bar g_0’ \to g_0$ this is equivalent to
+asking for a homotopy $\bar h \c \bar g_0 \to \bar g_0’$ such that
+$h_0’ * (f \circ \bar h) = h_0$. Again composing with $BSO(p) \to BSO$
+and $BO(p) \to BO$, this precisely determines an equivalence of the
+homotopy lifts $(\bar g, h)$ and $(\bar g’, h’)$. Hence the resulting
+$SO$-structure is well-defined.&lt;/p&gt;
+
+&lt;p&gt;The two constructions are evidently mutually inverse, so we win.
+\end{proof}&lt;/p&gt;
+
+&lt;p&gt;\begin{remark}
+Hopefully the argument in \ref{SO-orientation} has made it more clear
+why we always need to specify our homotopy $f \circ \bar g \to g$, and
+why the notion of equivalence of homotopy lifts is as it is in
+\ref{f-structure-prelim}. In particular, observe that the commuting
+condition on homotopies in the equivalence of homotopy lifts is
+absolutely key. For example, suppose $\eta$ is an orientable bundle
+and $\xi \iso \eta$ an isomorphism of unoriented bundles. The two
+orientations on $\eta$ might in fact give isomorphic oriented bundles,
+but tautologically won’t induce the same orientation on $\xi$ via the
+isomorphism $\xi \iso \eta$. In this case the necessary commuting
+condition isn’t satisfied. (Note, the two orientations on any
+orientable bundle are always &lt;em&gt;stably&lt;/em&gt; isomorphic, since multiplication
+by $-1$ on $\uR$ gives an orientation reversing isomorphism $\eta
+\oplus \uR \iso \eta \oplus \uR$.)
+\end{remark}&lt;/p&gt;
+
+</description>
+      <pubDate>Sat, 25 Oct 2014 20:09:14 -0400</pubDate>
+      <link>http://www.arponr.com/structures-on-manifolds</link>
+      <guid isPermaLink="true">http://www.arponr.com/structures-on-manifolds</guid>
+    </item>
+    
+    <item>
+      <title>Hotel</title>
+      <description>&lt;p&gt;Waft up into the atmosphere with all the other in-flight scents, for
+some precisely prescribed but immaterial length of time, drifting and
+swirling and who knows what goes on at those altitudes, till the
+prescription runs out and you are sucked down into the world. Fall
+through infinity—fractals of branching passages, vague semiotics,
+and cordoned sinusoids—till infinity spits you out in front of
+Arrivals. Watch sinister, swarthy creatures slouching by towards
+Departures while you wait to diffuse into some vehicle which barely
+stops and then flows, onward, submerged in a viscous
+cavalcade. Surface and emerge, finally, at your destination. The night
+is dark red and pulsing.&lt;/p&gt;
+
+&lt;p&gt;Come inside, welcome. This hotel is nestled at the heart of me.&lt;/p&gt;
+
+&lt;h4 id=&quot;floor-eleven&quot;&gt;Floor Eleven&lt;/h4&gt;
+
+&lt;p&gt;It’s October of 2004, and the hallway is lined with those lurid
+lockers, the ones which send the average American hurtling back in
+fits of nostalgia toward some teenage point in spacetime. Only this is
+one of my not-even-teen years, and it’s right here and now.&lt;/p&gt;
+
+&lt;p&gt;Look at me—no, not at me, at not-even-teen me—leaning like I must
+have seen on tv against an orange locker adjacent to her orange
+locker. I’m fidgeting, imperceptibly I hope, maybe even just
+inwardly. A pen full of red ink comes out of my pocket and into my
+hand and begins to fidget with me. What am I saying?&lt;/p&gt;
+
+&lt;p&gt;“. . . .”&lt;/p&gt;
+
+&lt;p&gt;I capital-L Like, a.k.a. like-like, her. Who knows why. Are we even
+friends? Seriously, what am I saying? That capital-L has planted
+itself right inside me, its roots reach far deeper than my sorry logic
+could ever dig.&lt;/p&gt;
+
+&lt;p&gt;“. . . .”&lt;/p&gt;
+
+&lt;p&gt;My neck squirms, eyes wander, searching for some wit or charm or
+something, but something else finds me: the pen explodes. The
+idiomatic explosion is more metaphoric than literal though, the spray
+of ink scrawny and pathetic, yet in perfectly catastrophic trajectory,
+existing in all the wrong places and moments.&lt;/p&gt;
+
+&lt;p&gt;I am too young for innuendo to apply. This is real.&lt;/p&gt;
+
+&lt;p&gt;Dear god, I am bleeding all over her and her baby-blue North Face
+fleece. So many dreams shatter around me as my glossy oxygenated red
+struggles to harmonize with her soft baby-blue, like some grotesque
+hall of inconsistently colored mirrors. My neck snaps into place, eyes
+freeze, and, as neck- and eye-mobility appear to be gradually
+transferred over to her, she slowly lifts her heavy gaze from her
+orange locker. The gaze, expressing and therefore evoking terror,
+thuds down onto me. I need to react. I Like her so much I’m
+bleeding. I need a reaction.&lt;/p&gt;
+
+&lt;p&gt;I laugh. I double over, laughing.&lt;/p&gt;
+
+&lt;p&gt;Her terror metamorphoses in between eye-blinks: into anger, then
+sadness, then disgust; all those feelings I decide between mirroring
+eye-blinks I had always wanted from her. Yes, of course, I hate her
+with all my heart.&lt;/p&gt;
+
+&lt;p&gt;“. . . .”&lt;/p&gt;
+
+&lt;p&gt;Does she say something? A ventricle is pounding at my ear, and I am
+far too busy with my laughter. A bell interposes to notify us the day
+is over, cackling along with me as my brand new nemesis storms off
+into the afternoon.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;me: hey s—-
+s: hi what’s up?
+me: not much, chilling
+…
+s: you want to see this video my dance team recorded?
+me: yeak ok
+s: [url]
+…
+me: i didn’t really like it
+s: … are you serious
+me: i guess i didn’t really get it
+s: what
+s: i’m dancing what’s there to get
+me: sorry
+s: why would you say that
+me: sorry!
+me: it’s not about you i guess i just don’t get dance
+s: so still
+s: why would you say you don’t like it
+s: k—- said he liked it
+s: why couldn’t you just
+me: sorry&lt;/p&gt;
+
+&lt;hr /&gt;
+
+</description>
+      <pubDate>Sat, 25 Oct 2014 20:09:14 -0400</pubDate>
+      <link>http://www.arponr.com/hotel</link>
+      <guid isPermaLink="true">http://www.arponr.com/hotel</guid>
+    </item>
+    
+    <item>
+      <title>Finland</title>
+      <description>&lt;p&gt;Today I woke up in Finland, somewhere, in the grass. To be fair, I did
+yesterday too, and the day before that, and . . . well, not to
+infinity, as far as I know. I guess I don’t really know what I mean by
+&lt;em&gt;today&lt;/em&gt;, though, or &lt;em&gt;yesterday&lt;/em&gt; or &lt;em&gt;the day before that&lt;/em&gt; or
+. . . . What I mean is, for some time now I have been falling asleep
+and waking up in the grass, somewhere in Finland.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I arrived here in June on a red-eye. My plane landed at sunrise, my
+eyes were red. With me I had:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a pair of pants, on the darker end of khaki;&lt;/li&gt;
+  &lt;li&gt;a pair of boxers underneath;&lt;/li&gt;
+  &lt;li&gt;a short-sleeved t-shirt, grey and decorated with some made-up
+emblem;&lt;/li&gt;
+  &lt;li&gt;a long-sleeved button-up shirt, made of faded blue flannel;&lt;/li&gt;
+  &lt;li&gt;a jacket, darker blue and sort of rugged—or maybe that’s just how
+it made me feel;&lt;/li&gt;
+  &lt;li&gt;a pair of sneakers, bright red;&lt;/li&gt;
+  &lt;li&gt;a pair of socks underneath;&lt;/li&gt;
+  &lt;li&gt;an old black backpack, containing my passport, my boarding pass,
+a collection of short stories by Haruki Murakami, a black leather
+notebook, and a couple of mechanical pencils.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The backpack was on my back, the jacket under my arm, and the
+remaining items covered my body, so that I would not be considered
+indecent. In particular, I left behind anything that could tell me the
+time.&lt;/p&gt;
+
+&lt;p&gt;I planned to leave here at sunset, which should be sometime in August.&lt;/p&gt;
+
+&lt;p&gt;Perhaps this informs my confusion about &lt;em&gt;today&lt;/em&gt; and &lt;em&gt;yesterday&lt;/em&gt;, and
+all those words that have to do with &lt;em&gt;days&lt;/em&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I wasn’t hungry when I woke up today. To be fair, I wasn’t yesterday
+either, or the day before that . . . and that same spiel about today
+and yesterday and time and the sun of the Finnish summer.&lt;/p&gt;
+
+&lt;p&gt;So I just lay in the grass, letting myself wake up, one bone at a
+time. The grass here is lush, green, soft, warm, beautiful, and so
+on. It’s grass that you can lie in, where you can bathe in the
+tireless summer sun, float down into a dreamless sleep and drift
+somewhere, some place.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Some place empty, but not cold or dark for even here the sun has not
+set—does time even pass?—you are fixed here, and unsure if that or
+anything else will ever change, so you wait, the sun overhead, and you
+wait, and finally the sun has poured into you all that it could and
+you wake up, in Finland, somewhere, slowly, one bone at a time.&lt;/em&gt;&lt;/p&gt;
+</description>
+      <pubDate>Sat, 25 Oct 2014 20:09:14 -0400</pubDate>
+      <link>http://www.arponr.com/finland</link>
+      <guid isPermaLink="true">http://www.arponr.com/finland</guid>
+    </item>
+    
+    <item>
+      <title>Bundles II: comparisons</title>
+      <description>&lt;p&gt;This is a continuation of the &lt;a href=&quot;/bundles-i-definitions&quot;&gt;previous post&lt;/a&gt;, in which we
+defined a sheaf-theoretic notion of &lt;em&gt;bundle&lt;/em&gt; over a
+space, in analogy with the notion of fibre bundles. This time we
+deal with a couple of comparison problems. Namely, we discuss:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;why our notion of bundle is in fact a strict generalisation of the
+notion of fibre bundle;&lt;/li&gt;
+  &lt;li&gt;the “change of fibre”, or “associated bundle”, construction.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;We start by defining the categories which will feature in our
+comparisons. We fix a space $X$ as we did last time.&lt;/p&gt;
+
+&lt;p&gt;\begin{definitions}{fibre-bundle-cat}
+Let $G$ be a topological group and $F$ a left
+$G$-space. &lt;a href=&quot;/bundles-i-definitions/#bundles-structure-groups&quot;&gt;Recall&lt;/a&gt; that a $G$-bundle on $X$ with fibre
+$F$ is a fibre bundle $\pi \c E \to X$ with fibre $F$ equipped with a
+trivialisation ${(U_i,\kappa_i)}$ with transition maps in $G$. We
+define a &lt;em&gt;morphism of $G$-bundles with fibre $F$&lt;/em&gt; to be a continous
+map $\lambda \c E \to E’$ over $X$ and a common refinement ${V_j}$ of
+${U_i}$ and ${U’&lt;em&gt;{i’}}$ satisfying the following condition. For
+any $i,i’,j$ such that $V_j \subseteq U_i$ and $V_j \subseteq
+U’&lt;/em&gt;{i’}$, the map
+[
+\begin{xy}
+  \xymatrix{
+    V_j \times F \ar[r]^{\kappa_i^{-1}} &amp;amp;
+    \pi^{-1}(V_j) \ar[r]^{\lambda} &amp;amp;
+    \pi’^{-1}(V_j) \ar[r]^{\kappa’_{i’}} &amp;amp;
+    V_j \times F
+  }
+\end{xy}
+]
+is an automorphism of the form $(v,f) \mapsto (v, g(v)f)$, where $g$
+is a map $V_j \to G$.&lt;/p&gt;
+
+&lt;p&gt;This defines the &lt;em&gt;category $\Bun_G(X;F)$ of $G$-bundles on
+$X$ with fibre $F$&lt;/em&gt;.
+\end{definitions}&lt;/p&gt;
+
+&lt;p&gt;\begin{definitions}{bundle-sheaf-cat}
+Let $\G$ be a sheaf of groups on $X$ and $\F$ a left
+$\G$-sheaf. &lt;a href=&quot;/bundles-i-definitions/#bundle-sheaf&quot;&gt;Recall&lt;/a&gt; that a $\G$-bundle on $X$ with
+fibre $\F$ is a bundle $\E$ on $X$ with fibre $\F$ equipped with a
+trivialisation ${(U_i,\kappa_i)}$ with transition morphisms in
+$\G$. We define a &lt;em&gt;morphism of $\G$-bundles with fibre $\F$&lt;/em&gt; to be a
+morphism $\lambda \c \E \to \E’$ of sheaves on $X$ and a common
+refinement ${V_j}$ of ${U_i}$ and ${U’&lt;em&gt;{i’}}$ satisfying the
+following condition. For any $i,i’,j$ such that $V_j \subseteq U_i$
+and $V_j \subseteq U’&lt;/em&gt;{i’}$, the map
+[
+\begin{xy}
+  \xymatrix{
+    \F|&lt;em&gt;{V_j} \ar[r]^{\kappa_i^{-1}} &amp;amp;
+    \E|&lt;/em&gt;{V_j} \ar[r]^{\lambda} &amp;amp;
+    \E’|&lt;em&gt;{V_j} \ar[r]^{\kappa’&lt;/em&gt;{i’}} &amp;amp;
+    \F|_{V_j}
+  }
+\end{xy}
+]
+is an automorphism given by the action of an element of $\G(V_j)$.&lt;/p&gt;
+
+&lt;p&gt;This defines the &lt;em&gt;category $\Bun_\G(X;\F)$ of $\G$-bundles on
+$X$ with fibre $\F$&lt;/em&gt;.
+\end{definitions}&lt;/p&gt;
+
+&lt;p&gt;\begin{remark}
+Note that all morphisms of $G$-bundles with fibre $F$ and morphisms of
+$\G$-bundles with fibre $\F$ are isomorphisms (i.e. $\Bun_G(X;F)$ and
+$\Bun_\G(X;\F)$ are groupoids). These are the notions of isomorphism
+we will use for these objects.
+\end{remark}&lt;/p&gt;
+
+&lt;p&gt;\begin{remark}
+It follows from a &lt;a href=&quot;/bundles-i-definitions/#auto-left&quot;&gt;lemma&lt;/a&gt; from last time that if $\lambda \c
+\E \to \E’$ is a morphism of sheaves on $X$ with $\E,\E’$ both
+principal $\G$-bundles (i.e. $\G$-torsors) then $\lambda$ is a morphism
+in $\Bun_\G(X;\G)$ if and only if $\lambda$ is a morphism of right
+$\G$-sheaves.&lt;/p&gt;
+
+&lt;p&gt;After proving a similar (also easy) lemma for principal $G$-bundles,
+we can also see that a continuous map $\lambda \c E \to E’$ over $X$
+between principal $G$-bundles $E \to X$ and $E’ \to X$ is a morphism
+in $\Bun_G(X;G)$ if and only if it is $G$-equivariant.
+\end{remark}&lt;/p&gt;
+
+&lt;p&gt;We now show that the topological $\Bun_G(X;F)$ is really a special
+case of the sheaf-theoretic $\Bun_\G(X;\F)$. &lt;a href=&quot;/bundles-i-definitions/#map-sheaf&quot;&gt;Recall&lt;/a&gt; that
+to a space $Y$ we may associate the sheaf $\u{Y}$ on $X$ of continuous
+maps to $Y$.&lt;/p&gt;
+
+&lt;p&gt;\begin{proposition}
+Let $G$ be a topological group and $F$ a left $G$-space. Taking
+sheaves of sections defines an equivalence of categories
+[
+\Bun_G(X;F) \iso \Bun_{\u{G}}(X;\u{F}).
+]
+\end{proposition}&lt;/p&gt;
+
+&lt;p&gt;\begin{proof}
+Before beginning observe that the action of $G$ on $F$ certainly
+defines an action of $\u{G}$ on $\u{F}$, so the right-hand category is
+indeed defined.&lt;/p&gt;
+
+&lt;p&gt;Now, we first show that sheaves of sections in fact defines a functor
+$\Bun_G(X;F) \to \Bun&lt;em&gt;{\u{G}}(X;\u{F})$. Let $\pi \c E \to X$ be a
+$G$-bundle with fibre $F$ and trivialisation ${(U_i,\kappa_i)}$. Let
+$\E$ denote the sheaf of sections of $\pi$. A section of $U \times F
+\to U$ is simply a continuous map $U \to F$, so composition with the
+homeomorphisms $\kappa_i \c \pi^{-1}(U_i) \to U_i \times F$ over $U_i$
+determine isomorphisms $\u{\kappa}_i \c \E|&lt;/em&gt;{U_i} \to
+\u{F}|&lt;em&gt;{U_i}$. Then the resulting transition morphism $\u{t}&lt;/em&gt;{ij} \ce
+\u{\kappa}&lt;em&gt;i\u{\kappa}_j^{-1}$ is composition with the transition map
+$\kappa_i\kappa_j^{-1}$, which is of the form
+[
+(U_i \cap U_j) \times F \to (U_i \cap U_j) \times F, \quad
+(u,f) \mapsto (u, t&lt;/em&gt;{ij}(u)f)
+]
+for some map $t&lt;em&gt;{ij} \c U_i \cap U_j \to G$ since $\pi$ has structure
+group $G$. Thus $\u{t}&lt;/em&gt;{ij}$ is given by the action of $t_{ij} \in
+\u{G}(U_i \cap U_j)$. So indeed $\E$ equipped with the trivialisation
+${(U_i, \u{\kappa}_i)}$ is a $\u{G}$-bundle with fibre $\u{F}$.&lt;/p&gt;
+
+&lt;p&gt;This defines the functor on objects. For morphisms, a map $\lambda \c
+E \to E’$ over $X$ defines (again via composition) a morphism of
+sheaves $\u{\lambda} \c \E \to \E’$. That the common refinement and
+condition defining a morphism in $\Bun_G(X;F)$ imply the condition
+defining a morphism in $\Bun_{\u{G}}(X;\u{F})$ is the same as the
+argument above showing that $\E$ has structure group $\u{G}$ if $\pi$
+has structure group $G$.&lt;/p&gt;
+
+&lt;p&gt;We now sketch why this actually gives an equivalence:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Essential surjectivity: Suppose we have a $\u{G}$-bundle $\E$ with
+fibre $\F$ and trivialisation ${(U_i, \kappa_i)}$ with transition
+morphisms given by the action of $t&lt;em&gt;{ij} \in \u{G}(U_i \cap
+U_j)$. We form a $G$-bundle $\pi \c E \to X$ with fibre $F$ by
+gluing the trivial bundles $U_i \times F$ over each $U_i$ along the
+transition maps $t&lt;/em&gt;{ij}$. (This will be possible because they come
+from transitions on $\E$ and hence satisfy the cocycle condition.)
+It’s clear that the sheaf of sections of $\pi$ will be isomorphic to
+$\E$.&lt;/li&gt;
+  &lt;li&gt;Full-faithfulness: This follows from the fact that the morphisms in
+$\Bun_G(X;F)$ are determined by the automorphisms of $V_j \times F$
+which appear in \ref{fibre-bundle-cat}, and the morphisms in
+$\Bun&lt;em&gt;{\u{G}}(X;\u{F})$ are determined by the automorphisms of
+$\F|&lt;/em&gt;{V_j}$ appearing in \ref{bundle-sheaf-cat}. Both automorphisms
+determine and are determined by an element of $\u{G}(V_j)$, which
+implies full-faithfulness.
+\end{proof}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So any work we do in studying $\Bun_\G(X;\F)$ for general $\G,\F$ will
+in particular give results for $\Bun_G(X;F)$ for general $G,F$ as
+well. As a first example we discuss “change of fibre” for bundles,
+which will allow us to relate bundles with arbitrary fibre to
+principal bundles. This is also known as the “associated bundle”
+construction.&lt;/p&gt;
+
+&lt;p&gt;\begin{definition}
+Let $\G$ be a sheaf of groups on $X$ and $\F$ a $\G$-sheaf. The action
+of $\G$ on $\F$ is called &lt;em&gt;faithful&lt;/em&gt; if the induced morphism of
+sheaves $\G \to \saut_X(\F)$ is injective.
+\end{definition}&lt;/p&gt;
+
+&lt;p&gt;\begin{proposition}
+Let $\G$ be a sheaf of groups on $X$ and $\F,\F’$ be two left
+$\G$-sheaves. If the action of $\G$ on $\F$ is faithful, then there is
+a functor
+[
+\Theta&lt;em&gt;{\F,\F’} \c \Bun&lt;/em&gt;\G(X;\F) \to \Bun&lt;em&gt;\G(X;\F’).
+]
+If the action of $\G$ on $\F’$ is also faithful then $\Theta&lt;/em&gt;{\F,\F’}$
+and $\Theta_{\F’,\F}$ are quasi-inverse equivalences.
+\end{proposition}&lt;/p&gt;
+
+&lt;p&gt;\begin{proof}
+We first define $\Theta&lt;em&gt;{\F,\F’}$ on objects. Let $\E$ be a
+$\G$-bundle on $X$ with fibre $\F$, equipped with trivialisation
+${(U_i, \kappa_i)}$ and transition morphisms $\tau&lt;/em&gt;{ij} \in \G(U_i
+\cap U_j)$.
+\end{proof}&lt;/p&gt;
+
+</description>
+      <pubDate>Sat, 25 Oct 2014 20:09:14 -0400</pubDate>
+      <link>http://www.arponr.com/bundles-ii-comparisons</link>
+      <guid isPermaLink="true">http://www.arponr.com/bundles-ii-comparisons</guid>
+    </item>
     
     <item>
       <title>Pulling back a Galois correspondence</title>
@@ -553,6 +1254,282 @@ $$
       <pubDate>Sat, 05 Jul 2014 14:30:00 -0400</pubDate>
       <link>http://www.arponr.com/hocolim-arent-colimho</link>
       <guid isPermaLink="true">http://www.arponr.com/hocolim-arent-colimho</guid>
+    </item>
+    
+    <item>
+      <title>Bundles I: definitions</title>
+      <description>&lt;p&gt;I decided to sit down and understand how structure groups of fibre
+bundles work. Principal bundles in particular seem like fairly
+ubiquitous objects, and they’ll come up right away in the upcoming
+posts about bordism. So I thought I’d work through the basics
+carefully and write it down.&lt;/p&gt;
+
+&lt;p&gt;It struck me that much of the discussion can be translated immediately
+to the more general setting of sheaves, so for fun that’s how I’ll
+approach things. Of course I’ll point out throughout how the more
+familiar setting of bundles fits into the picture.&lt;/p&gt;
+
+&lt;p&gt;The aim of this first post is just to set things up.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;We begin by defining the motivating players advertised in the title:
+bundles and structure groups.&lt;/p&gt;
+
+&lt;p&gt;\begin{notation}
+Fix a topological space $X$ until further notice.
+\end{notation}&lt;/p&gt;
+
+&lt;p&gt;\begin{definitions}{bundles-structure-groups}
+Let $F$ be a space and $G$ a topological group.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A &lt;em&gt;fibre bundle&lt;/em&gt; over $X$ with &lt;em&gt;fibre&lt;/em&gt; $F$ is a map $\pi \c E \to X$
+such that there is an open cover ${U_i}$ of $X$ and homeomorphisms
+$\phi_i \c \pi^{-1}(U_i) \to U_i \times F$ over $X$ for each $i$. In
+particular the fibre $\pi^{-1}(x)$ is homeomorphic to $F$ for every
+$x \in X$.&lt;/li&gt;
+  &lt;li&gt;Such data ${(U_i,\phi_i)}$ is called a &lt;em&gt;trivialisation&lt;/em&gt; of the
+fibre bundle. The &lt;em&gt;transition maps&lt;/em&gt; associated to a trivialisation
+are the maps
+[
+t&lt;em&gt;{ij} \c U_i \cap U_j \to \aut(F),
+]
+where $\aut(F)$ denotes the group of homeomorphisms of $F$ with
+itself, such that the automorphism $\phi_i\phi_j^{-1}$ of $(U_i \cap
+U_j) \times F$ is given by $(u,f) \mapsto (u, t&lt;/em&gt;{ij}(u)(f))$.&lt;/li&gt;
+  &lt;li&gt;A fibre bundle $\pi \c E \to X$ with &lt;em&gt;structure group $G$&lt;/em&gt;, or a
+&lt;em&gt;$G$-bundle&lt;/em&gt;, is one where the fibre $F$ is equipped with a left
+$G$-action and $\pi$ is equipped with a trivialisation for which the
+transition maps $t_{ij}$ factor through the action $G \to \aut(F)$.&lt;/li&gt;
+  &lt;li&gt;A $G$-bundle is &lt;em&gt;principal&lt;/em&gt; if $G$ acts simply transitively on the
+fibre $F$, i.e., $F$ is homeomorphic as a left $G$-space to $G$
+(which is a left $G$-space via left multiplication).
+\end{definitions}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;\begin{remark}{principal-right-action}
+Note that a &lt;em&gt;trivial&lt;/em&gt; principal $G$-bundle $X \times G$ has both a
+left and a right $G$-action, via left and right multiplication on $G$.
+Since these two actions commute and a principal $G$-bundle $\pi \c E
+\to X$ locally looks like $U \times G$ as a left $G$-space, the right
+actions on $U \times G$ will glue together to give a global right
+$G$-action on $E$ which preserves fibres. I.e., any principal
+$G$-bundle is a right $G$-space over $X$.
+\end{remark}&lt;/p&gt;
+
+&lt;p&gt;These are the type of objects we should have in the back of our mind
+throughout. We will generalise them using the language of sheaves,
+with the following definitions as our basic tools.&lt;/p&gt;
+
+&lt;p&gt;\begin{definitions}
+Let $\G$ be a sheaf of groups on $X$.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A &lt;em&gt;$\G$-sheaf&lt;/em&gt; on $X$ is a sheaf of sets $\E$ on $X$ together with
+a right action $\E \times \G \to \E$ of $\G$. A &lt;em&gt;morphism of
+$\G$-sheaves&lt;/em&gt; $\E \to \E’$ on $X$ is a morphism of sheaves of sets
+which commutes with the $\G$-actions.&lt;/li&gt;
+  &lt;li&gt;A &lt;em&gt;$\G$-pseudotorsor&lt;/em&gt; is $\G$-sheaf $\E$ such that for all $U
+\subseteq X$ open, either $\E(U)$ is empty or the action of $\G(U)$
+on $\E(U)$ is simply transitive. A $\G$-pseudotorsor $\E$ is a
+&lt;em&gt;$\G$-torsor&lt;/em&gt; if moreover $\E(U_i)$ is nonempty for all $i$ in some
+open cover ${U_i}$ of $X$. A &lt;em&gt;morphism of $\G$-pseudotorsors or
+$\G$-torsors&lt;/em&gt; is simply a morphism of the underlying $\G$-sheaves.&lt;/li&gt;
+  &lt;li&gt;There is a &lt;em&gt;trivial $\G$-torsor&lt;/em&gt; on $X$ given by $\G$ equipped with
+the action given by right multiplication. A $\G$-sheaf $\E$ is
+called &lt;em&gt;trivial&lt;/em&gt; if there is an isomorphism of $\G$-sheaves $\E \iso
+\G$.&lt;/li&gt;
+  &lt;li&gt;Note that if $\E$ is a $\G$-sheaf, then $\E|&lt;em&gt;U$ is a $\G|_U$-sheaf
+on $U$ for any $U \subseteq X$. If $P$ is some property which can be
+enjoyed by $\H$-sheaves on $Y$ for any sheaf of groups $\H$ on any
+space $Y$—e.g. the properties of being a pseudotorsor, or torsor,
+or trivial—then we say a $\G$-sheaf $\E$ on $X$ *locally has the
+property* $P$ if the $\G|&lt;/em&gt;{U_i}$ sheaf $\E|_{U_i}$ has the property
+$P$ for all $i$ in some open cover ${U_i}$ of $X$. The same goes
+for morphisms of $\G$-sheaves.
+\end{definitions}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;\begin{remark}
+Note we should really have called these &lt;em&gt;right&lt;/em&gt; $\G$-sheaves,
+$\G$-pseudotorsors, and $\G$-torsors. Of course we can analogously
+define &lt;em&gt;left&lt;/em&gt; $\G$-sheaves, $\G$-pseudotorsors, and $\G$-torsors. We
+will need to distinguish between the two later on (as we needed to
+distinguish between left and right $G$-spaces for bundles above), but
+until then we agree to leave the modifier “right” implicit.
+\end{remark}&lt;/p&gt;
+
+&lt;p&gt;\begin{remarks}{torsor-equiv}
+Observe that any morphism of $\G$-torsors is an isomorphism, since
+clearly it must locally be an isomorphism. So suppose $\E$ is a
+$\G$-pseudotorsor with a section $s \in \E(U)$ for some $U \subseteq
+X$ open. Then there is a morphism of $\G|_U$-torsors $\G|_U \to \E|_U$
+on $U$ given by
+[
+\G(V) \ni 1 \mapsto s|_V \in \E(V), \quad V \subseteq U\text{ open}.
+]
+As just observed this must an isomorphism. I.e., any global section
+trivialises a pseudotorsor, and in particilar a pseudotorsor is a
+torsor if and only if it is locally trivial. In fact, any $\G$-sheaf
+is a $\G$-torsor if and only if it’s locally trivial. This is
+immediate from the preceding discussion and the following lemma, that
+being a pseudotorsor or torsor is a local condition.
+\end{remarks}&lt;/p&gt;
+
+&lt;p&gt;\begin{lemma}{torsor-local}
+If a $\G$-sheaf $\E$ on $X$ is locally a $\G$-pseudotorsor
+(resp. $\G$-torsor), then $\E$ is a $\G$-pseudotorsor
+(resp. $\G$-torsor).
+\end{lemma}&lt;/p&gt;
+
+&lt;p&gt;\begin{proof}
+It’s clear that the statement for $\G$-torsors follows immediately
+from the statement for pseudotorsors, so we need only prove the
+latter. Assume $\E|&lt;em&gt;{U_i}$ is a $\G|&lt;/em&gt;{U_i}$-pseudotorsor for all $i$
+in an open cover ${U_i}$ of $X$. Let $V \subseteq X$ such that
+$\E(V)$ is nonempty. Let $s, t \in \E(V)$. We need to show there is a
+unique $g \in \G(V)$ such that $t = sg$. Write
+[
+V_i \ce V \cap U_i, \quad V&lt;em&gt;{ij} \ce V \cap U_i \cap U_j,
+]
+[
+s_i \ce s|&lt;/em&gt;{V_i}, \quad s&lt;em&gt;{ij} \ce s|&lt;/em&gt;{V&lt;em&gt;{ij}}, \quad t_i \ce
+t|&lt;/em&gt;{V_i}, \quad t&lt;em&gt;{ij} \ce t|&lt;/em&gt;{V&lt;em&gt;{ij}}
+]
+for all $i,j$ where these
+intersections are nonempty. Since $\E|&lt;/em&gt;{U_i}$ is a
+$\G|&lt;em&gt;{U_i}$-pseudotorsor, there is a unique $g_i \in \G(V_i)$ such
+that $t_i = s_ig_i$; then
+[
+s&lt;/em&gt;{ij}g_i|&lt;em&gt;{V&lt;/em&gt;{ij}} = t&lt;em&gt;{ij} = s&lt;/em&gt;{ij}g_j|&lt;em&gt;{V&lt;/em&gt;{ij}},
+]
+so uniqueness also implies $g_i|&lt;em&gt;{V&lt;/em&gt;{ij}} = g_j|&lt;em&gt;{V&lt;/em&gt;{ij}}$. Since the
+$V_i$ cover $V$, the $g_i$ glue to $g \in \G(V)$. The equation $t =
+sg$ holds when restricted to each $V_i$ and thus must hold on $V$, and
+the uniqueness of $g$ is immediate from the uniqueness of the $g_i$.
+\end{proof}&lt;/p&gt;
+
+&lt;p&gt;Let’s bring things back down to bundles for a second.&lt;/p&gt;
+
+&lt;p&gt;\begin{definition}{map-sheaf}
+To any space $Y$ we can associate a sheaf of sets $\u{Y}$ on $X$: the
+&lt;em&gt;sheaf of continuous maps to $Y$&lt;/em&gt;, given by the assignment
+[
+U \mapsto \hom_\Top(U,Y), \quad U \subseteq X \text{ open}.
+]
+\end{definition}&lt;/p&gt;
+
+&lt;p&gt;\begin{example}{bundle-example}
+Let $G$ be a topological group. Then $\u{G}$ is in fact a sheaf of
+groups. If $\pi \c E \to X$ is a right $G$-space over $X$ (a space
+over $X$ with a right $G$-action preserving fibres) then the sheaf
+$\E$ of continuous sections of $\pi$ is a $\u{G}$-sheaf in a canonical
+manner. By \ref{principal-right-action}, any principal $G$-bundle
+gives an example of such a $\pi \c E \to X$. In this case we will
+moreover have that $\E$ is locally trivial, and hence a $\u{G}$-torsor
+by \ref{torsor-equiv}.
+\end{example}&lt;/p&gt;
+
+&lt;p&gt;We next generalise the main definitions we began with in
+\ref{bundles-structure-groups}. I’m not sure if there’s standard
+terminology for some of these things so I’m just sticking with the
+terminology for fibre bundles.&lt;/p&gt;
+
+&lt;p&gt;\begin{definition}
+If $\E$ is a sheaf of sets on $X$ then we have a &lt;em&gt;sheaf of
+automorphisms&lt;/em&gt; $\saut_X(\E)$ on $X$ which to every open $U \subseteq
+X$ assigns the set $\aut(\E|_U)$ of isomorphisms $\E|_U \to \E|_U$
+of sheaves on $U$.
+\end{definition}&lt;/p&gt;
+
+&lt;p&gt;\begin{remark}
+If $G$ is a topological group and $F$ a space then giving a $G$-action
+on a space $F$ is equivalent to giving a continuous map $G \to
+\aut(F)$. Observe similarly that if $\G$ is a sheaf of groups on
+$X$ and $\F$ a sheaf of sets on $X$ then giving a left $\G$-action on
+$\F$ is equivalent to giving a morphism of sheaves $\G \to
+\saut_X(\E)$.
+\end{remark}&lt;/p&gt;
+
+&lt;p&gt;\begin{definition}{bundle-sheaf}
+Let $\F$ be a sheaf of sets on $X$ and $\G$ a sheaf of groups on $X$.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A &lt;em&gt;bundle&lt;/em&gt; over $X$ with &lt;em&gt;fibre&lt;/em&gt; $\F$ is a sheaf of sets $\E$ on $X$
+such that there is an open cover ${U_i}$ of $X$ and isomorphisms
+$\phi_i \c \E|&lt;em&gt;{U_i} \to \F|&lt;/em&gt;{U_i}$ for each $i$.&lt;/li&gt;
+  &lt;li&gt;Such data ${(U_i,\phi_i)}$ is called a &lt;em&gt;trivialisation&lt;/em&gt; of the
+bundle. The &lt;em&gt;transition morpshisms&lt;/em&gt; associated to a trivialisation
+are the automorphisms $t&lt;em&gt;{ij} \ce \phi_i\phi_j^{-1}$ of $\F|&lt;/em&gt;{U_i
+\cap U_j}$.&lt;/li&gt;
+  &lt;li&gt;A bundle $\E$ on $X$ with &lt;em&gt;structure group $\G$&lt;/em&gt;, or a
+&lt;em&gt;$\G$-bundle&lt;/em&gt;, is one where the fibre $\F$ is equipped with a left
+$\G$-action and $\E$ is equipped with a trivialisation for which the
+transition morphisms $t_{ij}$ lie in the image of $\G(U_i \cap U_j)
+\to \saut_X(\F)(U_i \cap U_j)$.&lt;/li&gt;
+  &lt;li&gt;A $\G$-bundle is &lt;em&gt;principal&lt;/em&gt; if $\F$ is isomorphic as a left
+$\G$-sheaf to $\G$ (which is a left $\G$-sheaf via left
+multiplication).
+\end{definition}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In fact we could have left that last definition out, since according
+to \ref{principal-equals-torsor} below, we have already defined it!&lt;/p&gt;
+
+&lt;p&gt;\begin{lemma}{auto-left}
+Let $\G$ be a sheaf of groups on $X$. Any morphism of right
+$\G$-sheaves $t \c \G \to \G$ is given by left multiplication by some
+$g \in \G(X)$:
+[
+t_U \c\  \G(U) \ni h \mapsto g|_Uh \in \G(U), \quad U \subseteq X \text{
+open}.
+]
+\end{lemma}&lt;/p&gt;
+
+&lt;p&gt;\begin{proof}
+Let $1_U \in \G(U)$ denote the unit for $U \subseteq X$ open. Let $g
+\ce t_X(1_X) \in \G(X)$. Since $1_X|_U = 1_U$ and $t$ is a morphism of
+right $\G$-sheaves we have for any $U \subseteq X$ open and $h \in
+\G(U)$:
+[
+t_U(h) = t_U(1_U) \cdot h = t_X(1_X)|_U \cdot h = g|_Uh.
+]
+\end{proof}&lt;/p&gt;
+
+&lt;p&gt;\begin{proposition}{principal-equals-torsor}
+Let $\G$ be a sheaf of groups on $X$. A sheaf of sets $\E$ on $X$ is a
+principal $\G$-bundle if and only if it is a right $\G$-torsor.
+\end{proposition}&lt;/p&gt;
+
+&lt;p&gt;\begin{proof}
+($\Rightarrow$) Let $\E$ be a principal $\G$-bundle sheaf. So we have
+an open cover ${U_i}$ of $X$ and isomorphisms $\E|&lt;em&gt;{U_i} \iso
+\G|&lt;/em&gt;{U_i}$ such that the transition morphisms $t&lt;em&gt;{ij}$ are given by
+left multiplication by some $g&lt;/em&gt;{ij} \in \G(U_i \cap U_j)$. Since left
+and right multiplication commute, the right actions of $\G|&lt;em&gt;{U_i}$ on
+$\E|&lt;/em&gt;{U_i}$ via right-multiplication will glue together to give a
+global right action of $\G$ on $\E$ (this is precisely analogous to
+\ref{principal-right-action}). Thus $\E$ is a right $\G$-sheaf, and
+since $\E$ is by construction locally trivial it must be a $\G$-torsor
+by \ref{torsor-equiv}.&lt;/p&gt;
+
+&lt;p&gt;($\Leftarrow$) Suppose $\E$ is a right $\G$-torsor. By
+\ref{torsor-equiv} it is locally trivial: there is an open cover
+${U_i}$ of $X$ and isomorphisms of right $\G$-sheaves $\E|&lt;em&gt;{U_i}
+\iso \G|&lt;/em&gt;{U_i}$. So $\E$ is a bundle sheaf with fibre $\G$. Then that
+$\E$ has structure group $\G$ is immediate from \ref{auto-left}.
+\end{proof}&lt;/p&gt;
+
+&lt;p&gt;Now, I’ve said that we’ve &lt;em&gt;generalised&lt;/em&gt; the notion of fibre bundle
+with this notion of bundles as sheaves. But we’ve been proceeding on
+analogies alone. So though I’ve hinted at it in \ref{bundle-example},
+I haven’t actually proved in what sense this is a generalisation. But
+I’ll save that for the next post.&lt;/p&gt;
+</description>
+      <pubDate>Mon, 16 Jun 2014 17:10:00 -0400</pubDate>
+      <link>http://www.arponr.com/bundles-i-definitions</link>
+      <guid isPermaLink="true">http://www.arponr.com/bundles-i-definitions</guid>
     </item>
     
     <item>

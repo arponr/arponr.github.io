@@ -12,67 +12,24 @@
     <!-- <script type="text/javascript" src="//use.typekit.net/cen6cew.js"></script> -->
     <!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
 
-    <script type="text/javascript" src="/js/jquery-min.js"></script>
-    <script type="text/javascript" src="/js/jquery.nanoscroller.js"></script>
-    <script type="text/javascript" src="/js/ui.js"></script>
-
     {% if page.math %}
     <script type="text/javascript" src="http://beta.mathjax.org/mathjax/latest/MathJax.js?config={{ site.baseurl }}/js/jax-config.js"></script>
     {% endif %}
   </head>
 
-  <body{% if page.math %} class="math"{% endif %}>
-    <div class="side">
-      <div class="nano">
-        <div class="side-content nano-content">
-          <ul class="section nav">
-            <li><a href="/">Home</a></li>
-          </ul>
-
-          <ul class="section entries">
-            {% for entry in site.posts %}
-            <li>
-              <time class="date">
-                {{ entry.date | date: "%y/%m/%d" }}
-                {%if entry.file_url%}
-                <br>PDF
-                {% endif %}
-              </time>
-              <a class="link" href="{% if entry.file_url %}/files/{{ entry.file_url }}{% else %}{{ entry.url }}{% endif %}">
-                <div class="title">{{ entry.title }}</div>
-                <div class="desc">
-                  {{ entry.desc }}
-                </div>
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="browse-bar side-toggle">
-      <div class="browse-bar-content">
-        <div class="browse">Browse</div>
-      </div>
-    </div>
-
-    <div class="main">
-      <div class="nano">
-        <div class="main-content nano-content">
-          <header class="section">
-            {% if page.title == "About" %}
-            <h1>I am Arpon Raksit and trying (to try) my best to
-              understand and create interesting things. Welcome to the
-              closet in which I stash any
-              minimal <span class="side-toggle button">progress</span> which occurs
-              towards these ends.</h1>
-            {% else %}
-            {% if page.title %}
-            <h1>{{ page.title }}</h1>
-            {% endif %}
-            {% if page.date %}
-            <h2>{{ page.date | date: "%Y, %B %d" }}</h2>
-            {% endif %}
-            {% endif %}
-          </header>
+    <main class="wrap">
+      <nav>
+        <ul>
+          <li><a href="/">About</a></li>
+          <li><a href="/browse">Browse</a></li>
+        </ul>
+      </nav>
+      <header>
+        {% if page.title %}
+        <h1>{{ page.title }}</h1>
+        {% endif %}
+        {% if page.date %}
+        <h2>{{ page.date | date: "%Y, %B %d" }}</h2>
+        {% endif %}
+      </header>
+      

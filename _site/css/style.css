@@ -88,7 +88,8 @@ h1, h2, h3, h4, h5, h6 {
 
 sup, sub {
   vertical-align: baseline;
-  position: relative; }
+  position: relative;
+  font-size: 13px; }
 
 sup {
   top: -0.5em; }
@@ -101,63 +102,46 @@ p + p, p + blockquote, p + .environment, blockquote + p, blockquote + blockquote
 
 blockquote {
   font-style: italic;
-  color: #706865;
+  color: #656870;
   text-align: right; }
 
 figure img {
   max-width: 100%; }
 figure figcaption {
   font-size: 15px;
-  color: #706865;
+  color: #656870;
   text-align: center;
   margin-top: 8px; }
 
-.side, .browse-bar, .main {
-  position: absolute;
-  top: 0;
-  bottom: 0; }
+.wrap {
+  width: 550px;
+  margin: 0 auto;
+  padding: 20px 0; }
 
-.side, .browse-bar {
-  background: #f8f8f8; }
-
-.browse-bar {
-  left: 0;
-  width: 50px;
-  cursor: pointer; }
-  .browse-bar .browse {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg); }
-  .browse-bar:hover .browse {
-    color: #c7480a; }
-
-.side, .main {
-  padding-left: 20px; }
-
-.side {
-  left: -350px;
-  width: 350px; }
-
-.main {
-  left: 50px;
-  right: 0; }
-
-.section:first-child, .section + .section {
-  margin-top: 60px; }
-.section:last-child {
-  margin-bottom: 60px; }
-
-.side-content .nav li {
+nav {
   font-size: 15px;
-  display: inline; }
-  .side-content .nav li + li {
-    margin-left: 10px; }
-  .side-content .nav li a:hover {
-    color: #c7480a; }
+  padding-bottom: 10px;
+  border-bottom: 1px solid #c5c8d0; }
+  nav li {
+    display: inline; }
+    nav li + li {
+      margin-left: 15px; }
+  nav a:link, nav a:visited {
+    color: #656870; }
+  nav a:hover {
+    color: #302825; }
+
+header {
+  margin-top: 30px; }
+  header h1 {
+    font-size: 24px;
+    line-height: 1.2; }
+  header h2 {
+    margin-top: 8px;
+    color: #656870; }
+
+.section {
+  margin-top: 40px; }
 
 .entries li {
   line-height: 1.2; }
@@ -165,39 +149,29 @@ figure figcaption {
     margin-top: 30px; }
   .entries li .date {
     float: left;
-    padding-right: 8px;
+    padding-right: 10px;
     margin-top: 1px;
-    font-size: 13px;
-    color: #706865; }
+    font-size: 13px; }
   .entries li .link {
     display: block;
     overflow: hidden; }
     .entries li .link:hover .title {
-      color: #c7480a; }
+      text-decoration: underline; }
   .entries li .title {
     margin-bottom: 5px; }
   .entries li .desc {
     font-size: 15px;
-    color: #706865; }
+    color: #656870; }
 
-.main-content {
-  width: 550px;
-  margin: 0 auto; }
-  .main-content header h1 {
-    font-size: 24px;
-    line-height: 1.2; }
-  .main-content header h2 {
-    margin-top: 8px;
-    color: #706865; }
-  .main-content .button {
-    cursor: pointer; }
-  .main-content .button, .main-content a:link, .main-content a:visited {
-    color: #c7480a; }
-  .main-content .button:hover, .main-content a:hover {
-    text-decoration: underline; }
+.button {
+  cursor: pointer; }
 
 .text {
   line-height: 1.35; }
+  .text a:link, .text a:visited {
+    color: #c7480a; }
+  .text a:hover {
+    text-decoration: underline; }
   .text ul, .text ol {
     margin-left: 35px; }
     .text ul li, .text ol li {
@@ -215,7 +189,7 @@ figure figcaption {
     height: 1px;
     margin: 20px auto;
     border: 0;
-    background: #c0b8b5; }
+    background: #c5c8d0; }
 
 .MathJax_Display {
   margin: 8px 0 !important; }
@@ -238,7 +212,7 @@ figure figcaption {
 .footnotes:before {
   content: '';
   display: block;
-  background: #c0b8b5;
+  background: #c5c8d0;
   height: 1px;
   width: 75px;
   margin-top: 30px;

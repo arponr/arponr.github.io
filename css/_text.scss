@@ -1,6 +1,14 @@
 .text {
     line-height: $line-text;
 
+    a:link, a:visited {
+        color: $accent-light;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
     ul, ol {
         margin-left: 35px;
 
