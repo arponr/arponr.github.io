@@ -54,7 +54,7 @@ module Jekyll
         )
         |
         (?:
-           ^--\s*                           # "--" starts environment
+           ^(-{2,})\s*                           # "--" starts environment
            (?:                              # optional environment meta info:
               (.*?)?\s*                     #   - type (e.g. Definition)
               (?:\((.*?)\))?\s*             #   - desc (e.g. Hilbert Basis Thm)
@@ -68,7 +68,7 @@ module Jekyll
       }x) do
         index += 1
         label = "#{label_prefix}#{index}"
-        eq_tag, eq_inner, type, desc, tag, inner = [$1, $2, $3, $4, $5, $6, $7].map do |x|
+        eq_tag, eq_inner, dashes, type, desc, tag, inner = [$1, $2, $3, $4, $5, $6, $7].map do |x|
           x.nil? || x.empty? ? nil : x.strip()
         end
 
@@ -81,18 +81,19 @@ module Jekyll
         end
         stripped = inner.strip().gsub(/^[[:blank:]]{,3}/, "")
         body, tag_hash = texdown_process(stripped, "#{label}.", tag_hash)
-        build_environment(type, desc, tag, body.strip(), label)
+        priority = dashes.length - 1
+        build_environment(type, desc, tag, body.strip(), label, priority)
       end
       return output, tag_hash
     end
 
-    def build_environment(type, desc, tag, body, label)
+    def build_environment(type, desc, tag, body, label, priority)
       output = ""
       output << "<div "
       if !tag.nil?
         output << "id=\"#{tag}\" "
       end
-      output << "class=\"environment"
+      output << "class=\"environment priority-#{priority}"
       if !type.nil?
         dashed = type.downcase.gsub(/[[:blank:]]/, "-")
         output << " #{dashed}"
@@ -100,7 +101,11 @@ module Jekyll
       output << "\">\n"
 
       output << "<div class=\"environment_label\">\n"
-      output << "{::nomarkdown}#{label}.{:/}"
+      if priority == 1
+        output << "{::nomarkdown}#{label}.{:/}"
+      else
+        output << "{::nomarkdown}(#{label}){:/}"
+      end
       output << "\n</div>\n"
 
       output << "<div class=\"environment_body\">\n"

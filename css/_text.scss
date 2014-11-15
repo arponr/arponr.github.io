@@ -51,7 +51,6 @@
 .environment {
     .environment_label {
         float: left;
-        padding-right: 5px;
     }
 
     .environment_body {
@@ -64,8 +63,25 @@
         }
     }
 
-    .environment_label, .environment_header {
-        font-weight: 700;
+    &.priority-1 {
+        & > .environment_label {
+            padding-right: 5px;
+            font-weight: 700;
+        }
+
+        & > .environment_body .environment_header {
+            font-weight: 700;
+        }
+    }
+
+    &.priority-2 {
+        & > .environment_label {
+            padding-right: 8px;
+        }
+
+        & > .environment_body .environment_header {
+            font-style: italic;
+        }
     }
 }
 

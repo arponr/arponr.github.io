@@ -26,22 +26,26 @@ preamble:
 -- Definition: We say a morphism $i \c Z \to X$ of locally ringed
    spaces is a *closed immersion* if:
 
-   1. the underlying map of spaces $\lv Z \rv \to \lv X \rv$ induces a
-      homeomorphism of $\lv X \rv$ onto a closed subset of $\lv X
+   --- the underlying map of spaces $\lv Z \rv \to \lv X \rv$ induces
+       a homeomorphism of $\lv X \rv$ onto a closed subset of $\lv X
       \rv$;
-   2. the underlying map of sheaves $\O_X \to i_*\O_Z$ is
-      surjective.
+
+   --- the underlying map of sheaves $\O_X \to i_*\O_Z$ is
+       surjective.
 
    Recall also that:
 
-   1. the *ideal sheaf* of $Z$ is defined as $\I \ce \ker(\O_X \to
-      i_*\O_Z)$;
-   2. the *closed subspace* determined by $\I$ is defined as the
-      locally ringed space $Z' \ce (\supp(\O_X/\I), \O_X/\I)$;
-   3. the natural map $i' \c Z' \to X$ is a closed immersion with
-      ideal sheaf $\I$;
-   4. $i \c Z \to X$ in fact induces an isomorphism $h \c Z \to Z'$
-      such that $i = i' \circ h$.
+   --- the *ideal sheaf* of $Z$ is defined as $\I \ce \ker(\O_X \to
+       i_*\O_Z)$;
+
+   --- the *closed subspace* determined by $\I$ is defined as the
+       locally ringed space $Z' \ce (\supp(\O_X/\I), \O_X/\I)$;
+
+   --- the natural map $i' \c Z' \to X$ is a closed immersion with
+       ideal sheaf $\I$;
+
+   --- $i \c Z \to X$ in fact induces an isomorphism $h \c Z \to Z'$
+       such that $i = i' \circ h$.
 
 -- Lemma #monomorphism: If $i \c Z \to X$ is a closed immersion of
    locally ringed spaces, then $i$ is a monomorphism (in the category

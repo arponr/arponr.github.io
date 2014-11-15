@@ -197,14 +197,20 @@ header {
     color: #302825 !important; }
 
 .environment .environment_label {
-  float: left;
-  padding-right: 5px; }
+  float: left; }
 .environment .environment_body {
   overflow: hidden; }
 .environment .environment_header, .environment .environment_header p, .environment .environment_header + p {
   display: inline; }
-.environment .environment_label, .environment .environment_header {
+.environment.priority-1 > .environment_label {
+  padding-right: 5px;
   font-weight: 700; }
+.environment.priority-1 > .environment_body .environment_header {
+  font-weight: 700; }
+.environment.priority-2 > .environment_label {
+  padding-right: 8px; }
+.environment.priority-2 > .environment_body .environment_header {
+  font-style: italic; }
 
 .preamble {
   display: none; }

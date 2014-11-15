@@ -25,10 +25,10 @@ preamble:
    every $N \in \Sub_G$ the induced map $\phi_N \c A/\phi^{-1}(N) \to
    G/N$ is an isomorphism. Then:
 
-   -- #preimage-injective: the preimage map $\Sub_G \to \Sub_A$,
-      defined by $N \mapsto \phi^{-1}(N)$, is injective;
-   -- #join-preserved: $\phi^{-1}(N_1N_2) =
-      \phi^{-1}(N_1)\phi^{-1}(N_2)$ for $N_1,N_2 \in \Sub_G$.
+   --- #preimage-injective: the preimage map $\Sub_G \to \Sub_A$,
+       defined by $N \mapsto \phi^{-1}(N)$, is injective;
+   --- #join-preserved: $\phi^{-1}(N_1N_2) =
+       \phi^{-1}(N_1)\phi^{-1}(N_2)$ for $N_1,N_2 \in \Sub_G$.
 
    -- Proof: Let $N_1,N_2 \in \Sub_G$. To prove #preimage-injective It
       suffices to show that $N_1 \subseteq N_2$ if $\phi^{-1}(N_1)
@@ -94,16 +94,16 @@ preamble:
    Let $K$ be a non-archimedean local field. Let $K^\ab$ be a maximal
    abelian extension of $K$. The Galois group $G \ce \Gal(K^\ab/K)$ is
    a profinite group, and Galois theory tells us that the poset
-   $\Sub_G$ is anti-equivalent to the poset $\Ab_K$ of finite abelian
-   extensions of $K$, i.e. the set of finite subextensions of $K^\ab$
-   ordered by inclusion.[^1] The "reciprocity" statement in local
+   $\Sub_G$ is anti-equivalent[^1] to the poset $\Ab_K$ of finite
+   abelian extensions of $K$, i.e. the set of finite subextensions of
+   $K^\ab$ ordered by inclusion. The "reciprocity" statement in local
    class field theory asserts:
 
-   -- the existence of a morphism $\phi_K \c K^\times \to
-      \Gal(K^\ab/K)$ satisfying the hypothesis of #main;
-   -- if $N \ce \Stab_L \in \Sub_G$ is the subgroup corresponding to a
-      finite abelian extension $K \inj L$, then $\phi_K^{-1}(N)$ is
-      the *norm group* $N_{L/K}(L^\times) \subseteq K^\times$.
+   --- the existence of a morphism $\phi_K \c K^\times \to
+       \Gal(K^\ab/K)$ satisfying the hypothesis of #main;
+   --- if $N \ce \Stab_L \in \Sub_G$ is the subgroup corresponding to a
+       finite abelian extension $K \inj L$, then $\phi_K^{-1}(N)$ is
+       the *norm group* $N_{L/K}(L^\times) \subseteq K^\times$.
 
    Thus, putting #main and Galois theory together gives us that the
    poset $\Ab_K$ is anti-equivalent to the poset of norm groups in
