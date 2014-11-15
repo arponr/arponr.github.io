@@ -63,7 +63,7 @@
         $$
       </div>
       
-      <div class="environment">
+      <div class="environment priority-1">
   <div class="environment_label">
     <p>1.</p>
   </div>
@@ -79,7 +79,7 @@ completely analogous, so we will abstract very slightly and address
 both at once.</p>
   </div>
 </div>
-<div class="environment notation">
+<div class="environment priority-1 notation">
   <div class="environment_label">
     <p>2.</p>
   </div>
@@ -87,28 +87,75 @@ both at once.</p>
     <div class="environment_header">
       <p>Notation.</p>
     </div>
-    <ul>
-      <li>All rings and algebras are commutative with unit.</li>
-      <li>For a ring $A$, let $\C_A$ denote either the category of
-$A$-modules or the category of $A$-algebras. All arrows indicate
-morphisms in $\C_A$.</li>
-      <li>Let $\amalg$ denote the coproduct in $\C_A$, i.e., direct sum
-$\oplus$ for $A$-modules or tensor product $\otimes_A$ for
-$A$-algebras.</li>
-      <li>For $C \in \obj(\C_A)$ and $n \in \N$ let $C^{\amalg n}$ denote
-the $n$-fold coproduct $C \amalg \cdots \amalg C$ and $C^n$
-denote the $n$-fold product $C \times \cdots \times C$.</li>
-      <li>Let $F_A \in \obj(\C_A)$ denote the free object on one element,
-i.e., $F_A \iso$ $A$ for $A$-modules and $F_A \iso$ $A[t]$ for
-$A$-algebras. Thus for any $n \in \N$ there is an isomorphism
-$\hom_{\C_A}(F_A^{\amalg n},C) \iso$ $C^n$ natural in $C \in
-\obj(\C_A)$.</li>
-    </ul>
+    <div class="environment priority-2">
+      <div class="environment_label">
+        <p>(2.1)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
 
+        </div>
+        <p>All rings and algebras are commutative with unit.</p>
+      </div>
+    </div>
+    <div class="environment priority-2">
+      <div class="environment_label">
+        <p>(2.2)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>For a ring $A$, let $\C_A$ denote either the category of
+ $A$-modules or the category of $A$-algebras. All arrows indicate
+ morphisms in $\C_A$.</p>
+      </div>
+    </div>
+    <div class="environment priority-2">
+      <div class="environment_label">
+        <p>(2.3)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>Let $\amalg$ denote the coproduct in $\C_A$, i.e., direct sum
+ $\oplus$ for $A$-modules or tensor product $\otimes_A$ for
+ $A$-algebras.</p>
+      </div>
+    </div>
+    <div class="environment priority-2">
+      <div class="environment_label">
+        <p>(2.4)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>For $C \in \obj(\C_A)$ and $n \in \N$ let $C^{\amalg n}$ denote
+ the $n$-fold coproduct $C \amalg \cdots \amalg C$ and $C^n$
+ denote the $n$-fold product $C \times \cdots \times C$.</p>
+      </div>
+    </div>
+    <div class="environment priority-2">
+      <div class="environment_label">
+        <p>(2.5)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>Let $F_A \in \obj(\C_A)$ denote the free object on one element,
+ i.e., $F_A \iso$ $A$ for $A$-modules and $F_A \iso$ $A[t]$ for
+ $A$-algebras. Thus for any $n \in \N$ there is an isomorphism
+ $\hom_{\C_A}(F_A^{\amalg n},C) \iso$ $C^n$ natural in $C \in
+ \obj(\C_A)$.</p>
+      </div>
+    </div>
     <p>And now fix a ring $A$ for the remainder.</p>
   </div>
 </div>
-<div class="environment definition">
+<div class="environment priority-1 definition">
   <div class="environment_label">
     <p>3.</p>
   </div>
@@ -118,16 +165,34 @@ $\hom_{\C_A}(F_A^{\amalg n},C) \iso$ $C^n$ natural in $C \in
     </div>
     <p>An object $C \in \obj(\C_A)$ is:</p>
 
-    <ol>
-      <li><em>finitely generated</em> if for some $n \in \N$ there is a
-surjection $F_A^{\amalg n} \to$ $M$;</li>
-      <li><em>finitely presented</em> if for some $n \in \N$ there is a
-surjection $F_A^{\amalg n} \to$ $M$ with finitely generated
-kernel.</li>
-    </ol>
+    <div class="environment priority-2">
+      <div class="environment_label">
+        <p>(3.1)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p><em>finitely generated</em> if for some $n \in \N$ there is a
+ surjection $F_A^{\amalg n} \to$ $M$;</p>
+      </div>
+    </div>
+    <div class="environment priority-2">
+      <div class="environment_label">
+        <p>(3.2)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p><em>finitely presented</em> if for some $n \in \N$ there is a
+ surjection $F_A^{\amalg n} \to$ $M$ with finitely generated
+ kernel.</p>
+      </div>
+    </div>
   </div>
 </div>
-<div id="ker-surjection" class="environment lemma">
+<div id="ker-surjection" class="environment priority-1 lemma">
   <div class="environment_label">
     <p>4.</p>
   </div>
@@ -141,7 +206,7 @@ surjective, the canonical morphism $\ker(h) \to$ $\ker(g)$ induced by
 $f$ is surjective. In particular, if $\ker(h)$ is finitely
 generated then so is $\ker(g)$.</p>
 
-    <div class="environment proof">
+    <div class="environment priority-1 proof">
       <div class="environment_label">
         <p>4.1.</p>
       </div>
@@ -154,7 +219,7 @@ generated then so is $\ker(g)$.</p>
     </div>
   </div>
 </div>
-<div id="fp-implies-always-fp" class="environment proposition">
+<div id="fp-implies-always-fp" class="environment priority-1 proposition">
   <div class="environment_label">
     <p>5.</p>
   </div>
@@ -166,7 +231,7 @@ generated then so is $\ker(g)$.</p>
 finitely presented. If $\alpha \c D \to$ $C$ is a surjection with $D$
 finitely generated, then $\ker(\alpha)$ is finitely generated.</p>
 
-    <div class="environment proof">
+    <div class="environment priority-1 proof">
       <div class="environment_label">
         <p>5.1.</p>
       </div>
@@ -213,7 +278,7 @@ which implies $\ker(\alpha)$ is finitely generated by
     </div>
   </div>
 </div>
-<div id="fg-fp-local" class="environment proposition">
+<div id="fg-fp-local" class="environment priority-1 proposition">
   <div class="environment_label">
     <p>6.</p>
   </div>
@@ -223,65 +288,74 @@ which implies $\ker(\alpha)$ is finitely generated by
     </div>
     <p>Let $C \in \obj(\C_A)$.</p>
 
-    <ol>
-      <li>If $C$ is finitely generated (resp. presented), then for any $f
-\in A$ the localisation $C_f$ is finitely generated
-(resp. presented) in $\C_{A_f}$.</li>
-      <li>If $f_1,\ldots,f_n \in A$ generate the unit ideal and $C_{f_i}$
-is finitely generated (resp. presented) in $\C_{A_{f_i}}$ for
-each $i$, then $C$ is finitely generated (resp. presented).</li>
-    </ol>
-
-    <div class="environment proof">
+    <div id="global-local" class="environment priority-2">
       <div class="environment_label">
-        <p>6.1.</p>
+        <p>(6.1)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>If $C$ is finitely generated (resp. presented),
+ then for any $f \in A$ the localisation $C_f$ is finitely
+ generated (resp. presented) in $\C_{A_f}$.</p>
+      </div>
+    </div>
+    <div id="local-global" class="environment priority-2">
+      <div class="environment_label">
+        <p>(6.2)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>If $f_1,\ldots,f_n \in A$ generate the unit
+ ideal and $C_{f_i}$ is finitely generated (resp. presented) in
+ $\C_{A_{f_i}}$ for each $i$, then $C$ is finitely generated
+ (resp. presented).</p>
+      </div>
+    </div>
+    <div class="environment priority-1 proof">
+      <div class="environment_label">
+        <p>6.3.</p>
       </div>
       <div class="environment_body">
         <div class="environment_header">
           <p>Proof.</p>
         </div>
-        <p>We first address finite generation.</p>
+        <p>We first address finite generation. Observe $(F_A)_f \iso$ $F_{A_f}$. Thus, since localisation is exact, hence commutes with
+finite products, a surjection $F_A^{\amalg n} \to$ $C$ localises
+to a surjection $F_{A_f}^{\amalg n} \to$ $C_f$. This proves
+<a href="#global-local">(6.1)</a>. Now suppose for each $i$ that $C_{f_i}$ is
+generated (in the appropriate sense) by
+$\{a_{i,j}/f_i^{r_{i,j}}\}_{1 \le j \le m_i}$.  Take $R \ge
+\max\{r_{i,j}\}$. Then for all $i$ we have that $f_i^Ra$ is
+generated by $\{a_{i,j}\}$ for any $a \in A$. Since
+$f_1,\ldots,f_n$ generate the unit ideal, so do
+$f_1^R,\ldots,f_n^R$ and hence there exist $c_i \in A$ such that
+$\sum c_if_i^R = 1$. It is then clear that $\{c_i\} \cup
+\{a_{i,j}\}$ generates $C$. This proves <a href="#local-global">(6.2)</a>.</p>
 
-        <ol>
-          <li>Observe $(F_A)_f \iso$ $F_{A_f}$. Thus, since localisation is
-exact (and hence commutes with finite products), a surjection
-$F_A^{\amalg n} \to$ $C$ localises to a surjection
-$F_{A_f}^{\amalg n} \to$ $C_f$.</li>
-          <li>Suppose for each $i$ that $C_{f_i}$ is generated (in the
-appropriate sense) by $\{a_{i,j}/f_i^{r_{i,j}}\}_{1 \le j \le
-m_i}$.  Take $R \ge \max\{r_{i,j}\}$. Then for all $i$ we
-have that $f_i^Ra$ is generated by $\{a_{i,j}\}$ for any $a
-\in A$. Since $f_1,\ldots,f_n$ generate the unit ideal, so do
-$f_1^R,\ldots,f_n^R$ and hence there exist $c_i \in A$ such
-that $\sum c_if_i^R = 1$. It is then clear that $\{c_i\} \cup
-\{a_{i,j}\}$ generates $C$.</li>
-        </ol>
-
-        <p>Now finite presentation. Recall that localisation commutes with
-kernels since it is exact.</p>
-
-        <ol>
-          <li>This is immediate from localisation commuting with kernels
-and that we have proved (i) for finite generation.</li>
-          <li>
-            <p>Since we have proved (ii) for finite generation there is a
-surjection $\alpha \c F_A^{\amalg n} \to$ $C$. Then for each $i$,</p>
+        <p>Now finite presentation. Since localisation is exact, hence
+commutes with kernels, <a href="#global-local">(6.1)</a> for finite presentation is
+immediate from <a href="#global-local">(6.1)</a> for finite generation. Now assume
+the hypothesis of <a href="#local-global">(6.2)</a>. Since we have proved
+<a href="#local-global">(6.2)</a> for finite generation there is a surjection
+$\alpha \c F_A^{\amalg n} \to$ $C$. Then for each $i$,</p>
 
 $$
 \alpha_{f_i} \c F_{A_{f_i}}^{\amalg n} \to C_{f_i}
 $$
 
-            <p>is a surjection, so by <a href="#fp-implies-always-fp">(5)</a> we know
+        <p>is a surjection, so by <a href="#fp-implies-always-fp">(5)</a> we know
 $\ker(\alpha_{f_i}) \iso$ $\ker(\alpha)_{f_i}$ is finitely
-generated. By statement (ii) for finite generation this
-implies $\ker(\alpha)$ is finitely generated as desired.</p>
-          </li>
-        </ol>
+generated. By <a href="#local-global">(6.2)</a> for finite generation this implies
+$\ker(\alpha)$ is finitely generated as desired.</p>
       </div>
     </div>
   </div>
 </div>
-<div class="environment">
+<div class="environment priority-1">
   <div class="environment_label">
     <p>7.</p>
   </div>
@@ -296,7 +370,7 @@ for, but I ended up wanting to assume a lot of stuff and it seemed
 like the exposition would get pretty ugly.</p>
   </div>
 </div>
-<div class="environment remark">
+<div class="environment priority-1 remark">
   <div class="environment_label">
     <p>8.</p>
   </div>

@@ -61,7 +61,7 @@
         $$
       </div>
       
-      <div class="environment">
+      <div class="environment priority-1">
   <div class="environment_label">
     <p>1.</p>
   </div>
@@ -76,7 +76,7 @@ anything about schemes specifically today, so let me make the
 following definition.<sup id="fnref:immersion-general"><a href="#fn:immersion-general" class="footnote">1</a></sup></p>
   </div>
 </div>
-<div class="environment definition">
+<div class="environment priority-1 definition">
   <div class="environment_label">
     <p>2.</p>
   </div>
@@ -87,28 +87,83 @@ following definition.<sup id="fnref:immersion-general"><a href="#fn:immersion-ge
     <p>We say a morphism $i \c Z \to$ $X$ of locally ringed
 spaces is a <em>closed immersion</em> if:</p>
 
-    <ol>
-      <li>the underlying map of spaces $\lv Z \rv \to$ $\lv X \rv$ induces a
-homeomorphism of $\lv X \rv$ onto a closed subset of $\lv X
-\rv$;</li>
-      <li>the underlying map of sheaves $\O_X \to$ $i_*\O_Z$ is
-surjective.</li>
-    </ol>
+    <div class="environment priority-2">
+      <div class="environment_label">
+        <p>(2.1)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
 
+        </div>
+        <p>the underlying map of spaces $\lv Z \rv \to$ $\lv X \rv$ induces
+ a homeomorphism of $\lv X \rv$ onto a closed subset of $\lv X
+\rv$;</p>
+      </div>
+    </div>
+    <div class="environment priority-2">
+      <div class="environment_label">
+        <p>(2.2)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>the underlying map of sheaves $\O_X \to$ $i_*\O_Z$ is
+ surjective.</p>
+      </div>
+    </div>
     <p>Recall also that:</p>
 
-    <ol>
-      <li>the <em>ideal sheaf</em> of $Z$ is defined as $\I \ce \ker(\O_X \to$ $i_*\O_Z)$;</li>
-      <li>the <em>closed subspace</em> determined by $\I$ is defined as the
-locally ringed space $Z' \ce (\supp(\O_X/\I), \O_X/\I)$;</li>
-      <li>the natural map $i' \c Z' \to$ $X$ is a closed immersion with
-ideal sheaf $\I$;</li>
-      <li>$i \c Z \to$ $X$ in fact induces an isomorphism $h \c Z \to$ $Z'$
-such that $i = i' \circ h$.</li>
-    </ol>
+    <div class="environment priority-2">
+      <div class="environment_label">
+        <p>(2.3)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>the <em>ideal sheaf</em> of $Z$ is defined as $\I \ce \ker(\O_X \to$ $i_*\O_Z)$;</p>
+      </div>
+    </div>
+    <div class="environment priority-2">
+      <div class="environment_label">
+        <p>(2.4)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>the <em>closed subspace</em> determined by $\I$ is defined as the
+ locally ringed space $Z' \ce (\supp(\O_X/\I), \O_X/\I)$;</p>
+      </div>
+    </div>
+    <div class="environment priority-2">
+      <div class="environment_label">
+        <p>(2.5)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>the natural map $i' \c Z' \to$ $X$ is a closed immersion with
+ ideal sheaf $\I$;</p>
+      </div>
+    </div>
+    <div class="environment priority-2">
+      <div class="environment_label">
+        <p>(2.6)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>$i \c Z \to$ $X$ in fact induces an isomorphism $h \c Z \to$ $Z'$
+ such that $i = i' \circ h$.</p>
+      </div>
+    </div>
   </div>
 </div>
-<div id="monomorphism" class="environment lemma">
+<div id="monomorphism" class="environment priority-1 lemma">
   <div class="environment_label">
     <p>3.</p>
   </div>
@@ -120,7 +175,7 @@ such that $i = i' \circ h$.</li>
 locally ringed spaces, then $i$ is a monomorphism (in the category
 of locally ringed spaces).</p>
 
-    <div class="environment proof">
+    <div class="environment priority-1 proof">
       <div class="environment_label">
         <p>3.1.</p>
       </div>
@@ -135,7 +190,7 @@ is an epimorphism, so the claim is clear.</p>
     </div>
   </div>
 </div>
-<div id="factoring" class="environment proposition">
+<div id="factoring" class="environment priority-1 proposition">
   <div class="environment_label">
     <p>4.</p>
   </div>
@@ -150,7 +205,7 @@ factors through $i$—i.e., there exists $g \c Y \to$ $Z$ such that
 $f = i \circ g$—if and only if the induced map $f^*\I \to$ $f^*\O_X
 \iso$ $\O_Y$ is zero. Such a factoring $g$ is unique if it exists.</p>
 
-    <div class="environment proof">
+    <div class="environment priority-1 proof">
       <div class="environment_label">
         <p>4.1.</p>
       </div>
@@ -182,7 +237,7 @@ factors through $\lv Z \rv$. Then by adjunction the map $\I \to$ $\O_X \to$ $f_*
     </div>
   </div>
 </div>
-<div class="environment">
+<div class="environment priority-1">
   <div class="environment_label">
     <p>5.</p>
   </div>
@@ -198,7 +253,7 @@ change, as alluded to in the title, and moreover lets us see
 explicitly how the defining ideals behave under base change.</p>
   </div>
 </div>
-<div class="environment proposition">
+<div class="environment priority-1 proposition">
   <div class="environment_label">
     <p>6.</p>
   </div>
@@ -224,7 +279,7 @@ $$
 \end{xy}
 $$
 
-    <div class="environment proof">
+    <div class="environment priority-1 proof">
       <div class="environment_label">
         <p>6.1.</p>
       </div>
