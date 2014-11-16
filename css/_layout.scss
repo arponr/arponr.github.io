@@ -78,10 +78,9 @@ header {
 
     .date {
         float: left;
-        padding-right: 10px;
+        padding-right: 15px;
         margin-top: 1px;
         font-size: $size-small;
-        // color: $color-light;
     }
 
     .link {
@@ -100,6 +99,10 @@ header {
     .desc {
         font-size: $size-medium;
         color: $color-light;
+    }
+
+    .tag {
+        font-size: $size-medium;
     }
 }
 

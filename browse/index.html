@@ -7,12 +7,13 @@ layout: page
 <li>
   <time class="date">
     {{ entry.date | date: "%y/%m/%d" }}
-    {%if entry.file_url%}
-    <br>PDF
-    {% endif %}
   </time>
-  <a class="link" href="{% if entry.file_url %}/files/{{ entry.file_url }}{% else %}{{ entry.url }}{% endif %}">
-    <div class="title">{{ entry.title }}</div>
+  <a class="link"
+     href="{% if entry.file_url %}/files/{{ entry.file_url }}{% else %}{{ entry.url }}{% endif %}">
+    <div class="title">
+      {{ entry.title }}
+      {%if entry.file_url%}<span class="tag">(PDF)</span>{% endif %}
+    </div>
     <div class="desc">
       {{ entry.desc }}
     </div>
