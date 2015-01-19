@@ -1,25 +1,14 @@
 {% include header.html %}
 
-    {% if page.banner_url %}
-    <figure class="section">
-      <img src="/images/{{ page.banner_url }}" alt="{{ page.banner_alt }}">
-      <figcaption>
-        {{ page.banner_cap }}
-      </figcaption>
-    </figure>
-    {% endif %}
+<article>
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+    <time class="page-date">{{ page.date | date: '%B %d, %Y' }}</time>
+  </header>
 
-    <section class="section text">
-      {% if page.preamble %}
-      <div class="preamble">
-        $$
-        {% for cmd in page.preamble %}
-        \newcommand{ \{{ cmd[0] }} }{% if cmd[1] > 0 %}[ {{ cmd[1] }} ]{% endif %}{ {{ cmd[2] }} }
-        {% endfor %}
-        $$
-      </div>
-      {% endif %}
-      {{ content }}
-    </section>
+  <div class="text">
+    {{ content }}
+  </div>
+</article>
 
 {% include footer.html %}

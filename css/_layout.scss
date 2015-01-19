@@ -1,113 +1,44 @@
-p, blockquote, ul, ol, .environment {
-    & + p, & + blockquote, & + .environment {
-        margin-top: 10px;
-    }
-}
-
-blockquote {
-    font-style: italic;
-    color: $color-light;
-    text-align: right;
-}
-
-figure {
-    img {
-        max-width: 100%;
-    }
-
-    figcaption {
-        font-size: $size-medium;
-        color: $color-light;
-        text-align: center;
-        margin-top: 8px;
-    }
-}
-
 .wrap {
-    width: $width-main;
+    max-width: 32rem;
     margin: 0 auto;
-    padding: 20px 0;
+    position: relative;
 }
 
-nav {
-    font-size: $size-medium;
-    padding-bottom: 10px;
-    border-bottom: 1px solid $border-light;
-
-    li {
-        display: inline;
-
-        & + li {
-            margin-left: 15px;
-        }
-    }
-
-    a:link, a:visited {
-        color: $color-light;
-    }
-
-    a:hover {
-        color: $color-base;
-    }
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: $background-base;
+    z-index: 10;
 }
 
-header {
-    margin-top: 30px;
+.site-logo {
+    display: block;
+    text-align: right;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e8e8e8;
 
-    h1 {
-        font-size: $size-large;
-        line-height: $line-header
+    .first-name {
+        font-size: 1.5em;
+        line-height: .6;
     }
 
-    h2 {
-        margin-top: 8px;
-        color: $color-light;
+    .last-name {
+        font-size: .75em;
+        text-transform: uppercase;
     }
 }
 
-.section {
-    margin-top: 40px;
+.site-main {
+    padding: 6rem 0 4rem;
 }
 
-.entries li {
-    line-height: $line-header;
-
-    & + li {
-        margin-top: 30px;
-    }
-
-    .date {
-        float: left;
-        padding-right: 15px;
-        margin-top: 1px;
-        font-size: $size-small;
-    }
-
-    .link {
-        display: block;
-        overflow: hidden;
-
-        &:hover .title {
-            text-decoration: underline;
-        }
-    }
-
-    .title {
-        margin-bottom: 5px;
-    }
-
-    .desc {
-        font-size: $size-medium;
-        color: $color-light;
-    }
-
-    .tag {
-        font-size: $size-medium;
-    }
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.button {
-    cursor: pointer;
+.page-date {
+    display: block;
+    margin-top: 0.5rem;
 }
-
-

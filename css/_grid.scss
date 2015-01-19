@@ -11,6 +11,7 @@
         @for $i from 1 through $n {
             .col-#{$i}-#{$n} {
                 width: percentage($i / $n);
+                @extend .col;
             }
         }
     }

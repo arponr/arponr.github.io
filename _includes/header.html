@@ -5,31 +5,15 @@
     <title>{{ site.name }}{% if page.title %} | {{ page.title }}{% endif %}</title>
     <meta property="og:title" content="{{ page.title }}"/>
     <meta property="og:site_name" content="{{ site.name }}"/>
-
     <link href="/css/style.css" rel="stylesheet" type="text/css">
-    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="RSS">
-
-    <!-- <script type="text/javascript" src="//use.typekit.net/cen6cew.js"></script> -->
-    <!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
-
-    {% if page.math %}
-    <script type="text/javascript" src="http://beta.mathjax.org/mathjax/latest/MathJax.js?config={{ site.baseurl }}/js/jax-config.js"></script>
-    {% endif %}
   </head>
 
-    <main class="wrap">
-      <nav>
-        <ul>
-          <li><a href="/">About</a></li>
-          <li><a href="/browse">Browse</a></li>
-        </ul>
-      </nav>
-      <header>
-        {% if page.title %}
-        <h1>{{ page.title }}</h1>
-        {% endif %}
-        {% if page.date %}
-        <h2>{{ page.date | date: "%Y, %B %d" }}</h2>
-        {% endif %}
-      </header>
+  <body>
+    <header class="site-header">
+      <a class="wrap site-logo" href="/">
+        <div class="last-name">Raksit,</div>
+        <div class="first-name">Arpon</div>
+      </a>
+    </header>
+    <main class="wrap site-main">
       

@@ -1,28 +1,14 @@
-$serif: Times New Roman, Times, serif;
-$mono: Courier, monospace;
+$serif: calendas-plus, georgia, serif;
 
-$size-base: 17px;
-$size-small: 13px;
-$size-medium: 15px;
-$size-large: 24px;
+$size-base: 15px;
+$size-small: .8em;
+$size-large: 1.2em;
+$size-huge: 1.6em;
 
 $line-base-unitless: 1;
 $line-base: $size-base * $line-base-unitless;
 
 $background-base: #ffffff;
-$background-dark: #f8f8f8;
-
 $color-base: #302825;
-$color-light: #656870;
 
-$accent-dark: #407050;
-$accent-light: #c7480a;
 
-$border-light: #c5c8d0;
-$border-dark: #706865;
-
-$width-main: 550px;
-
-$line-text: 1.35;
-$line-footnote: 1.2;
-$line-header: 1.2;

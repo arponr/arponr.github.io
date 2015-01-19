@@ -5,6 +5,9 @@ markdown: Kramdown
 
 permalink: /:title
 
+collections:
+- notes
+
 exclude: ["publish.sh"]
 
 
