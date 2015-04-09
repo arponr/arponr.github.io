@@ -1,109 +1,30 @@
 .text {
     line-height: $line-text;
 
-    a:link, a:visited {
-        color: $accent-light;
-    }
-
-    a:hover {
+    a:link,
+    a:visited {
         text-decoration: underline;
     }
 
-    ul, ol {
-        margin-left: 35px;
+    a:hover {
+        color: $color-accent;
+    }
+
+    p,
+    ul {
+        & + p,
+        & + ul {
+            margin-top: 0.8rem;
+        }
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 1.5rem;
 
         li {
-            margin-top: 5px;
-        }
-    }
-
-    ol {
-        list-style-type: lower-roman;
-    }
-
-    ul li {
-        text-indent: -13px;
-
-        &:before {
-            content: "\2014";
-            position: relative;
-            left: -10px;
-        }
-    }
-
-    hr {
-        width: 15%;
-        height: 1px;
-        margin: 20px auto;
-        border: 0;
-        background: $border-light;
-    }
-}
-
-.MathJax_Display {
-    margin: 8px 0 !important;
-
-    & * {
-        color: $color-base !important;
-    }
-}
-
-.environment {
-    .environment_label {
-        float: left;
-    }
-
-    .environment_body {
-        overflow: hidden;
-    }
-
-    .environment_header {
-        &, p, & + p {
-            display: inline;
-        }
-    }
-
-    &.priority-1 {
-        & > .environment_label {
-            padding-right: 5px;
-            font-weight: 700;
-        }
-
-        & > .environment_body .environment_header {
-            font-weight: 700;
-        }
-    }
-
-    &.priority-2 {
-        & > .environment_label {
-            padding-right: 8px;
-        }
-
-        & > .environment_body .environment_header {
-            font-style: italic;
+            margin-top: 0.6rem;
         }
     }
 }
 
-.preamble {
-    display: none;
-}
-
-.footnotes {
-    &:before {
-        content: '';
-        display: block;
-        background: $border-light;
-        height: 1px;
-        width: 75px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-    }
-
-    ol {
-        list-style-type: decimal;
-        margin-left: 20px;
-        font-size: $size-medium;
-        line-height: $line-footnote;
-    }
-}

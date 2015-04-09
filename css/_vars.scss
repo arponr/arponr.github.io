@@ -1,14 +1,17 @@
-$serif: calendas-plus, georgia, serif;
+$serif: ff-dagny-web-pro, georgia, serif;
 
-$size-base: 15px;
+$size-base: 14px;
 $size-small: .8em;
 $size-large: 1.2em;
 $size-huge: 1.6em;
 
 $line-base-unitless: 1;
 $line-base: $size-base * $line-base-unitless;
+$line-text: $line-base-unitless * 1.25;
 
 $background-base: #ffffff;
-$color-base: #302825;
+$color-base: #333333;
+$color-light: #666666;
+$color-accent: #335588;
 
 
