@@ -6,10 +6,6 @@
         text-decoration: underline;
     }
 
-    a:hover {
-        color: $color-accent;
-    }
-
     p,
     ul {
         & + p,

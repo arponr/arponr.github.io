@@ -19,9 +19,13 @@ html {
   color: #333333;
   background: white; }
 
-a:link, a:visited {
+a:link,
+a:visited {
   text-decoration: none;
   color: #333333; }
+
+a:hover {
+  color: #335588; }
 
 ul {
   list-style: none; }
@@ -81,13 +85,15 @@ sub {
 .sec + .sec {
   margin-top: 1.5rem; }
 
+.stream .desc {
+  margin-top: 0.2rem;
+  font-size: 0.9em; }
+
 .text {
   line-height: 1.25; }
   .text a:link,
   .text a:visited {
     text-decoration: underline; }
-  .text a:hover {
-    color: #335588; }
   .text p + p, .text p + ul,
   .text ul + p,
   .text ul + ul {

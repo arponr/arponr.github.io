@@ -26,9 +26,14 @@ html {
     background: $background-base;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
     text-decoration: none;
     color: $color-base;
+}
+
+a:hover {
+    color: $color-accent;
 }
 
 ul {

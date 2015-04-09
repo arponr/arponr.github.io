@@ -1,30 +1,28 @@
 ---
 layout: page
-exp:
+exposition:
   - title: Characters in global equivariant homotopy theory
     file: senior-thesis.pdf
-    date: March 2015
-    desc: My senior thesis, giving an exposition of the
-          Hopkins-Kuhn-Ravenel character theory (and Stapleton's
-          generalization), taking advantage of the language of global
-          equivariant homotopy theory. In an ideal world this would
-          have a been a polished, formal document, but it's really
-          quite rough (unsurprisingly, the actual writing process
-          ended up being rather concentrated around the due date). A
-          cleaner version should (hopefully) appear in the (somewhat)
-          near future.
+    date: Mar 2015
+    desc: My senior thesis, on the generalized character theory of
+          Hopkins-Kuhn-Ravenel and Stapleton, utilizing the language
+          of global equivariant homotopy theory. (In an ideal world
+          this would have a been a polished, formal document, but it's
+          really quite rough for now; unsurprisingly, the actual
+          writing process ended up being rather concentrated around
+          the due date.)
   - title: Vector fields on spheres
     file: vfields.pdf
     date: May 2014
-    desc: An exposition of the ideas in Adams's solution to the problem
-          of finding vector fields on spheres, and its relation to his
-          work on the J-homomorphism.
+    desc: On the ideas in Adams's solution to the problem of finding
+          vector fields on spheres, and its relation to his work on
+          the J-homomorphism.
   - title: Defining the cotangent complex
     file: quillen-cotangent.pdf
     date: Dec 2013
-    desc: An exposition of Quillen's application of the theory of
-          model categories to defining a homology theory of algebras
-          in analogy with singular homology.
+    desc: On Quillen's application of the theory of model categories
+          to defining a homology theory of algebras in analogy with
+          singular homology.
   - title: The Dold-Kan correspondence
     file: doldkan.pdf
     date: Oct 2013
@@ -35,12 +33,14 @@ exp:
 <div class="text sec">
   <p>Here are a few things I've written while learning math.</p>
   
-  <ul>
-    {% for e in page.exp %}
+  <ul class="stream">
+    {% for e in page.exposition %}
     <li>
       <a href="/files/{{ e.file }}">{{ e.title }}</a>
-      ({{ e.date }})<br>
-      {{ e.desc }}
+      ({{ e.date }})
+      <div class="desc">
+        {{ e.desc }}
+      </div>
     </li>
     {% endfor %}
   </ul>
