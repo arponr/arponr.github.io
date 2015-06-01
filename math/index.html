@@ -1,9 +1,10 @@
 ---
 layout: page
+title: Math
 exposition:
   - title: Characters in global equivariant homotopy theory
     file: senior-thesis.pdf
-    date: Mar 2015
+    date: March 2015
     desc: My senior thesis, on the generalized character theory of
           Hopkins-Kuhn-Ravenel and Stapleton, utilizing the language
           of global equivariant homotopy theory. (In an ideal world
@@ -19,28 +20,28 @@ exposition:
           the J-homomorphism.
   - title: Defining the cotangent complex
     file: quillen-cotangent.pdf
-    date: Dec 2013
+    date: December 2013
     desc: On Quillen's application of the theory of model categories
           to defining a homology theory of algebras in analogy with
           singular homology.
   - title: The Dold-Kan correspondence
     file: doldkan.pdf
-    date: Oct 2013
+    date: October 2013
     desc: A proof of the titular result, and a couple of quick
           consequences.
 ---
 
-<div class="text sec">
-  <p>Here are a few things I've written while learning math.</p>
+<div class="sec">
+  <h2>Exposition</h2>
   
   <ul class="stream">
     {% for e in page.exposition %}
     <li>
-      <a href="/files/{{ e.file }}">{{ e.title }}</a>
-      ({{ e.date }})
-      <div class="desc">
+      <div class="desc text">
         {{ e.desc }}
       </div>
+      <a href="/files/{{ e.file }}" class="title">{{ e.title }}</a>
+      <div class="date">{{ e.date }}</div>
     </li>
     {% endfor %}
   </ul>

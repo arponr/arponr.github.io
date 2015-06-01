@@ -1,13 +1,13 @@
-$serif: ff-dagny-web-pro, georgia, serif;
+$serif: ff-dagny-web-pro, sans-serif;
 
 $size-base: 14px;
-$size-small: .8em;
+$size-small: 0.9em;
 $size-large: 1.2em;
 $size-huge: 1.6em;
 
 $line-base-unitless: 1;
 $line-base: $size-base * $line-base-unitless;
-$line-text: $line-base-unitless * 1.25;
+$line-text: $line-base-unitless * 1.35;
 
 $background-base: #ffffff;
 $color-base: #333333;
