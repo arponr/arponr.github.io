@@ -1,3 +1,15 @@
+.grid .col, .grid .col-1-3, .grid .col-2-3, .grid .col-3-3 {
+  float: left;
+  position: relative;
+  height: 100%;
+  min-height: 1px; }
+.grid .col-1-3 {
+  width: 33.33333%; }
+.grid .col-2-3 {
+  width: 66.66667%; }
+.grid .col-3-3 {
+  width: 100%; }
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +25,7 @@ html, body {
   height: 100%; }
 
 html {
-  font-family: ff-dagny-web-pro, georgia, serif;
+  font-family: ff-dagny-web-pro, sans-serif;
   font-size: 14px;
   line-height: 1;
   color: #333333;
@@ -37,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 sup, sub {
   vertical-align: baseline;
   position: relative;
-  font-size: 0.8em; }
+  font-size: 0.9em; }
 
 sup {
   top: -0.5em; }
@@ -46,7 +58,7 @@ sub {
   top: 0.5em; }
 
 .wrap {
-  max-width: 32rem;
+  max-width: 45rem;
   margin: 0 auto;
   position: relative; }
 
@@ -54,20 +66,9 @@ sub {
   padding: 2rem 0;
   border-bottom: 1px solid #e8e8e8; }
 
-.site-nav, .site-name {
-  position: absolute;
-  bottom: 0.8rem; }
-
-.site-name {
-  font-size: 1.2em; }
-
-.site-nav {
-  right: 0;
-  text-transform: uppercase;
-  font-size: .8em; }
-  .site-nav li {
-    display: inline;
-    margin-left: 1rem; }
+.site-nav li {
+  display: inline;
+  margin-right: 1rem; }
 
 .site-main {
   padding: 2rem 0 4rem; }
@@ -78,7 +79,7 @@ sub {
   .figure img {
     width: 100%; }
   .figure .caption {
-    font-size: .9em;
+    font-size: 0.9em;
     color: #666666;
     padding: 0.3rem 0; }
     .figure .caption.right {
@@ -87,12 +88,27 @@ sub {
 .sec + .sec {
   margin-top: 1.5rem; }
 
+.stream li {
+  margin-top: 1.2rem; }
+.stream .date {
+  color: #666666;
+  margin-top: 0.2rem; }
 .stream .desc {
-  margin-top: 0.2rem;
-  font-size: 0.9em; }
+  float: left;
+  width: calc(50% - 1rem);
+  margin-left: -50%;
+  font-size: 0.9em;
+  color: #666666;
+  display: none; }
+
+h1, h2 {
+  font-weight: bold; }
+
+h2 {
+  margin-bottom: 1rem; }
 
 .text {
-  line-height: 1.25; }
+  line-height: 1.35; }
   .text a:link,
   .text a:visited {
     text-decoration: underline; }
