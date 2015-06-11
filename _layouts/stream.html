@@ -1,0 +1,26 @@
+{% include header.html %}
+
+{% if page.subsections %}
+{% for s in page.subsections %}
+<h2>{{ s.title }}</h2>
+<ul class="stream">
+  {% for e in site.posts %}
+  {% if e.section == page.key and e.subsection == s.key %}
+  {% include stream-entry.html %}
+  {% endif %}
+  {% endfor %}
+</ul>
+{% endfor %}
+
+{% else %}
+<ul class="stream">
+  {% for e in site.posts %}
+  {% if e.section == page.key %}
+  {% include stream-entry.html %}
+  {% endif %}
+  {% endfor %}
+</ul>
+
+{% endif %}
+
+{% include footer.html %}

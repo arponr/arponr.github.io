@@ -1,23 +1,31 @@
 .wrap {
-    max-width: 45rem;
-    margin: 0 auto;
+    max-width: $site-width;
+    margin: 2rem auto 4rem;
     position: relative;
 }
 
-.site-header {
-    padding: 2rem 0;
-    border-bottom: 1px solid #e8e8e8;
+.site-main {
+    font-family: $serif;
+    font-size: $size-text;
+    margin-top: 2rem;
+}
+
+.page-info {
+    margin-bottom: 2rem;
 }
 
 .site-nav {
+    .nav-break {
+        height: 1px;
+        width: 100%;
+        margin: 0.2rem 0;
+        background: $background-accent;
+    }
+
     li {
         display: inline;
-        margin-right: 1rem;
+        margin-right: 0.3rem;
     }
-}
-
-.site-main {
-    padding: 2rem 0 4rem;
 }
 
 .figure {
@@ -31,7 +39,7 @@
     .caption {
         font-size: $size-small;
         color: $color-light;
-        padding: 0.3rem 0;
+        // padding: 0.1rem 0;
 
         &.right {
             text-align: right;
@@ -39,36 +47,30 @@
     }
 }
 
-.sec {
-    & + & {
-        margin-top: 1.5rem;
-    }
+.date {
+    color: $color-light;
 }
 
 .stream {
     li {
-        margin-top: 1.2rem;
-    }
-
-    .date {
-        color: $color-light;
-        margin-top: 0.2rem;
+        margin-bottom: 1.0rem;
     }
 
     .desc {
-        float: left;
-        width: calc(50% - 1rem);
-        margin-left: -50%;
-        font-size: $size-small;
         color: $color-light;
-        display: none;
+        font-size: $size-small;
     }
 }
 
-h1, h2 {
+h1 {
     font-weight: bold;
 }
 
 h2 {
-    margin-bottom: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+
+    * + & {
+        margin-top: 2.0rem;
+    }
 }

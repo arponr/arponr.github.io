@@ -1,26 +1,42 @@
 .text {
-    line-height: $line-text;
-
-    a:link,
-    a:visited {
-        text-decoration: underline;
-    }
-
     p,
-    ul {
+    ul,
+    .figure {
         & + p,
-        & + ul {
-            margin-top: 0.8rem;
+        .figure {
+            margin-top: 1rem;
         }
     }
 
     ul {
         list-style-type: disc;
-        margin-left: 1.5rem;
+        margin-left: 2.0rem;
 
         li {
-            margin-top: 0.6rem;
+            margin-top: 0.3rem;
         }
+    }
+
+    ul ul {
+        list-style-type: circle;
+        margin-left: 2.0rem;
+
+        li {
+            margin-top: 0.1rem;
+        }
+    }
+
+    hr {
+        margin: 2rem auto;
+        width: 25%;
+        border: 0;
+        height: 1px;
+        background: $background-accent;
+    }
+
+    blockquote {
+        margin: 0.5rem 0 0.5rem 2rem;
+        color: $color-light;
     }
 }
 

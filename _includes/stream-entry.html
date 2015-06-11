@@ -1,0 +1,14 @@
+<li>
+  <a class="entry"
+     {% if e.external %}
+     href="{{ e.external }}"
+     {% else %}
+     href="{{ e.url }}"
+     {% endif %}>
+    {{ e.title }}
+  </a>
+  <div class="desc">
+    {{ e.date | date: '%B %d, %Y' }} &mdash;
+    {{ e.desc }}
+  </div>
+</li>

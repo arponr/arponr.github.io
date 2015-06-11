@@ -25,26 +25,26 @@ html, body {
   height: 100%; }
 
 html {
-  font-family: ff-dagny-web-pro, sans-serif;
-  font-size: 14px;
-  line-height: 1;
-  color: #333333;
+  font-family: kepler-std-semicondensed, georgia, serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: black;
   background: white; }
 
 a:link,
 a:visited {
-  text-decoration: none;
-  color: #333333; }
+  text-decoration: underline;
+  color: black; }
 
 a:hover {
-  color: #335588; }
+  color: #337722; }
 
 ul {
   list-style: none; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
-  font-size: 14px; }
+  font-size: 1em; }
 
 sup, sub {
   vertical-align: baseline;
@@ -58,20 +58,26 @@ sub {
   top: 0.5em; }
 
 .wrap {
-  max-width: 45rem;
-  margin: 0 auto;
+  max-width: 28rem;
+  margin: 2rem auto 4rem;
   position: relative; }
 
-.site-header {
-  padding: 2rem 0;
-  border-bottom: 1px solid #e8e8e8; }
+.site-main {
+  font-family: kepler-std-semicondensed, georgia, serif;
+  font-size: 16px;
+  margin-top: 2rem; }
 
+.page-info {
+  margin-bottom: 2rem; }
+
+.site-nav .nav-break {
+  height: 1px;
+  width: 100%;
+  margin: 0.2rem 0;
+  background: #cccccc; }
 .site-nav li {
   display: inline;
-  margin-right: 1rem; }
-
-.site-main {
-  padding: 2rem 0 4rem; }
+  margin-right: 0.3rem; }
 
 .figure {
   width: 100%;
@@ -80,44 +86,51 @@ sub {
     width: 100%; }
   .figure .caption {
     font-size: 0.9em;
-    color: #666666;
-    padding: 0.3rem 0; }
+    color: #555555; }
     .figure .caption.right {
       text-align: right; }
 
-.sec + .sec {
-  margin-top: 1.5rem; }
+.date {
+  color: #555555; }
 
 .stream li {
-  margin-top: 1.2rem; }
-.stream .date {
-  color: #666666;
-  margin-top: 0.2rem; }
+  margin-bottom: 1.0rem; }
 .stream .desc {
-  float: left;
-  width: calc(50% - 1rem);
-  margin-left: -50%;
-  font-size: 0.9em;
-  color: #666666;
-  display: none; }
+  color: #555555;
+  font-size: 0.9em; }
 
-h1, h2 {
+h1 {
   font-weight: bold; }
 
 h2 {
-  margin-bottom: 1rem; }
+  font-weight: bold;
+  margin-bottom: 0.5rem; }
+  * + h2 {
+    margin-top: 2.0rem; }
 
-.text {
-  line-height: 1.35; }
-  .text a:link,
-  .text a:visited {
-    text-decoration: underline; }
-  .text p + p, .text p + ul,
-  .text ul + p,
-  .text ul + ul {
-    margin-top: 0.8rem; }
-  .text ul {
-    list-style-type: disc;
-    margin-left: 1.5rem; }
-    .text ul li {
-      margin-top: 0.6rem; }
+.text p + p,
+.text p .figure,
+.text ul + p,
+.text ul .figure,
+.text .figure + p,
+.text .figure .figure {
+  margin-top: 1rem; }
+.text ul {
+  list-style-type: disc;
+  margin-left: 2.0rem; }
+  .text ul li {
+    margin-top: 0.3rem; }
+.text ul ul {
+  list-style-type: circle;
+  margin-left: 2.0rem; }
+  .text ul ul li {
+    margin-top: 0.1rem; }
+.text hr {
+  margin: 2rem auto;
+  width: 25%;
+  border: 0;
+  height: 1px;
+  background: #cccccc; }
+.text blockquote {
+  margin: 0.5rem 0 0.5rem 2rem;
+  color: #555555; }

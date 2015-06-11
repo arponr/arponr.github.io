@@ -21,15 +21,15 @@ html, body {
 html {
     font-family: $serif;
     font-size: $size-base;
-    line-height: $line-base-unitless;
+    line-height: $line-height;
     color: $color-base;
     background: $background-base;
 }
 
 a:link,
 a:visited {
-    text-decoration: none;
-    color: $color-base;
+    text-decoration: underline;
+    color: $color-base
 }
 
 a:hover {
@@ -42,7 +42,7 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
-    font-size: $size-base;
+    font-size: 1em;
 }
 
 sup, sub {

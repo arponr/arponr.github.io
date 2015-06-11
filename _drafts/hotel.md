@@ -1,9 +1,9 @@
 ---
 layout: text
-section: writing
-title: Hotel
+section: art
+title: Heart Hotel
 permalink: /hotel
-desc: This hotel is nestled at the heart of me.
+desc: A short story about an adolescent heart.
 ---
 
 Waft up into the atmosphere with all the other in-flight scents, for
@@ -20,7 +20,7 @@ is dark red and pulsing.
 
 Come inside, welcome. This hotel is nestled at the heart of me.
 
-#### Floor Eleven
+## Floor Eleven
 
 It's October of 2004, and the hallway is lined with those lurid
 lockers, the ones which send the average American hurtling back in
@@ -100,7 +100,6 @@ s: why couldn't you just
 me: sorry
 
 ______________________________________________________________________
-
 
 
 

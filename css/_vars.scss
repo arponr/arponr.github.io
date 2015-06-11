@@ -1,17 +1,18 @@
-$serif: ff-dagny-web-pro, sans-serif;
+$serif: kepler-std-semicondensed, georgia, serif;
+$mono: droid-sans-mono, monospace;
 
-$size-base: 14px;
-$size-small: 0.9em;
+$size-base: 16px;
+$size-text: 16px;
+$size-small: .9em;
 $size-large: 1.2em;
-$size-huge: 1.6em;
 
-$line-base-unitless: 1;
-$line-base: $size-base * $line-base-unitless;
-$line-text: $line-base-unitless * 1.35;
+$line-height: 1.4;
 
 $background-base: #ffffff;
-$color-base: #333333;
-$color-light: #666666;
-$color-accent: #335588;
+$background-accent: #cccccc;
+$color-base: #000000;
+$color-nav: #444444;
+$color-light: #555555;
+$color-accent: #337722;
 
-
+$site-width: 28rem;
