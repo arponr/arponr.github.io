@@ -1,65 +1,76 @@
+body {
+    padding: 2rem;
+}
+
 .wrap {
     max-width: $site-width;
-    margin: 2rem auto 4rem;
+    margin: 0 auto;
     position: relative;
 }
 
-.site-main {
-    font-family: $serif;
-    font-size: $size-text;
-    margin-top: 2rem;
-}
-
-.page-info {
+header {
     margin-bottom: 2rem;
 }
 
-.site-nav {
-    .nav-break {
-        height: 1px;
-        width: 100%;
-        margin: 0.2rem 0;
-        background: $background-accent;
+main,
+footer {
+    margin-bottom: 4rem;
+}
+
+.site-footer {
+    &,
+    a:link,
+    a:visited {
+        color: $color-light;
     }
 
-    li {
-        display: inline;
-        margin-right: 0.3rem;
+    a:hover {
+        color: $color-accent;
+    }
+
+    padding-top: 1rem;
+    border-top: 1px solid $background-accent;
+}
+
+p,
+ul,
+ol,
+blockquote,
+figure {
+    margin-bottom: 1rem;
+}
+
+li {
+    p,
+    ul,
+    ol {
+        margin-bottom: 0;
     }
 }
 
-.figure {
-    width: 100%;
-    text-align: center;
-
-    img {
+figure {
+    &, img {
         width: 100%;
     }
 
-    .caption {
+    figcaption {
+        width: 75%;
         font-size: $size-small;
         color: $color-light;
-        // padding: 0.1rem 0;
-
-        &.right {
-            text-align: right;
-        }
     }
 }
 
-.date {
+blockquote {
+    margin-left: 2rem;
     color: $color-light;
 }
 
-.stream {
-    li {
-        margin-bottom: 1.0rem;
-    }
-
-    .desc {
-        color: $color-light;
-        font-size: $size-small;
-    }
+hr {
+    margin: 2rem auto;
+    width: 25%;
+    border: 0;
+    height: 1px;
+    background: $background-accent;
 }
 
 h1 {
@@ -74,3 +85,43 @@ h2 {
         margin-top: 2.0rem;
     }
 }
+
+.site-nav li {
+    display: inline;
+    margin-right: 0.3rem;
+}
+
+.page-date {
+    color: $color-light;
+}
+
+.stream {
+    li {
+        margin-bottom: 1.0rem;
+    }
+
+    .desc {
+        color: $color-light;
+        font-size: $size-small;
+    }
+}
+
+.text {
+    ul {
+        list-style-type: disc;
+        margin-left: 1.5rem;
+
+        li {
+            margin-bottom: 0.3rem;
+        }
+    }
+
+    li ul {
+        list-style-type: circle;
+
+        li {
+            margin-bottom: 0.1rem;
+        }
+    }
+}
+

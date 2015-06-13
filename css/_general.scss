@@ -19,7 +19,7 @@ html, body {
 }
 
 html {
-    font-family: $serif;
+    font-family: $family-main;
     font-size: $size-base;
     line-height: $line-height;
     color: $color-base;
@@ -58,4 +58,3 @@ sup {
 sub {
     top: 0.5em;
 }
-

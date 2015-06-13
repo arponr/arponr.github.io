@@ -1,6 +1,5 @@
 <li>
-  <a class="entry"
-     {% if e.external %}
+  <a {% if e.external %}
      href="{{ e.external }}"
      {% else %}
      href="{{ e.url }}"

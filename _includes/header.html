@@ -2,38 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>arponr</title>
-    <meta property="og:title" content=""/>
+    <title>arponr | {{ page.title }}</title>
+    <meta property="og:title" content="{{ page.title }}"/>
     <meta property="og:site_name" content="arponr"/>
     <script src="//use.typekit.net/cen6cew.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
     <link href="/css/style.css" rel="stylesheet" type="text/css">
-    <!-- <script src="/js/jquery-min.js"></script> -->
-    <!-- <script src="/js/ui.js"></script> -->
   </head>
 
   <body>
     <div class="wrap">
       <header class="site-header">
-        <ul class="site-nav">
-          <li><a href="/">Arpon Raksit</a></li>
-          <br>
-          <li><a href="/math">Math</a></li>
-          <li><a href="/art">Art</a></li>
-          <li><a href="/thoughts">Thoughts</a></li>
-        </ul>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="/">Arpon Raksit</a></li>
+            <br>
+            <li><a href="/math">Math</a></li>
+            <li><a href="/art">Art</a></li>
+            <li><a href="/thoughts">Thoughts</a></li>
+          </ul>
+        </nav>
       </header>
       
-      <main class="site-main">
-        {% if page.title or page.date %}
-        <div class="page-info">
-          {% if page.title %}
-          <h1>{{ page.title }}</h1>
-          {% endif %}
-          {% if page.date %}
-          <div class="date">
-            {{ page.date | date: '%B %d, %Y' }}
-          </div>
-          {% endif %}
-        </div>
-        {% endif %}
+      <main class="site-content">
+        <article class="page">
+          <header class="page-header">
+            <h1>{{ page.title }}</h1>
+            {% if page.date %}
+            <div class="page-date">
+              {{ page.date | date: '%B %d, %Y' }}
+            </div>
+            {% endif %}
+          </header>

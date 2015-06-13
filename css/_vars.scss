@@ -1,8 +1,6 @@
-$serif: kepler-std-semicondensed, georgia, serif;
-$mono: droid-sans-mono, monospace;
+$family-main: kepler-std-semicondensed, georgia, serif;
 
-$size-base: 16px;
-$size-text: 16px;
+$size-base: (16/16) * 100%;
 $size-small: .9em;
 $size-large: 1.2em;
 
@@ -11,7 +9,6 @@ $line-height: 1.4;
 $background-base: #ffffff;
 $background-accent: #cccccc;
 $color-base: #000000;
-$color-nav: #444444;
 $color-light: #555555;
 $color-accent: #337722;
 
