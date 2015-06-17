@@ -1,6 +1,7 @@
 ---
 layout: text
-section: art
+section: writing
+subsection: fiction
 title: Heart Hotel
 permalink: /hotel
 desc: A short story about an adolescent heart.
