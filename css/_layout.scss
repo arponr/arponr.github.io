@@ -1,23 +1,30 @@
-body {
-    padding: 2rem;
+.wrap {
+    max-width: $site-width + 2 * $site-pad;
+    margin: 0 auto;
+    padding: $site-pad;
+    position: relative;
 }
 
-.wrap {
-    max-width: $site-width;
-    margin: 0 auto;
-    position: relative;
+.site-header {
+    margin-bottom: 3rem;
+}
+
+.site-content {
+    margin-bottom: 6rem;
 }
 
 header {
     margin-bottom: 2rem;
 }
 
-main,
-footer {
-    margin-bottom: 4rem;
+.site-nav {
+    li {
+        display: inline;
+        margin-right: 0.4rem;
+    }
 }
 
-.site-footer {
+.site-nav, .site-footer {
     &,
     a:link,
     a:visited {
@@ -27,9 +34,6 @@ footer {
     a:hover {
         color: $color-accent;
     }
-
-    padding-top: 1rem;
-    border-top: 1px solid $background-accent;
 }
 
 p,
@@ -61,8 +65,9 @@ figure {
 }
 
 blockquote {
-    margin-left: 2rem;
-    color: $color-light;
+    padding-left: 1.5rem;
+    margin-left: 2px;
+    border-left: 2px solid $background-accent;
 }
 
 hr {
@@ -82,13 +87,8 @@ h2 {
     margin-bottom: 0.5rem;
 
     * + & {
-        margin-top: 2.0rem;
+        margin-top: 2.5rem;
     }
-}
-
-.site-nav li {
-    display: inline;
-    margin-right: 0.3rem;
 }
 
 .page-date {
@@ -109,18 +109,31 @@ h2 {
 .text {
     ul {
         list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul, ol {
         margin-left: 1.5rem;
 
         li {
             margin-bottom: 0.3rem;
-        }
-    }
 
-    li ul {
-        list-style-type: circle;
+            ul {
+                list-style-type: circle;
+            }
 
-        li {
-            margin-bottom: 0.1rem;
+            ol {
+                list-style-type: lower-roman;
+            }
+
+            ul, ol {
+                li {
+                    margin-bottom: 0.1rem;
+                }
+            }
         }
     }
 }

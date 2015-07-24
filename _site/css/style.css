@@ -13,19 +13,19 @@ html, body {
   height: 100%; }
 
 html {
-  font-family: kepler-std-semicondensed, georgia, serif;
-  font-size: 100%;
-  line-height: 1.4;
-  color: black;
+  font-family: ff-meta-serif-web-pro, franklin-gothic-urw, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #444444;
   background: white; }
 
 a:link,
 a:visited {
   text-decoration: underline;
-  color: black; }
+  color: #444444; }
 
 a:hover {
-  color: #337722; }
+  color: #337733; }
 
 ul {
   list-style: none; }
@@ -45,30 +45,36 @@ sup {
 sub {
   top: 0.5em; }
 
-body {
-  padding: 2rem; }
-
+/* strong, b { */
+/*     font-weight: 500; */
+/* } */
 .wrap {
-  max-width: 28rem;
+  max-width: 32rem;
   margin: 0 auto;
+  padding: 2rem;
   position: relative; }
+
+.site-header {
+  margin-bottom: 3rem; }
+
+.site-content {
+  margin-bottom: 6rem; }
 
 header {
   margin-bottom: 2rem; }
 
-main,
-footer {
-  margin-bottom: 4rem; }
+.site-nav li {
+  display: inline;
+  margin-right: 0.4rem; }
 
-.site-footer {
-  padding-top: 1rem;
-  border-top: 1px solid #cccccc; }
-  .site-footer,
-  .site-footer a:link,
-  .site-footer a:visited {
-    color: #555555; }
-  .site-footer a:hover {
-    color: #337722; }
+.site-nav,
+.site-nav a:link,
+.site-nav a:visited, .site-footer,
+.site-footer a:link,
+.site-footer a:visited {
+  color: #888888; }
+.site-nav a:hover, .site-footer a:hover {
+  color: #337733; }
 
 p,
 ul,
@@ -87,11 +93,12 @@ figure, figure img {
 figure figcaption {
   width: 75%;
   font-size: 0.9em;
-  color: #555555; }
+  color: #888888; }
 
 blockquote {
-  margin-left: 2rem;
-  color: #555555; }
+  padding-left: 1.5rem;
+  margin-left: 2px;
+  border-left: 2px solid #cccccc; }
 
 hr {
   margin: 2rem auto;
@@ -107,27 +114,28 @@ h2 {
   font-weight: bold;
   margin-bottom: 0.5rem; }
   * + h2 {
-    margin-top: 2.0rem; }
-
-.site-nav li {
-  display: inline;
-  margin-right: 0.3rem; }
+    margin-top: 2.5rem; }
 
 .page-date {
-  color: #555555; }
+  color: #888888; }
 
 .stream li {
   margin-bottom: 1.0rem; }
 .stream .desc {
-  color: #555555;
+  color: #888888;
   font-size: 0.9em; }
 
 .text ul {
-  list-style-type: disc;
+  list-style-type: disc; }
+.text ol {
+  list-style-type: decimal; }
+.text ul, .text ol {
   margin-left: 1.5rem; }
-  .text ul li {
+  .text ul li, .text ol li {
     margin-bottom: 0.3rem; }
-.text li ul {
-  list-style-type: circle; }
-  .text li ul li {
-    margin-bottom: 0.1rem; }
+    .text ul li ul, .text ol li ul {
+      list-style-type: circle; }
+    .text ul li ol, .text ol li ol {
+      list-style-type: lower-roman; }
+    .text ul li ul li, .text ul li ol li, .text ol li ul li, .text ol li ol li {
+      margin-bottom: 0.1rem; }

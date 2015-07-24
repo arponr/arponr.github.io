@@ -1,15 +1,17 @@
-$family-main: kepler-std-semicondensed, georgia, serif;
+$family-main: ff-meta-serif-web-pro, franklin-gothic-urw, sans-serif;
 
-$size-base: (16/16) * 100%;
+$size-base: 15px;
 $size-small: .9em;
 $size-large: 1.2em;
 
-$line-height: 1.4;
+$line-height: 1.5;
 
 $background-base: #ffffff;
 $background-accent: #cccccc;
-$color-base: #000000;
-$color-light: #555555;
-$color-accent: #337722;
+$color-base: #444444;
+$color-light: #888888;
+$color-accent: #337733;
 
 $site-width: 28rem;
+$site-pad: 2rem;
+
