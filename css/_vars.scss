@@ -1,17 +1,18 @@
-$family-main: ff-meta-serif-web-pro, franklin-gothic-urw, sans-serif;
+$font-main: ff-meta-serif-web-pro, serif;
+$font-main-sc: ff-meta-serif-sc-web-pro, sans-serif;
 
-$size-base: 15px;
+$size-base: (15/16)*100%;
 $size-small: .9em;
-$size-large: 1.2em;
+$size-large: 1.1em;
 
 $line-height: 1.5;
 
 $background-base: #ffffff;
 $background-accent: #cccccc;
 $color-base: #444444;
-$color-light: #888888;
+$color-light: #777777;
 $color-accent: #337733;
 
 $site-width: 28rem;
-$site-pad: 2rem;
+$site-pad: 2.0rem;
 

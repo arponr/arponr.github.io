@@ -19,7 +19,7 @@ html, body {
 }
 
 html {
-    font-family: $family-main;
+    font-family: $font-main;
     font-size: $size-base;
     line-height: $line-height;
     color: $color-base;
@@ -33,7 +33,7 @@ a:visited {
 }
 
 a:hover {
-    color: $color-accent;
+    color: $color-accent !important;
 }
 
 ul {
@@ -58,7 +58,3 @@ sup {
 sub {
     top: 0.5em;
 }
-
-/* strong, b { */
-/*     font-weight: 500; */
-/* } */

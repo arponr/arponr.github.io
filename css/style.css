@@ -13,8 +13,8 @@ html, body {
   height: 100%; }
 
 html {
-  font-family: ff-meta-serif-web-pro, franklin-gothic-urw, sans-serif;
-  font-size: 15px;
+  font-family: ff-meta-serif-web-pro, serif;
+  font-size: 93.75%;
   line-height: 1.5;
   color: #444444;
   background: white; }
@@ -25,7 +25,7 @@ a:visited {
   color: #444444; }
 
 a:hover {
-  color: #337733; }
+  color: #337733 !important; }
 
 ul {
   list-style: none; }
@@ -45,36 +45,29 @@ sup {
 sub {
   top: 0.5em; }
 
-/* strong, b { */
-/*     font-weight: 500; */
-/* } */
 .wrap {
   max-width: 32rem;
   margin: 0 auto;
   padding: 2rem;
   position: relative; }
 
-.site-header {
-  margin-bottom: 3rem; }
+.page-header {
+  margin-bottom: 2.5rem; }
 
-.site-content {
-  margin-bottom: 6rem; }
-
-header {
-  margin-bottom: 2rem; }
-
+.site-nav a,
+.site-nav a:link,
+.site-nav a:visited {
+  text-decoration: none;
+  color: inherit; }
+.site-nav ul {
+  margin-bottom: 0; }
 .site-nav li {
   display: inline;
-  margin-right: 0.4rem; }
-
-.site-nav,
-.site-nav a:link,
-.site-nav a:visited, .site-footer,
-.site-footer a:link,
-.site-footer a:visited {
-  color: #888888; }
-.site-nav a:hover, .site-footer a:hover {
-  color: #337733; }
+  margin-right: 1rem;
+  color: #777777; }
+  .site-nav li:first-child {
+    color: #444444;
+    margin-right: 2rem; }
 
 p,
 ul,
@@ -93,7 +86,7 @@ figure, figure img {
 figure figcaption {
   width: 75%;
   font-size: 0.9em;
-  color: #888888; }
+  color: #777777; }
 
 blockquote {
   padding-left: 1.5rem;
@@ -108,22 +101,21 @@ hr {
   background: #cccccc; }
 
 h1 {
-  font-weight: bold; }
+  font-family: ff-meta-serif-sc-web-pro, sans-serif;
+  font-size: 1.1em; }
 
 h2 {
   font-weight: bold;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 1.0rem; }
   * + h2 {
     margin-top: 2.5rem; }
 
-.page-date {
-  color: #888888; }
+.meta {
+  color: #777777;
+  font-size: 0.9em; }
 
 .stream li {
-  margin-bottom: 1.0rem; }
-.stream .desc {
-  color: #888888;
-  font-size: 0.9em; }
+  margin-bottom: 1.5rem; }
 
 .text ul {
   list-style-type: disc; }
