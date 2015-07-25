@@ -46,12 +46,10 @@ sub {
   top: 0.5em; }
 
 .wrap {
+  max-width: 32rem;
   margin: 0 auto;
   padding: 2rem;
   position: relative; }
-  @media (min-width: 700px) {
-    .wrap {
-      max-width: 32rem; } }
 
 .page-header {
   margin-bottom: 2.5rem; }

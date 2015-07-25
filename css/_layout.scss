@@ -1,8 +1,5 @@
 .wrap {
-    @media (min-width: 700px) {
-        max-width: $site-width + 2 * $site-pad;
-    }
-
+    max-width: $site-width + 2 * $site-pad;
     margin: 0 auto;
     padding: $site-pad;
     position: relative;
