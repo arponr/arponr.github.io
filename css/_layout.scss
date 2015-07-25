@@ -1,6 +1,7 @@
 .wrap {
     max-width: $site-width + 2 * $site-pad;
     @media (max-width: 700px) {
+        width: 100%;
         max-width: 100%;
     }
 
