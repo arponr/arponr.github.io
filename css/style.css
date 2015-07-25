@@ -50,6 +50,9 @@ sub {
   margin: 0 auto;
   padding: 2rem;
   position: relative; }
+  @media (max-width: 500px) {
+    .wrap {
+      max-width: 100%; } }
 
 .page-header {
   margin-bottom: 2.5rem; }
