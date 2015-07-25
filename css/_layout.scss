@@ -1,5 +1,9 @@
 .wrap {
     max-width: $site-width + 2 * $site-pad;
+    @media (max-width: 500px) {
+        max-width: 100%;
+    }
+
     margin: 0 auto;
     padding: $site-pad;
     position: relative;
