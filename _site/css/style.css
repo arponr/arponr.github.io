@@ -50,7 +50,7 @@ sub {
   margin: 0 auto;
   padding: 2rem;
   position: relative; }
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     .wrap {
       max-width: 100%; } }
 
