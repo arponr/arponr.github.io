@@ -1,36 +1,32 @@
+body {
+    padding: 0 $site-pad;
+}
+
 .wrap {
-    max-width: $site-width + 2 * $site-pad;
+    max-width: $site-width;
     margin: 0 auto;
-    padding: $site-pad;
     position: relative;
 }
 
-.page-header {
-    margin-bottom: 2.5rem;
-}
+.site-header {
+    padding-top: 2.0rem;
+    font-family: $font-main-sc;
+    text-transform: lowercase;
 
-.site-nav {
     a,
     a:link,
     a:visited {
         text-decoration: none;
         color: inherit;
     }
+}
 
-    ul {
-        margin-bottom: 0;
-    }
+.site-content {
+    padding: 3.0rem 0;
+}
 
-    li {
-        display: inline;
-        margin-right: 1rem;
-        color: $color-light;
-
-        &:first-child {
-            color: $color-base;
-            margin-right: 2rem;
-        }
-    }
+.page-header {
+    margin-bottom: 2.0rem;
 }
 
 p,
@@ -76,26 +72,29 @@ hr {
 }
 
 h1 {
-    font-family: $font-main-sc;
-    font-size: $size-large;
+    font-weight: bold;
 }
 
 h2 {
-    font-weight: bold;
+    font-family: $font-main-sc;
     margin-bottom: 1.0rem;
 
     * + & {
-        margin-top: 2.5rem;
+        margin-top: 3.0rem;
     }
 }
 
-.meta {
+.page-meta {
     color: $color-light;
-    font-size: $size-small;
 }
 
 .stream li {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.0rem;
+}
+
+.stream-meta {
+    color: $color-light;
+    font-size: $size-small;
 }
 
 .text {

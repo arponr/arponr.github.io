@@ -1,12 +1,13 @@
 <li>
-  <a {% if e.external %}
+  <a class="stream-title"
+     {% if e.external %}
      href="{{ e.external }}"
      {% else %}
      href="{{ e.url }}"
      {% endif %}>
     {{ e.title }}
   </a>
-  <div class="meta">
+  <div class="stream-meta">
     {{ e.date | date: '%d %b %Y' }} &mdash;
     {{ e.desc }}
   </div>
