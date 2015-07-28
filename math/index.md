@@ -9,4 +9,4 @@ subsections:
     title: Informal notes
 ---
 
-My mathematical interests are centered around homotopy theory. If you'd like more information, feel free to contact me at [arpon.raksit@gmail.com](mailto:arpon.raksit@gmail.com).
+My mathematical interests are centered around homotopy theory. Slightly more information about me can be gleaned from my [r&eacute;sum&eacute;](/files/resume.pdf).
