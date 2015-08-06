@@ -29,12 +29,21 @@ body {
     margin-bottom: 2.0rem;
 }
 
+%small {
+    font-size: $size-small;
+    line-height: $line-height-small;
+}
+
+%meta {
+    color: $color-light;
+}
+
 p,
 ul,
 ol,
 blockquote,
 figure {
-    margin-bottom: 1rem;
+    margin-bottom: 1.0rem;
 }
 
 li {
@@ -52,8 +61,8 @@ figure {
 
     figcaption {
         width: 75%;
-        font-size: $size-small;
-        color: $color-light;
+        @extend %small;
+        @extend %meta;
     }
 }
 
@@ -85,7 +94,7 @@ h2 {
 }
 
 .page-meta {
-    color: $color-light;
+    @extend %meta;
 }
 
 .stream li {
@@ -93,8 +102,8 @@ h2 {
 }
 
 .stream-meta {
-    color: $color-light;
-    font-size: $size-small;
+    @extend %small;
+    @extend %meta;
 }
 
 .text {

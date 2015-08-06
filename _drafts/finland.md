@@ -2,16 +2,18 @@
 layout: text
 section: writing
 subsection: fiction
-title: Finland
 permalink: /finland
 desc: A short story about somewhere I haven't been (yet).
+title: Finland
 ---
 
-Today I woke up in Finland, in the grass. To be fair, I did yesterday too, and the day before that, and---well, I guess I don’t really know what I mean by 'today', though, or 'yesterday' or 'the day before that' or---what I mean is, for some time now I have been falling asleep and waking up in the grass in Finland.
+I woke up in Finland today, in the grass. To be fair, I did yesterday too, and the day before that, and---well, I guess I don’t really know what I mean by 'today', though, or 'yesterday' or 'the day before that' or---what I mean is, for some time now I have been falling asleep and waking up in the grass in Finland.
 
-I came to Finland in June on a sparse red-eye flight, JFK to HEL. Sitting in seat 21B between an empty 21A and 21C, I felt for the first time in just over twenty years of quasifrequent air travel the freedom to inhabit as much space as I wanted to, or rather, as god had always intended me to. And it is not lightly that I use the word 'freedom' here. In that great expanse I recognized something truly liberating: that the sensory irritants accompanying my conception of (economy/coach/third-class) air travel---the drone and odor saturating the cabin air, the pilot's meaningless announcements, the random dinging of the fasten-seatbelt sign, the clanging of carts packed with stimulants and depressants up and down the narrow aisles---these irritants are not actually irritating at all in and of themselves. While stepping onto an airliner does indeed stir an acrid bile within me, these inanimate and invisible environs are not its source. Their inanimacy and invisibility simply make them socially acceptable receptacles in which I, the civilized citizen, have been trained to spew my bile, in a bonding communal unison with my fellow citizens. No, the actual source is precisely these fellow citizens, the restless shifting and insistent whispering and unabating, unadulterated existence of *people* just millimeters in every direction of my heartrendingly compressed body.
+I came to Finland in June on a sparse red-eye flight, JFK to HEL. Sitting in seat 21B between an empty 21A and 21C, I felt for the first time in roughly twenty years of somewhat frequent air travel the freedom to inhabit as much space as I wanted to, or rather, as god had always intended me to. And it is not lightly that I use the word 'freedom' here. In that great expanse I recognized something truly liberating: that the sensory irritants accompanying my conception of (economy/coach/third-class) air travel---the drone and odor saturating the cabin air; the pilot's meaningless announcements and the fasten-seatbelt-sign's unheeded dinging; the clanging of carts packed with stimulants and depressants up and down the narrow aisles---these 'irritants' are not actually irritating at all in and of themselves. While stepping onto an airliner does indeed stir an acrid bile within me, these inanimate and invisible environs are not its source. Their inanimacy and invisibility simply make them socially acceptable targets, convenient receptacles in which I, the civilized citizen, have been trained to spew my bile, in communal unison with my fellow citizens. No, the actual source is precisely these fellow citizens, the restless shifting and insistent wheezing and unabating, unadulterated existence of *people* just millimeters in every direction of my constricted body. It is human density that lends unbearableness to the drone and odor, the dinging and clanging.
 
-So on this sparse red-eye, I---neighborless, uncompressed, liberated---fell gently asleep to the cabin's reassuring whir and the pilot's gibberish lullaby, the silent miming of the flight attendant tilting and blurring as I retreated beneath warm darkness behind eyelids. And, uninteruppted by others' bodily functions, I slept soundly. I awoke during the plane's final descent, burnt sunrise behind eyelids dissolving into faint light and refocusing outside the oval window in the pale morning sky. Crawling over to 21A and pulling myself up ever so slightly, I let my head rest at the edge of the oval cut-out and fixed my gaze on the rising sun. I made no additional voluntary movements for the remaining fifteen or so minutes of the flight. Never before had I simply watched the sun rise. It rose so slowly and deliberately, so heavily. In those final minutes, I felt I understood a bit closer to my core the heaviness of the sun.
+So on this sparse red-eye, I---neighborless, uncompressed, liberated---fell gently asleep to the cabin's reassuring whir and the pilot's gibberish lullaby, the silent miming of the flight attendant tilting and blurring as I retreated beneath warm darkness behind eyelids. And, uninteruppted by others' bodily functions, I slept soundly. I awoke during the plane's final descent, burnt sunrise behind eyelids dissolving into faint light and refocusing outside the oval window in the pale morning sky. Crawling over to 21A and pulling myself up ever so slightly, I let my head rest at the edge of the oval cut-out and fixed my gaze on the rising sun. I made no voluntary movements for the remaining fifteen or so minutes of the flight. Never before had I simply watched the sun rise. It rose so slowly and deliberately, so heavily. In those final minutes, I felt I understood a bit closer to my core the heaviness of the sun.
+
+In Helinski for a night. Hotel bar. Nonsensical conversation / markov chain. Or maybe we don't say in HEL for a night. Go straight to Ivalo, spend one afternoon in society, picking up gear and stuff. Stop in cafe and that's where markov guy shows up, just like real life starbucks guy.
 
 The items I brought with me to Finland can be divided into two categories. The first consists of those items covering my body (allowing me to move discreetly through society, like one of its own):
 
@@ -32,9 +34,7 @@ The second consists of those items contained in the aformentioned backpack:
 - a mechanical pencil, along with extra lead and an eraser.
 - an iPod nano (you know, one of those old-fashioned gadgets which, believe it or not, just outputs music) and a pair of headphones.
 
-I left behind anything that could tell me the time, planning to leave
-here at sunset, which should be sometime in August. Perhaps this
-informs my confusion about all those words containing the word 'day'.
+I left behind anything that could tell me the time, planning to leave here at sunset, which should be sometime in August. Perhaps this informs my confusion about all those words and phrases containing the word 'day'.
 
 * * *
 

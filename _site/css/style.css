@@ -27,7 +27,7 @@ html {
 a:link,
 a:visited {
   text-decoration: underline;
-  color: #444444; }
+  color: inherit; }
 
 a:hover {
   color: #337733 !important; }
@@ -74,12 +74,19 @@ body {
 .page-header {
   margin-bottom: 2.0rem; }
 
+figure figcaption, .stream-meta {
+  font-size: 0.9em;
+  line-height: 1.3; }
+
+figure figcaption, .page-meta, .stream-meta {
+  color: #777777; }
+
 p,
 ul,
 ol,
 blockquote,
 figure {
-  margin-bottom: 1rem; }
+  margin-bottom: 1.0rem; }
 
 li p,
 li ul,
@@ -89,9 +96,7 @@ li ol {
 figure, figure img {
   width: 100%; }
 figure figcaption {
-  width: 75%;
-  font-size: 0.9em;
-  color: #777777; }
+  width: 75%; }
 
 blockquote {
   padding-left: 1.5rem;
@@ -114,15 +119,8 @@ h2 {
   * + h2 {
     margin-top: 3.0rem; }
 
-.page-meta {
-  color: #777777; }
-
 .stream li {
   margin-bottom: 1.0rem; }
-
-.stream-meta {
-  color: #777777;
-  font-size: 0.9em; }
 
 .text ul {
   list-style-type: disc; }

@@ -13,7 +13,7 @@ desc: Reflection on the novel by Haruki Murakami.
   - Forgot to track this for the first ~200 pages
   - 257, 278, 403
 - The vacant house
-  - 43--44, 46, 172, 238, 261, 310, 368, 393, 409, 459
+  - 43--44, 46, 172, 238, 261, 310, 368, 393, 409, 459, 528--533
 - The flow, water, wells
   - 51, 55, 58--59, 105, 125, 162, 175, 179, 213, 224--225, 265, 319, 359, 409, 449
 - Light destructive / blinding
@@ -23,7 +23,7 @@ desc: Reflection on the novel by Haruki Murakami.
   - 298
 - Does Toru switching the phone between hands mean anything?
   - didn't track this for the first ~250 pages
-  - 281, 466
+  - 281, 466, 536
 
 ## Quotations
 
@@ -49,4 +49,4 @@ desc: Reflection on the novel by Haruki Murakami.
 
 - It's kind of like *The Magic Flute*. You know: Mozart. Using a magic flute and magic bells, they have to save a princess who's being held captive in a faraway castle. ... In the opera, the prince and the birdcatcher are led to the castle by three children riding on a cloud. But what's really happening is  a battle between the land of day and the land of night. The land of night is trying to recapture of princess from teh land of day. Midway through the opera, the heroes can't tell any longer which side is right---who is being held captive and who is not. (406)
 
-- Remember when I kissed your mark that time? I've been thinking about that ever since I said goodbye to you last summer, thinking about it over and over, like a cat watching the rain fall, and wondering *what was that all about?*
+- Remember when I kissed your mark that time? I've been thinking about that ever since I said goodbye to you last summer, thinking about it over and over, like a cat watching the rain fall, and wondering *what was that all about?* (462)
