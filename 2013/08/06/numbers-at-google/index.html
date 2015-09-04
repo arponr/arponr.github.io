@@ -11,30 +11,62 @@
     <link href="/css/style.css" rel="stylesheet" type="text/css">
   </head>
 
-  <body>
-    <header class="site-header wrap">
-      <a class="site-name" href="/">Arpon Raksit</a>
-      &mdash;
-      <a href="/math">Math</a>,
-      <a href="/writing">Writing</a>
-    </header>
+  <body class="writing">
+    
+    <div class="site">
       
-    <main class="site-content wrap">
-      <article class="page">
-        
-        <header class="page-header">
-          <h1>Numbers at Google</h1>
-          
-          <div class="page-meta">
-            06 August 2013
-          </div>
-          
-        </header>
-        
+      <header class="section site__header" role="banner">
+        <nav class="grid site__nav" role="navigation">
+          <a class="grid__col-1" href="/">Arpon Raksit</a>
+          <ul class="grid__col-2">
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/about/">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/math/">Math</a></li>
+            
+            
+            
+            <li><a 
+                   href="/reading/">Reading</a></li>
+            
+            
+            
+            <li><a 
+                   class="active"
+                   
+                   href="/writing/">Writing</a></li>
+            
+            
+          </ul>
+        </nav>
+      </header>
 
 
-<div class="page-content text">
-  <p>This is a post about some numbers that I saw at work one day during my
+<main class="site__content" role="main">
+  <article class="page">
+
+    <header class="grid section page__header">
+      <h1 class="grid__col-1">Numbers at Google</h1>
+      <p class="grid__col-2 meta">
+        Reflection on a day during my internship at Google.
+      </p>
+    </header>
+
+    <div class="grid section page__content">
+      <div class="grid__col-alone text">
+        <p>This is a post about some numbers that I saw at work one day during my
 internship at Google. I present them to you without further ado.</p>
 
 <ul>
@@ -68,10 +100,26 @@ only for a moment.</p>
 minutes. That’s some astounding stuff.</li>
 </ul>
 
-</div>
 
-      </article>
-    </main>
+        
+        <time pubdate datetime="2013-08-06 22:40:00 -0400" class="page__time">
+          06 August 2013
+        </time>
+        
+      </div>
+    </div>
+
+  </article>
+</main>
+
+<footer class="grid section site__footer" role="contentinfo">
+  <p class="grid__col-alone meta">
+    &copy; 2015 Arpon Raksit.
+  </p>
+</footer>
+
+    </div>
   </body>
 </html>
+
 
