@@ -1,10 +1,10 @@
 ---
-layout: text
-section: writing-old
-subsection: blog
-date: 2013-08-06 21:40:00 -0500
+layout: post
+hidden: true
 title: Numbers at Google
-permalink: /numbers-at-google
+date: 2013-08-06 21:40:00 -0500
+section: writing
+subsection: blog
 desc: Reflection on a day during my internship at Google.
 ---
 

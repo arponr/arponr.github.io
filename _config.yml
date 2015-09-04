@@ -3,7 +3,7 @@ url: http://www.arponr.com
 
 markdown: Kramdown
 
-permalink: /:title
+permalink: pretty
 
 exclude: ["publish.sh"]
 

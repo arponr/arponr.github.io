@@ -1,12 +1,11 @@
 ---
-layout: stream
-key: math
+layout: post-list
 title: Math
+in-nav: true
+section: math
 subsections:
-  - key: formal
+  - subsection: formal
     title: Formal writing
-  - key: notes
+  - subsection: notes
     title: Informal notes
 ---
-
-My mathematical interests are centered around homotopy theory. Slightly more information about me can be gleaned from my [r&eacute;sum&eacute;](/files/resume.pdf).

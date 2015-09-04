@@ -1,9 +1,8 @@
 ---
-layout: text
+layout: post
 section: writing
 subsection: fiction
 title: Logic
-permalink: /logic
 desc: A short story about the danger of logic.
 ---
 

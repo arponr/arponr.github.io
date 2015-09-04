@@ -1,9 +1,8 @@
 ---
-layout: text
+layout: post
+title: Heart Hotel
 section: writing
 subsection: fiction
-title: Heart Hotel
-permalink: /hotel
 desc: A short story about an adolescent heart.
 ---
 

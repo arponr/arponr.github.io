@@ -1,17 +1,19 @@
-$font-main: ff-meta-serif-web-pro, serif;
-$font-main-sc: ff-meta-serif-sc-web-pro, sans-serif;
+$font-main: adelle-sans, ff-meta-serif-web-pro, serif;
+$font-main-sc: adelle-sans, ff-meta-serif-sc-web-pro, sans-serif;
 
-$size-base: (15/16)*100%;
+$size-base: (16/16)*100%;
 $size-small: .9em;
 
 $line-height: 1.5;
-$line-height-small: 1.3;
+$line-height-small: 1.35;
 
-$background-base: #ffffff;
-$background-accent: #cccccc;
-$color-base: #444444;
+$background-base: #eaeaea;
+$background-accent: #dddddd;
+$color-base: #333333;
 $color-light: #777777;
-$color-accent: #337733;
+$color-accent: #ee7733;
 
-$site-width: 28rem;
-$site-pad: 1.5rem;
+$site-width: 50rem;
+$smallskip: 1.0rem;
+$medskip: 1.5rem;
+$bigskip: 2.0rem;

@@ -1,7 +1,23 @@
 {% include header.html %}
 
-<div class="page-content">
-  {{ content }}
-</div>
+<main class="site__content" role="main">
+  <article class="page">
+
+    <div class="grid section page__content">
+      <div class="grid__col-alone text">
+        {{ content }}
+
+        {% if page.date %}
+        <p>
+          <time pubdate datetime="{{ page.date }}">
+            {{page.date | date: '%d %B %Y' }}
+          </time>
+        </p>
+        {% endif %}
+      </div>
+    </div>
+
+  </article>
+</main>
 
 {% include footer.html %}

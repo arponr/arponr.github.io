@@ -1,10 +1,9 @@
 ---
-layout: text
-section: writing
-subsection: literature
+layout: post
 title: The Wind-Up Bird Chronicle
-permalink: /windup
-desc: Reflection on the novel by Haruki Murakami.
+section: reading
+subsection: literature
+desc: by Haruki Murakami, trans. Jay Rubin
 ---
 
 ## Ideas

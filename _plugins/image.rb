@@ -30,7 +30,7 @@ module Jekyll
     def render(context)
       source = "<figure"
       if @class
-        source += "class=\"#{@class}\""
+        source += " class=\"#{@class}\""
       end
       source += ">\n"
       source += "<img src=\"#{@url}\"/>\n"

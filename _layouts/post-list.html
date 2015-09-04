@@ -1,0 +1,44 @@
+{% include header.html %}
+
+<main class="site__content" role="main">
+  <article class="page">
+
+    <div class="grid section page__content">
+      <div class="grid__col-alone">
+
+        {% if page.subsections %}
+
+        {% for s in page.subsections %}
+        <h2>{{ s.title }}</h2>
+        <ul class="post-list">
+          {% for e in site.posts %}
+          {% if e.hidden != true %}
+          {% if e.section == page.section and e.subsection == s.subsection %}
+          {% include post-list-entry.html %}
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+        {% endfor %}
+
+        {% else %}
+        
+        <ul class="post-list">
+          {% for e in site.posts %}
+          {% if e.hidden != true %}
+          {% if e.section == page.section %}
+          {% include post-list-entry.html %}
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+
+        {% endif %}
+
+      </div>
+    </div>
+
+  </article>
+</main>
+
+{% include footer.html %}

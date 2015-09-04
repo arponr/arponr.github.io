@@ -1,0 +1,42 @@
+.site {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+}
+
+.section {
+    padding: 1.5rem 0;
+}
+
+header {
+    border-bottom: 1px solid $background-accent;
+}
+
+footer {
+    border-top: 1px solid $background-accent;
+}
+
+.site__nav {
+    a {
+        @extend .plain;
+    }
+    
+    ul a:not(.active) {
+        @extend .light;
+    }
+
+    ul li {
+        display: inline;
+        margin-right: 1.0rem;
+    }
+}
+
+.small {
+    font-size: $size-small;
+    line-height: $line-height-small;
+}
+
+.meta, time {
+    color: $color-light;
+}

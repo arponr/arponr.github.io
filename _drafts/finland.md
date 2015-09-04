@@ -1,8 +1,7 @@
 ---
-layout: text
+layout: post
 section: writing
 subsection: fiction
-permalink: /finland
 desc: A short story about somewhere I haven't been (yet).
 title: Finland
 ---

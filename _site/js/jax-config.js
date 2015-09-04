@@ -30,5 +30,5 @@ MathJax.Hub.Config({
     }
 });
 
-MathJax.Ajax.loadComplete("/js/jax-config.js");
+MathJax.Ajax.loadComplete("//js/jax-config.js");
 

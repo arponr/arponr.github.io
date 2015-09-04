@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -31,16 +32,43 @@ html {
     line-height: $line-height;
     color: $color-base;
     background: $background-base;
+
+    @media (min-device-pixel-ratio: 2) {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+
+    @media (max-width: 860px) {
+        font-size: 90%;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 80%;
+    }
 }
 
 a:link,
 a:visited {
     text-decoration: underline;
-    color: inherit;
+    color: $color-base;
+}
+
+a.plain {
+    &:link,
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+a.light:not(:hover) {
+    &:link,
+    &:visited {
+        color: $color-light;
+    }
 }
 
 a:hover {
-    color: $color-accent !important;
+    color: $color-accent;
 }
 
 ul {

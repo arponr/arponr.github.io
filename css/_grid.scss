@@ -1,18 +1,51 @@
+$grid-breakpoint: 650px;
+$gutter-width: 1.5rem;
+$col-1-width: 20%;
+$col-2-width: 100% - 2*$col-1-width;
+$col-ratio: percentage($col-1-width/$col-2-width);
+
 .grid {
-    .col {
-        float: left;
-        position: relative;
-        height: 100%;
-        min-height: 1px;
+    &__col-1, &__col-2, &__col-alone {
+        display: block;
+    }
+    
+    &__col-1 {
+        margin-bottom: $smallskip;
     }
 
-    $ns: 3;
-    @each $n in $ns {
-        @for $i from 1 through $n {
-            .col-#{$i}-#{$n} {
-                width: percentage($i / $n);
-                @extend .col;
+    @media (min-width: $grid-breakpoint) {
+        overflow: hidden;
+        clear: left;
+        
+        &__col-1, &__col-2, &__col-alone {
+            float: left;
+        }
+
+        &__col-1 {
+            width: $col-1-width;
+            padding-right: $gutter-width;
+            margin-bottom: 0;
+        }
+
+        &__col-2, &__col-alone {
+            width: $col-2-width;
+
+            .alignleft {
+                float: left;
+                margin-left: -$col-ratio;
+                margin-bottom: 0;
+                width: calc(#{$col-ratio} - #{$gutter-width});
             }
+
+            .banner {
+                margin-left: -$col-ratio;
+                width: percentage(100%/$col-2-width);
+                max-height: calc(100% - 4rem);
+            }
+        }
+
+        &__col-alone {
+            margin-left: $col-1-width;
         }
     }
 }
