@@ -153,18 +153,24 @@ footer {
     .page__content * + h2 + * {
       padding-top: 2rem; } }
 
-.post-list li {
+.entrylist li {
   margin-bottom: 1rem;
   position: relative; }
-.post-list__meta {
+.entrylist__meta {
   display: table; }
-.post-list__desc {
+  @media (min-width: 650px) {
+    .entrylist__meta {
+      width: 133.33333%; } }
+.entrylist__desc {
   display: table-cell;
-  width: 100%;
-  padding-right: 1.0rem; }
-.post-list__time {
+  width: 100%; }
+  @media (min-width: 650px) {
+    .entrylist__desc {
+      width: 75%; } }
+.entrylist__time {
   display: table-cell;
-  white-space: nowrap; }
+  white-space: nowrap;
+  padding-left: 1.5rem; }
 
 .text ul {
   list-style-type: disc; }
