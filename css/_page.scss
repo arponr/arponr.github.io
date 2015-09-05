@@ -1,127 +1,127 @@
 .page {
-    h1 {
-        font-weight: bold;
+  h1 {
+    font-weight: bold;
+  }
+  
+  &__time {
+    display: block;
+    padding-top: $smallskip;
+  }
+
+  &__content {
+    padding-bottom: 6.0rem;
+    
+    p,
+    ul,
+    ol,
+    blockquote,
+    figure,
+    h2 {
+      margin-bottom: $smallskip;
     }
 
-    &__time {
-        display: block;
-        padding-top: $smallskip;
+    li {
+      ul,
+      ol {
+        margin-bottom: 0;
+      }
     }
 
-    &__content {
-        padding-bottom: 6.0rem;
-        
-        p,
-        ul,
-        ol,
-        blockquote,
-        figure,
-        h2 {
-            margin-bottom: $smallskip;
-        }
+    figure {
+      &, img {
+        width: 100%;
+      }
+      
+      figcaption {
+        width: 75%;
+        @extend .small;
+        @extend .meta;
+      }
+    }
 
-        li {
-            ul,
-            ol {
-                margin-bottom: 0;
-            }
-        }
+    blockquote {
+      border-left: 2px solid $background-accent;
+      margin-left: 2px;
+      padding-left: 1.5rem;
+    }
 
-        figure {
-            &, img {
-                width: 100%;
-            }
-
-            figcaption {
-                width: 75%;
-                @extend .small;
-                @extend .meta;
-            }
-        }
-
-        blockquote {
-            padding-left: 1.5rem;
-            margin-left: 2px;
-            border-left: 2px solid $background-accent;
-        }
-
-        * + h2,
-        hr {
-            padding-top: $bigskip;
-        }
+    * + h2,
+    hr {
+      padding-top: $bigskip;
+    }
 
 
-        @media (min-width: $grid-breakpoint) {
-            * + h2 + * {
-                padding-top: $bigskip;
-            }
-        }
+    @media (min-width: $grid-breakpoint) {
+      * + h2 + * {
+        padding-top: $bigskip;
+      }
+    }
 
-        h2 {
-            @extend .alignleft;
-            @extend .meta;
-        }
-    }    
+    h2 {
+      @extend .alignleft;
+      @extend .meta;
+    }
+  }    
 }
 
 .entrylist {
-    li {
-        margin-bottom: $smallskip;
-        position: relative;
+  li {
+    margin-bottom: $smallskip;
+    position: relative;
+  }
+
+  &__meta {
+    display: table;
+
+    @media (min-width: $grid-breakpoint) {
+      width: 100% + $col-ratio;
     }
+  }
 
-    &__meta {
-        display: table;
+  &__desc {
+    display: table-cell;
+    width: 100%;
 
-        @media (min-width: $grid-breakpoint) {
-            width: 100% + $col-ratio;
-        }
-    }
+    @media (min-width: $grid-breakpoint) {
+      width: percentage($col-2-width / ($col-1-width + $col-2-width));
+    }    
+  }
 
-    &__desc {
-        display: table-cell;
-        width: 100%;
-
-        @media (min-width: $grid-breakpoint) {
-            width: percentage($col-2-width / ($col-1-width + $col-2-width));
-        }    
-    }
-
-    &__time {
-        display: table-cell;
-        white-space: nowrap;
-        padding-left: $gutter-width;
-    }
+  &__time {
+    display: table-cell;
+    padding-left: $gutter-width;
+    white-space: nowrap;
+  }
 }
 
 .text {
-    ul {
-        list-style-type: disc;
-    }
+  ul {
+    list-style-type: disc;
+  }
 
-    ol {
-        list-style-type: decimal;
-    }
+  ol {
+    list-style-type: decimal;
+  }
 
-    ul, ol {
-        margin-left: 1.5rem;
+  ul, ol {
+    margin-left: 1.5rem;
 
+    li {
+      margin-bottom: 0.3rem;
+
+      ul {
+        list-style-type: circle;
+      }
+
+      ol {
+        list-style-type: lower-roman;
+      }
+
+      ul, ol {
         li {
-            margin-bottom: 0.3rem;
-
-            ul {
-                list-style-type: circle;
-            }
-
-            ol {
-                list-style-type: lower-roman;
-            }
-
-            ul, ol {
-                li {
-                    margin-bottom: 0.1rem;
-                }
-            }
+          margin-bottom: 0.1rem;
         }
+      }
     }
+  }
 }

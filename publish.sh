@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/Documents/code/site &&
+cd ~/Documents/code/arponr.com &&
 jekyll build &&
 git add --all . &&
 git commit -a &&
