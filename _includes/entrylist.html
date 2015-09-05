@@ -1,0 +1,19 @@
+<ul class="entrylist">
+  {% for e in entries %}
+  {% if e.hidden != true %}
+  <li>
+    {% if e.url %}<a href="{{ e.url }}">{% endif %}
+    {{ e.title }}
+    {% if e.url %}</a>{% endif%}
+    <div class="small meta entrylist__meta">
+      <div class="entrylist__desc">
+        {{ e.desc }}
+      </div>
+      <time pubdate datetime="{{ e.date }}" class="entrylist__time">
+        {{ e.date | date: '%d %b %Y' }}
+      </time>
+    </div>
+  </li>  
+  {% endif %}
+  {% endfor %}
+</ul>

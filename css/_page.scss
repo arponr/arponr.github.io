@@ -64,7 +64,7 @@
     }    
 }
 
-.post-list {
+.entrylist {
     li {
         margin-bottom: $smallskip;
         position: relative;
@@ -72,17 +72,25 @@
 
     &__meta {
         display: table;
+
+        @media (min-width: $grid-breakpoint) {
+            width: 100% + $col-ratio;
+        }
     }
 
     &__desc {
         display: table-cell;
         width: 100%;
-        padding-right: 1.0rem;
+
+        @media (min-width: $grid-breakpoint) {
+            width: percentage($col-2-width / ($col-1-width + $col-2-width));
+        }    
     }
 
     &__time {
         display: table-cell;
         white-space: nowrap;
+        padding-left: $gutter-width;
     }
 }
 

@@ -1,0 +1,23 @@
+{% include header.html %}
+
+<main class="site__content" role="main">
+  <article class="page">
+
+    <div class="grid section page__content">
+      <div class="grid__col-alone">
+        
+        <ul class="entry-list">
+          {% for e in page.entries %}
+          {% if e.hidden != true %}
+          {% include list-entry.html %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+
+      </div>
+    </div>
+
+  </article>
+</main>
+
+{% include footer.html %}

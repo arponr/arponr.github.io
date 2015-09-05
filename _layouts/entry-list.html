@@ -4,17 +4,15 @@
   <article class="page">
     <div class="grid section page__content">
       <div class="grid__col-alone">
-        {% assign entries_ = site.posts | where:"section",page.section %}
-
         {% if page.subsections %}
         {% for s in page.subsections %}
-        {% assign entries = entries_ | where:"subsection",s.subsection %}
+        {% assign entries = s.entries %}
         <h2>{{ s.title }}</h2>
         {% include entrylist.html %}
         {% endfor %}
-        
+
         {% else %}
-        {% assign entries = entries_ %}
+        {% assign entries = page.entries %}
         {% include entrylist.html %}
 
         {% endif %}
