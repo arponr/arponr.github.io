@@ -1,12 +1,29 @@
-body.home {
-    background-image: url(/images/2015-07-pier.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-
-    .site__header {
-        border: none;
-    }
+@mixin vertical-gradient($stops...) {
+  background: -webkit-linear-gradient(top, $stops);
+  background: -o-linear-gradient(bottom, $stops);
+  background: -moz-linear-gradient(bottom, $stops);
+  background: linear-gradient(bottom, $stops);
 }
 
+body.home {
+  background-image: url(/images/2015-07-pier.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  .site__header {
+    border: none;
+    @include vertical-gradient(rgba(234,234,234,1.0),
+                               rgba(234,234,234,0.85),
+                               rgba(234,234,234,0.8),
+                               rgba(234,234,234,0.0));
+  }
+
+  .site__nav ul a:not(.active):not(:hover) {
+    &:link,
+    &:visited {
+      color: $color-base;
+    }
+  }
+}

@@ -1,42 +1,47 @@
-.site {
-    max-width: 50rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    position: relative;
+.wrap {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
 }
 
 .section {
-    padding: 1.5rem 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 header {
-    border-bottom: 1px solid $background-accent;
+  border-bottom: 1px solid $background-accent;
 }
 
 footer {
-    border-top: 1px solid $background-accent;
+  border-top: 1px solid $background-accent;
 }
 
 .site__nav {
-    a {
-        @extend .plain;
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+  
+  ul a:not(.active):not(:hover) {
+    &:link,
+    &:visited {
+      color: $color-light;
     }
-    
-    ul a:not(.active) {
-        @extend .light;
-    }
+  }
 
-    ul li {
-        display: inline;
-        margin-right: 1.0rem;
-    }
+  ul li {
+    display: inline;
+    margin-right: 1.0rem;
+  }
 }
 
 .small {
-    font-size: $size-small;
-    line-height: $line-height-small;
+  font-size: $size-small;
+  line-height: $line-height-small;
 }
 
 .meta, time {
-    color: $color-light;
+  color: $color-light;
 }

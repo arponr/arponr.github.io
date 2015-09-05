@@ -19,7 +19,7 @@ html, body {
   height: 100%; }
 
 html {
-  font-family: adelle-sans, ff-meta-serif-web-pro, serif;
+  font-family: adelle-sans, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #333333;
@@ -40,11 +40,8 @@ a:visited {
   text-decoration: underline;
   color: #333333; }
 
-a.plain:link, .site__nav a:link, a.plain:visited, .site__nav a:visited {
+a.plain:link, a.plain:visited {
   text-decoration: none; }
-
-a.light:not(:hover):link, .site__nav ul a:not(:hover):link:not(.active), a.light:not(:hover):visited, .site__nav ul a:not(:hover):visited:not(.active) {
-  color: #777777; }
 
 a:hover {
   color: #ee7733; }
@@ -95,14 +92,15 @@ sub {
     .grid__col-alone {
       margin-left: 20%; } }
 
-.site {
+.wrap {
   max-width: 50rem;
   margin: 0 auto;
   padding: 0 1.5rem;
   position: relative; }
 
 .section {
-  padding: 1.5rem 0; }
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
 
 header {
   border-bottom: 1px solid #dddddd; }
@@ -110,6 +108,11 @@ header {
 footer {
   border-top: 1px solid #dddddd; }
 
+.site__nav a:link,
+.site__nav a:visited {
+  text-decoration: none; }
+.site__nav ul a:not(.active):not(:hover):link, .site__nav ul a:not(.active):not(:hover):visited {
+  color: #777777; }
 .site__nav ul li {
   display: inline;
   margin-right: 1.0rem; }
@@ -194,6 +197,12 @@ body.home {
   background-attachment: fixed;
   background-size: cover; }
   body.home .site__header {
-    border: none; }
+    border: none;
+    background: -webkit-linear-gradient(top, #eaeaea, rgba(234, 234, 234, 0.85), rgba(234, 234, 234, 0.8), rgba(234, 234, 234, 0));
+    background: -o-linear-gradient(bottom, #eaeaea, rgba(234, 234, 234, 0.85), rgba(234, 234, 234, 0.8), rgba(234, 234, 234, 0));
+    background: -moz-linear-gradient(bottom, #eaeaea, rgba(234, 234, 234, 0.85), rgba(234, 234, 234, 0.8), rgba(234, 234, 234, 0));
+    background: linear-gradient(bottom, #eaeaea, rgba(234, 234, 234, 0.85), rgba(234, 234, 234, 0.8), rgba(234, 234, 234, 0)); }
+  body.home .site__nav ul a:not(.active):not(:hover):link, body.home .site__nav ul a:not(.active):not(:hover):visited {
+    color: #333333; }
 
 /*# sourceMappingURL=style.css.map */

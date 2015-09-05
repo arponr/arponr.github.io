@@ -12,20 +12,18 @@
   </head>
 
   <body class="{{ page.section }}">
-    
-    <div class="site">
       
-      <header class="section site__header" role="banner">
-        <nav class="grid site__nav" role="navigation">
-          <a class="grid__col-1" href="/">Arpon Raksit</a>
-          <ul class="grid__col-2">
-            {% assign pages = site.pages | sort:"url" %}
-            {% for p in pages %}
-            {% if p.in-nav == true %}
-            <li><a {% if p.url == page.url %}class="active"{% endif %}
-                   href="{{ p.url }}">{{ p.title }}</a></li>
-            {% endif %}
-            {% endfor %}
-          </ul>
-        </nav>
-      </header>
+    <header class="wrap section site__header" role="banner">
+      <nav class="grid site__nav" role="navigation">
+        <a class="grid__col-1" href="/">Arpon Raksit</a>
+        <ul class="grid__col-2">
+          {% assign pages = site.pages | sort:"url" %}
+          {% for p in pages %}
+          {% if p.in-nav == true %}
+          <li><a {% if p.url == page.url %}class="active"{% endif %}
+                 href="{{ p.url }}">{{ p.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>

@@ -5,47 +5,47 @@ $col-2-width: 100% - 2*$col-1-width;
 $col-ratio: percentage($col-1-width/$col-2-width);
 
 .grid {
-    &__col-1, &__col-2, &__col-alone {
-        display: block;
-    }
+  &__col-1, &__col-2, &__col-alone {
+    display: block;
+  }
+  
+  &__col-1 {
+    margin-bottom: $smallskip;
+  }
+
+  @media (min-width: $grid-breakpoint) {
+    overflow: hidden;
+    clear: left;
     
+    &__col-1, &__col-2, &__col-alone {
+      float: left;
+    }
+
     &__col-1 {
-        margin-bottom: $smallskip;
+      width: $col-1-width;
+      padding-right: $gutter-width;
+      margin-bottom: 0;
     }
 
-    @media (min-width: $grid-breakpoint) {
-        overflow: hidden;
-        clear: left;
-        
-        &__col-1, &__col-2, &__col-alone {
-            float: left;
-        }
+    &__col-2, &__col-alone {
+      width: $col-2-width;
 
-        &__col-1 {
-            width: $col-1-width;
-            padding-right: $gutter-width;
-            margin-bottom: 0;
-        }
+      .alignleft {
+        float: left;
+        margin-left: -$col-ratio;
+        margin-bottom: 0;
+        width: calc(#{$col-ratio} - #{$gutter-width});
+      }
 
-        &__col-2, &__col-alone {
-            width: $col-2-width;
-
-            .alignleft {
-                float: left;
-                margin-left: -$col-ratio;
-                margin-bottom: 0;
-                width: calc(#{$col-ratio} - #{$gutter-width});
-            }
-
-            .banner {
-                margin-left: -$col-ratio;
-                width: percentage(100%/$col-2-width);
-                max-height: calc(100% - 4rem);
-            }
-        }
-
-        &__col-alone {
-            margin-left: $col-1-width;
-        }
+      .banner {
+        margin-left: -$col-ratio;
+        width: percentage(100%/$col-2-width);
+        max-height: calc(100% - 4rem);
+      }
     }
+
+    &__col-alone {
+      margin-left: $col-1-width;
+    }
+  }
 }
