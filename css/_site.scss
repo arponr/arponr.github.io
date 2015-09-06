@@ -1,13 +1,13 @@
 .wrap {
-  max-width: 50rem;
   margin: 0 auto;
+  max-width: 50rem;
   padding: 0 1.5rem;
   position: relative;
 }
 
 .section {
-  padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 header {
@@ -23,7 +23,7 @@ footer {
   a:visited {
     text-decoration: none;
   }
-  
+
   ul a:not(.active):not(:hover) {
     &:link,
     &:visited {

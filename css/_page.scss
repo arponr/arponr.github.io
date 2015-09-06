@@ -2,7 +2,7 @@
   h1 {
     font-weight: bold;
   }
-  
+
   &__time {
     display: block;
     padding-top: $smallskip;
@@ -10,7 +10,7 @@
 
   &__content {
     padding-bottom: 6.0rem;
-    
+
     p,
     ul,
     ol,
@@ -31,7 +31,7 @@
       &, img {
         width: 100%;
       }
-      
+
       figcaption {
         width: 75%;
         @extend .small;
@@ -61,7 +61,7 @@
       @extend .alignleft;
       @extend .meta;
     }
-  }    
+  }
 }
 
 .entrylist {
@@ -84,7 +84,7 @@
 
     @media (min-width: $grid-breakpoint) {
       width: percentage($col-2-width / ($col-1-width + $col-2-width));
-    }    
+    }
   }
 
   &__time {
