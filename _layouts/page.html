@@ -1,12 +1,12 @@
 {% include header.html %}
 
-<main class="wrap site__content" role="main">
+<main class="site__content" role="main">
   <article class="page">
-
+    
     <div class="grid section page__content">
       <div class="grid__col-alone text">
         {{ content }}
-
+        
         {% if page.date %}
         <p>
           <time pubdate datetime="{{ page.date }}">
@@ -16,7 +16,7 @@
         {% endif %}
       </div>
     </div>
-
+    
   </article>
 </main>
 

@@ -12,6 +12,15 @@ body.home {
   background-attachment: fixed;
   background-size: cover;
 
+  .site {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .site__nav {
+    @extend %wrap;
+  }
+
   .site__header {
     border: none;
     @include vertical-gradient(rgba(234,234,234,1.0),
