@@ -92,10 +92,11 @@ sub {
     .grid__col-alone {
       margin-left: 20%; } }
 
-.wrap {
+.site, body.home .site__nav {
   margin: 0 auto;
   max-width: 50rem;
-  padding: 0 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   position: relative; }
 
 .section {
@@ -196,6 +197,9 @@ body.home {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover; }
+  body.home .site {
+    max-width: 100%;
+    padding: 0; }
   body.home .site__header {
     border: none;
     background: -webkit-linear-gradient(top, #eaeaea, rgba(234, 234, 234, 0.85), rgba(234, 234, 234, 0.8), rgba(234, 234, 234, 0));
