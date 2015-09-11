@@ -5,19 +5,29 @@
 
   &__time {
     display: block;
-    padding-top: $smallskip;
+    margin-top: $bigskip;
   }
 
   &__content {
     padding-bottom: 6.0rem;
 
-    p,
     ul,
     ol,
     blockquote,
     figure,
     h2 {
       margin-bottom: $smallskip;
+    }
+
+    p + ul,
+    p + ol,
+    p + blockquote,
+    p + figure {
+      margin-bottom: $smallskip;
+    }
+
+    p + p {
+      text-indent: 1.2em;
     }
 
     li {
@@ -47,13 +57,13 @@
 
     * + h2,
     hr {
-      padding-top: $bigskip;
+      padding-top: $medskip;
     }
 
 
     @media (min-width: $grid-breakpoint) {
       * + h2 + * {
-        padding-top: $bigskip;
+        padding-top: $medskip;
       }
     }
 

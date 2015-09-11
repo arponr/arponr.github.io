@@ -1,0 +1,26 @@
+---
+layout: post
+title: The young man who might still be
+date: 2015-09-11 15:30:00 -0500
+section: writing
+subsection: fiction
+desc: An account of a dream from which I lifted my head and gasped.
+---
+
+The young man was at a party in a ballroom. He might still be. That's the beginning and end of this story.
+
+* * *
+
+He wore a requisitely nice white shirt and black pants. A dark grey tie hung firmly around his neck and gleaming black shoes kept him just off the floor. He pulled off his suit jacket when he noticed he was warm, rolled and rumpled up his sleeves when later he began to sweat. The suit jacket now cloaks his empty seat.
+
+The young man was appointed to table number fourteen, a circular table draped with white cloth, and when he first sat, arranged consummately with nine salads on sparkling plates flanked by gorgeous silverware and crystal glasses, identical to the other twenty-nine tables at the party, all dotting the red carpeting around the outer portion of the ballroom like inverted pox, all surrounding the central lacquered-pine dance floor. At table fourteen, eight mouths shifted fluently between smiles and stories and laughter, sixteen eyebrows wriggling in and out of anticipation and mirth. The young man felt farther away, though, like table fourteen wasn't quite circular, like he was at the corner of some nonconvexity. His smiles lagged behind the others and were uneven. A substance mediated between the table and him, refracting, lengthening, distorting.
+
+He looked down and speared a cherry tomato with a single tine of his fork. He lifted it out of the salad, watched a bead of water run down its contour and felt a bead of sweat run down his nose. The cherry tomato burst in his mouth and he shivered. A kernel of uneasiness hovered in a lightless cavity inside him, swelling and contracting rhythmically but separately from and much smaller than his heart. Of course these are not the words that came to him. He just felt uneasy and that maybe his head was throbbing the slightest bit and that things were tilted by like a sliverish fraction of a degree in some way. But in reality, there existed this pulsating kernel, whose swells were steadily growing and whose rhythm was steadily slowing.
+
+* * *
+
+Salads were eaten and dinners served and also eaten. The speakers stopped echoing eye-dampening speeches, started playing pop music, and thus white shirts, black pants, and colored dresses flooded the dance floor. The young man liked to dance, too, when the music was right. So although he thought he should maybe stay seated tonight out of respect for the whole throbbing and tilting business, when the right music did come on a short while later, a serious dissonance formed within him, a dissonance that was resolved immediately and unseriously, however, his friends knowing very well that the music was right, and basically hurling him onto the dance floor. He barely resisted. The young man really did like to dance, and as his right shoe struck lacquered pine, any awareness of uneasiness---in fact any awareness of self at all---melted away into the music.
+
+He snapped his fingers and his hips; he lunged forward and jerked back; let's face it: he flailed; and halfway through the first song, in a fit of aliveness, he spun. This revolution is the zenith of this story. After its completion everything will have changed, will be stranger, perhaps beyond faithful description. At 120 degrees through the spin, the young man's universe decelerated sharply. The final 240 degrees lasted about ten seconds, during which the room's tilt intensified, and the surrounding whites and blacks and colors blurred together like an aesthetic unfocusing of his eyes. He heard the kernel inside him pound out distended time hard and slow. It was all very cinematic.
+
+At 360 degrees everything indeed had changed, but the young man had lost the power to react. He was adrift in the music, believed that he was keeping on dancing, believed that he'd forever keep on dancing, gave himself up to the electric flow. The shades and colors swirled and swarmed in disks around him, gathered themselves up into contorted faces with mouths agape and eyebrows furrowed, dissolved back into unfocused overlapping disks as he felt himself being lifted and carried, in actuality by people really physically holding him up but in his mind by lush harmony as the disks coalesced into his mother's head beside him and he heard behind the melody, That's my son, What's happening to my son, Please god please, but that too fades, dissolves away into the music and the colors strobing and swimming around the ballroom like the whole world is fragmented and refracted in a polychromatic disco ball and here we are back at the end now, the young man who might still be being carried away from the party in the ballroom. Gasp for air.
