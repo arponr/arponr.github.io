@@ -129,16 +129,22 @@ footer {
   font-weight: bold; }
 .page__time {
   display: block;
-  padding-top: 1rem; }
+  margin-top: 2rem; }
 .page__content {
   padding-bottom: 6.0rem; }
-  .page__content p,
   .page__content ul,
   .page__content ol,
   .page__content blockquote,
   .page__content figure,
   .page__content h2 {
     margin-bottom: 1rem; }
+  .page__content p + ul,
+  .page__content p + ol,
+  .page__content p + blockquote,
+  .page__content p + figure {
+    margin-bottom: 1rem; }
+  .page__content p + p {
+    text-indent: 1.2em; }
   .page__content li ul,
   .page__content li ol {
     margin-bottom: 0; }
@@ -152,10 +158,10 @@ footer {
     padding-left: 1.5rem; }
   .page__content * + h2,
   .page__content hr {
-    padding-top: 2rem; }
+    padding-top: 1.5rem; }
   @media (min-width: 650px) {
     .page__content * + h2 + * {
-      padding-top: 2rem; } }
+      padding-top: 1.5rem; } }
 
 .entrylist li {
   margin-bottom: 1rem;
