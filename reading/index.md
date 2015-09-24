@@ -3,7 +3,13 @@ layout: entry-list
 title: Reading
 in-nav: true
 entries:
-  - title: The Brothers Karamazov
+  - title: The Blue Flower
+    desc: by Penelope Fitzgerald
+    date: 2015-09-21
+  - title: The Meursault Investigation
+    desc: by Kamel Daoud, trans. John Cullen
+    date: 2015-09-18
+  - title: The Brothers Karamazov (abandoned, for now)
     desc: by Fyodor Dostoevsky, trans. Richard Pevear and Larissa Volokhonsky
     date: 2015-08-22
   - title: Consider the Lobster
