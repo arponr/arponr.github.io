@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: post
 title: About
-in-nav: true
 ---
 
 {% image banner /images/2015-07-me.jpg  %}
@@ -20,5 +19,5 @@ This site exists basically for me and my vanity. (In fact if you're neither of t
 
 ## Contact
 
-Some more information is available in my [r&eacute;sum&eacute;](/files/resume.pdf). You can reach me at [arpon.raksit@gmail.com](arpon.raksit@gmail.com).
+ [arpon.raksit@gmail.com](arpon.raksit@gmail.com)
 

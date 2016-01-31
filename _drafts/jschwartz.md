@@ -1,9 +1,9 @@
 ---
 layout: post
-section: writing
-subsection: fiction
 title: But I'm not through
-desc: A slightly therapeutic exercise in writing
+tags:
+- writing
+- short story
 ---
 
 Late Sunday morning and I are peeking at each other, from behind 97%-drawn window blinds and from beneath a 98%-pulled-up comforter, respectively. It After we're each satisfied that the other's really here, I turn onto my back, uncover twelve percent more of myself to stare at the ceiling and take inventory of things, sketch a todo list.

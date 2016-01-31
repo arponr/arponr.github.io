@@ -1,28 +1,47 @@
-{% include header.html %}
+---
+layout: base
+---
 
 <main class="site__content" role="main">
-  <article class="page">
+  <article class="page grid section">
     
-    <header class="grid section page__header">
-      <h1 class="grid__col-1">{{ page.title }}</h1>
-      <p class="grid__col-2 meta">
-        {{ page.desc }}
-      </p>
-    </header>
+    <header class="page__header grid__col-1">
+      <h1>{{ page.title }}</h1>
 
-    <div class="grid section page__content">
-      <div class="grid__col-alone text">
-        {{ content }}
-
+      <div class="page__meta">
         {% if page.date %}
         <time pubdate datetime="{{ page.date }}" class="page__time">
           {{page.date | date: '%d %B %Y' }}
         </time>
         {% endif %}
+
+        {% if page.tags.size > 0 %}
+        <ul class="page__tags">
+          {% for tag in page.tags %}
+          <li><a href="/tag/{{ tag | replace: ' ', '-' }}">#{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
       </div>
+    </header>
+
+    <div class="page__content grid__col-2">
+    {% if page.preamble %}
+    <div class="preamble">
+      $$
+      {% for cmd in page.preamble %}
+      \newcommand{ \{{ cmd[0] }} }{% if cmd[1] > 0 %}[ {{ cmd[1] }} ]{% endif %}{ {{ cmd[2] }} }
+      {% endfor %}
+      $$
+    </div>
+    {% endif %}
+    
+    <div class="text">
+      {{ content }}
+    </div>
     </div>
 
   </article>
 </main>
 
-{% include footer.html %}
+

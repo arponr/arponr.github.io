@@ -7,4 +7,12 @@ permalink: pretty
 
 exclude: ["publish.sh"]
 
+paginate: 5
+
+nav_tags:
+- math
+- reading
+- writing
+
+
 

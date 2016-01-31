@@ -1,19 +1,24 @@
-$font-main: adelle-sans, sans-serif;
+$font-main: adobe-text-pro, adelle-sans, sans-serif;
 $font-main-sc: adelle-sans, sans-serif;
 
 $size-base: (16/16)*100%;
 $size-small: .9em;
 
-$line-height: 1.5;
-$line-height-small: 1.35;
+$line-height: 1.4;
+$line-height-united: $line-height * 1rem;
+$line-height-small: 1.3;
 
-$background-base: #eaeaea;
-$background-accent: #dddddd;
-$color-base: #333333;
+$background-base: #ffffff;
+$background-accent: #bbbbbb;
+
+$color-base: #222222;
 $color-light: #777777;
-$color-accent: #ee7733;
+$color-accent: #dd6622;
 
-$site-width: 50rem;
-$smallskip: 1.0rem;
-$medskip: 1.5rem;
-$bigskip: 2.0rem;
+$background-progress: #dddddd;
+$color-progress: #888888;
+
+$smallskip: 0.5 * $line-height-united;
+$medskip: 1 * $line-height-united;
+$bigskip: 2 * $line-height-united;
+

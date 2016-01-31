@@ -1,9 +1,9 @@
 ---
 layout: post
-section: writing
-subsection: fiction
-desc: A short story about somewhere I haven't been (yet).
 title: Finland
+tags:
+- writing
+- short story
 ---
 
 I woke up in Finland today, in the grass. To be fair, I did yesterday too, and the day before that, and---well, I guess I don’t really know what I mean by 'today', though, or 'yesterday' or 'the day before that' or---what I mean is, for some time now I have been falling asleep and waking up in the grass in Finland.

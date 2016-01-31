@@ -64,12 +64,21 @@ a:hover {
   color: $color-accent;
 }
 
+%light-link {
+  &:not(.active):not(:hover) {
+    &:link,
+    &:visited {
+      color: $color-light;
+    }
+  }
+}
+
 ul {
   list-style: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
+  font-weight: 700;
   font-size: 1em;
 }
 

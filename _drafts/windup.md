@@ -1,9 +1,8 @@
 ---
 layout: post
 title: The Wind-Up Bird Chronicle
-section: reading
-subsection: literature
-desc: by Haruki Murakami, trans. Jay Rubin
+tags:
+- reading
 ---
 
 ## Ideas

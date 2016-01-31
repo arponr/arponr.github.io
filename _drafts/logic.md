@@ -1,9 +1,9 @@
 ---
 layout: post
-section: writing
-subsection: fiction
 title: Logic
-desc: A short story about the danger of logic.
+tags:
+- writing
+- short story
 ---
 
 There's a dream I often have (I've had it about three times a week for

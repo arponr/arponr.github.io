@@ -1,19 +1,33 @@
-<ul class="entrylist">
-  {% for e in entries %}
-  {% if e.hidden != true %}
-  <li>
-    {% if e.url %}<a href="{{ e.url }}">{% endif %}
+{% if e.hidden != true %}
+<li>
+  {% if e.url %}<a href="{{ e.url }}" class="entrylist__title">{% endif %}
     {{ e.title }}
     {% if e.url %}</a>{% endif%}
-    <div class="small meta entrylist__meta">
-      <div class="entrylist__desc">
-        {{ e.desc }}
-      </div>
-      <time pubdate datetime="{{ e.date }}" class="entrylist__time">
-        {{ e.date | date: '%d %b %Y' }}
-      </time>
+  <div class="small meta entrylist__meta">
+    <div class="entrylist__desc">
+      {% if e.desc %}
+      <p>{{ e.desc }}</p>
+      {% endif %}
+
+      {% if e.tags.size > 0 %}
+      <ul class="entrylist__tags">
+        {% for tag in e.tags %}
+        {% if tag != page.tag %}
+        <li><a href="/tag/{{ tag | replace: ' ', '-' }}">#{{ tag | replace: ' ', '-' }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      {% endif %}
     </div>
-  </li>  
-  {% endif %}
-  {% endfor %}
-</ul>
+
+    {% if e.date %}
+    <time pubdate datetime="{{ e.date }}" class="entrylist__time">
+      {{ e.date | date: '%d %b %Y' }}
+    </time>
+    {% elsif e.progress %}
+    <progress class="entrylist__progress"
+              value="{{ e.progress.at }}" max="{{ e.progress.total }}"></progress>
+    {% endif %}
+  </div>
+</li>  
+{% endif %}

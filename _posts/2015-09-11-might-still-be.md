@@ -2,9 +2,9 @@
 layout: post
 title: The young man who might still be
 date: 2015-09-11 15:30:00 -0500
-section: writing
-subsection: fiction
-desc: An account of a dream from which I lifted my head and gasped.
+tags:
+- writing
+- dream
 ---
 
 The young man was at a party in a ballroom. He might still be. That's the beginning and end of this story.

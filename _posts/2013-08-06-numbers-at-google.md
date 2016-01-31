@@ -3,9 +3,10 @@ layout: post
 hidden: true
 title: Numbers at Google
 date: 2013-08-06 21:40:00 -0500
-section: writing
-subsection: blog
-desc: Reflection on a day during my internship at Google.
+tags:
+- writing
+- life
+- tech
 ---
 
 This is a post about some numbers that I saw at work one day during my

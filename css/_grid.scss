@@ -1,11 +1,11 @@
 $grid-breakpoint: 650px;
-$gutter-width: 1.5rem;
-$col-1-width: 20%;
+$gutter-width: 3.0rem;
+$col-1-width: 25%;
 $col-2-width: 100% - 2*$col-1-width;
 $col-ratio: percentage($col-1-width/$col-2-width);
 
 .grid {
-  &__col-1, &__col-2, &__col-alone {
+  &__col-1, &__col-2, &__col-3, &__col-alone {
     display: block;
   }
   
@@ -17,14 +17,21 @@ $col-ratio: percentage($col-1-width/$col-2-width);
     overflow: hidden;
     clear: left;
     
-    &__col-1, &__col-2, &__col-alone {
+    &__col-1, &__col-2, &__col-3, &__col-alone {
       float: left;
     }
 
-    &__col-1 {
+    &__col-1, &__col-3 {
       width: $col-1-width;
-      padding-right: $gutter-width;
       margin-bottom: 0;
+    }
+
+    &__col-1 {
+      padding-right: $gutter-width;
+    }
+
+    &__col-3 {
+      padding-left: $gutter-width;
     }
 
     &__col-2, &__col-alone {
@@ -38,8 +45,7 @@ $col-ratio: percentage($col-1-width/$col-2-width);
       }
 
       .banner {
-        margin-left: -$col-ratio;
-        width: percentage(100%/$col-2-width);
+        width: percentage((100% - $col-1-width)/$col-2-width);
         max-height: calc(100% - 4rem);
       }
     }

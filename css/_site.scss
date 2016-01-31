@@ -1,6 +1,6 @@
 %wrap {
   margin: 0 auto;
-  max-width: 50rem;
+  max-width: 60rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   position: relative;
@@ -11,34 +11,35 @@
 }
 
 .section {
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
+  padding-top: $bigskip;
 }
 
-header {
-  border-bottom: 1px solid $background-accent;
-}
-
-footer {
-  border-top: 1px solid $background-accent;
+.site__header {
+  margin-top: $medskip;
 }
 
 .site__nav {
-  a:link,
-  a:visited {
-    text-decoration: none;
+  a {
+    @extend .plain;
   }
 
-  ul a:not(.active):not(:hover) {
-    &:link,
-    &:visited {
-      color: $color-light;
-    }
+  ul a {
+    @extend %light-link;
   }
 
   ul li {
     display: inline;
     margin-right: 1.0rem;
+  }
+}
+
+.site__footer {
+  padding-bottom: $bigskip;
+  @extend .small;
+  @extend .meta;
+
+  a {
+    @extend %light-link;
   }
 }
 

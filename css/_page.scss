@@ -1,29 +1,38 @@
 .page {
-  h1 {
-    font-weight: bold;
-  }
-
   &__time {
     display: block;
-    margin-top: $bigskip;
+    margin-top: $smallskip;
   }
 
-  &__content {
-    padding-bottom: 6.0rem;
+  &__tags {
+    margin-top: $medskip;
 
+    a {
+      @extend %light-link;
+      @extend .plain;
+    }
+  }
+  
+  &__content {
+    padding-bottom: 1.5 * $bigskip;
+
+    h2,
     ul,
     ol,
     blockquote,
     figure,
-    h2 {
-      margin-bottom: $smallskip;
+    .environment {
+      & + * {
+        margin-top: $smallskip;
+      }
     }
 
     p + ul,
     p + ol,
     p + blockquote,
-    p + figure {
-      margin-bottom: $smallskip;
+    p + figure,
+    p + .environment, {
+      margin-top: $smallskip;
     }
 
     p + p {
@@ -54,53 +63,70 @@
       margin-left: 2px;
       padding-left: 1.5rem;
     }
-
+    
     * + h2,
     hr {
       padding-top: $medskip;
-    }
-
-
-    @media (min-width: $grid-breakpoint) {
-      * + h2 + * {
-        padding-top: $medskip;
-      }
-    }
-
-    h2 {
-      @extend .alignleft;
-      @extend .meta;
     }
   }
 }
 
 .entrylist {
+  a {
+    @extend .plain;
+  }
+  
   li {
     margin-bottom: $smallskip;
     position: relative;
   }
 
+  &__title {
+    display: block;
+  }
+
   &__meta {
     display: table;
-
-    @media (min-width: $grid-breakpoint) {
-      width: 100% + $col-ratio;
-    }
   }
 
   &__desc {
     display: table-cell;
     width: 100%;
+  }
 
-    @media (min-width: $grid-breakpoint) {
-      width: percentage($col-2-width / ($col-1-width + $col-2-width));
+  &__tags {
+    a {
+      @extend %light-link;
     }
+    
+    &, li {
+      display: inline;
+      margin-right: 0.2rem;
+    }
+  }
+  
+  &__time, &__progress {
+    display: table-cell;
   }
 
   &__time {
-    display: table-cell;
-    padding-left: $gutter-width;
     white-space: nowrap;
+    padding-left: 2.0rem;
+  }
+
+  &__progress {
+    width: 5rem;
+    height: 0.2rem;
+    box-shadow: 0 0 0 1px $color-progress;
+    border-radius: 5px;
+
+    &::-webkit-progress-bar {
+      background: $background-progress;
+    }
+
+    &::-webkit-progress-value {
+      background: $color-progress;
+    }
   }
 }
 
@@ -134,4 +160,72 @@
       }
     }
   }
+}
+
+.MathJax_Display {
+    margin: $smallskip rem 0 !important;
+
+    & * {
+      color: $color-base !important;
+    }
+}
+
+.environment {
+    .environment_label {
+      float: left;
+    }
+
+    .environment_body {
+        overflow: hidden;
+    }
+
+    .environment_header {
+      font-weight: 600;
+      
+      &, p, & + p {
+        display: inline;
+      }
+    }
+
+    &.priority-2 {
+        & > .environment_label {
+            padding-right: 8px;
+        }
+
+        & > .environment_body .environment_header {
+            font-style: italic;
+        }
+    }
+}
+
+.preamble {
+    display: none;
+}
+
+.ref, .footnote {
+  @extend %light-link;
+  @extend .plain;
+}
+
+.footnote {
+  padding: .2em;
+}
+
+.footnotes {
+    &:before {
+        content: '';
+        display: block;
+        background: $background-accent;
+        height: 1px;
+        width: 75px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    ol {
+        list-style-type: decimal;
+        margin-left: 20px;
+        font-size: $size-small;
+        line-height: $line-height-small;
+    }
 }

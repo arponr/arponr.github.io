@@ -2,9 +2,9 @@
 layout: post
 title: Metro North
 date: 2015-09-04 00:30:00 -0500
-section: writing
-subsection: blog
-desc: Being alone on public transportation really lends itself to feeling.
+tags:
+- writing
+- life
 ---
 
 You're on the Metro North Railroad traveling from Grand Central Station to Stamford, CT, seated facing the rear of the train, neck twisted towards the window on your left. You slip in your earbuds and welcome that Irish genius's crooning into your blood. Your eyes open and close as the old train wobbles leisurely out of the dim tunnel.

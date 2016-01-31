@@ -1,26 +1,37 @@
-{% include header.html %}
+---
+layout: base
+---
 
 <main class="site__content" role="main">
-  <article class="page">
+  <article class="page grid section">
     
-    <div class="grid section page__content">
-      <div class="grid__col-alone">
-        {% if page.subsections %}
-        {% for s in page.subsections %}
-        {% assign entries = s.entries %}
-        <h2>{{ s.title }}</h2>
+    <header class="page__header grid__col-1">
+      <h1>{{ page.title }}</h1>
+    </header>
+    
+    <div class="page__content grid__col-2">
+      {{ content }}
+      
+      {% if page.subsections %}
+      {% for s in page.subsections %}
+      <h2>{{ s.title }}</h2>
+      <ul class="entrylist">
+        {% for e in s.entries %}
         {% include entrylist.html %}
         {% endfor %}
+      </ul>
+      {% endfor %}
 
-        {% else %}
-        {% assign entries = page.entries %}
+      {% else %}
+      <ul class="entrylist">
+        {% for e in page.entries %}
         {% include entrylist.html %}
-
-        {% endif %}
-      </div>
+        {% endfor %}
+      </ul>
+      
+      {% endif %}
     </div>
     
   </article>
 </main>
 
-{% include footer.html %}
