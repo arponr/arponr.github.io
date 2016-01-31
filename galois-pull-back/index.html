@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>arponr | Pulling back a Galois correspondence</title>
+    <meta name="viewport" content="initial-scale=1"/>
+    <meta property="og:title" content="Pulling back a Galois correspondence"/>
+    <meta property="og:site_name" content="arponr"/>
+    <script src="//use.typekit.net/cen6cew.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=/js/jax-config.js"></script>
+    
+  </head>
+
+  <body class="">
+    <div class="site">
+      <header class="site__header" role="banner">
+        <nav class="grid site__nav" role="navigation">
+          <a class="grid__col-1" href="/">Arpon R.</a>
+          <ul class="grid__col-2">
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/academic/">Academic</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/math/">Math</a></li>
+            
+            
+            
+            <li><a 
+                   href="/tag/reading/">Reading</a></li>
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/writing/">Writing</a></li>
+            
+            
+          </ul>
+        </nav>
+      </header>
+
+
+<main class="site__content" role="main">
+  <article class="page grid section">
+    
+    <header class="page__header grid__col-1">
+      <h1>Pulling back a Galois correspondence</h1>
+
+      <div class="page__meta">
+        
+        <time pubdate datetime="2014-10-25 22:30:00 +0100" class="page__time">
+          25 October 2014
+        </time>
+        
+
+        
+        <ul class="page__tags">
+          
+          <li><a href="/tag/math">#math</a></li>
+          
+          <li><a href="/tag/group-theory">#group theory</a></li>
+          
+          <li><a href="/tag/galois-theory">#galois theory</a></li>
+          
+          <li><a href="/tag/class-field-theory">#class field theory</a></li>
+          
+        </ul>
+        
+      </div>
+    </header>
+
+    <div class="page__content grid__col-2">
+    
+    <div class="preamble">
+      $$
+      
+      \newcommand{ \inj }{ \hookrightarrow }
+      
+      \newcommand{ \Sub }{ \opname{Sub} }
+      
+      \newcommand{ \Gal }{ \opname{Gal} }
+      
+      \newcommand{ \Stab }{ \opname{Stab} }
+      
+      \newcommand{ \ab }{ \mathrm{ab} }
+      
+      \newcommand{ \Ab }{ \mathrm{Ab} }
+      
+      $$
+    </div>
+    
+    
+    <div class="text">
+      <div id="sub" class="environment priority-1 definition">
+  <div class="environment_body">
+    <div class="environment_header">
+      <p>1. Definition.</p>
+    </div>
+    <p>For $G$ a topological group, we denote by $\Sub_G$ the set of open normal subgroups of $G$, which is a poset under inclusion.</p>
+  </div>
+</div>
+<div id="main" class="environment priority-1 proposition">
+  <div class="environment_body">
+    <div class="environment_header">
+      <p>2. Proposition.</p>
+    </div>
+    <p>Let $G$ be a profinite group. Suppose we have a morphism of topological groups $\phi \c A \to$ $G$ such that for every $N \in \Sub_G$ the induced map $\phi_N \c A/\phi^{-1}(N) \to$ $G/N$ is an isomorphism. Then:</p>
+
+    <div id="preimage-injective" class="environment priority-2">
+      <div class="environment_label">
+        <p>(2.1)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>the preimage map $\Sub_G \to$ $\Sub_A$, defined by $N \mapsto \phi^{-1}(N)$, is injective;</p>
+      </div>
+    </div>
+    <div id="join-preserved" class="environment priority-2">
+      <div class="environment_label">
+        <p>(2.2)</p>
+      </div>
+      <div class="environment_body">
+        <div class="environment_header">
+
+        </div>
+        <p>$\phi^{-1}(N_1N_2) = \phi^{-1}(N_1)\phi^{-1}(N_2)$ for $N_1,N_2 \in \Sub_G$.</p>
+      </div>
+    </div>
+    <div class="environment priority-1 proof">
+      <div class="environment_body">
+        <div class="environment_header">
+          <p>Proof.</p>
+        </div>
+        <p>Let $N_1,N_2 \in \Sub_G$. To prove <a href="#preimage-injective" class="ref">[2.1]</a> It suffices to show that $N_1 \subseteq$ $N_2$ if $\phi^{-1}(N_1) \subseteq$ $\phi^{-1}(N_2)$, so assume the latter. Then</p>
+
+        <p><span id=intersection-preserved></span></p>
+
+$$
+\tag{2.3}
+\phi^{-1}(N_1 \cap N_2) = \phi^{-1}(N_1) \cap \phi^{-1}(N_2) =
+\phi^{-1}(N_2).$$
+
+        <p>Now consider the commutative diagram</p>
+
+$$
+\begin{xy}
+\xymatrix{
+  A \ar[d]^\phi \ar[r] &
+  A/\phi^{-1}(N_1 \cap N_2) \ar[d]^{\phi_{N_1 \cap N_2}} \ar[r]
+    &
+  A/\phi^{-1}(N_2) \ar[d]^{\phi_{N_2}} \\
+  G \ar[r] &
+  G/(N_1 \cap N_2) \ar[r] &
+  G/N_2
+}
+\end{xy}
+$$
+
+        <p>with the horizontal maps the projections. In the right-hand square, the vertical maps are isomorphisms by hypothesis, and the top horizontal map is an isomorphism by
+<a href="#intersection-preserved" class="ref">[2.3]</a>; thus the bottom horizontal map is an isomorphism, which implies $N_1 \subseteq$ $N_2$.</p>
+
+        <p>We now prove <a href="#join-preserved" class="ref">[2.2]</a>. Certainly $\phi^{-1}(N_1N_2) \supseteq$ $\phi^{-1}(N_1)\phi^{-1}(N_2)$. And it’s fairly easy to see we have the sequence of identifications</p>
+
+$$
+\frac{\phi^{-1}(N_1)\phi^{-1}(N_2)}{\phi^{-1}(N_1)} \iso
+\frac{\phi^{-1}(N_2)}{\phi^{-1}(N_1) \cap \phi^{-1}(N_2)} =
+\frac{\phi^{-1}(N_2)}{\phi^{-1}(N_1 \cap N_2)} =
+\phi_{N_1 \cap N_2}^{-1}\l( \frac{N_1}{N_1 \cap N_2} \r) \iso 
+\phi_{N_1}^{-1}\l( \frac{N_1N_2}{N_1} \r) =
+\frac{\phi^{-1}(N_1N_2)}{\phi^{-1}(N_1)}.
+$$
+
+        <p>But since $\phi^{-1}(N_1)$ has finite index in $A$, it follows that</p>
+
+$$
+[\phi^{-1}(N_1N_2) : \phi^{-1}(N_1)\phi^{-1}(N_2)] =
+\l[ \frac{\phi^{-1}(N_1N_2)}{\phi^{-1}(N_1)} :
+\frac{\phi^{-1}(N_1)\phi^{-1}(N_2)}{\phi^{-1}(N_1)} \r] = 1,
+$$
+
+        <p>proving the desired claim.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="local-cft" class="environment priority-1 example">
+  <div class="environment_body">
+    <div class="environment_header">
+      <p>3. Example.</p>
+    </div>
+    <p>If we take $G$ to be a Galois group in <a href="#main" class="ref">[2]</a>, then the proposition says that when we have a suitable morphism $A \to$ $G$, the Galois theory described by $G$ is in fact controlled by
+$A$. This is what I meant by “pulling back a Galois correspondence” in the title. Let’s state this in more detail in the motivating example.</p>
+
+    <p>Let $K$ be a non-archimedean local field. Let $K^\ab$ be a maximal abelian extension of $K$. The Galois group $G \ce \Gal(K^\ab/K)$ is a profinite group, and Galois theory tells us that the poset $\Sub_G$ is anti-equivalent<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> to the poset $\Ab_K$ of finite abelian extensions of $K$, i.e. the set of finite subextensions of $K^\ab$ ordered by inclusion. The “reciprocity” statement in local class field theory asserts:</p>
+
+    <ul>
+      <li>the existence of a morphism $\phi_K \c K^\times \to$ $\Gal(K^\ab/K)$ satisfying the hypothesis of <a href="#main" class="ref">[2]</a>;</li>
+      <li>if $N \ce \Stab_L \in \Sub_G$ is the subgroup corresponding to a finite abelian extension $K \inj L$, then $\phi_K^{-1}(N)$ is the <em>norm group</em> $N_{L/K}(L^\times) \subseteq$ $K^\times$.</li>
+    </ul>
+
+    <p>Thus, putting <a href="#main" class="ref">[2]</a> and Galois theory together gives us that the poset $\Ab_K$ is anti-equivalent to the poset of norm groups in $K^\times$ by the correspondence $L \mapsto N_{L/K}(L^\times)$. Then there is an “existence” theorem in local class field theory stating that the norm groups are precisely the open subgroups of finite index in $K^\times$.</p>
+  </div>
+</div>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>I just made up this terminology, who cares. What I mean is when you view the posets as categories, there is a contravariant equivalence. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    </div>
+    </div>
+
+  </article>
+</main>
+
+
+
+
+<footer class="site__footer wrap grid">
+  <p class="grid__col-alone">
+    &copy; 2016 Arpon Raksit &mdash;
+    <a href="mailto:arpon.raksit@gmail.com">arpon.raksit@gmail.com</a>
+  </p>
+</footer>
+
+</div>
+</body>
+</html>
+
