@@ -48,6 +48,7 @@ module Jekyll
     def initialize(site, page, all_posts, tag, num_pages = nil)
       @tag = tag
       super site, page, all_posts, num_pages
+      @root = paginate_root()
       @previous_page_path = paginate_path(site, @previous_page)
       @next_page_path = paginate_path(site, @next_page)
     end
@@ -57,6 +58,7 @@ module Jekyll
     def to_liquid
       liquid = original_to_liquid
       liquid['tag'] = @tag
+      liquid['root'] = @root
       liquid
     end
 
@@ -66,8 +68,8 @@ module Jekyll
     end
 
     def paginate_dir(site, num_page)
-      return paginate_root() if num_page <= 1
-      format = File.join(paginate_root(), site.config['paginate_path'])
+      return @root if num_page <= 1
+      format = File.join(@root, site.config['paginate_path'])
       unless format.include?(":num")
         raise ArgumentError.new("Invalid pagination path: '#{format}'. It must include ':num'.")
       end
