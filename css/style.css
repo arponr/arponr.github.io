@@ -65,7 +65,7 @@ a:link, a:visited {
   color: inherit; }
 a:hover {
   color: #dd6622; }
-.site__nav a:link, .page__tags a:link, .page__pagination a:link, a.ref:link, a.footnote:link, .entrylist a:link, .site__nav a:visited, .page__tags a:visited, .page__pagination a:visited, a.ref:visited, a.footnote:visited, .entrylist a:visited {
+.site__nav a:link, .page h1 a:link, .page__tags a:link, .page__pagination a:link, a.ref:link, a.footnote:link, .entrylist a:link, .site__nav a:visited, .page h1 a:visited, .page__tags a:visited, .page__pagination a:visited, a.ref:visited, a.footnote:visited, .entrylist a:visited {
   text-decoration: none; }
 a.site__footer:not(.active):not(:hover):link, a.page__meta:not(.active):not(:hover):link, a.ref:not(.active):not(:hover):link, a.footnote:not(.active):not(:hover):link, a.entrylist__meta:not(.active):not(:hover):link, a.site__footer:not(.active):not(:hover):visited, a.page__meta:not(.active):not(:hover):visited, a.ref:not(.active):not(:hover):visited, a.footnote:not(.active):not(:hover):visited, a.entrylist__meta:not(.active):not(:hover):visited {
   color: #777777; }
