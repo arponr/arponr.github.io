@@ -10,6 +10,8 @@ layout: base
     </header>
     
     <div class="page__content grid__col-2">
+      {% if paginator.page == 1 %}
+      
       {% if page.tag == "reading" %}
       I also keep a <a href="/reading-list">reading list</a>.
 
@@ -19,19 +21,22 @@ layout: base
       {% endif %}
 
       <h2>Recent posts</h2>
+      {% endif %}
+      
       <ul class="entrylist">        
-        {% for e in site.posts %}
-
-        {% unless page.tag %}
-        {% include entrylist.html %}
-        {% endunless %}
-
-        {% if page.tag and e.tags contains page.tag %}
-        {% include entrylist.html %}
-        {% endif %}
-        
+        {% for e in paginator.posts %}
+        {% include entrylist.html %}        
         {% endfor %}
       </ul>
+
+      <div class="page__pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">&#8592;</a>
+        {% endif %}
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">&rarr;</a>
+        {% endif %}
+      </div>
     </div>
       
   </article>

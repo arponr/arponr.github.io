@@ -40,7 +40,7 @@ a:visited {
   text-decoration: underline;
   color: #222222; }
 
-a.plain:link, .site__nav a:link, .page__tags a:link, .entrylist a:link, a.ref:link, a.footnote:link, a.plain:visited, .site__nav a:visited, .page__tags a:visited, .entrylist a:visited, a.ref:visited, a.footnote:visited {
+a.plain:link, .site__nav a:link, .page__tags a:link, .page__pagination a:link, .entrylist a:link, a.ref:link, a.footnote:link, a.plain:visited, .site__nav a:visited, .page__tags a:visited, .page__pagination a:visited, .entrylist a:visited, a.ref:visited, a.footnote:visited {
   text-decoration: none; }
 
 a:hover {
@@ -160,6 +160,12 @@ sub {
   .page__content * + h2,
   .page__content hr {
     padding-top: 1.4rem; }
+.page__pagination {
+  margin-top: 1.4rem; }
+  .page__pagination .previous {
+    float: left; }
+  .page__pagination .next {
+    float: right; }
 
 .entrylist li {
   margin-bottom: 0.7rem;

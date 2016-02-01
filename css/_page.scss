@@ -69,6 +69,22 @@
       padding-top: $medskip;
     }
   }
+
+  &__pagination {
+    margin-top: $medskip;
+
+    a {
+      @extend .plain;
+    }
+    
+    .previous {
+      float: left;
+    }
+
+    .next {
+      float: right;
+    }
+  }
 }
 
 .entrylist {

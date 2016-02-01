@@ -1,0 +1,29 @@
+---
+layout: base
+---
+
+<main class="site__content" role="main">
+  <article class="page grid section">
+    
+    <header class="page__header grid__col-1">
+      <h1>{{ page.title }}</h1>
+    </header>
+    
+    <div class="page__content grid__col-2">
+      {{ content }}
+
+      <h2>Recent posts</h2>
+      <ul class="entrylist">        
+        {% for e in site.posts limit:5 %}
+        {% include entrylist.html %}        
+        {% endfor %}
+      </ul>
+
+      <div class="page__pagination">
+        <a href="/all" class="next">&rarr;</a>
+      </div>
+    </div>
+      
+  </article>
+</main>
+
