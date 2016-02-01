@@ -1,0 +1,26 @@
+a {
+  &:link,
+  &:visited {
+    text-decoration: underline;
+    color: inherit;
+  }
+
+  &:hover {
+    color: $color-accent;
+  }
+
+
+  &%plain {
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+  }
+
+  &%meta:not(.active):not(:hover) {
+    &:link,
+    &:visited {
+      color: $color-light;
+    }
+  }
+}

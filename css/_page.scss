@@ -1,4 +1,8 @@
 .page {
+  &__meta {
+    @extend %meta;
+  }
+  
   &__time {
     display: block;
     margin-top: $smallskip;
@@ -8,8 +12,7 @@
     margin-top: $medskip;
 
     a {
-      @extend %light-link;
-      @extend .plain;
+      @extend %plain;
     }
   }
   
@@ -53,8 +56,8 @@
 
       figcaption {
         width: 75%;
-        @extend .small;
-        @extend .meta;
+        @extend %small;
+        @extend %meta;
       }
     }
 
@@ -74,7 +77,7 @@
     margin-top: $medskip;
 
     a {
-      @extend .plain;
+      @extend %plain;
     }
     
     .previous {
@@ -83,65 +86,6 @@
 
     .next {
       float: right;
-    }
-  }
-}
-
-.entrylist {
-  a {
-    @extend .plain;
-  }
-  
-  li {
-    margin-bottom: $smallskip;
-    position: relative;
-  }
-
-  &__title {
-    display: block;
-  }
-
-  &__meta {
-    display: table;
-  }
-
-  &__desc {
-    display: table-cell;
-    width: 100%;
-  }
-
-  &__tags {
-    a {
-      @extend %light-link;
-    }
-    
-    &, li {
-      display: inline;
-      margin-right: 0.2rem;
-    }
-  }
-  
-  &__time, &__progress {
-    display: table-cell;
-  }
-
-  &__time {
-    white-space: nowrap;
-    padding-left: 2.0rem;
-  }
-
-  &__progress {
-    width: 5rem;
-    height: 0.2rem;
-    box-shadow: 0 0 0 1px $color-progress;
-    border-radius: 5px;
-
-    &::-webkit-progress-bar {
-      background: $background-progress;
-    }
-
-    &::-webkit-progress-value {
-      background: $color-progress;
     }
   }
 }
@@ -178,49 +122,9 @@
   }
 }
 
-.MathJax_Display {
-    margin: $smallskip rem 0 !important;
-
-    & * {
-      color: $color-base !important;
-    }
-}
-
-.environment {
-    .environment_label {
-      float: left;
-    }
-
-    .environment_body {
-        overflow: hidden;
-    }
-
-    .environment_header {
-      font-weight: 600;
-      
-      &, p, & + p {
-        display: inline;
-      }
-    }
-
-    &.priority-2 {
-        & > .environment_label {
-            padding-right: 8px;
-        }
-
-        & > .environment_body .environment_header {
-            font-style: italic;
-        }
-    }
-}
-
-.preamble {
-    display: none;
-}
-
 .ref, .footnote {
-  @extend %light-link;
-  @extend .plain;
+  @extend %meta;
+  @extend %plain;
 }
 
 .footnote {
@@ -228,20 +132,20 @@
 }
 
 .footnotes {
-    &:before {
-        content: '';
-        display: block;
-        background: $background-accent;
-        height: 1px;
-        width: 75px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-    }
+  &:before {
+    content: '';
+    display: block;
+    background: $background-accent;
+    height: 1px;
+    width: 75px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
 
-    ol {
-        list-style-type: decimal;
-        margin-left: 20px;
-        font-size: $size-small;
-        line-height: $line-height-small;
-    }
+  ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+    font-size: $size-small;
+    line-height: $line-height-small;
+  }
 }

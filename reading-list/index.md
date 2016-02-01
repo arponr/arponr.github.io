@@ -6,9 +6,6 @@ subsections:
   entries:
   - title: Open City
     desc: by Teju Cole
-    progress:
-      at: 88
-      total: 259
 - title: Completed
   entries:
   - title: Pride and Prejudice

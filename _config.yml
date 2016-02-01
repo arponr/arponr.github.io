@@ -7,7 +7,7 @@ permalink: pretty
 
 exclude: ["publish.sh"]
 
-paginate: 2
+paginate: 15
 paginate_path: ":num"
 
 nav_tags:

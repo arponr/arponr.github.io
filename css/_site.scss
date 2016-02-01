@@ -8,46 +8,35 @@
 
 .site {
   @extend %wrap;
+
+  
+  &__header {
+    margin-top: $medskip;
+  }
+
+  &__nav {
+    a {
+      @extend %plain;
+    }
+
+    ul {
+      @extend %meta;
+    }
+
+    ul li {
+      display: inline;
+      margin-right: 1.0rem;
+    }
+  }
+
+  &__footer {
+    padding-bottom: $bigskip;
+    @extend %small;
+    @extend %meta;
+  }
 }
 
 .section {
   padding-top: $bigskip;
 }
 
-.site__header {
-  margin-top: $medskip;
-}
-
-.site__nav {
-  a {
-    @extend .plain;
-  }
-
-  ul a {
-    @extend %light-link;
-  }
-
-  ul li {
-    display: inline;
-    margin-right: 1.0rem;
-  }
-}
-
-.site__footer {
-  padding-bottom: $bigskip;
-  @extend .small;
-  @extend .meta;
-
-  a {
-    @extend %light-link;
-  }
-}
-
-.small {
-  font-size: $size-small;
-  line-height: $line-height-small;
-}
-
-.meta, time {
-  color: $color-light;
-}

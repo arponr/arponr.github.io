@@ -1,0 +1,40 @@
+.entrylist {
+  a {
+    @extend %plain;
+  }
+  
+  li {
+    margin-bottom: $smallskip;
+    position: relative;
+  }
+
+  &__title {
+    display: block;
+  }
+
+  &__meta {
+    display: table;
+    @extend %small;
+    @extend %meta;
+  }
+
+  &__desc, &__time {
+    display: table-cell;
+  }
+
+  &__desc {
+    width: 100%;
+  }
+
+  &__tags {
+    &, li {
+      display: inline;
+      margin-right: 0.2rem;
+    }
+  }
+
+  &__time {
+    white-space: nowrap;
+    padding-left: 2.0rem;
+  }
+}

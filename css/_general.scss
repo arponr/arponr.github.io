@@ -47,32 +47,6 @@ html {
   }
 }
 
-a:link,
-a:visited {
-  text-decoration: underline;
-  color: $color-base;
-}
-
-a.plain {
-  &:link,
-  &:visited {
-    text-decoration: none;
-  }
-}
-
-a:hover {
-  color: $color-accent;
-}
-
-%light-link {
-  &:not(.active):not(:hover) {
-    &:link,
-    &:visited {
-      color: $color-light;
-    }
-  }
-}
-
 ul {
   list-style: none;
 }
@@ -94,4 +68,13 @@ sup {
 
 sub {
   top: 0.5em;
+}
+
+%small {
+  font-size: $size-small;
+  line-height: $line-height-small;
+}
+
+%meta {
+  color: $color-light;
 }

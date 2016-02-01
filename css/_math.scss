@@ -1,0 +1,39 @@
+.MathJax_Display {
+  margin: $smallskip 0 !important;
+
+  & * {
+    color: $color-base !important;
+  }
+}
+
+.environment {
+  .environment_label {
+    float: left;
+  }
+
+  .environment_body {
+    overflow: hidden;
+  }
+
+  .environment_header {
+    font-weight: 600;
+    
+    &, p, & + p {
+      display: inline;
+    }
+  }
+
+  &.priority-2 {
+    & > .environment_label {
+      padding-right: 8px;
+    }
+
+    & > .environment_body .environment_header {
+      font-style: italic;
+    }
+  }
+}
+
+.preamble {
+  display: none;
+}
