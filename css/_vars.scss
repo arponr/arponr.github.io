@@ -4,7 +4,7 @@ $size-base: (16/16)*100%;
 $size-small: .9em;
 
 $line-height: 1.4;
-$line-height-united: $line-height * 1rem;
+$line-height-unit: $line-height * 1rem;
 $line-height-small: 1.3;
 
 $background-base: #ffffff;
@@ -17,6 +17,7 @@ $color-accent: #dd6622;
 $background-progress: #dddddd;
 $color-progress: #888888;
 
-$smallskip: 0.5 * $line-height-united;
-$medskip: 1 * $line-height-united;
-$bigskip: 2 * $line-height-united;
+$tinyskip: 0.25 * $line-height-unit;
+$smallskip: 0.5 * $line-height-unit;
+$medskip: 1 * $line-height-unit;
+$bigskip: 2 * $line-height-unit;

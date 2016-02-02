@@ -1,5 +1,5 @@
 .MathJax_Display {
-  margin: $smallskip 0 !important;
+  margin: $tinyskip 0 !important;
 
   & * {
     color: $color-base !important;
@@ -7,30 +7,39 @@
 }
 
 .environment {
-  .environment_label {
-    float: left;
+  margin-bottom: $smallskip;
+  
+  * + & {
+    margin-top: $smallskip;
   }
-
-  .environment_body {
-    overflow: hidden;
-  }
-
-  .environment_header {
+  
+  &__header {
     font-weight: 600;
     
     &, p, & + p {
       display: inline;
     }
   }
+}
 
-  &.priority-2 {
-    & > .environment_label {
-      padding-right: 8px;
-    }
+.enumerate {
+  margin-bottom: $tinyskip;
 
-    & > .environment_body .environment_header {
-      font-style: italic;
-    }
+  * + & {
+    margin-top: $tinyskip;
+  }
+  
+  &__label {
+    float: left;
+    padding-right: 0.5rem;
+  }
+
+  &__body {
+    overflow: hidden;
+  }
+
+  &__header {
+    font-style: italic;
   }
 }
 

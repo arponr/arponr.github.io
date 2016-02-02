@@ -110,13 +110,17 @@
         
         <ul class="page__tags">
           
+          
           <li><a href="/tag/math">#math</a></li>
           
-          <li><a href="/tag/group-theory">#group theory</a></li>
           
-          <li><a href="/tag/galois-theory">#galois theory</a></li>
+          <li><a href="/tag/group-theory">#group-theory</a></li>
           
-          <li><a href="/tag/class-field-theory">#class field theory</a></li>
+          
+          <li><a href="/tag/galois-theory">#galois-theory</a></li>
+          
+          
+          <li><a href="/tag/class-field-theory">#class-field-theory</a></li>
           
         </ul>
         
@@ -145,77 +149,75 @@
     
     
     <div class="text">
-      <div id="sub" class="environment priority-1 definition">
-  <div class="environment_body">
-    <div class="environment_header">
+      <div class="environment" id="sub">
+  <div class="environment__body">
+    <div class="environment__header">
       <p>1. Definition.</p>
     </div>
     <p>For $G$ a topological group, we denote by $\Sub_G$ the set of open normal subgroups of $G$, which is a poset under inclusion.</p>
   </div>
 </div>
-<div id="main" class="environment priority-1 proposition">
-  <div class="environment_body">
-    <div class="environment_header">
+<div class="environment" id="main">
+  <div class="environment__body">
+    <div class="environment__header">
       <p>2. Proposition.</p>
     </div>
     <p>Let $G$ be a profinite group. Suppose we have a morphism of topological groups $\phi \c A \to$ $G$ such that for every $N \in \Sub_G$ the induced map $\phi_N \c A/\phi^{-1}(N) \to$ $G/N$ is an isomorphism. Then:</p>
 
-    <div id="preimage-injective" class="environment priority-2">
-      <div class="environment_label">
+    <div class="enumerate" id="preimage-injective">
+      <div class="enumerate__label">
         <p>(2.1)</p>
       </div>
-      <div class="environment_body">
-        <div class="environment_header">
+      <div class="enumerate__body">
+        <div class="enumerate__header">
 
         </div>
         <p>the preimage map $\Sub_G \to$ $\Sub_A$, defined by $N \mapsto \phi^{-1}(N)$, is injective;</p>
       </div>
     </div>
-    <div id="join-preserved" class="environment priority-2">
-      <div class="environment_label">
+    <div class="enumerate" id="join-preserved">
+      <div class="enumerate__label">
         <p>(2.2)</p>
       </div>
-      <div class="environment_body">
-        <div class="environment_header">
+      <div class="enumerate__body">
+        <div class="enumerate__header">
 
         </div>
         <p>$\phi^{-1}(N_1N_2) = \phi^{-1}(N_1)\phi^{-1}(N_2)$ for $N_1,N_2 \in \Sub_G$.</p>
       </div>
     </div>
-    <div class="environment priority-1 proof">
-      <div class="environment_body">
-        <div class="environment_header">
+    <div class="environment">
+      <div class="environment__body">
+        <div class="environment__header">
           <p>Proof.</p>
         </div>
-        <p>Let $N_1,N_2 \in \Sub_G$. To prove <a href="#preimage-injective" class="ref">[2.1]</a> It suffices to show that $N_1 \subseteq$ $N_2$ if $\phi^{-1}(N_1) \subseteq$ $\phi^{-1}(N_2)$, so assume the latter. Then</p>
-
-        <p><span id=intersection-preserved></span></p>
+        <p>Let $N_1,N_2 \in \Sub_G$. To prove <a href="#preimage-injective" class="ref">[2.1]</a> It suffices to show that $N_1 \subseteq$ $N_2$ if $\phi^{-1}(N_1) \subseteq$ $\phi^{-1}(N_2)$, so assume the latter. Then
+<span id=intersection-preserved></span></p>
 
 $$
 \tag{2.3}
 \phi^{-1}(N_1 \cap N_2) = \phi^{-1}(N_1) \cap \phi^{-1}(N_2) =
 \phi^{-1}(N_2).$$
 
-        <p>Now consider the commutative diagram</p>
+        <p>Now consider the commutative diagram
 
 $$
 \begin{xy}
 \xymatrix{
-  A \ar[d]^\phi \ar[r] &
-  A/\phi^{-1}(N_1 \cap N_2) \ar[d]^{\phi_{N_1 \cap N_2}} \ar[r]
+    A \ar[d]^\phi \ar[r] &
+    A/\phi^{-1}(N_1 \cap N_2) \ar[d]^{\phi_{N_1 \cap N_2}} \ar[r]
     &
-  A/\phi^{-1}(N_2) \ar[d]^{\phi_{N_2}} \\
-  G \ar[r] &
-  G/(N_1 \cap N_2) \ar[r] &
-  G/N_2
+    A/\phi^{-1}(N_2) \ar[d]^{\phi_{N_2}} \\
+    G \ar[r] &
+    G/(N_1 \cap N_2) \ar[r] &
+    G/N_2
 }
 \end{xy}
 $$
 
-        <p>with the horizontal maps the projections. In the right-hand square, the vertical maps are isomorphisms by hypothesis, and the top horizontal map is an isomorphism by
-<a href="#intersection-preserved" class="ref">[2.3]</a>; thus the bottom horizontal map is an isomorphism, which implies $N_1 \subseteq$ $N_2$.</p>
+with the horizontal maps the projections. In the right-hand square, the vertical maps are isomorphisms by hypothesis, and the top horizontal map is an isomorphism by <a href="#intersection-preserved" class="ref">[2.3]</a>; thus the bottom horizontal map is an isomorphism, which implies $N_1 \subseteq$ $N_2$.</p>
 
-        <p>We now prove <a href="#join-preserved" class="ref">[2.2]</a>. Certainly $\phi^{-1}(N_1N_2) \supseteq$ $\phi^{-1}(N_1)\phi^{-1}(N_2)$. And it’s fairly easy to see we have the sequence of identifications</p>
+        <p>We now prove <a href="#join-preserved" class="ref">[2.2]</a>. Certainly $\phi^{-1}(N_1N_2) \supseteq$ $\phi^{-1}(N_1)\phi^{-1}(N_2)$. And it’s fairly easy to see we have the sequence of identifications
 
 $$
 \frac{\phi^{-1}(N_1)\phi^{-1}(N_2)}{\phi^{-1}(N_1)} \iso
@@ -226,7 +228,7 @@ $$
 \frac{\phi^{-1}(N_1N_2)}{\phi^{-1}(N_1)}.
 $$
 
-        <p>But since $\phi^{-1}(N_1)$ has finite index in $A$, it follows that</p>
+But since $\phi^{-1}(N_1)$ has finite index in $A$, it follows that
 
 $$
 [\phi^{-1}(N_1N_2) : \phi^{-1}(N_1)\phi^{-1}(N_2)] =
@@ -234,18 +236,17 @@ $$
 \frac{\phi^{-1}(N_1)\phi^{-1}(N_2)}{\phi^{-1}(N_1)} \r] = 1,
 $$
 
-        <p>proving the desired claim.</p>
+proving the desired claim.</p>
       </div>
     </div>
   </div>
 </div>
-<div id="local-cft" class="environment priority-1 example">
-  <div class="environment_body">
-    <div class="environment_header">
+<div class="environment" id="local-cft">
+  <div class="environment__body">
+    <div class="environment__header">
       <p>3. Example.</p>
     </div>
-    <p>If we take $G$ to be a Galois group in <a href="#main" class="ref">[2]</a>, then the proposition says that when we have a suitable morphism $A \to$ $G$, the Galois theory described by $G$ is in fact controlled by
-$A$. This is what I meant by “pulling back a Galois correspondence” in the title. Let’s state this in more detail in the motivating example.</p>
+    <p>If we take $G$ to be a Galois group in <a href="#main" class="ref">[2]</a>, then the proposition says that when we have a suitable morphism $A \to$ $G$, the Galois theory described by $G$ is in fact controlled by $A$. This is what I meant by “pulling back a Galois correspondence” in the title. Let’s state this in more detail in the motivating example.</p>
 
     <p>Let $K$ be a non-archimedean local field. Let $K^\ab$ be a maximal abelian extension of $K$. The Galois group $G \ce \Gal(K^\ab/K)$ is a profinite group, and Galois theory tells us that the poset $\Sub_G$ is anti-equivalent<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> to the poset $\Ab_K$ of finite abelian extensions of $K$, i.e. the set of finite subextensions of $K^\ab$ ordered by inclusion. The “reciprocity” statement in local class field theory asserts:</p>
 

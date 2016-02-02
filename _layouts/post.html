@@ -18,7 +18,8 @@ layout: base
         {% if page.tags.size > 0 %}
         <ul class="page__tags">
           {% for tag in page.tags %}
-          <li><a href="/tag/{{ tag | replace: ' ', '-' }}">#{{ tag }}</a></li>
+          {% assign slug = tag | replace: ' ', '-' %}
+          <li><a href="/tag/{{ slug }}">#{{ slug }}</a></li>
           {% endfor %}
         </ul>
         {% endif %}

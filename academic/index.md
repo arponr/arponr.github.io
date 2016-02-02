@@ -1,6 +1,7 @@
 ---
 layout: entry-list
 title: Academic
+tag: academic
 in-nav: true
 subsections:
 - title: Formal writing

@@ -17,10 +17,17 @@ a {
     }
   }
 
-  &%meta:not(.active):not(:hover) {
+  &%meta:not(:hover) {
     &:link,
     &:visited {
       color: $color-light;
+    }
+  }
+
+  &.active:not(:hover) {
+    &:link,
+    &:visited {
+      color: $color-base;
     }
   }
 }

@@ -27,23 +27,31 @@
     ul,
     ol,
     blockquote,
-    figure,
-    .environment {
+    figure {
       & + * {
         margin-top: $smallskip;
       }
     }
 
-    p + ul,
-    p + ol,
+    ul,
+    ol {
+      & + * {
+        margin-top: $tinyskip;
+      }
+    }
+
     p + blockquote,
-    p + figure,
-    p + .environment, {
+    p + figure {
       margin-top: $smallskip;
     }
 
+    p + ul,
+    p + ol {
+      margin-top: $tinyskip;
+    }
+
     p + p {
-      text-indent: 1.2em;
+      text-indent: 1.25em;
     }
 
     li {
@@ -107,7 +115,7 @@
     margin-left: 1.5rem;
 
     li {
-      margin-bottom: 0.3rem;
+      margin-bottom: $tinyskip;
 
       ul {
         list-style-type: circle;
