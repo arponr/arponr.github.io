@@ -1,5 +1,5 @@
 .page {
-  h1 a {
+  &__header a {
     @extend %plain;
   }
   
@@ -13,10 +13,19 @@
   }
 
   &__tags {
-    margin-top: $medskip;
+    margin-top: $smallskip;
 
     a {
       @extend %plain;
+    }
+
+    @media (max-width: $grid-breakpoint - 1) {
+      margin-bottom: $medskip;
+      
+      li {
+        display: inline;
+        margin-right: 0.2rem;
+      }
     }
   }
   
@@ -81,7 +90,7 @@
     
     * + h2,
     hr {
-      padding-top: $medskip;
+      margin-top: $medskip;
     }
   }
 

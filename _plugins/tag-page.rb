@@ -12,6 +12,7 @@ module Jekyll
 
     def paginate(site, tag)
       posts = (tag == 'all') ? site.posts : site.tags[tag]
+      posts = posts.find_all { |p| !p['hidden'] }
       posts.sort_by! {|p| -p.date.to_f}
       num_pages = TagPager.calculate_pages(posts, site.config['paginate'].to_i)
       
