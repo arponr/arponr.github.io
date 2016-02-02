@@ -67,8 +67,10 @@ a:hover {
   color: #dd6622; }
 .site__nav a:link, .page h1 a:link, .page__tags a:link, .page__pagination a:link, a.ref:link, a.footnote:link, .entrylist a:link, .site__nav a:visited, .page h1 a:visited, .page__tags a:visited, .page__pagination a:visited, a.ref:visited, a.footnote:visited, .entrylist a:visited {
   text-decoration: none; }
-a.site__footer:not(.active):not(:hover):link, a.page__meta:not(.active):not(:hover):link, a.ref:not(.active):not(:hover):link, a.footnote:not(.active):not(:hover):link, a.entrylist__meta:not(.active):not(:hover):link, a.site__footer:not(.active):not(:hover):visited, a.page__meta:not(.active):not(:hover):visited, a.ref:not(.active):not(:hover):visited, a.footnote:not(.active):not(:hover):visited, a.entrylist__meta:not(.active):not(:hover):visited {
+a.site__footer:not(:hover):link, a.page__meta:not(:hover):link, a.ref:not(:hover):link, a.footnote:not(:hover):link, a.entrylist__meta:not(:hover):link, a.site__footer:not(:hover):visited, a.page__meta:not(:hover):visited, a.ref:not(:hover):visited, a.footnote:not(:hover):visited, a.entrylist__meta:not(:hover):visited {
   color: #777777; }
+a.active:not(:hover):link, a.active:not(:hover):visited {
+  color: #222222; }
 
 .grid__col-1, .grid__col-2, .grid__col-3, .grid__col-alone {
   display: block; }
@@ -129,17 +131,19 @@ a.site__footer:not(.active):not(:hover):link, a.page__meta:not(.active):not(:hov
   .page__content ul + *,
   .page__content ol + *,
   .page__content blockquote + *,
-  .page__content figure + *,
-  .page__content .environment + * {
+  .page__content figure + * {
+    margin-top: 0.7rem; }
+  .page__content ul + *,
+  .page__content ol + * {
+    margin-top: 0.35rem; }
+  .page__content p + blockquote,
+  .page__content p + figure {
     margin-top: 0.7rem; }
   .page__content p + ul,
-  .page__content p + ol,
-  .page__content p + blockquote,
-  .page__content p + figure,
-  .page__content p + .environment {
-    margin-top: 0.7rem; }
+  .page__content p + ol {
+    margin-top: 0.35rem; }
   .page__content p + p {
-    text-indent: 1.2em; }
+    text-indent: 1.25em; }
   .page__content li ul,
   .page__content li ol {
     margin-bottom: 0; }
@@ -168,7 +172,7 @@ a.site__footer:not(.active):not(:hover):link, a.page__meta:not(.active):not(:hov
 .text ul, .text ol {
   margin-left: 1.5rem; }
   .text ul li, .text ol li {
-    margin-bottom: 0.3rem; }
+    margin-bottom: 0.35rem; }
     .text ul li ul, .text ol li ul {
       list-style-type: circle; }
     .text ul li ol, .text ol li ol {
@@ -194,22 +198,30 @@ a.site__footer:not(.active):not(:hover):link, a.page__meta:not(.active):not(:hov
   line-height: 1.3; }
 
 .MathJax_Display {
-  margin: 0.7rem 0 !important; }
+  margin: 0.35rem 0 !important; }
   .MathJax_Display * {
     color: #222222 !important; }
 
-.environment .environment_label {
-  float: left; }
-.environment .environment_body {
-  overflow: hidden; }
-.environment .environment_header {
-  font-weight: 600; }
-  .environment .environment_header, .environment .environment_header p, .environment .environment_header + p {
-    display: inline; }
-.environment.priority-2 > .environment_label {
-  padding-right: 8px; }
-.environment.priority-2 > .environment_body .environment_header {
-  font-style: italic; }
+.environment {
+  margin-bottom: 0.7rem; }
+  * + .environment {
+    margin-top: 0.7rem; }
+  .environment__header {
+    font-weight: 600; }
+    .environment__header, .environment__header p, .environment__header + p {
+      display: inline; }
+
+.enumerate {
+  margin-bottom: 0.35rem; }
+  * + .enumerate {
+    margin-top: 0.35rem; }
+  .enumerate__label {
+    float: left;
+    padding-right: 0.5rem; }
+  .enumerate__body {
+    overflow: hidden; }
+  .enumerate__header {
+    font-style: italic; }
 
 .preamble {
   display: none; }
