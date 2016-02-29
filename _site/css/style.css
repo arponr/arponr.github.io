@@ -64,7 +64,7 @@ sub {
 .site__nav ul, .site__footer, .page__meta, .page__tags, .page__content figure figcaption, .ref, .footnote, .entrylist__meta {
   color: #777777; }
 
-.smcp, .page h2 {
+.smcp {
   -moz-font-feature-settings: "c2sc", "smcp";
   -webkit-font-feature-settings: "c2sc", "smcp";
   font-feature-settings: "c2sc", "smcp"; }
@@ -142,6 +142,8 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
   padding-bottom: 3.0375rem; }
   .page h1 {
     font-weight: 700; }
+  .page h2 {
+    font-weight: 600; }
   .page h3 {
     font-style: italic; }
   .page__time {
