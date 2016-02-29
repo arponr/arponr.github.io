@@ -84,10 +84,9 @@ sub {
   color: $color-light;
 }
 
-%smcp {
-  text-transform: lowercase;
-  -moz-font-feature-settings: "smcp";
-  -webkit-font-feature-settings: "smcp";
-  font-feature-settings: "smcp";
+.smcp {
+  -moz-font-feature-settings: "c2sc", "smcp";
+  -webkit-font-feature-settings: "c2sc", "smcp";
+  font-feature-settings: "c2sc", "smcp";
 }
   
