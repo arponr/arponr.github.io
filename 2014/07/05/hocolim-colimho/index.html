@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>arponr | Homotopy (co)limits aren't (co)limits in the homotopy category</title>
+    <meta name="viewport" content="initial-scale=1"/>
+    <meta property="og:title" content="Homotopy (co)limits aren't (co)limits in the homotopy category"/>
+    <meta property="og:site_name" content="arponr"/>
+    <script src="//use.typekit.net/cen6cew.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=/js/jax-config.js"></script>
+    
+  </head>
+
+  <body class="">
+    <div class="site grid">
+      <header class="site__header grid__col-1" role="banner">
+        <nav class="site__nav" role="navigation">
+          <a class="nav__name" href="/">Arpon R.</a>
+          <ul class="nav__pages section">
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/academic/">Academic</a></li>
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/all/">All</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/math/">Math</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/reading/">Reading</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/writing/">Writing</a></li>
+            
+            
+          </ul>
+        </nav>
+      </header>
+
+
+<main class="site__content grid__col-2">
+  <article class="page">
+    
+    <header class="page__header">
+      <h1>Homotopy (co)limits aren't (co)limits in the homotopy category</h1>
+
+      <div class="page__meta">
+        
+        <time pubdate datetime="2014-07-05 19:30:00 +0100" class="page__time">
+          05 July 2014
+        </time>
+        
+      </div>
+    </header>
+
+    <div class="page__content section">
+      
+      <div class="preamble">
+        $$
+        
+        \newcommand{ \Grp }{ \mathrm{Grp} }
+        
+        \newcommand{ \RP }{ \bR\bP }
+        
+        $$
+      </div>
+      
+    
+      <div class="text">
+        <p>It’s really nice to be able to think about things via universal properties, and I in particular know and love how to do this for limits and colimits in ordinary categories. But in homotopy theory things these notions need to be fixed slightly, since they’re not homotopy invariant. The canonical example in the familiar realm of spaces is that $D^n \from S^{n-1} \to D^n$ has pushout $S^n$ but $* \from S^{n-1} \to *$ has pushout $*$.</p>
+
+<p>This is what leads one to define homotopy limits and homotopy colimits, which <em>are</em> homotopy invariant. But, not understanding these things all too well, and seeking to retreat into familiar territory, I’m tempted to just think of them as limits as colimits in the homotopy category. But this is so, so wrong! The example above already shows that, but I wanted to write down a perhaps even more severe example I learned from <a href="http://mathoverflow.net/questions/10364/categorical-homotopy-colimits">the internet</a> which helped hammer this point home.</p>
+
+<div class="environment">
+  <div class="environment__body">
+    <div class="environment__label">
+
+    </div>
+    <div class="environment__header">
+      <p>Notation.</p>
+    </div>
+    <p>Let $\cH$ denote the homotopy category of pointed spaces (for definiteness maybe take this to be pointed CW complexes and maps up to homotopy). For $X,Y \in \cH$, denote $\Hom_\cH(X,Y)$ by $[X,Y]$.</p>
+  </div>
+</div>
+
+<div class="environment">
+  <div class="environment__body">
+    <div class="environment__label">
+
+    </div>
+    <div class="environment__header">
+      <p>Example (a colimit which doesn’t exist).</p>
+    </div>
+    <p>Consider the diagram
+
+$$
+\begin{xy}
+\xymatrix{
+    S^1 \ar[r]_i \ar[d]^f & D^2 \\ S^1. &
+}
+\end{xy}
+$$
+
+where $i$ is the canonical inclusion and $f$ is a degree $2$ map. If we imagine the bottom $S^1$ as $\RP^1$, then this diagram is the attaching of the $2$-cell which forms $\RP^2$, so the homotopy pushout of the diagram (which agrees with the ordinary pushout in the category of pointed spaces, since $i$ is already a cofibration) is $\RP^2$. On the other hand, we can show that this diagram has no colimit in $\cH$.</p>
+
+    <p>Suppose there is a pushout $X \in \cH$: then for $Y \in \cH$ we have
+
+$$
+[X,Y] \iso [S^1,Y] \times_{[S^1, Y]} [D^2,Y] \iso \pi_1(Y)
+\times_{\pi_1(Y)} 1,
+$$
+
+where the map $\pi_1(Y) \to \pi_1(Y)$ defining the fiber product is multiplication by $2$, by definition of $f$. Thus $[X,Y] \iso \pi_1(Y)[2]$ is the set of $2$-torsion in $\pi_1(Y)$. We’ll use this fact to obtain a contradiction, proving that the functor $Y \mapsto \pi_1(Y)[2]$ on $\cH$ cannot be corepresentable.</p>
+
+    <p>First, we have $[X,S^0] \iso \pi_1(S^0)[2] \iso 0$, implying $X$ is connected. Second, for $G$ a (discrete) group, we may consider the classifying space $BG$. Since $X$ is connected and $BG$ is a $1$-type, taking $\pi_1$ induces an isomorphism
+<span id=one-type></span></p>
+
+$$
+\tag{1}
+[X, BG] \iso \Hom_\Grp(\pi_1(X),G),$$
+
+    <p>and hence we obtain isomorphisms
+
+$$
+\Hom_\Grp(\pi_1(X),G) \iso \pi_1(BG)[2] \iso G[2],
+$$
+
+all natural in $G$. I.e. $\pi_1(X)$ corepresents the $2$-torsion functor $G \mapsto G[2]$ on $\Grp$. But so does $\bZ/2$, so by Yoneda we get an isomorphism $\pi_1(X) \iso \bZ/2$. Again applying <a href="#one-type" class="ref">[1]</a>, this isomorphism is induced by a map $X \to B\bZ/2 \iso \RP^\infty$.</p>
+
+    <p>Now, since $\pi_1(\RP^2) \iso \bZ/2$ and $\RP^2$ consists of a single $0$-, $1$-, and $2$-cell, we can also construct a map $\RP^2 \to X$ inducing an isomorphism on $\pi_1$. So we now have a sequence
+
+$$
+\RP^2 \to X \to \RP^\infty
+$$
+
+inducing isomorphisms on $\pi_1$, and hence isomorphisms on $H_1(-;\bZ)$. Since
+
+$$
+H_2(\RP^2;\bZ) \iso 0 \iso H_2(\RP^\infty;\bZ),
+$$
+
+it follows by the universal coefficient theorem that the composition $\RP^2 \to \RP^\infty$ is an isomorphism on $H^2(-;\bZ)$. But this is impossible, since the induced map factors through
+
+$$
+H^2(X;\bZ) \iso [X,K(\bZ,2)] \iso \pi_1(K(\bZ,2))[2] \iso 1,
+$$
+
+while $H^2(\RP^2)$ and $H^2(\RP^\infty)$ are nontrivial (both isomorphic to $\bZ/2$).</p>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+    
+    
+    <div class="page__tags section">
+      <ul>
+        
+        
+        <li><a href="/tag/math">#math</a></li>
+        
+        
+        <li><a href="/tag/homotopy-theory">#homotopy-theory</a></li>
+        
+        
+        <li><a href="/tag/limits">#limits</a></li>
+        
+      </ul>
+    </div>
+    
+  </article>  
+</main>
+
+
+
+
+
+<!-- <footer class="site__footer wrap grid"> -->
+<!--   <p class="grid__col-alone"> -->
+<!--     &copy; 2016 Arpon Raksit &mdash; -->
+<!--     <a href="mailto:arpon.raksit@gmail.com">arpon.raksit@gmail.com</a> -->
+<!--   </p> -->
+<!-- </footer> -->
+
+</div>
+</body>
+</html>
+
