@@ -64,11 +64,10 @@ sub {
 .site__nav ul, .site__footer, .page__meta, .page__tags, .page__content figure figcaption, .ref, .footnote, .entrylist__meta {
   color: #777777; }
 
-.page h2 {
-  text-transform: lowercase;
-  -moz-font-feature-settings: "smcp";
-  -webkit-font-feature-settings: "smcp";
-  font-feature-settings: "smcp"; }
+.smcp, .page h2 {
+  -moz-font-feature-settings: "c2sc", "smcp";
+  -webkit-font-feature-settings: "c2sc", "smcp";
+  font-feature-settings: "c2sc", "smcp"; }
 
 a:link, a:visited {
   text-decoration: underline;
