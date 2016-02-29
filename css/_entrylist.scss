@@ -27,6 +27,8 @@
   }
 
   &__tags {
+    text-transform: lowercase;
+    
     &, li {
       display: inline;
       margin-right: 0.2rem;

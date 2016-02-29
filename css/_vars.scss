@@ -1,16 +1,16 @@
-$font-main: adobe-text-pro, serif;
+$font-main: arno-pro, adobe-text-pro, serif;
 
-$size-base: (16/16)*100%;
+$size-base: (18/16)*100%;
 $size-small: .9em;
 
-$line-height: 1.4;
+$line-height: 1.35;
 $line-height-unit: $line-height * 1rem;
 $line-height-small: 1.3;
 
 $background-base: #ffffff;
-$background-accent: #bbbbbb;
+$background-accent: #cccccc;
 
-$color-base: #222222;
+$color-base: #333333;
 $color-light: #777777;
 $color-accent: #dd6622;
 
@@ -20,4 +20,4 @@ $color-progress: #888888;
 $tinyskip: 0.25 * $line-height-unit;
 $smallskip: 0.5 * $line-height-unit;
 $medskip: 1 * $line-height-unit;
-$bigskip: 2 * $line-height-unit;
+$bigskip: 1.5 * $line-height-unit;

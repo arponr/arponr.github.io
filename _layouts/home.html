@@ -2,17 +2,17 @@
 layout: base
 ---
 
-<main class="site__content" role="main">
-  <article class="page grid section">
+<main class="site__content grid__col-2">
+  <article class="page">
     
-    <header class="page__header grid__col-1">
+    <header class="page__header">
       <h1>{{ page.title }}</h1>
     </header>
     
-    <div class="page__content grid__col-2">
+    <div class="page__content">
       {{ content }}
 
-      <h2>Recent posts</h2>
+      <h2>Latest posts</h2>
       <ul class="entrylist">        
         {% for e in site.posts limit:5 %}
         {% include entrylist.html %}        

@@ -12,9 +12,33 @@
   * + & {
     margin-top: $smallskip;
   }
+
+  &__label {
+    @extend .alignleft;
+
+    &, p {
+      display: inline;
+    }
+
+    @media (max-width: $grid-breakpoint-1 - 1px) {
+      p:after {
+        content: ".";
+      }
+    }
+    
+    @media (min-width: $grid-breakpoint-1) {
+      text-align: right;
+      position: relative;
+      z-index: -10;
+    }
+  }
   
   &__header {
     font-weight: 600;
+
+    p {
+      padding-right: 0.3rem;
+    }
     
     &, p, & + p {
       display: inline;
@@ -32,6 +56,7 @@
   &__label {
     float: left;
     padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 
   &__body {

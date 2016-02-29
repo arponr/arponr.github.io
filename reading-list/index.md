@@ -4,17 +4,22 @@ title: Reading list
 subsections:
 - title: In progress
   entries:
-  - title: Open City
-    desc: Teju Cole
+  - title: nothing yet
 - title: Completed
   entries:
+  - title: Professor Andersen's Night
+    desc: Dag Solstad
+    date: 2016-02-27
+  - title: Open City
+    desc: Teju Cole
+    date: 2016-02-07
   - title: Pride and Prejudice
     desc: Jane Austen
     date: 2016-01-19
   - title: Cat's Eye
     desc: Margaret Atwood
     date: 2016-01-05
-  - title: "My Struggle: Book 1"
+  - title: "A Death in the Family: My Struggle Book 1"
     desc: Karl Ove Knausgaard
     date: 2015-12-12
   - title: Leaving the Atocha Station

@@ -33,17 +33,22 @@ html {
   color: $color-base;
   background: $background-base;
 
+  font-variant-numeric: oldstyle-nums;
+  -moz-font-feature-settings: "onum";
+  -webkit-font-feature-settings: "onum";
+  font-feature-settings: "onum";
+
   @media (min-device-pixel-ratio: 2) {
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
   }
 
-  @media (max-width: 860px) {
-    font-size: 90%;
+  @media (max-width: 600px) {
+    font-size: .95 * $size-base;
   }
 
-  @media (max-width: 500px) {
-    font-size: 80%;
+  @media (max-width: 425px) {
+    font-size: .9 * $size-base;
   }
 }
 
@@ -52,7 +57,7 @@ ul {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-weight: normal;
   font-size: 1em;
 }
 
@@ -63,11 +68,11 @@ sup, sub {
 }
 
 sup {
-  top: -0.5em;
+  top: -0.4em;
 }
 
 sub {
-  top: 0.5em;
+  top: 0.4em;
 }
 
 %small {
@@ -78,3 +83,11 @@ sub {
 %meta {
   color: $color-light;
 }
+
+%smcp {
+  text-transform: lowercase;
+  -moz-font-feature-settings: "smcp";
+  -webkit-font-feature-settings: "smcp";
+  font-feature-settings: "smcp";
+}
+  

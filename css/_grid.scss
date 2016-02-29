@@ -1,11 +1,12 @@
-$grid-breakpoint: 650px;
-$gutter-width: 2.0rem;
-$col-1-width: 25%;
+$grid-breakpoint-1: 500px;
+$grid-breakpoint-2: 800px;
+$gutter-width: 1.0rem;
+$col-1-width: 20%;
 $col-2-width: 100% - 2*$col-1-width;
 $col-ratio: percentage($col-1-width/$col-2-width);
 
 .grid {
-  &__col-1, &__col-2, &__col-3, &__col-alone {
+  &__col-1, &__col-2, &__col-alone {
     display: block;
   }
   
@@ -13,15 +14,15 @@ $col-ratio: percentage($col-1-width/$col-2-width);
     margin-bottom: $smallskip;
   }
 
-  @media (min-width: $grid-breakpoint) {
+  @media (min-width: $grid-breakpoint-1) {
     overflow: hidden;
     clear: left;
     
-    &__col-1, &__col-2, &__col-3, &__col-alone {
+    &__col-1, &__col-2, &__col-alone {
       float: left;
     }
 
-    &__col-1, &__col-3 {
+    &__col-1 {
       width: $col-1-width;
       margin-bottom: 0;
     }
@@ -30,12 +31,8 @@ $col-ratio: percentage($col-1-width/$col-2-width);
       padding-right: $gutter-width;
     }
 
-    &__col-3 {
-      padding-left: $gutter-width;
-    }
-
     &__col-2, &__col-alone {
-      width: $col-2-width;
+      width: 100% - $col-1-width;
 
       .alignleft {
         float: left;
@@ -43,15 +40,21 @@ $col-ratio: percentage($col-1-width/$col-2-width);
         margin-bottom: 0;
         width: calc(#{$col-ratio} - #{$gutter-width});
       }
+    }
+
+    &__col-alone {
+      margin-left: $col-1-width;
+    }
+  }
+
+  @media (min-width: $grid-breakpoint-2) {
+    &__col-2, &__col-alone {
+      width: $col-2-width;
 
       .banner {
         width: percentage((100% - $col-1-width)/$col-2-width);
         max-height: calc(100% - 4rem);
       }
-    }
-
-    &__col-alone {
-      margin-left: $col-1-width;
     }
   }
 }

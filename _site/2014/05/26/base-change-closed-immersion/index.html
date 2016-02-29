@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>arponr | Closed immersions and base change</title>
+    <meta name="viewport" content="initial-scale=1"/>
+    <meta property="og:title" content="Closed immersions and base change"/>
+    <meta property="og:site_name" content="arponr"/>
+    <script src="//use.typekit.net/cen6cew.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=/js/jax-config.js"></script>
+    
+  </head>
+
+  <body class="">
+    <div class="site grid">
+      <header class="site__header grid__col-1" role="banner">
+        <nav class="site__nav" role="navigation">
+          <a class="nav__name" href="/">Arpon R.</a>
+          <ul class="nav__pages section">
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/academic/">Academic</a></li>
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/all/">All</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/math/">Math</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/reading/">Reading</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/writing/">Writing</a></li>
+            
+            
+          </ul>
+        </nav>
+      </header>
+
+
+<main class="site__content grid__col-2">
+  <article class="page">
+    
+    <header class="page__header">
+      <h1>Closed immersions and base change</h1>
+
+      <div class="page__meta">
+        
+        <time pubdate datetime="2014-05-26 03:30:00 +0100" class="page__time">
+          26 May 2014
+        </time>
+        
+      </div>
+    </header>
+
+    <div class="page__content section">
+      
+      <div class="preamble">
+        $$
+        
+        \newcommand{ \lv }{ \lvert }
+        
+        \newcommand{ \rv }{ \rvert }
+        
+        \newcommand{ \ker }{ \operatorname{ker} }
+        
+        \newcommand{ \supp }{ \operatorname{supp} }
+        
+        $$
+      </div>
+      
+    
+      <div class="text">
+        <p>The goal of this post is to understand closed immersions of schemes a bit better. But I’m not going to use anything about schemes specifically today, so let me make the following definition.<sup id="fnref:immersion-general"><a href="#fn:immersion-general" class="footnote">1</a></sup></p>
+
+<div class="environment">
+  <div class="environment__body">
+    <div class="environment__label">
+
+    </div>
+    <div class="environment__header">
+      <p>Definition.</p>
+    </div>
+    <p>We say a morphism $i \c Z \to X$ of locally ringed spaces is a <em>closed immersion</em> if:</p>
+
+    <ul>
+      <li>the underlying map of spaces $\lv Z \rv \to \lv X \rv$ induces a homeomorphism of $\lv Z \rv$ onto a closed subset of $\lv X \rv$;</li>
+      <li>the underlying map of sheaves $\cO_X \to i_*\cO_Z$ is surjective.</li>
+    </ul>
+  </div>
+</div>
+
+<p>Recall also that:</p>
+
+<ul>
+  <li>the <em>ideal sheaf</em> of $Z$ is defined as $\cI \ce \ker(\cO_X \to i_*\cO_Z)$;</li>
+  <li>the <em>closed subspace</em> determined by $\cI$ is defined as the locally ringed space $Z' \ce (\supp(\cO_X/\cI), \cO_X/\cI)$;</li>
+  <li>the natural map $i' \c Z' \to X$ is a closed immersion with ideal sheaf $\cI$;</li>
+  <li>$i \c Z \to X$ in fact induces an isomorphism $h \c Z \to Z'$ such that $i = i' \circ h$.</li>
+</ul>
+
+<div class="environment" id="monomorphism">
+  <div class="environment__body">
+    <div class="environment__label">
+      <p>1</p>
+    </div>
+    <div class="environment__header">
+      <p>Lemma.</p>
+    </div>
+    <p>If $i \c Z \to X$ is a closed immersion of locally ringed spaces, then $i$ is a monomorphism (in the category of locally ringed spaces).</p>
+
+    <div class="environment">
+      <div class="environment__body">
+        <div class="environment__label">
+
+        </div>
+        <div class="environment__header">
+          <p>Proof.</p>
+        </div>
+        <p>By definition, the map of spaces $\lv Z \rv \to \lv X \rv$ is a monomorphism and the map of sheaves $\cO_X \to i_*\cO_Z$ is an epimorphism, so the claim is clear.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="environment" id="factoring">
+  <div class="environment__body">
+    <div class="environment__label">
+      <p>2</p>
+    </div>
+    <div class="environment__header">
+      <p>Proposition.</p>
+    </div>
+    <p>Let $i \c Z \to X$ be a closed immersion of locally ringed spaces, and let $\cI$ be the corresponding ideal sheaf. Then a morphism of locally ringed spaces $f \c Y \to X$ factors through $i$—i.e., there exists $g \c Y \to Z$ such that $f = i \circ g$—if and only if the induced map $f^*\cI \to f^*\cO_X \iso \cO_Y$ is zero. Such a factoring $g$ is unique if it exists.</p>
+
+    <div class="environment">
+      <div class="environment__body">
+        <div class="environment__label">
+
+        </div>
+        <div class="environment__header">
+          <p>Proof.</p>
+        </div>
+        <p>Uniqueness is immediate from $i$ being a monomorphism by <a href="#monomorphism" class="ref">[1]</a>, so we need only prove the existence statement. As recalled above, we can assume without loss of generality that $i$ is the inclusion of the closed subspace $Z \ce (\supp(\cO_X/\cI), \cO_X/\cI)$.</p>
+
+        <p>($\Rightarrow$) Assume $f$ factors through $i$. By definition we have an exact sequence $0 \to \cI \to \cO_X \to i_*\cO_Z \to 0.$ Since $i^*$ is right-exact we get an exact sequence $i^*\cI \to i^*\cO_X \to i^*i_*\cO_Z \to 0$, where the map $\cO_Z \iso i^*\cO_X \to i^*i_*\cO_Z \iso \cO_Z$ is an isomorphism. It follows that $i^*\cI \to i^*\cO_X$ is zero, and since $f^* = g^* \circ i^*$ this implies $f^*\cI \to \cO_Y$ is zero as well.</p>
+
+        <p>($\Leftarrow$) Assume $f^*\cI \to \cO_Y$ is zero. Let $y \in \lv Y \rv$. Then the map on stalks $\cI_{f(y)} \to \cO_{X,f(y)} \to \cO_{Y,y}$ is zero. Since $\cO_{X,f(y)} \to \cO_{Y,y}$ is a ring morphism this implies $\cI_{f(y)} \ne \cO_{X,f(y)}$, whence $f(y) \in \supp(\cO_X/\cI)$. Thus, on spaces, $\lv Y \rv \to \lv X \rv$ factors through $\lv Z \rv$. Then by adjunction the map $\cI \to \cO_X \to f_*\cO_Y$ is zero, inducing a map on sheaves $i_*\cO_Z \iso \cO_X/\cI \to \cO_Y$. This defines the required map $g \c Y \to Z$.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<p>We have now characterised maps into closed subspaces in the way you’d expect: a map factors through a closed subspace if and only if the defining equations vanish on the domain space. This allows us to prove finally that closed immersions are stable under base change, as alluded to in the title, and moreover lets us see explicitly how the defining ideals behave under base change.</p>
+
+<div class="environment" id="base-change">
+  <div class="environment__body">
+    <div class="environment__label">
+      <p>3</p>
+    </div>
+    <div class="environment__header">
+      <p>Proposition.</p>
+    </div>
+    <p>Let $i \c Z \to X$ be a closed immersion of locally ringed spaces, and let $\cI$ be the corresponding ideal sheaf. Let $f \c Y \to X$ be any morphism of locally ringed spaces. Let $\cI'$ be the image of the map $f^*\cI \to f^*\cO_X \iso \cO_Y$ and $i' \c Z' \to Y$ the closed subspace determined by $\cI'$. Then we have a pullback diagram
+
+$$
+\begin{xy}
+\xymatrix {
+    Z' \ar[d]^g \ar[r]_{i'} &
+    Y \ar[d]_f \\
+    Z \ar[r]^i &
+    X.
+}
+\end{xy}
+$$
+</p>
+
+    <div class="environment">
+      <div class="environment__body">
+        <div class="environment__label">
+
+        </div>
+        <div class="environment__header">
+          <p>Proof.</p>
+        </div>
+        <p>By <a href="#factoring" class="ref">[2]</a>, giving a morphism of locally ringed spaces $T \to Z'$ is equivalent to giving a morphism $a \c T \to Y$ such that the map $a^*\cI' \to \cO_T$ is zero. We claim this condition is equivalent to asking that $(f \circ a)^*\cI \to \cO_T$ is zero. Assuming this for the moment, this in turn is equivalent by <a href="#factoring" class="ref">[2]</a> to giving a morphism $b \c T \to Z$ such that $f \circ a = i \circ b$. Thus $Z'$ satisfies the necessary universal property (in particular the morphism $g$ is determined by the identity $Z' \to Z'$, i.e. it is the morphism $b$ corresponding to $a = i'$).</p>
+
+        <p>To prove the claim assumed above, consider
+
+$$
+(f \circ a)^*\cI \iso a^*f^*\cI \to a^*\cI' \to \cO_T.
+$$
+
+By definition $f^*\cI \to \cI'$ is surjective, so since $a^*$ is right-exact, $(f \circ a)^*\cI \to a^*I'$ is surjective, hence an epimorphism. It is then immediate that $(f \circ a)^*\cI \to \cO_T$ is zero if and only if $a^*\cI' \to \cO_T$ is zero.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:immersion-general">
+
+      <p>Though it suffices for this post, I’m pretty sure one wouldn’t actually want to use this definition in general. In fact, I’m curious to know a correct, general notion of closed immersion.</p>
+
+      <p>The only setting other than the algebraic one where I’m certain the sheaf-theoretic perspective is really prominent is complex analysis, so this point got me to glance at <a href="//books.google.com/books/about/Coherent_Analytic_Sheaves.html?id=HyCFQgAACAAJ">Grauert-Remmert’s <em>Coherent Analytic Sheaves</em></a>. From there I’ve gathered that complex analytic spaces are built locally out of closed subspaces of opens $U \subseteq \mathbb{C}^n$ which are cut out by finitely generated ideals of the sheaf of holomorphic functions on $U$. By <a href="//en.wikipedia.org/wiki/Oka_coherence_theorem">a theorem of Oka</a> we can equivalently require that the ideals are coherent. So I’m guessing more generally one should require of a closed immersion of complex analytic spaces that it be cut out by a <em>finite type</em> or <em>coherent</em> ideal sheaf. (Of course this is just a complete guess based on a superficial reading of some definitions, so I’m still curious…)</p>
+
+      <p>To be honest, I would hope there’s a general principle of what a closed immersion/subspace should mean, but it also seems a little crazy that it could automagically encode a finiteness condition.</p>
+
+      <p><strong>Update (2014-06-03):</strong> I talked someone about this issue and cleared things up. I was confused above because there are actually two distinct issues involved. The general definition of closed immersion above is fine, but you then have to ask: if I have a closed immersion of locally ringed spaces $Z \to X$ and I know $X$ is a scheme, when is $Z$ a scheme? And then the answer is: if and only if the ideal sheaf is quasicoherent. And if I replace scheme by complex analtic space then it’s if and only if the ideal sheaf is coherent. Etc. <a href="#fnref:immersion-general" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+      </div>
+    </div>
+    
+    
+    <div class="page__tags section">
+      <ul>
+        
+        
+        <li><a href="/tag/math">#math</a></li>
+        
+        
+        <li><a href="/tag/schemes">#schemes</a></li>
+        
+        
+        <li><a href="/tag/locally-ringed-spaces">#locally-ringed-spaces</a></li>
+        
+      </ul>
+    </div>
+    
+  </article>  
+</main>
+
+
+
+
+
+<!-- <footer class="site__footer wrap grid"> -->
+<!--   <p class="grid__col-alone"> -->
+<!--     &copy; 2016 Arpon Raksit &mdash; -->
+<!--     <a href="mailto:arpon.raksit@gmail.com">arpon.raksit@gmail.com</a> -->
+<!--   </p> -->
+<!-- </footer> -->
+
+</div>
+</body>
+</html>
+

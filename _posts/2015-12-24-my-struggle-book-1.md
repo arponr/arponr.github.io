@@ -1,0 +1,81 @@
+---
+layout: post
+title: Failing Knausgaard's My Struggle Book 1
+date: 2015-12-24 14:00:00 -0500
+tags:
+- reading
+- objectivity
+- relativism
+- meaning
+- death
+- My Struggle
+- Karl Ove Knausgaard
+---
+
+I recently finished the first installment of Karl Ove Knausgaard's series of fictionalized autobiography, *My Struggle*[^cite]. Page by page, for the most part, I didn't enjoy it a whole lot. However, a few pages were actually wildly thought-provoking, re Knausgaard's project in writing this series, and how it fits into the context of (and responds to) contemporary art, literature, and society. I discuss this below, and then conclude by realizing that, in light of the discussion, my failure to enjoy the book is really an aspect of the discussion.
+
+[^cite]: All page references are to: Karl Ove Knausgaard, *A Death in the Family: My Struggle Book 1*, Vintage, 2013.
+
+## Time, distance, and meaning
+
+I'll begin with a striking passage from early on:
+
+> As your perspective of the world increases not only is the pain it inflicts on you less but also its meaning. Understanding the world requires you to keep a certain distance from it. Things that are too small for the naked eye to see, such as molecules and atoms, we magnify. Things that are too large, such as cloud formations, river deltas, constellations, we reduce. At length we bring it within the scope of our senses and we stabilize it with fixer. When it has been fixed we call it knowledge. Throughout our childhood and teenage years we strive to attain the correct distance from objects and phenomena. We read, we learn, we experience, we make adjustments. Then one day we reach the point where all the necessary distances have been set, all the necessary systems have been put in place. That is when time begins to pick up speed. It no longer meets any obstacles, everything is set, time races through our lives, the days pass by in a flash and before we know what is happening we are forty, fifty, sixty ... Meaning requires content, content requires time, time requires resistance.
+
+Perhaps then Knausgaard, by writing these books, is trying to slow down time, and therefore create resistance and meaning for himself. The deluges of banal detail and description serve this goal.[^proust]
+
+[^proust]: Is this somehow related to Proust? I should probably read that stuff.
+
+
+## Science, abstraction, and meaning
+
+The bit of the novel that most riveted me is pp. 240--250. The central idea there seems to be that, beginning with the scientific revolution of the 1700s, the development of scientific and technological thinking and culture has led to an abstraction and loss of emotional meaning in the world---both the world of art and the world of the individual human.
+
+### The abstraction of art
+
+The arrow between the scientific revolution and abstraction in art is drawn in the following passage:
+
+> this world we had created where the great, the divine, the solemn, the holy, the beautiful and the true were no longer valid entities but quite the contrary, dubious or even laughable. This means that the great beyond, which until the Age of Enlightenment had been the divine, brought to us through the Revelation, and which in romanticism was nature, where the concept of revelation was expressed as the sublime, no longer found any expression. In art that which was beyond was synonymous with society, by which is meant the human masses, which fully encompassed its concepts and ideas of validity. As far as Norweigian art is concerned, the break came with Munch; it was in his paintings that, for the first time, man took up all the space. ... with painters after Munch it is the colours themselves, the forms themselves, not what they represent, that carry the emotion. Here we are in a world of images where the expression itself is everything, which of course means that there is no longer any dynamism betwen the outer and the inner, just a division. In the modernist era the division between art and the world was close to absolute, or put another way, art was a world of its own. ... and the situation we have arrived at now whereby the props of art no longer have any significance, all the emphasis is placed on what the art expresses, in other words, not what it is but what it thinks, what ideas it carries, such that the last remnants of objectivity, the final remnants of something outside the human world have been abandoned. ... And art has come to be a spectator of itself, the way it reacts, what newspapers write about it; the artist is a performer. That is how it is. Art does not know a beyond, science does not know a beyond, religion does not know a beyond, not anymore. Our world is enclosed around itself, enclosed around us, and there is no way out of it. Those in this situation who call for more intellectual depth, more spirituality have understood nothing, for the problem is that the intellect has taken over everything. *Everything* has become intellect, even our bodies, they aren't bodies any more, but ideas of bodies, something that is situated in our own heaven of images and conceptions within us and above us, where an increasingly large part of our lives is lived. The limits of that which cannot speak to us---the unfathomable---no longer exist. We understand everything and we do so because we have turned everything into ourselves. [pp. 248--249]
+
+So in essence, the scientific revolution taught us that all we know is what we observe (and what we logically deduce from what we observe). Our society today is obsessed with the scientific, which it identifies practically with the objective; but this point of view actually destroys objectivity, for now all that is real is (subjective) human perception. Everything is human, hence everything is relative.
+
+Knausgaard gives an example of this phenomenon influencing painting, but of course it is reflected in literature as well. We may consider for example the narrator's rise to the foreground. Devices like the unreliable narrator and metafiction constantly remind the reader that the story they are reading is very much a story, related and interpreted by individual people. This idea also manifests in the Wittgensteinan "contention that the world is linguistically structured" [p. 244], i.e. that anything we know is in the form of human language and hence all that exists (relative to us) is human language.
+
+This relativism leads to a devaluing of concrete, objective (here the root "object" is particularly relevant) depictions of reality, and a stronger emphasis on abstract ideas. This is fairly evident in the history of visual art, as far as my cursory understanding of that goes. Part of what Knausgaard's pointing out is that this move towards ideas and abstraction is all tied to a collective egoism of humanity. In summary, maybe the scientific revolution underpins a relativism that dominates in today's art world.
+
+I also think the line above about "dynamism between the outer and inner" is important. He says it better on the two preceding pages, describing:
+
+> these sudden states of clear-sightedness that everyone must know ... The last time I experienced this was on a commuter train between Stockholm and Gnesta a few months ago ... I wasn't thinking about anything in particular, just staring at the burning red ball in the sky and the pleasure that suffused me was so sharp and came with such intensity that it was indistinguishable from pain. What I experienced seemed to me to be of enormous significance. Enormous significance. When the moment had passed the feeling of significance did not diminish but all of a sudden it became hard to place: exactly what was significant? And why? A train, an industrial area, sun, mist?
+> 
+> I recognised the feeling, it was akin to the one some works of art evoke in me. ... I didn't know what it was about these pictures that made such a great impression on me. However, it was striking that they were all painted before the 1900s, within the artistic paradigm that always retained some reference to visible reality. Thus, there was always a certain objectivity to them, by which I mean a distance between reality and the portrayal of reality, and it was doubtless in this interlying space where it 'happened', where it appeared, whatever it was I saw, when the world seemed to step forward from the world. [pp. 246--247]
+
+This characterization of objectivity was a bit jarring when I first read it, but I think it's actually really nice; he's essentially just describing objectivity as the opposite of relativism. In relativism we are always made aware that we are within the subjectivity of an observer, so we eliminate the distinction between "reality" and "the portrayal of reality". In objectivity we allow ourselves this distinction, and we distance ourselves from thinking too much about the portrayal aspect. And he's suggesting that the magic of art, the ineffeable emotional reactions it produces in him, relies on that distance in some way. I don't know if I can say it any better than he has...
+
+Maybe one crude interpretation of it is the following: emotional reactions precede intellectual reactions. That is, the body takes in sensory input, and the brain has immediate emotional/visceral responses, and following that the inputs are abstracted and rationalized, resulting in intellectual responses. If the sensory input is pre-abstracted, pre-intellectualized, then maybe emotional responses are precluded, or at least diminished, and perhaps this prepackaging is a consequence of the relativistic tendencies of modern art.
+
+### The abstraction of the individual
+
+Now for the arrow between the scientific revolution and abstraction and loss of meaning in the lives of individuals:
+
+> A fabricated world?
+>
+> Yes, the world as a superstructure, the world as a spirit, weightless and abstract, of the same material with which thoughts are woven, and through which therefore they can move unhindered. A world that after 300 years of natural science is left without mysteries. Everything is explained, everything is understood, everything lies within humanity's horizons of comprehension, from the biggest, the universe, whose oldest observable light, the furthest boundary of the cosmos, dates from its birth fifteen billion years ago, to the smallest, the protons and neutrons and mesons of the atom. Even the phenomena that kill us we know about and understand, such as the bacteria and viruses that invade our bodies, attack our cells and cause them to grow or die. For a long time it was only nature and its laws that were made abstract and transparent in this way, but now, in our iconoclastic times, this not only applies to nature's laws but also to its places and people. The whole of the physical world has been elevated to this sphere, everything has been incorporated into the immense imaginary realm from South American rain forests and the islands of the Pacific Ocean to the North African deserts and Eastern Europe's tired, grey towns. Our minds are flooded with images of places we have never been, yet still know, people we have never met, yet still know and in accordance with which we, to a considerable extent, live our lives. The feeling this gives, that the world is small, tightly enclosed around itself, without openings to anywhere else, is almost incestuous, and although I knew this to be deeply untrue, since actually we know nothing about anything, still I could not escape it. [pp. 244-245]
+
+This is related to quotation in the previous section regarding time, distance, and meaning.  People are getting more and more knowledgeable as time passes, and with this knowledge comes the abstraction of real events and objects into ideas in the mind. It's reminiscent of the fact that communication technology not only reduces the distance between people around the world, but in fact *equalizes* distances, sometimes increasing the distance between you and what is close to you.
+
+Knausgaard makes this point most poignantly with respect to death:
+
+> It is in this light we have to see the strangely ambiguous role death has assumed. On the one hand, it is all around us, we are inundated by news of deaths, pictures of dead people; for death, in that respect, there are no limits, it is massive, ubiquitous, inexhaustible. But this is death as an idea, death without a body, death as thought and image, death as an intellectual concept. This death is the same as the word 'death', the body-less entity referred to when a dead person's name is used. For while the person is alive the name refers to the body, to where it resides, to what it does; the name becomes detached from the body when it does and remains with the living, who, when they use the name, always mean the person he was, never the person he is now, a body which lies rotting somewhere. This aspect of death, that which belongs to the body and is concrete, physical and material, this death is hidden with such great care that it borders on a frenzy, and it works, just listen to how people who have been involuntary witnesses to fatal accidents or murders tend to express themselves. They always say the same, *it was absolutely unreal*, even though what they mean is the opposite. It was so real. But we no longer live in that reality. For us everything has been turned on its head, for us the real is unreal, the unreal real. And death, death is the last great beyond. That is why it has to be kept hidden. Because death might be beyond the term and beyond life, but it is not beyond the world. [p. 250]
+
+This highlights a really practical, visceral sense in which the world is becoming more linguistically structured. He's saying that with all this abstraction, words like "death" no longer refer in our minds to their (gruesome) reality, but rather just to refer to themselves as words.
+
+### How this explains the project
+
+In light of all this, Knausgaard wants to break from relativism and abstraction. He wants to just present in all its gory, banal detail an objective experience. He wants to make death real again by describing over hundreds of pages the process of cleaning up shit and piss from a house full of death, and showing us (as he is shown) the grotesque corpse of his father. And he wants to return to the perspective of a child, who perceives everything as real and objective and meaningful.
+
+## The horrible irony of it all
+
+The horrible irony of it all is that *these* are the parts of the book that I found most engaging, that is, the philosophical discussion of the ideas carried in this text, rather than the experience that he is relating in trying to realize these ideas and philosophy. So I feel I failed his project. I think you need to read these books slowly and just relish the detail and try to experience it.
+
+Conclusion: I'm the typical victim of the scientific revolution; all I care about is abstraction and ideas (my main interest is pure mathematics for god's sake). 
+

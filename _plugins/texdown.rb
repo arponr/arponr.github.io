@@ -49,9 +49,15 @@ module Jekyll
     end
 
     def texdown(input)
-      processed, tag_hash = texdown_process(input, "", 0, Hash.new("???"))
-      output = processed.gsub(/(\s)\@([\w\-]*)/) do
-        "#{$1}<a href=\"\##{$1}\" class=\"ref\">[#{tag_hash[$2]}]</a>"
+      output, tag_hash = texdown_process(input, "", 0, Hash.new("???"))
+      output = output.gsub(/(\s)\@\@([\w\-]*)/) do
+        label = "(#{tag_hash[$2][1]})"
+        "#{$1}<a href=\"\##{$2}\" class=\"ref\">#{label}</a>"
+      end
+      output = output.gsub(/(\s)\@([\w\-]*)/) do
+        h = tag_hash[$2]
+        label = h.is_a?(Array) ? "#{h[0]}(#{h[1]})" : h
+        "#{$1}<a href=\"\##{$2}\" class=\"ref\">[#{label}]</a>"
       end
       return output
     end
@@ -64,9 +70,20 @@ module Jekyll
       )
       |
       (?:
-        ^((?:---)|(?:~~~)) \ *    # "---" starts environment, "~~~" starts enumerate
+        ^--- \ *                  # "---" starts environment
         (?:                       # meta info:
-          ([\w\-\ \(\)]*)?        # - title (e.g. Theorem)
+          ([^\[\n]*)              # - title (e.g. Theorem)
+          (?:\[([\w\-]*)\])? \ *  # - tag  (e.g. #hilbert-basis)
+        )                            
+        (                         # body:
+          (?:.*)                  # - possible first line
+          (?:(?:\ {4}.*)|\n)*     # - lines indented by 4 spaces
+        )
+      )
+      |
+      (?:
+        ^~~~ \ *                  # "~~~" starts enumerate
+        (?:                       # meta info:
           (?:\[([\w\-]*)\])? \ *  # - tag  (e.g. #hilbert-basis)
         )                            
         (                         # body:
@@ -77,39 +94,40 @@ module Jekyll
     }x
 
     def texdown_process(input, label_pre, label_ind, tag_hash)
+      enum_ind = 0
+      
       output = input.gsub(@@environment_re) do
-        eq_tag, eq_body, dashes, title, tag, body = [$1, $2, $3, $4, $5, $6].map do |x|
+        eq_tag, eq_body, env_title, env_tag, env_body, enum_tag, enum_body = [$1, $2, $3, $4, $5, $6, $7].map do |x|
           (x.nil? || x.empty?) ? nil : x.strip()
         end
-        
-        is_eq = !eq_tag.nil?
-        is_enum = dashes == "~~~"
+
+        if !enum_body.nil?
+          enum_ind += 1
+          label = ("a".ord + enum_ind - 1).chr
+          tag_hash[enum_tag] = [label_pre.chomp('.'), label.dup]
+          enum_body = enum_body.gsub(/^\ {4}/, "") if !enum_body.nil?
+          next build_enumerate(enum_tag, enum_body, label)
+        end
         
         label = label_pre.dup
 
-        if is_eq
+        if !eq_body.nil?
           label_ind += 1
           label << "#{label_ind}"
           tag_hash[eq_tag] = label.dup
           next build_equation(eq_tag, eq_body, label)
         end
 
-        if !tag.nil? or is_enum
+        if !env_tag.nil?
           label_ind += 1
           label << "#{label_ind}"
-          tag_hash[tag] = label.dup if !tag.nil?
+          tag_hash[env_tag] = label.dup
         end
-
-        body = body.gsub(/^\ {4}/, "") if !body.nil?
-        
-        if is_enum
-          next build_enumerate(title, tag, body, label)
-        end
-       
-        next_pre = tag.nil? ? label_pre : "#{label}."
-        next_ind = tag.nil? ? label_ind : 0
-        body, tag_hash = texdown_process(body, next_pre, next_ind, tag_hash)
-        build_environment(title, tag, body, label)
+        env_body = env_body.gsub(/^\ {4}/, "") if !env_body.nil?
+        next_pre = env_tag.nil? ? label_pre : "#{label}."
+        next_ind = env_tag.nil? ? label_ind : 0
+        env_body, tag_hash = texdown_process(env_body, next_pre, next_ind, tag_hash)
+        build_environment(env_title, env_tag, env_body, label)
       end
       
       return output, tag_hash
@@ -120,25 +138,24 @@ module Jekyll
       output << " id=\"#{tag}\" " if !tag.nil?
       output << ">\n"
       output << "<div class=\"environment__body\">\n"
+      output << "<div class=\"environment__label\">\n"
+      output << "#{label}" if !tag.nil?
+      output << "\n</div>\n"
       output << "<div class=\"environment__header\">\n"
-      output << "{::nomarkdown}#{label}. {:/}" if !tag.nil?
       output << "#{title}." if !title.nil?
       output << "\n</div>\n"
       output << "#{body}\n</div>\n</div>\n\n"
       return output
     end
 
-    def build_enumerate(title, tag, body, label)
+    def build_enumerate(tag, body, label)
       output = "<div class=\"enumerate\""
       output << " id=\"#{tag}\" " if !tag.nil?
       output << ">\n"
       output << "<div class=\"enumerate__label\">\n"
-      output << "{::nomarkdown}(#{label}){:/}"
+      output << "(#{label})"
       output << "\n</div>\n"
       output << "<div class=\"enumerate__body\">\n"
-      output << "<div class=\"enumerate__header\">\n"
-      output << "#{title}." if !title.nil?
-      output << "\n</div>\n"
       output << "#{body}\n</div>\n</div>\n\n"
       return output
     end

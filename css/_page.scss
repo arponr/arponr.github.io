@@ -1,4 +1,18 @@
 .page {
+  padding-bottom: 1.5 * $bigskip;
+  
+  h1 {
+    font-weight: 700;
+  }
+
+  h2 {
+    @extend %smcp;
+  }
+
+  h3 {
+    font-style: italic;
+  }
+  
   &__header a {
     @extend %plain;
   }
@@ -9,29 +23,24 @@
   
   &__time {
     display: block;
-    margin-top: $smallskip;
   }
 
   &__tags {
-    margin-top: $smallskip;
+    @extend %meta;
+    @extend %small;
+    text-transform: lowercase;
 
     a {
       @extend %plain;
     }
-
-    @media (max-width: $grid-breakpoint - 1) {
-      margin-bottom: $medskip;
       
-      li {
-        display: inline;
-        margin-right: 0.2rem;
-      }
+    li {
+      display: inline;
+      margin-right: 0.3rem;
     }
   }
   
   &__content {
-    padding-bottom: 1.5 * $bigskip;
-
     h2,
     ul,
     ol,
@@ -42,6 +51,7 @@
       }
     }
 
+    h3,
     ul,
     ol {
       & + * {
@@ -83,14 +93,18 @@
     }
 
     blockquote {
-      border-left: 2px solid $background-accent;
-      margin-left: 2px;
       padding-left: 1.5rem;
+      margin-left: 2px;
+      border-left: 2px solid $background-accent;
     }
     
     * + h2,
     hr {
       margin-top: $medskip;
+    }
+
+    * + h3 {
+      margin-top: $smallskip;
     }
   }
 
@@ -121,7 +135,7 @@
   }
 
   ul, ol {
-    margin-left: 1.5rem;
+    margin-left: 2.0rem;
 
     li {
       margin-bottom: $tinyskip;
@@ -158,14 +172,13 @@
     display: block;
     background: $background-accent;
     height: 1px;
-    width: 75px;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    width: 25%;
+    margin-top: $medskip;
+    margin-bottom: $smallskip;
   }
 
   ol {
     list-style-type: decimal;
-    margin-left: 20px;
     font-size: $size-small;
     line-height: $line-height-small;
   }

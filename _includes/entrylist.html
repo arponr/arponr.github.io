@@ -8,14 +8,16 @@
       <p>{{ e.desc }}</p>
       {% endif %}
 
+      {% assign tag_limit = 6 %}
       {% if e.tags.size > 0 %}
       <ul class="entrylist__tags">
-        {% for tag in e.tags %}
+        {% for tag in e.tags limit:tag_limit %}
         {% if tag != page.tag %}
         <li><a href="/tag/{{ tag | replace: ' ', '-' }}">#{{ tag | replace: ' ', '-' }}</a></li>
         {% endif %}
         {% endfor %}
       </ul>
+      {% if e.tags.size > tag_limit %}...{% endif %}
       {% endif %}
     </div>
 

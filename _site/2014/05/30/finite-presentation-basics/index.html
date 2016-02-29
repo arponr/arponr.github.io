@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>arponr | Finite presentation basics</title>
+    <meta name="viewport" content="initial-scale=1"/>
+    <meta property="og:title" content="Finite presentation basics"/>
+    <meta property="og:site_name" content="arponr"/>
+    <script src="//use.typekit.net/cen6cew.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=/js/jax-config.js"></script>
+    
+  </head>
+
+  <body class="">
+    <div class="site grid">
+      <header class="site__header grid__col-1" role="banner">
+        <nav class="site__nav" role="navigation">
+          <a class="nav__name" href="/">Arpon R.</a>
+          <ul class="nav__pages section">
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/academic/">Academic</a></li>
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/all/">All</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/math/">Math</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/reading/">Reading</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/writing/">Writing</a></li>
+            
+            
+          </ul>
+        </nav>
+      </header>
+
+
+<main class="site__content grid__col-2">
+  <article class="page">
+    
+    <header class="page__header">
+      <h1>Finite presentation basics</h1>
+
+      <div class="page__meta">
+        
+        <time pubdate datetime="2014-05-30 02:00:00 +0100" class="page__time">
+          30 May 2014
+        </time>
+        
+      </div>
+    </header>
+
+    <div class="page__content section">
+      
+      <div class="preamble">
+        $$
+        
+        \newcommand{ \obj }{ \operatorname{obj} }
+        
+        \newcommand{ \hom }{ \operatorname{hom} }
+        
+        \newcommand{ \ker }{ \operatorname{ker} }
+        
+        \newcommand{ \max }{ \operatorname{max} }
+        
+        $$
+      </div>
+      
+    
+      <div class="text">
+        <p>In this post I’ll review the definition of finite presentation and prove two basic statements, that “finitely presented implies always finitely presented”<sup id="fnref:always"><a href="#fn:always" class="footnote">1</a></sup> and that it is a local property. The definitions and proofs in the setting of modules and in the setting of algebras are completely analogous, so we will abstract very slightly and address both at once.</p>
+
+<div class="environment">
+  <div class="environment__body">
+    <div class="environment__label">
+
+    </div>
+    <div class="environment__header">
+      <p>Notation.</p>
+    </div>
+
+  </div>
+</div>
+
+<ul>
+  <li>All rings and algebras are commutative with unit.</li>
+  <li>For a ring $A$, let $\cC_A$ denote either the category of $A$-modules or the category of $A$-algebras. All arrows indicate morphisms in $\cC_A$.</li>
+  <li>Let $\amalg$ denote the coproduct in $\cC_A$, i.e., direct sum $\oplus$ for $A$-modules or tensor product $\otimes_A$ for $A$-algebras.</li>
+  <li>For $C \in \obj(\cC_A)$ and $n \in \bN$ let $C^{\amalg n}$ denote the $n$-fold coproduct $C \amalg \cdots \amalg C$ and $C^n$ denote the $n$-fold product $C \times \cdots \times C$.</li>
+  <li>Let $F_A \in \obj(\cC_A)$ denote the free object on one element, i.e., $F_A \iso A$ for $A$-modules and $F_A \iso A[t]$ for $A$-algebras. Thus for any $n \in \bN$ there is an isomorphism $\hom_{\cC_A}(F_A^{\amalg n},C) \iso C^n$ natural in $C \in \obj(\cC_A)$.</li>
+</ul>
+
+<p>And now fix a ring $A$ for the remainder.</p>
+
+<div class="environment">
+  <div class="environment__body">
+    <div class="environment__label">
+
+    </div>
+    <div class="environment__header">
+      <p>Definition.</p>
+    </div>
+    <p>An object $C \in \obj(\cC_A)$ is:</p>
+
+    <ul>
+      <li><em>finitely generated</em> if for some $n \in \bN$ there is a surjection $F_A^{\amalg n} \to M$;</li>
+      <li><em>finitely presented</em> if for some $n \in \bN$ there is a surjection $F_A^{\amalg n} \to M$ with finitely generated kernel.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="environment" id="ker-surjection">
+  <div class="environment__body">
+    <div class="environment__label">
+      <p>1</p>
+    </div>
+    <div class="environment__header">
+      <p>Lemma.</p>
+    </div>
+    <p>Let $f \c C \to D$ and $g \c D \to E$ be morphisms in $\cC_A$.  Define $h \ce g \circ f$. Then if $f$ is surjective, the canonical morphism $\ker(h) \to \ker(g)$ induced by $f$ is surjective. In particular, if $\ker(h)$ is finitely generated then so is $\ker(g)$.</p>
+
+    <div class="environment">
+      <div class="environment__body">
+        <div class="environment__label">
+
+        </div>
+        <div class="environment__header">
+          <p>Proof.</p>
+        </div>
+        <p>Evident.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="environment" id="fp-implies-always-fp">
+  <div class="environment__body">
+    <div class="environment__label">
+      <p>2</p>
+    </div>
+    <div class="environment__header">
+      <p>Proposition.</p>
+    </div>
+    <p>Let $C \in \obj(\cC_A)$ be finitely presented. If $\alpha \c D \to C$ is a surjection with $D$ finitely generated, then $\ker(\alpha)$ is finitely generated.</p>
+
+    <div class="environment">
+      <div class="environment__body">
+        <div class="environment__label">
+
+        </div>
+        <div class="environment__header">
+          <p>Proof.</p>
+        </div>
+        <p>By <a href="#ker-surjection" class="ref">[1]</a> we may assume $D \iso F_A^{\amalg m}$. By definition we have a surjection $\beta \c F_A^{\amalg n} \to C$ with $\ker(\beta)$ finitely generated. Consider the diagram
+
+$$
+\begin{xy}
+\xymatrix {
+    &
+    F_A^{\amalg m} \ar@{>>}[dr]^\alpha &
+    \\
+    F_A^{\amalg m} \amalg F_A^{\amalg n}
+        \ar@{>>}[ur]^{\id\,\amalg\,\xi}
+        \ar@{>>}[dr]_{\eta\,\amalg\,\id}
+        \ar@{>>}[rr]^-\gamma &
+    &
+    C, \\
+    &
+    F_A^{\amalg n} \ar@{>>}[ur]_\beta &
+}
+\end{xy}
+$$
+
+where $\xi \c F_A^{\amalg n} \to F_A^{\amalg m}$ and $\eta \c F_A^{\amalg m} \to F_A^{\amalg n}$ are defined such that $\alpha \circ \xi = \beta$ and $\beta \circ \eta = \alpha$—which exist since free objects are projective in $\cC_A$—so that defining $\gamma \ce \alpha \amalg \beta$ makes the diagram commute. Now, if $t_1,\ldots,t_m$ are the canonical generators (in the appropriate sense according to $\cC_A$) of $F_A^{\amalg m}$, then clearly $\ker(\gamma)$ is generated by $\ker(\beta)$ and $\{t_i - \eta(t_i)\}_{1 \le i \le m}$. Thus $\ker(\beta)$ being finitely generated implies $\ker(\gamma)$ is finitely generated, which implies $\ker(\alpha)$ is finitely generated by <a href="#ker-surjection" class="ref">[1]</a>.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="environment" id="fg-fp-local">
+  <div class="environment__body">
+    <div class="environment__label">
+      <p>3</p>
+    </div>
+    <div class="environment__header">
+      <p>Proposition.</p>
+    </div>
+    <p>Let $C \in \obj(\cC_A)$.</p>
+
+    <ul>
+      <li>If $C$ is finitely generated (resp. presented), then for any $f \in A$ the localisation $C_f$ is finitely generated (resp. presented) in $\cC_{A_f}$.</li>
+      <li>If $f_1,\ldots,f_n \in A$ generate the unit ideal and $C_{f_i}$ is finitely generated (resp. presented) in $\cC_{A_{f_i}}$ for each $i$, then $C$ is finitely generated (resp. presented).</li>
+    </ul>
+
+    <div class="environment">
+      <div class="environment__body">
+        <div class="environment__label">
+
+        </div>
+        <div class="environment__header">
+          <p>Proof.</p>
+        </div>
+        <p>We first address finite generation.</p>
+
+        <ul>
+          <li>Observe $(F_A)_f \iso F_{A_f}$. Thus, since localisation is exact (and hence commutes with finite products), a surjection $F_A^{\amalg n} \to C$ localises to a surjection $F_{A_f}^{\amalg n} \to C_f$.</li>
+          <li>Suppose for each $i$ that $C_{f_i}$ is generated (in the appropriate sense) by $\{a_{i,j}/f_i^{r_{i,j}}\}_{1 \le j \le m_i}$.  Take $R \ge \max\{r_{i,j}\}$. Then for all $i$ we have that $f_i^Ra$ is generated by $\{a_{i,j}\}$ for any $a \in A$. Since $f_1,\ldots,f_n$ generate the unit ideal, so do $f_1^R,\ldots,f_n^R$ and hence there exist $c_i \in A$ such that $\sum c_if_i^R = 1$. It is then clear that $\{c_i\} \cup \{a_{i,j}\}$ generates $C$.</li>
+        </ul>
+
+        <p>Now finite presentation. Recall that localisation commutes with kernels since it is exact.</p>
+
+        <ul>
+          <li>The first statement is immediate from localisation commuting with kernels and that we have proved the statement for finite generation.</li>
+          <li>Since we have proved the second statement for finite generation there is a surjection $\alpha \c F_A^{\amalg n} \to C$. Then for each $i$,
+
+$$
+\alpha_{f_i} \c F_{A_{f_i}}^{\amalg n} \to C_{f_i}
+$$
+
+is a surjection, so by <a href="#fp-implies-always-fp" class="ref">[2]</a> we know $\ker(\alpha_{f_i}) \iso \ker(\alpha)_{f_i}$ is finitely generated. Again applying the finite generation case, this implies $\ker(\alpha)$ is finitely generated, as desired.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<p>Ok that’s it! I mostly wanted to write this up because you can prove it in both settings at once, which I found fun. I thought a bit about axiomiatising the type of category one could prove this for, but I ended up wanting to assume a lot of stuff and it seemed like the exposition would get pretty ugly.</p>
+
+<div class="environment">
+  <div class="environment__body">
+    <div class="environment__label">
+
+    </div>
+    <div class="environment__header">
+      <p>Remark.</p>
+    </div>
+    <p><a href="#fg-fp-local" class="ref">[3]</a> is what one needs to prove when showing that a morphism of schemes being of locally of finite type or locally of finite presentation is local on the source.</p>
+  </div>
+</div>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:always">
+
+      <p>This catchy phrasing for the proposition is taken from <a href="//math216.wordpress.com/">Vakil’s notes</a>. <a href="#fnref:always" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+      </div>
+    </div>
+    
+    
+    <div class="page__tags section">
+      <ul>
+        
+        
+        <li><a href="/tag/math">#math</a></li>
+        
+        
+        <li><a href="/tag/commutative-algebra">#commutative-algebra</a></li>
+        
+        
+        <li><a href="/tag/finite-presentation">#finite-presentation</a></li>
+        
+      </ul>
+    </div>
+    
+  </article>  
+</main>
+
+
+
+
+
+<!-- <footer class="site__footer wrap grid"> -->
+<!--   <p class="grid__col-alone"> -->
+<!--     &copy; 2016 Arpon Raksit &mdash; -->
+<!--     <a href="mailto:arpon.raksit@gmail.com">arpon.raksit@gmail.com</a> -->
+<!--   </p> -->
+<!-- </footer> -->
+
+</div>
+</body>
+</html>
+

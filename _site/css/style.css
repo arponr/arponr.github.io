@@ -19,27 +19,31 @@ html, body {
   height: 100%; }
 
 html {
-  font-family: adobe-text-pro, serif;
-  font-size: 100%;
-  line-height: 1.4;
-  color: #222222;
-  background: #ffffff; }
+  font-family: arno-pro, adobe-text-pro, serif;
+  font-size: 112.5%;
+  line-height: 1.35;
+  color: #333333;
+  background: #ffffff;
+  font-variant-numeric: oldstyle-nums;
+  -moz-font-feature-settings: "onum";
+  -webkit-font-feature-settings: "onum";
+  font-feature-settings: "onum"; }
   @media (min-device-pixel-ratio: 2) {
     html {
       -webkit-font-smoothing: subpixel-antialiased;
       -moz-osx-font-smoothing: auto; } }
-  @media (max-width: 860px) {
+  @media (max-width: 600px) {
     html {
-      font-size: 90%; } }
-  @media (max-width: 500px) {
+      font-size: 106.875%; } }
+  @media (max-width: 425px) {
     html {
-      font-size: 80%; } }
+      font-size: 101.25%; } }
 
 ul {
   list-style: none; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-weight: normal;
   font-size: 1em; }
 
 sup, sub {
@@ -48,17 +52,23 @@ sup, sub {
   font-size: 0.9em; }
 
 sup {
-  top: -0.5em; }
+  top: -0.4em; }
 
 sub {
-  top: 0.5em; }
+  top: 0.4em; }
 
-.site__footer, .page__content figure figcaption, .entrylist__meta {
+.site__footer, .page__tags, .page__content figure figcaption, .entrylist__meta {
   font-size: 0.9em;
   line-height: 1.3; }
 
-.site__nav ul, .site__footer, .page__meta, .page__content figure figcaption, .ref, .footnote, .entrylist__meta {
+.site__nav ul, .site__footer, .page__meta, .page__tags, .page__content figure figcaption, .ref, .footnote, .entrylist__meta {
   color: #777777; }
+
+.page h2 {
+  text-transform: lowercase;
+  -moz-font-feature-settings: "smcp";
+  -webkit-font-feature-settings: "smcp";
+  font-feature-settings: "smcp"; }
 
 a:link, a:visited {
   text-decoration: underline;
@@ -67,87 +77,97 @@ a:hover {
   color: #dd6622; }
 .site__nav a:link, .page__header a:link, .page__tags a:link, .page__pagination a:link, a.ref:link, a.footnote:link, .entrylist a:link, .site__nav a:visited, .page__header a:visited, .page__tags a:visited, .page__pagination a:visited, a.ref:visited, a.footnote:visited, .entrylist a:visited {
   text-decoration: none; }
-a.site__footer:not(:hover):link, a.page__meta:not(:hover):link, a.ref:not(:hover):link, a.footnote:not(:hover):link, a.entrylist__meta:not(:hover):link, a.site__footer:not(:hover):visited, a.page__meta:not(:hover):visited, a.ref:not(:hover):visited, a.footnote:not(:hover):visited, a.entrylist__meta:not(:hover):visited {
+a.site__footer:not(:hover):link, a.page__meta:not(:hover):link, a.page__tags:not(:hover):link, a.ref:not(:hover):link, a.footnote:not(:hover):link, a.entrylist__meta:not(:hover):link, a.site__footer:not(:hover):visited, a.page__meta:not(:hover):visited, a.page__tags:not(:hover):visited, a.ref:not(:hover):visited, a.footnote:not(:hover):visited, a.entrylist__meta:not(:hover):visited {
   color: #777777; }
 a.active:not(:hover):link, a.active:not(:hover):visited {
-  color: #222222; }
+  color: #333333; }
 
-.grid__col-1, .grid__col-2, .grid__col-3, .grid__col-alone {
+.grid__col-1, .grid__col-2, .grid__col-alone {
   display: block; }
 .grid__col-1 {
-  margin-bottom: 0.7rem; }
-@media (min-width: 650px) {
+  margin-bottom: 0.675rem; }
+@media (min-width: 500px) {
   .grid {
     overflow: hidden;
     clear: left; }
-    .grid__col-1, .grid__col-2, .grid__col-3, .grid__col-alone {
+    .grid__col-1, .grid__col-2, .grid__col-alone {
       float: left; }
-    .grid__col-1, .grid__col-3 {
-      width: 25%;
+    .grid__col-1 {
+      width: 20%;
       margin-bottom: 0; }
     .grid__col-1 {
-      padding-right: 2rem; }
-    .grid__col-3 {
-      padding-left: 2rem; }
+      padding-right: 1rem; }
     .grid__col-2, .grid__col-alone {
-      width: 50%; }
-      .grid__col-2 .alignleft, .grid__col-alone .alignleft {
+      width: 80%; }
+      .grid__col-2 .alignleft, .grid__col-2 .environment__label, .grid__col-alone .alignleft, .grid__col-alone .environment__label {
         float: left;
-        margin-left: -50%;
+        margin-left: -33.33333%;
         margin-bottom: 0;
-        width: calc(50% - 2rem); }
-      .grid__col-2 .banner, .grid__col-alone .banner {
-        width: 150%;
-        max-height: calc(100% - 4rem); }
+        width: calc(33.33333% - 1rem); }
     .grid__col-alone {
-      margin-left: 25%; } }
+      margin-left: 20%; } }
+@media (min-width: 800px) {
+  .grid__col-2, .grid__col-alone {
+    width: 60%; }
+    .grid__col-2 .banner, .grid__col-alone .banner {
+      width: 133.33333%;
+      max-height: calc(100% - 4rem); } }
 
 .site {
   margin: 0 auto;
-  max-width: 60rem;
+  max-width: 50rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   position: relative; }
 
-.site__header {
-  padding-top: 1.4rem; }
+@media (min-width: 500px) {
+  .site__nav a {
+    display: block; } }
 .site__nav ul li {
-  display: inline;
-  margin-right: 1.0rem; }
+  margin-bottom: 0.3375rem; }
+  @media (max-width: 499px) {
+    .site__nav ul li {
+      display: inline;
+      margin-right: 1.0rem;
+      margin-bottom: 0; } }
 .site__footer {
-  padding-bottom: 2.8rem; }
+  padding-bottom: 2.025rem; }
+
+.site__header, .page__header {
+  padding-top: 1.35rem; }
 
 .section {
-  padding-top: 2.8rem; }
+  padding-top: 1.35rem; }
 
-.page__time {
-  display: block;
-  margin-top: 0.7rem; }
-.page__tags {
-  margin-top: 0.7rem; }
-  @media (max-width: 649px) {
-    .page__tags {
-      margin-bottom: 1.4rem; }
-      .page__tags li {
-        display: inline;
-        margin-right: 0.2rem; } }
-.page__content {
-  padding-bottom: 4.2rem; }
+.page {
+  padding-bottom: 3.0375rem; }
+  .page h1 {
+    font-weight: 700; }
+  .page h3 {
+    font-style: italic; }
+  .page__time {
+    display: block; }
+  .page__tags {
+    text-transform: lowercase; }
+    .page__tags li {
+      display: inline;
+      margin-right: 0.3rem; }
   .page__content h2 + *,
   .page__content ul + *,
   .page__content ol + *,
   .page__content blockquote + *,
   .page__content figure + * {
-    margin-top: 0.7rem; }
+    margin-top: 0.675rem; }
+  .page__content h3 + *,
   .page__content ul + *,
   .page__content ol + * {
-    margin-top: 0.35rem; }
+    margin-top: 0.3375rem; }
   .page__content p + blockquote,
   .page__content p + figure {
-    margin-top: 0.7rem; }
+    margin-top: 0.675rem; }
   .page__content p + ul,
   .page__content p + ol {
-    margin-top: 0.35rem; }
+    margin-top: 0.3375rem; }
   .page__content p + p {
     text-indent: 1.25em; }
   .page__content li ul,
@@ -158,27 +178,29 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
   .page__content figure figcaption {
     width: 75%; }
   .page__content blockquote {
-    border-left: 2px solid #bbbbbb;
+    padding-left: 1.5rem;
     margin-left: 2px;
-    padding-left: 1.5rem; }
+    border-left: 2px solid #cccccc; }
   .page__content * + h2,
   .page__content hr {
-    margin-top: 1.4rem; }
-.page__pagination {
-  margin-top: 1.4rem; }
-  .page__pagination .previous {
-    float: left; }
-  .page__pagination .next {
-    float: right; }
+    margin-top: 1.35rem; }
+  .page__content * + h3 {
+    margin-top: 0.675rem; }
+  .page__pagination {
+    margin-top: 1.35rem; }
+    .page__pagination .previous {
+      float: left; }
+    .page__pagination .next {
+      float: right; }
 
 .text ul {
   list-style-type: disc; }
 .text ol {
   list-style-type: decimal; }
 .text ul, .text ol {
-  margin-left: 1.5rem; }
+  margin-left: 2.0rem; }
   .text ul li, .text ol li {
-    margin-bottom: 0.35rem; }
+    margin-bottom: 0.3375rem; }
     .text ul li ul, .text ol li ul {
       list-style-type: circle; }
     .text ul li ol, .text ol li ol {
@@ -192,38 +214,50 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
 .footnotes:before {
   content: '';
   display: block;
-  background: #bbbbbb;
+  background: #cccccc;
   height: 1px;
-  width: 75px;
-  margin-top: 30px;
-  margin-bottom: 10px; }
+  width: 25%;
+  margin-top: 1.35rem;
+  margin-bottom: 0.675rem; }
 .footnotes ol {
   list-style-type: decimal;
-  margin-left: 20px;
   font-size: 0.9em;
   line-height: 1.3; }
 
 .MathJax_Display {
-  margin: 0.35rem 0 !important; }
+  margin: 0.3375rem 0 !important; }
   .MathJax_Display * {
-    color: #222222 !important; }
+    color: #333333 !important; }
 
 .environment {
-  margin-bottom: 0.7rem; }
+  margin-bottom: 0.675rem; }
   * + .environment {
-    margin-top: 0.7rem; }
+    margin-top: 0.675rem; }
+  .environment__label, .environment__label p {
+    display: inline; }
+  @media (max-width: 499px) {
+    .environment__label p:after {
+      content: "."; } }
+  @media (min-width: 500px) {
+    .environment__label {
+      text-align: right;
+      position: relative;
+      z-index: -10; } }
   .environment__header {
     font-weight: 600; }
+    .environment__header p {
+      padding-right: 0.3rem; }
     .environment__header, .environment__header p, .environment__header + p {
       display: inline; }
 
 .enumerate {
-  margin-bottom: 0.35rem; }
+  margin-bottom: 0.3375rem; }
   * + .enumerate {
-    margin-top: 0.35rem; }
+    margin-top: 0.3375rem; }
   .enumerate__label {
     float: left;
-    padding-right: 0.5rem; }
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; }
   .enumerate__body {
     overflow: hidden; }
   .enumerate__header {
@@ -233,7 +267,7 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
   display: none; }
 
 .entrylist li {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.675rem;
   position: relative; }
 .entrylist__title {
   display: block; }
@@ -243,9 +277,11 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
   display: table-cell; }
 .entrylist__desc {
   width: 100%; }
-.entrylist__tags, .entrylist__tags li {
-  display: inline;
-  margin-right: 0.2rem; }
+.entrylist__tags {
+  text-transform: lowercase; }
+  .entrylist__tags, .entrylist__tags li {
+    display: inline;
+    margin-right: 0.2rem; }
 .entrylist__time {
   white-space: nowrap;
   padding-left: 2.0rem; }

@@ -15,11 +15,11 @@
   </head>
 
   <body class="{{ page.section }}">
-    <div class="site">
-      <header class="site__header" role="banner">
-        <nav class="grid site__nav" role="navigation">
-          <a class="grid__col-1" href="/">Arpon R.</a>
-          <ul class="grid__col-2">
+    <div class="site grid">
+      <header class="site__header grid__col-1" role="banner">
+        <nav class="site__nav" role="navigation">
+          <a class="nav__name" href="/">Arpon R.</a>
+          <ul class="nav__pages section">
             {% assign pages = site.pages | sort:"url" %}
             {% for p in pages %}
             {% if p.in-nav %}

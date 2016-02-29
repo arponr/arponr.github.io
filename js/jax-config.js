@@ -1,16 +1,23 @@
 var macros = {
-    iso: "\\simeq",
-    inj: "\\hookrightarrow",
-    lblto: ["\\xrightarrow{#1}", 1],
-    isoto: "\\xrightarrow{\\sim}",
-    shimplies: "\\Rightarrow",
+    abs: ["\\l|#1\\r|", 1],
+    bar: "\\overline",
     c: "\\colon",
     ce: "\\mathrel{:=}",
+    cofib: "\\operatorname*{cofib}",
+    colim: "\\operatorname*{colim}",
     ec: "\\mathrel{=:}",
-    l: "\\left",
-    r: "\\right",
     f: "\\frac",
-    bar: "\\overline",
+    from: "\\leftarrow",
+    Hom: "\\operatorname{Hom}",
+    id: "\\mathrm{id}",
+    inj: "\\hookrightarrow",
+    iso: "\\simeq",
+    isoto: "\\xrightarrow{\\sim}",
+    l: "\\left",
+    lblto: ["\\xrightarrow{#1}", 1],
+    r: "\\right",
+    shimplies: "\\Rightarrow",
+    shimplied: "\\Leftarrow",
 }
 
 for (var i = 'A'.charCodeAt(0); i <= 'Z'.charCodeAt(0); i++) {
@@ -39,7 +46,7 @@ MathJax.Hub.Config({
     "HTML-CSS": {
         imageFont: null,
         webFont: "STIX-Web",
-        scale: 100,
+        scale: 110,
         linebreaks: {
             automatic: true,
             width: "75% container"

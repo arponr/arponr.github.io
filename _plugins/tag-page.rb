@@ -39,7 +39,13 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'post-list.html')
       self.data['tag'] = tag
-      self.data['title'] = tag.capitalize
+      self.data['title'] = TagPage.capitalize_first(tag)
+    end
+
+    def self.capitalize_first(x)
+      y = x.dup
+      y[0] = y[0].upcase
+      y
     end
   end
 

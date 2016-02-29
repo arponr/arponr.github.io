@@ -3,7 +3,7 @@ layout: post
 title: About
 ---
 
-{% image banner /images/2015-07-me.jpg  %}
+
 
 ## Introduction
 
