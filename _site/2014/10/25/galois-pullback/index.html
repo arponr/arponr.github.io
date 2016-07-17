@@ -19,7 +19,7 @@
       <header class="site__header grid__col-1" role="banner">
         <nav class="site__nav" role="navigation">
           <a class="nav__name" href="/">Arpon R.</a>
-          <ul class="nav__pages section">
+          <ul class="nav__pages">
             
             
             
@@ -36,6 +36,10 @@
             
             <li><a 
                    href="/all/">All</a></li>
+            
+            
+            
+            
             
             
             
@@ -110,10 +114,10 @@
             
             
             
+            
+            
             <li><a 
                    href="/tag/reading/">Reading</a></li>
-            
-            
             
             
             
@@ -140,7 +144,7 @@
 
       <div class="page__meta">
         
-        <time pubdate datetime="2014-10-25 22:30:00 +0100" class="page__time">
+        <time pubdate datetime="2014-10-25 17:30:00 -0400" class="page__time">
           25 October 2014
         </time>
         
@@ -239,7 +243,7 @@ $$
 \end{xy}
 $$
 
-with the horizontal maps the projections. In the right-hand square, the vertical maps are isomorphisms by hypothesis, and the top horizontal map is an isomorphism by <a href="#intersection-preserved" class="ref">[2.1]</a>; thus the bottom horizontal map is an isomorphism, which implies $N_1 \subseteq N_2$.</p>
+with the horizontal maps the projections. In the right-hand square, the vertical maps are isomorphisms by hypothesis, and the top horizontal map is an isomorphism by <a href="#intersection-preserved" class="ref">(2.1)</a>; thus the bottom horizontal map is an isomorphism, which implies $N_1 \subseteq N_2$.</p>
 
         <p>We now prove <a href="#join-preserved" class="ref">(b)</a>. Certainly $\phi^{-1}(N_1N_2) \supseteq \phi^{-1}(N_1)\phi^{-1}(N_2)$. And it’s fairly easy to see we have the sequence of identifications
 
@@ -275,16 +279,16 @@ proving the desired claim.</p>
     <div class="environment__header">
       <p>Example.</p>
     </div>
-    <p>If we take $G$ to be a Galois group in <a href="#main" class="ref">[2]</a>, then the proposition says that when we have a suitable morphism $A \to G$, the Galois theory described by $G$ is in fact controlled by $A$. This is what I meant by “pulling back a Galois correspondence” in the title. Let’s state this in more detail in the motivating example.</p>
+    <p>If we take $G$ to be a Galois group in <a href="#main" class="ref">(2)</a>, then the proposition says that when we have a suitable morphism $A \to G$, the Galois theory described by $G$ is in fact controlled by $A$. This is what I meant by “pulling back a Galois correspondence” in the title. Let’s state this in more detail in the motivating example.</p>
 
     <p>Let $K$ be a non-archimedean local field. Let $K^\ab$ be a maximal abelian extension of $K$. The Galois group $G \ce \Gal(K^\ab/K)$ is a profinite group, and Galois theory tells us that the poset $\Sub_G$ is contravariantly equivalent to the poset $\Ab_K$ of finite abelian extensions of $K$, i.e. the set of finite subextensions of $K^\ab$ ordered by inclusion. The “reciprocity” statement in local class field theory asserts:</p>
 
     <ul>
-      <li>the existence of a morphism $\phi_K \c K^\times \to \Gal(K^\ab/K)$ satisfying the hypothesis of <a href="#main" class="ref">[2]</a>;</li>
+      <li>the existence of a morphism $\phi_K \c K^\times \to \Gal(K^\ab/K)$ satisfying the hypothesis of <a href="#main" class="ref">(2)</a>;</li>
       <li>if $N \ce \Stab_L \in \Sub_G$ is the subgroup corresponding to a finite abelian extension $K \inj L$, then $\phi_K^{-1}(N)$ is the <em>norm group</em> $N_{L/K}(L^\times) \subseteq K^\times$.</li>
     </ul>
 
-    <p>Thus, putting <a href="#main" class="ref">[2]</a> and Galois theory together gives us that the poset $\Ab_K$ is anti-equivalent to the poset of norm groups in $K^\times$ by the correspondence $L \mapsto N_{L/K}(L^\times)$. Then there is an “existence” theorem in local class field theory stating that the norm groups are precisely the open subgroups of finite index in $K^\times$.</p>
+    <p>Thus, putting <a href="#main" class="ref">(2)</a> and Galois theory together gives us that the poset $\Ab_K$ is anti-equivalent to the poset of norm groups in $K^\times$ by the correspondence $L \mapsto N_{L/K}(L^\times)$. Then there is an “existence” theorem in local class field theory stating that the norm groups are precisely the open subgroups of finite index in $K^\times$.</p>
   </div>
 </div>
 

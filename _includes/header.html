@@ -19,7 +19,7 @@
       <header class="site__header grid__col-1" role="banner">
         <nav class="site__nav" role="navigation">
           <a class="nav__name" href="/">Arpon R.</a>
-          <ul class="nav__pages section">
+          <ul class="nav__pages">
             {% assign pages = site.pages | sort:"url" %}
             {% for p in pages %}
             {% if p.in-nav %}

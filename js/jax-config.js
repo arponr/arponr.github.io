@@ -4,6 +4,7 @@ var macros = {
     c: "\\colon",
     ce: "\\mathrel{:=}",
     cofib: "\\operatorname*{cofib}",
+    coker: "\\operatorname*{coker}",
     colim: "\\operatorname*{colim}",
     ec: "\\mathrel{=:}",
     f: "\\frac",
@@ -15,9 +16,12 @@ var macros = {
     isoto: "\\xrightarrow{\\sim}",
     l: "\\left",
     lblto: ["\\xrightarrow{#1}", 1],
+    Map: "\\operatorname{Map}",
+    op: "\\mathrm{op}",
     r: "\\right",
     shimplies: "\\Rightarrow",
     shimplied: "\\Leftarrow",
+    und: "\\underline",
 }
 
 for (var i = 'A'.charCodeAt(0); i <= 'Z'.charCodeAt(0); i++) {
@@ -46,7 +50,7 @@ MathJax.Hub.Config({
     "HTML-CSS": {
         imageFont: null,
         webFont: "STIX-Web",
-        scale: 110,
+        scale: 95,
         linebreaks: {
             automatic: true,
             width: "75% container"

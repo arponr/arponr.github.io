@@ -1,5 +1,6 @@
 ---
 layout: post
+hidden: true
 math: true
 title: Closed immersions and base change
 date: 2014-05-25 21:30:00 -0500

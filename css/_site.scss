@@ -1,6 +1,6 @@
 %wrap {
   margin: 0 auto;
-  max-width: 50rem;
+  max-width: 60rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   position: relative;
@@ -25,7 +25,7 @@
     ul li {
       margin-bottom: $tinyskip;
     
-      @media (max-width: $grid-breakpoint-1 - 1px) {
+      @media (max-width: $grid-breakpoint-1) {
         display: inline;
         margin-right: 1.0rem;
         margin-bottom: 0;
@@ -46,6 +46,10 @@
 
 
 .section {
-  padding-top: $medskip;
+  padding-top: $bigskip;
+}
+
+.nav__pages {
+  margin-top: $smallskip;
 }
 
