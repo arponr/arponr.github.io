@@ -4,9 +4,19 @@ title: Reading list
 subsections:
 - title: In progress
   entries:
-  - title: nothing yet
+  - title: New American Stories
+    desc: Ben Marcus (ed.)
 - title: Completed
   entries:
+  - title: The Trial
+    desc: Franz Kafka
+    date: 2016-08-17
+  - title: The Question of Bruno
+    desc: Aleksandar Hemon
+    date: 2016-07-15
+  - title: What I Talk About When I Talk About Running
+    desc: Haruki Murakami
+    date: 2016-05-20
   - title: Professor Andersen's Night
     desc: Dag Solstad
     date: 2016-02-27

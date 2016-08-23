@@ -26,4 +26,4 @@ subsections:
     url: /files/doldkan.pdf
 ---
 
-I'm currently at the University of Cambridge, ostensibly doing Part III of the Tripos. I finished my undergraduate degree at Harvard last spring, and I'll be starting my PhD at Stanford this fall.
+I'll be starting my PhD at Stanford this fall. I was an undergraduate at Harvard from 2011--2015 and spent 2015--2016 at the University of Cambridge doing Part III of the Tripos.
