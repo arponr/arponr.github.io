@@ -26,4 +26,4 @@ subsections:
     url: /files/doldkan.pdf
 ---
 
-I'll be starting my PhD at Stanford this fall. I was an undergraduate at Harvard from 2011--2015 and spent 2015--2016 at the University of Cambridge doing Part III of the Tripos.
+I'm a first year graduate student in mathematics at Stanford. I was an undergraduate at Harvard from 2011--2015 and spent 2015--2016 at the University of Cambridge.

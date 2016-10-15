@@ -6,8 +6,16 @@ subsections:
   entries:
   - title: New American Stories
     desc: Ben Marcus (ed.)
+  - title: How Not to Be Wrong
+    desc: Jordan Ellenberg
 - title: Completed
   entries:
+  - title: "10:04"
+    desc: Ben Lerner
+    date: 2016-09-08
+  - title: Gilead
+    desc: Marylinne Robinson
+    date: 2016-09-04
   - title: The Trial
     desc: Franz Kafka
     date: 2016-08-17
