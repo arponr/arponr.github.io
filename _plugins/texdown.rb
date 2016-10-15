@@ -56,7 +56,7 @@ module Jekyll
       end
       output = output.gsub(/(\s)\@([\w\-]*)/) do
         h = tag_hash[$2]
-        label = h.is_a?(Array) ? "#{h[0]}(#{h[1]})" : h
+        label = h.is_a?(Array) ? "#{h[0]}#{h[1]}" : h
         "#{$1}<a href=\"\##{$2}\" class=\"ref\">(#{label})</a>"
       end
       return output
