@@ -10,11 +10,13 @@ tags:
 - cohomology
 - eilenberg-steenrod axioms
 preamble:
+- [Ab, 0, '\operatorname{Ab}']
 - [AbGroups, 0, '\mathrm{AbGroups}']
 - [fin, 0, '\mathrm{fin}']
 - [Ho, 0, '\operatorname{Ho}']
 - [pt, 0, '\star']
 - [Push, 0, '\operatorname{Push}']
+- [Sing, 0, '\operatorname{Sing}']
 - [Spaces, 0, '\mathrm{Spaces}']
 ---
 
@@ -178,3 +180,16 @@ preamble:
 
     --- Remark [cohomology-theory-mayer-vietoris]
         The locality axioms @cohomology-theory-locality and @homology-theory-locality are usually named after Mayer and Vietoris, and the exact sequences there are referred to as *Mayer-Vietoris sequences*.
+
+--- Example [singular-cohomology]
+
+    Our first examples of homology and cohomology theories, on $\sC = \Spaces$, are singular homology and cohomology with coefficients in an abelian group $A$. The underlying functors are denoted on objects by $X \mapsto \rH_n(X;A)$ and $X \mapsto \rH^n(X;A)$, and are uniquely characterized by fitting into a (co)homology theory together with their values on the spheres $\rS^k$ for $k \ge 0$:
+    $$
+    \rH_n(\rS^k;A) \iso \rH^n(\rS^k;A) \iso
+    \begin{cases}
+      A, & n \in \{0,k\} \\
+      0, & \text{otherwise}.
+    \end{cases}
+    $$
+    I don't really want to explain the direct constructions of singular homology and cohomology at the moment, but when I get to discussing spectra we'll see an indirect construction.
+
