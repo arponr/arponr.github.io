@@ -184,7 +184,7 @@ Let $C$ be a category, $i \c C_0 \inj C$ a full subcategory.
     
     --- Example [example-sheaves]
         
-        Let $X$ be a topological space (or more generally a site). Take $C$ to be the category $\PSh(X)$ of presheaves on $X$ and $C_0$ the full subcategory $\Sh(X) \subseteq \PSh(X)$ of sheaves.
+        Let $X$ be a topological space. Take $C$ to be the category $\PSh(X)$ of presheaves on $X$ and $C_0$ the full subcategory $\Sh(X) \subseteq \PSh(X)$ of sheaves.
         
         The inclusion $i \c \PSh(X) \inj \Sh(X)$ has a left adjoint $a \c \Sh(X) \to \PSh(X)$, usually referred to as sheafification, so the subcategory of sheaves is a localization.
         
