@@ -89,7 +89,7 @@ The idea of this construction is fairly clear, but in what sense is it "canonica
 
     We thus conclude from @induction-unpack that the construction of @explicit is "canonical", or natural, in two senses: it defines both left and right adjoints to restriction of represenations from $G$ to $H$. In fact, even though the identification above went through an ugly choice of coset representatives, one can see that the discussion above still supplies a natural isomorphism between the two adjoints; the choice only depended on our fixed $G$ and $H$, and hence only makes it non-obvious that this natural isomorphism itself is natural. I.e. we have proved in a non-canonical way that the construction is canonical in a canonical way. (Sorry.)
     
-    Looking at the situation from the other side, we may be surprised to conclude that the left and right adjoints of restriction, induction and coinduction, are given on objects by the same construction! A near-future post will explain how to understand this phenomenon more generally and systematically (in particular getting rid of that last shred of non-canonicity), as well as a small application of the phenomenon.
+    Looking at the situation from the other side, we may be surprised to conclude that the left and right adjoints of restriction, induction and coinduction, are naturally isomorphic! A near-future post will explain how to understand this phenomenon more generally and systematically (in particular getting rid of that last shred of non-canonicity), as well as a small application of the phenomenon.
     
     
 
