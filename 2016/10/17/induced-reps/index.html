@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>arponr | Induced and coinduced representations</title>
+    <meta name="viewport" content="initial-scale=1"/>
+    <meta property="og:title" content="Induced and coinduced representations"/>
+    <meta property="og:site_name" content="arponr"/>
+    <script src="//use.typekit.net/cen6cew.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=/js/jax-config.js"></script>
+    
+  </head>
+
+  <body class="">
+    <div class="site grid">
+      <header class="site__header grid__col-1" role="banner">
+        <nav class="site__nav" role="navigation">
+          <a class="nav__name" href="/">Arpon R.</a>
+          <ul class="nav__pages">
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/academic/">Academic</a></li>
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/all/">All</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/math/">Math</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/reading/">Reading</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a 
+                   href="/tag/writing/">Writing</a></li>
+            
+            
+          </ul>
+        </nav>
+      </header>
+
+
+<main class="site__content grid__col-2">
+  <article class="page">
+    
+    <header class="page__header">
+      <h1>Induced and coinduced representations</h1>
+
+      <div class="page__meta">
+        
+        <time pubdate datetime="2016-10-17 01:15:00 -0700" class="page__time">
+          17 October 2016
+        </time>
+        
+      </div>
+    </header>
+
+    <div class="page__content section">
+      
+      <div class="preamble">
+        $$
+        
+        \newcommand{ \LMod }{ \mathrm{LMod} }
+        
+        $$
+      </div>
+      
+    
+      <div class="text">
+        <div class="environment">
+  <div class="environment__body">
+    <div class="environment__label">
+
+    </div>
+    <div class="environment__header">
+      <p>Notation.</p>
+    </div>
+    <p>Let $G$ be a (discrete) group and $H \le G$ a <em>finite-index</em> subgroup. Let $k$ be a field. For now, by a <em>representation</em> we will mean a finite dimensional $k$-linear representation.</p>
+  </div>
+</div>
+
+<p>There is an evident way to restrict representations of $G$ to representations of $H$. Conversely, one learns that out of a representation $(V,\rho)$ of $H$ there is a canonical way to build a representation $(V',\rho')$ of $G$. Depending on who’s writing or lecturing (or thinking), there are a various ways this might be presented. The first time I saw it was in a course taught by Joe Harris, so I saw the following completely explicit construction.</p>
+
+<div class="environment" id="explicit">
+  <div class="environment__body">
+    <div class="environment__label">
+      <p>1</p>
+    </div>
+    <div class="environment__header">
+      <p>Construction.</p>
+    </div>
+    <p>Let $n \ce [G:H]$ and choose a set of left-coset representatives $\{g_1,\ldots,g_n\} \subseteq G$ for $G/H$, say with $g_1 = 1$. The underlying vector space is defined as
+
+$$
+V' \ce \bigoplus_{i=1}^n V,
+$$
+
+i.e. $[G:H]$-many copies of $V$; write $V_i$ for the $i$-th factor in $V'$ and $\alpha_i \c V \to V_i$ the tautological isomorphism. The $G$-action $\rho'$ on $V'$ is then defined so that the representatives $g_i$ send $V_1$ to $V_i$ (via the identity $V \to V$), and so that $H$ acts on each $V_i$ via $\rho$. These requirements force the following definition: for $g \in G$ and $1 \le i \le n$ we may write $g \cdot g_i = g_j \cdot h$ for unique $1 \le j \le n$ and $h \in H$ since $\{g_1,\ldots,g_n\}$ are left-coset representatives); then for $v \in V$ we define
+
+$$
+\rho'(g)\alpha_i(v) \ce \alpha_j(\rho(h)v).
+$$
+
+One then has to check that this is indeed a representation.</p>
+  </div>
+</div>
+
+<p>The idea of this construction is fairly clear, but in what sense is it “canonical”, and what naturality properties does it have? There are actually two interpretations of this construction, hence two answers to these questions.</p>
+
+<div class="environment" id="interpretation">
+  <div class="environment__body">
+    <div class="environment__label">
+      <p>2</p>
+    </div>
+    <div class="environment__header">
+
+    </div>
+    <p>Recall that representations of $H$ and $G$ may be thought of equivalently as left modules over the group algebras $k[H]$ and $k[G]$. In this language, restriction of representations from $G$ to $H$ is restriction of scalars in the canonical $k$-algebra map $\psi \c k[H] \to k[G]$. This brings us to the following.</p>
+
+    <div class="environment" id="ring-adjunction">
+      <div class="environment__body">
+        <div class="environment__label">
+          <p>2.1</p>
+        </div>
+        <div class="environment__header">
+          <p>Lemma.</p>
+        </div>
+        <p>Let $\phi \c R \to S$ be a map of rings. Let $\phi^* \c \LMod(S) \to \LMod(R)$ be the restriction of scalars functor from left $S$-modules to left $R$-modules. Then $\phi^*$:</p>
+
+        <div class="enumerate" id="ring-adjunction-left">
+          <div class="enumerate__label">
+            <p>(a)</p>
+          </div>
+          <div class="enumerate__body">
+            <p>has a left adjoint $\phi_* \c \LMod(R) \to \LMod(S)$ given by <em>extension of scalars</em> $M \mapsto S \otimes_R M$;</p>
+          </div>
+        </div>
+
+        <div class="enumerate" id="ring-adjunction-right">
+          <div class="enumerate__label">
+            <p>(b)</p>
+          </div>
+          <div class="enumerate__body">
+            <p>has a right adjoint $\phi_! \c \LMod(R) \to \LMod(S)$ given by <em>coextension of scalars</em> $M \mapsto \Hom_R(S,M)$.</p>
+          </div>
+        </div>
+
+        <div class="environment">
+          <div class="environment__body">
+            <div class="environment__label">
+
+            </div>
+            <div class="environment__header">
+              <p>Proof.</p>
+            </div>
+            <p><a href="#ring-adjunction-left" class="ref">(a)</a>: If we view $S$ as an $(S,R)$-bimodule in the obvious fashion, then there is a natural isomorphism
+
+$$
+\phi^*(N) \iso \Hom_S(S,N) \in \LMod(R).
+$$
+
+The claim then follows from the <a href="//en.wikipedia.org/wiki/Tensor-hom_adjunction">tensor-hom adjunction</a> for $(S,R)$-bimodules.</p>
+
+            <p><a href="#ring-adjunction-right" class="ref">(b)</a>: If we view $S$ as an $(R,S)$-bimodule in the obvious fashion, then there is a natural isomorphism
+
+$$
+\phi^*(N) \iso S \otimes_R N.
+$$
+
+The claim then follows from the tensor-hom adjunction for $(R,S)$-bimodules.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <p>We now apply <a href="#ring-adjunction" class="ref">(2.1)</a> to the ring map $\psi \c k[H] \to k[G]$ mentioned above. Suppose given an $H$-representation $V \in \LMod(k[H])$.</p>
+
+    <div class="environment" id="induction">
+      <div class="environment__body">
+        <div class="environment__label">
+          <p>2.2</p>
+        </div>
+        <div class="environment__header">
+          <p>Definition.</p>
+        </div>
+        <p>We define the <em>induced $G$-representation</em> associated to $V$ to be
+
+$$
+\psi_*(V) \iso k[G] \otimes_{k[H]} V \in \LMod(k[G]),
+$$
+
+and the <em>coinduced $G$-representation</em> associated to $V$ to be
+
+$$
+\psi_!(V) \iso \Hom_{k[H]}(k[G], V) \in \LMod(k[G]).
+$$
+</p>
+      </div>
+    </div>
+
+    <div class="environment" id="induction-unpack">
+      <div class="environment__body">
+        <div class="environment__label">
+          <p>2.3</p>
+        </div>
+        <div class="environment__header">
+          <p>Unpacking.</p>
+        </div>
+        <p>A choice of left-coset representatives $\{g_1,\ldots,g_n\}$ of $G/H$ as in <a href="#explicit" class="ref">(1)</a> defines a basis of $k[G]$ as a (free) right $k[H]$-module, hence determines an isomorphism of left $k[H]$-modules
+
+$$
+k[G] \otimes_{k[H]} V \iso \bigoplus_{i=1}^n V.
+$$
+
+Translating the left $k[G]$-module structure from the left-hand to the right-hand side precisely recovers the $G$-representation structure constructed in <a href="#explicit" class="ref">(1)</a>.</p>
+
+        <p>Next, note that $\{g_1^{-1},\ldots,g_n^{-1}\}$ will be a choice of <em>right</em>-coset representatives, defining a basis of $k[G]$ as a (free) <em>left</em> $k[H]$-module, hence determining an isomorphism of left $k[H]$-modules
+
+$$
+\Hom_{k[H]}(k[G], V) \iso \prod_{i=1}^n V \iso \bigoplus_{i=1}^n V.
+$$
+
+(Observe that we have crucially used that $n = [G:H] < \infty$ in the second isomorphism.) And again, translating the left $k[G]$-module structure from the left-hand to the right-hand side recovers the construction in <a href="#explicit" class="ref">(1)</a>.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="environment" id="conclusion">
+  <div class="environment__body">
+    <div class="environment__label">
+      <p>3</p>
+    </div>
+    <div class="environment__header">
+      <p>Conclusion.</p>
+    </div>
+    <p>We thus conclude from <a href="#induction-unpack" class="ref">(2.3)</a> that the construction of <a href="#explicit" class="ref">(1)</a> is “canonical”, or natural, in two senses: it defines both left and right adjoints to restriction of represenations from $G$ to $H$. In fact, even though the identification above went through an ugly choice of coset representatives, one can see that the discussion above still supplies a natural isomorphism between the two adjoints; the choice only depended on our fixed $G$ and $H$, and hence only makes it non-obvious that this natural isomorphism itself is natural. I.e. we have proved in a non-canonical way that the construction is canonical in a canonical way. (Sorry.)</p>
+
+    <p>Looking at the situation from the other side, we may be surprised to conclude that the left and right adjoints of restriction, induction and coinduction, are given on objects by the same construction! A near-future post will explain how to understand this phenomenon more generally and systematically (in particular getting rid of that last shred of non-canonicity), as well as a small application of the phenomenon.</p>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+    
+    
+    <div class="page__tags section">
+      <ul>
+        
+        
+        <li><a href="/tag/math">#math</a></li>
+        
+        
+        <li><a href="/tag/representation-theory">#representation-theory</a></li>
+        
+        
+        <li><a href="/tag/adjunctions">#adjunctions</a></li>
+        
+      </ul>
+    </div>
+    
+  </article>  
+</main>
+
+
+
+
+
+<!-- <footer class="site__footer wrap grid"> -->
+<!--   <p class="grid__col-alone"> -->
+<!--     &copy; 2016 Arpon Raksit &mdash; -->
+<!--     <a href="mailto:arpon.raksit@gmail.com">arpon.raksit@gmail.com</a> -->
+<!--   </p> -->
+<!-- </footer> -->
+
+</div>
+</body>
+</html>
+
