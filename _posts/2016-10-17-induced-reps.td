@@ -40,9 +40,9 @@ The idea of this construction is fairly clear, but in what sense is it "canonica
         Let $\phi \c R \to S$ be a map of rings. Let $\phi^* \c \LMod(S) \to \LMod(R)$ be the restriction of scalars functor from left $S$-modules to left $R$-modules. Then $\phi^*$:
         
         ~~~ [ring-adjunction-left]
-            has a left adjoint $\phi_* \c \LMod(R) \to \LMod(S)$ given by *extension of scalars* $M \mapsto S \otimes_R M$;
+            has a left adjoint $\phi_! \c \LMod(R) \to \LMod(S)$ given by *extension of scalars* $M \mapsto S \otimes_R M$;
         ~~~ [ring-adjunction-right]
-            has a right adjoint $\phi_! \c \LMod(R) \to \LMod(S)$ given by *coextension of scalars* $M \mapsto \Hom_R(S,M)$.
+            has a right adjoint $\phi_* \c \LMod(R) \to \LMod(S)$ given by *coextension of scalars* $M \mapsto \Hom_R(S,M)$.
         
         --- Proof
             
@@ -64,11 +64,11 @@ The idea of this construction is fairly clear, but in what sense is it "canonica
         
         We define the *induced $G$-representation* associated to $V$ to be
         $$
-        \psi_*(V) \iso k[G] \otimes_{k[H]} V \in \LMod(k[G]),
+        \psi_!(V) \iso k[G] \otimes_{k[H]} V \in \LMod(k[G]),
         $$
         and the *coinduced $G$-representation* associated to $V$ to be
         $$
-        \psi_!(V) \iso \Hom_{k[H]}(k[G], V) \in \LMod(k[G]).
+        \psi_*(V) \iso \Hom_{k[H]}(k[G], V) \in \LMod(k[G]).
         $$
         
     --- Unpacking [induction-unpack]
@@ -89,7 +89,7 @@ The idea of this construction is fairly clear, but in what sense is it "canonica
 
     We thus conclude from @induction-unpack that the construction of @explicit is "canonical", or natural, in two senses: it defines both left and right adjoints to restriction of represenations from $G$ to $H$. In fact, even though the identification above went through an ugly choice of coset representatives, one can see that the discussion above still supplies a natural isomorphism between the two adjoints; the choice only depended on our fixed $G$ and $H$, and hence only makes it non-obvious that this natural isomorphism itself is natural. I.e. we have proved in a non-canonical way that the construction is canonical in a canonical way. (Sorry.)
     
-    Looking at the situation from the other side, we may be surprised to conclude that the left and right adjoints of restriction, induction and coinduction, are naturally isomorphic! A near-future post will explain how to understand this phenomenon more generally and systematically (in particular getting rid of that last shred of non-canonicity), as well as a small application of the phenomenon.
+    Looking at the situation from the other side, we may be surprised to conclude that the left and right adjoints of restriction, induction and coinduction, are naturally isomorphic! Near-future posts will explain how to understand this phenomenon more generally and systematically (in particular getting rid of that last shred of non-canonicity).
     
     
 
