@@ -167,9 +167,13 @@ This is partially a continuation of the [previous post][induced-reps] on (co)ind
         $$
         is an isomorphism. (This includes the degenerate case of the empty collection, which says that $\sC$ has a zero object.)
     
+    --- Examples [semiadditive-eg]
+    
+        Abelian categories like $\Vect(k)$ are semiadditive, as are stable $\infty$-categories like $\Spectra$.
+    
     --- Proposition [ambidexterity-induction]
     
-        Let $f \c \BH \to \BG$ be as in @pullback-bg. Let $\sC$ be a semiaddiive $\infty$-category. Then there is a natural isomorphism
+        Let $f \c \BH \to \BG$ be as in @pullback-bg. Let $\sC$ be a semiadditive $\infty$-category. Then there is a natural isomorphism
         $$
         f_! \iso f_* \c \Loc_\BH(\sC) \to \Loc_\BG(\sC)
         $$
