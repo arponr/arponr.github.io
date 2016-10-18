@@ -7,8 +7,8 @@ tags:
 - math
 - category theory
 - localization
-- adjunction
-- monad
+- adjunctions
+- monads
 preamble:
 - [Fun, 0, '\mathrm{Fun}']
 - [Sh, 0, '\mathrm{Sh}']
