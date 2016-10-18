@@ -226,7 +226,8 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
 .footnotes ol {
   list-style-type: decimal;
   font-size: 0.9em;
-  line-height: 1.45; }
+  line-height: 1.45;
+  margin-left: 0rem; }
 
 .MathJax_Display {
   margin: 0.3875rem 0 !important; }

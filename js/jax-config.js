@@ -1,5 +1,6 @@
 var macros = {
     abs: ["\\l|#1\\r|", 1],
+    Aut: "\\operatorname{Aut}",
     bar: "\\overline",
     c: "\\colon",
     ce: "\\mathrel{:=}",
@@ -10,6 +11,7 @@ var macros = {
     ec: "\\mathrel{=:}",
     f: "\\frac",
     from: "\\leftarrow",
+    Fun: "\\operatorname{Fun}",
     goesto: "\\mapsto",
     Hom: "\\operatorname{Hom}",
     id: "\\mathrm{id}",

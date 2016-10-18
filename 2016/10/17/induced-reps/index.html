@@ -103,6 +103,10 @@
             
             
             
+            
+            
+            
+            
             <li><a 
                    href="/tag/math/">Math</a></li>
             
@@ -246,7 +250,7 @@ One then has to check that this is indeed a representation.</p>
             <p>(a)</p>
           </div>
           <div class="enumerate__body">
-            <p>has a left adjoint $\phi_* \c \LMod(R) \to \LMod(S)$ given by <em>extension of scalars</em> $M \mapsto S \otimes_R M$;</p>
+            <p>has a left adjoint $\phi_! \c \LMod(R) \to \LMod(S)$ given by <em>extension of scalars</em> $M \mapsto S \otimes_R M$;</p>
           </div>
         </div>
 
@@ -255,7 +259,7 @@ One then has to check that this is indeed a representation.</p>
             <p>(b)</p>
           </div>
           <div class="enumerate__body">
-            <p>has a right adjoint $\phi_! \c \LMod(R) \to \LMod(S)$ given by <em>coextension of scalars</em> $M \mapsto \Hom_R(S,M)$.</p>
+            <p>has a right adjoint $\phi_* \c \LMod(R) \to \LMod(S)$ given by <em>coextension of scalars</em> $M \mapsto \Hom_R(S,M)$.</p>
           </div>
         </div>
 
@@ -301,13 +305,13 @@ The claim then follows from the tensor-hom adjunction for $(R,S)$-bimodules.</p>
         <p>We define the <em>induced $G$-representation</em> associated to $V$ to be
 
 $$
-\psi_*(V) \iso k[G] \otimes_{k[H]} V \in \LMod(k[G]),
+\psi_!(V) \iso k[G] \otimes_{k[H]} V \in \LMod(k[G]),
 $$
 
 and the <em>coinduced $G$-representation</em> associated to $V$ to be
 
 $$
-\psi_!(V) \iso \Hom_{k[H]}(k[G], V) \in \LMod(k[G]).
+\psi_*(V) \iso \Hom_{k[H]}(k[G], V) \in \LMod(k[G]).
 $$
 </p>
       </div>
@@ -352,7 +356,7 @@ $$
     </div>
     <p>We thus conclude from <a href="#induction-unpack" class="ref">(2.3)</a> that the construction of <a href="#explicit" class="ref">(1)</a> is “canonical”, or natural, in two senses: it defines both left and right adjoints to restriction of represenations from $G$ to $H$. In fact, even though the identification above went through an ugly choice of coset representatives, one can see that the discussion above still supplies a natural isomorphism between the two adjoints; the choice only depended on our fixed $G$ and $H$, and hence only makes it non-obvious that this natural isomorphism itself is natural. I.e. we have proved in a non-canonical way that the construction is canonical in a canonical way. (Sorry.)</p>
 
-    <p>Looking at the situation from the other side, we may be surprised to conclude that the left and right adjoints of restriction, induction and coinduction, are naturally isomorphic! A near-future post will explain how to understand this phenomenon more generally and systematically (in particular getting rid of that last shred of non-canonicity), as well as a small application of the phenomenon.</p>
+    <p>Looking at the situation from the other side, we may be surprised to conclude that the left and right adjoints of restriction, induction and coinduction, are naturally isomorphic! Near-future posts will explain how to understand this phenomenon more generally and systematically (in particular getting rid of that last shred of non-canonicity).</p>
   </div>
 </div>
 
