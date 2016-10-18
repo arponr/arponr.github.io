@@ -19,8 +19,8 @@ html, body {
   height: 100%; }
 
 html {
-  font-family: acumin-pro, arno-pro, serif;
-  font-size: 93.75%;
+  font-family: utopia-std, serif;
+  font-size: 100%;
   line-height: 1.55;
   color: #333333;
   background: #ffffff;
@@ -34,10 +34,10 @@ html {
       -moz-osx-font-smoothing: auto; } }
   @media (max-width: 600px) {
     html {
-      font-size: 89.0625%; } }
+      font-size: 95%; } }
   @media (max-width: 425px) {
     html {
-      font-size: 84.375%; } }
+      font-size: 90%; } }
 
 ul {
   list-style: none; }

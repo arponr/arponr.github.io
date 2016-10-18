@@ -54,7 +54,7 @@ MathJax.Hub.Config({
     "HTML-CSS": {
         imageFont: null,
         webFont: "STIX-Web",
-        scale: 95,
+        scale: 98,
         linebreaks: {
             automatic: true,
             width: "75% container"
