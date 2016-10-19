@@ -154,6 +154,7 @@ This is partially a continuation of the [previous post][induced-reps] on (co)ind
             $$
             f_*(L)(x) \iso \lim_{y \in Y_x} L(y).
             $$
+            We may thus alternatively think of $f_!$ and $f_*$ as a "fiberwise" relative version of homology and cohomology.
 
 --- [ambidexterity]
     
