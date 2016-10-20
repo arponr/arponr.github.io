@@ -162,11 +162,11 @@ This is partially a continuation of the [previous post][induced-reps] on (co)ind
     
     --- Definition [semiadditive]
     
-        We say an $\infty$-category $\sC$ is *semiadditive* if it admits finite coproducts and finite products, and for any finite collection of objects $\{C_i\}_{1 \le i \le n}$ in $\sC$, the canonical map
+        We say an $\infty$-category $\sC$ is *semiadditive* if it is pointed (i.e. admits a zero object), admits finite coproducts and finite products, and for any finite collection of objects $\{C_i\}_{1 \le i \le n}$ in $\sC$, the canonical map
         $$
         \coprod_{i=1}^n C_i \to \prod_{i=1}^n C_i
         $$
-        is an isomorphism. (This includes the degenerate case of the empty collection, which says that $\sC$ has a zero object.)
+        (represented by the "identity matrix") is an isomorphism.
     
     --- Examples [semiadditive-eg]
     
