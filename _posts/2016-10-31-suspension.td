@@ -2,7 +2,7 @@
 layout: post
 math: true
 title: Suspension and rigor
-date: 2016-10-29 12:30:00 -0800
+date: 2016-10-31 16:30:00 -0800
 tags:
 - math
 - category theory
