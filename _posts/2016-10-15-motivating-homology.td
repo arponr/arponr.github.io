@@ -101,7 +101,7 @@ preamble:
         $$
         for $n \in \bZ$ satisfying the following conditions:
         ~~~ [theory-homology-additivity]
-            *Additivity*: For any set of objects $\{X_i\}$ that admits a coproduct in $\sC$, the canonical map $E_n(\coprod_i X_i) \to \bigoplus_i E_n(X_i)$ is an isomorphism.
+            *Additivity*: For any set of objects $\{X_i\}$ that admits a coproduct in $\sC$, the canonical map $\bigoplus_i E_n(X_i) \to E_n(\coprod_i X_i)$ is an isomorphism.
         ~~~ [theory-homology-locality]
             *Locality*: For any pushout square $\sigma$:
             $$

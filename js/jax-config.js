@@ -12,7 +12,7 @@ var macros = {
     f: "\\frac",
     from: "\\leftarrow",
     Fun: "\\operatorname{Fun}",
-    goesto: "\\mapsto",
+    goesto: "\\rightsquigarrow",
     Hom: "\\operatorname{Hom}",
     id: "\\mathrm{id}",
     inj: "\\hookrightarrow",
@@ -25,6 +25,7 @@ var macros = {
     r: "\\right",
     shimplies: "\\Rightarrow",
     shimplied: "\\Leftarrow",
+    til: "\\tilde",
     und: "\\underline",
 }
 
