@@ -6,10 +6,17 @@ subsections:
   entries:
   - title: New American Stories
     desc: Ben Marcus (ed.)
-  - title: How Not to Be Wrong
-    desc: Jordan Ellenberg
 - title: Completed
   entries:
+  - title: "Oryx and Crake"
+    desc: Margaret Atwood
+    date: 2017-01-05
+  - title: "They and We Will Get Into Trouble for This"
+    desc: Anna Moschovakis
+    date: 2016-12-28
+  - title: "Absolutely on Music"
+    desc: Haruki Murakami
+    date: 2016-12-27
   - title: "10:04"
     desc: Ben Lerner
     date: 2016-09-08

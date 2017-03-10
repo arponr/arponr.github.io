@@ -144,9 +144,9 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
 .page {
   padding-bottom: 3.6rem; }
   .page h1 {
-    font-weight: 700; }
+    font-weight: 900; }
   .page h2 {
-    font-weight: 600; }
+    font-weight: 700; }
   .page h3 {
     font-style: italic; }
   .page__time {
