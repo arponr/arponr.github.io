@@ -19,11 +19,11 @@ html, body {
   height: 100%; }
 
 html {
-  font-family: utopia-std, serif;
-  font-size: 100%;
-  line-height: 1.55;
-  color: #333333;
-  background: #ffffff;
+  font-family: kozuka-mincho-pro, serif;
+  font-size: 87.5%;
+  line-height: 1.6;
+  color: #111111;
+  background: #fffffc;
   font-variant-numeric: oldstyle-nums;
   -moz-font-feature-settings: "onum";
   -webkit-font-feature-settings: "onum";
@@ -34,10 +34,10 @@ html {
       -moz-osx-font-smoothing: auto; } }
   @media (max-width: 600px) {
     html {
-      font-size: 95%; } }
+      font-size: 83.125%; } }
   @media (max-width: 425px) {
     html {
-      font-size: 90%; } }
+      font-size: 78.75%; } }
 
 ul {
   list-style: none; }
@@ -62,7 +62,7 @@ sub {
   line-height: 1.45; }
 
 .site__nav ul, .site__footer, .page__meta, .page__tags, .page__content figure figcaption, .ref, .footnote, .entrylist__meta {
-  color: #777777; }
+  color: #666666; }
 
 .smcp {
   -moz-font-feature-settings: "c2sc", "smcp";
@@ -77,14 +77,14 @@ a:hover {
 .site__nav a:link, .page__header a:link, .page__tags a:link, .page__pagination a:link, a.ref:link, a.footnote:link, .entrylist a:link, .site__nav a:visited, .page__header a:visited, .page__tags a:visited, .page__pagination a:visited, a.ref:visited, a.footnote:visited, .entrylist a:visited {
   text-decoration: none; }
 a.site__footer:not(:hover):link, a.page__meta:not(:hover):link, a.page__tags:not(:hover):link, a.ref:not(:hover):link, a.footnote:not(:hover):link, a.entrylist__meta:not(:hover):link, a.site__footer:not(:hover):visited, a.page__meta:not(:hover):visited, a.page__tags:not(:hover):visited, a.ref:not(:hover):visited, a.footnote:not(:hover):visited, a.entrylist__meta:not(:hover):visited {
-  color: #777777; }
+  color: #666666; }
 a.active:not(:hover):link, a.active:not(:hover):visited {
-  color: #333333; }
+  color: #111111; }
 
 .grid__col-1, .grid__col-2, .grid__col-alone {
   display: block; }
 .grid__col-1 {
-  margin-bottom: 0.775rem; }
+  margin-bottom: 0.8rem; }
 @media (min-width: 500px) {
   .grid {
     overflow: hidden;
@@ -114,7 +114,7 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
 
 .site {
   margin: 0 auto;
-  max-width: 60rem;
+  max-width: 65rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   position: relative; }
@@ -123,26 +123,26 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
   .site__nav a {
     display: block; } }
 .site__nav ul li {
-  margin-bottom: 0.3875rem; }
+  margin-bottom: 0.4rem; }
   @media (max-width: 500px) {
     .site__nav ul li {
       display: inline;
       margin-right: 1.0rem;
       margin-bottom: 0; } }
 .site__footer {
-  padding-bottom: 2.325rem; }
+  padding-bottom: 2.4rem; }
 
 .site__header, .page__header {
-  padding-top: 1.55rem; }
+  padding-top: 1.6rem; }
 
 .section {
-  padding-top: 2.325rem; }
+  padding-top: 2.4rem; }
 
 .nav__pages {
-  margin-top: 0.775rem; }
+  margin-top: 0.8rem; }
 
 .page {
-  padding-bottom: 3.4875rem; }
+  padding-bottom: 3.6rem; }
   .page h1 {
     font-weight: 700; }
   .page h2 {
@@ -161,17 +161,17 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
   .page__content ol + *,
   .page__content blockquote + *,
   .page__content figure + * {
-    margin-top: 0.775rem; }
+    margin-top: 0.8rem; }
   .page__content h3 + *,
   .page__content ul + *,
   .page__content ol + * {
-    margin-top: 0.3875rem; }
+    margin-top: 0.4rem; }
   .page__content p + blockquote,
   .page__content p + figure {
-    margin-top: 0.775rem; }
+    margin-top: 0.8rem; }
   .page__content p + ul,
   .page__content p + ol {
-    margin-top: 0.3875rem; }
+    margin-top: 0.4rem; }
   .page__content p + p {
     text-indent: 1.25em; }
   .page__content li ul,
@@ -187,11 +187,11 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
     border-left: 2px solid #cccccc; }
   .page__content * + h2,
   .page__content hr {
-    margin-top: 1.55rem; }
+    margin-top: 1.6rem; }
   .page__content * + h3 {
-    margin-top: 0.775rem; }
+    margin-top: 0.8rem; }
   .page__pagination {
-    margin-top: 1.55rem; }
+    margin-top: 1.6rem; }
     .page__pagination .previous {
       float: left; }
     .page__pagination .next {
@@ -204,7 +204,7 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
 .text ul, .text ol {
   margin-left: 2.0rem; }
   .text ul li, .text ol li {
-    margin-bottom: 0.3875rem; }
+    margin-bottom: 0.4rem; }
     .text ul li ul, .text ol li ul {
       list-style-type: circle; }
     .text ul li ol, .text ol li ol {
@@ -221,8 +221,8 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
   background: #cccccc;
   height: 1px;
   width: 25%;
-  margin-top: 1.55rem;
-  margin-bottom: 0.775rem; }
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem; }
 .footnotes ol {
   list-style-type: decimal;
   font-size: 0.9em;
@@ -230,16 +230,16 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
   margin-left: 0rem; }
 
 .MathJax_Display {
-  margin: 0.3875rem 0 !important; }
+  margin: 0.4rem 0 !important; }
   .MathJax_Display * {
-    color: #333333 !important; }
+    color: #111111 !important; }
 
 .environment {
-  margin-bottom: 0.775rem; }
+  margin-bottom: 0.8rem; }
   * + .environment {
-    margin-top: 0.775rem; }
+    margin-top: 0.8rem; }
   .environment__label {
-    color: #777777; }
+    color: #666666; }
     .environment__label, .environment__label p {
       display: inline; }
     @media (max-width: 499px) {
@@ -258,14 +258,14 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
       display: inline; }
 
 .enumerate {
-  margin-bottom: 0.3875rem; }
+  margin-bottom: 0.4rem; }
   * + .enumerate {
-    margin-top: 0.3875rem; }
+    margin-top: 0.4rem; }
   .enumerate__label {
     float: left;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
-    color: #777777; }
+    color: #666666; }
   .enumerate__body {
     overflow: hidden; }
   .enumerate__header {
@@ -275,7 +275,7 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
   display: none; }
 
 .entrylist li {
-  margin-bottom: 0.775rem;
+  margin-bottom: 0.8rem;
   position: relative; }
 .entrylist__title {
   display: block; }

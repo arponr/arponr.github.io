@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd ~/Documents/code/arponr.com &&
-jekyll build &&
+jekyll _2.4_ build &&
 git add --all . &&
 git commit -a &&
 git branch -D master &&
