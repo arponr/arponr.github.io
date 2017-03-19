@@ -12,6 +12,10 @@ subsections:
     url: /files/senior-thesis.pdf
 - title: Expository notes
   entries:
+  - title: Motivating infinity-categorical thinking
+    date: 2017-01-23
+    desc: Notes from a talk describing a few basic ways in which higher category theory supplies useful ways to think about classical homotopy theory.
+    url: /files/inftycats-motivation.pdf
   - title: Vector fields and the J-homomorphism
     date: 2014-05-09
     desc: On Adams's work on counting vector fields on spheres and the J-homomorphism.
