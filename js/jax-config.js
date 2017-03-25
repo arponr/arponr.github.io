@@ -54,9 +54,9 @@ MathJax.Hub.Config({
     jax: ["input/TeX", "output/HTML-CSS"],
     "HTML-CSS": {
         imageFont: null,
-        availableFonts: [],
-        webFont: "Latin-Modern",
-        scale: 93,
+        // availableFonts: [],
+        webFont: "STIX-Web",
+        scale: 96,
         linebreaks: {
             automatic: true,
             width: "75% container"
