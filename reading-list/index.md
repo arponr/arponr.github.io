@@ -1,11 +1,8 @@
 ---
 layout: entry-list
 title: Reading list
+section: other
 subsections:
-- title: In progress
-  entries:
-  - title: New American Stories
-    desc: Ben Marcus (ed.)
 - title: Completed
   entries:
   - title: "Oryx and Crake"
@@ -72,3 +69,4 @@ subsections:
     desc: Haruki Murakami, trans. Jay Rubin
     date: 2015-06-02
 ---
+

@@ -1,0 +1,44 @@
+---
+layout: base
+---
+
+<main class="site__content">
+  <article class="page">
+
+    <div class="grid">
+      <div class="grid__col-alone">
+        <header class="page__header">
+          <h1>{{ page.title }}</h1>
+        </header>
+        
+        <div class="page__content">
+          <div class="page__section">
+            <div class="text">
+              {{ content }}
+            </div>
+          </div>
+
+          <div class="page__section">
+            <h2>Latest posts</h2>
+            <ul class="entrylist">
+              {% assign counter = 0 %}
+              {% for e in site.posts %}
+              {% if counter < 5 %}
+                              {% unless e.hidden %}
+                              {% assign counter=counter | plus:1 %}
+                              {% include entrylist.html %}
+                              {% endunless %}
+                              {% endif %}
+                              {% endfor %}
+                              </ul>
+
+            <div class="page__pagination">
+              <a href="/all" class="next">&rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </article>
+</main>
+

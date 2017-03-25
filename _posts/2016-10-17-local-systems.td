@@ -1,5 +1,6 @@
 ---
 layout: post
+hidden: true
 math: true
 title: Local systems, (co)induction, and (co)homology
 date: 2016-10-17 23:00:00 -0800

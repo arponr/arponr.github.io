@@ -13,7 +13,6 @@ paginate_path: ":num"
 
 nav_tags:
 - all
-- math
 - reading
 - writing
 

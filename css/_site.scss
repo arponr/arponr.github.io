@@ -1,6 +1,6 @@
 %wrap {
   margin: 0 auto;
-  max-width: 65rem;
+  max-width: 60rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   position: relative;
@@ -11,11 +11,7 @@
 
   &__nav {
     a {
-      @extend %plain;
-
-      @media (min-width: $grid-breakpoint-1) {
-        display: block;
-      }
+      // @extend %plain;
     }
 
     ul {
@@ -33,6 +29,16 @@
     }
   }
 
+  &__header {
+    padding-top: $medskip;
+    padding-bottom: $smallskip;
+    border-bottom: 1px solid $background-accent;
+  }
+
+  &__content {
+    padding-top: $smallskip;
+  }
+  
   &__footer {
     padding-bottom: $bigskip;
     @extend %small;
@@ -40,16 +46,19 @@
   }
 }
 
-.site__header, .page__header {
-  padding-top: $medskip;
-}
-
-
-.section {
-  padding-top: $bigskip;
-}
-
 .nav__pages {
-  margin-top: $smallskip;
+  &, a {
+    @extend %meta;
+  }
+  
+  li {
+    display: inline;
+    margin-right: 0.2rem;
+
+    & + li:before {
+      padding-right: 0.4rem;
+      content: "/";
+    }
+  }
 }
 

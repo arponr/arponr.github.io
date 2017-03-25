@@ -1,5 +1,6 @@
 ---
 layout: post
+hidden: true
 math: true
 title: Finite presentation basics
 date: 2014-05-29 20:00:00 -0500

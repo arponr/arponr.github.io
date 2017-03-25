@@ -1,5 +1,6 @@
 ---
 layout: post
+hidden: true
 math: true
 date: 2014-07-05 13:30:00 -0500
 title: Homotopy (co)limits aren't (co)limits in the homotopy category

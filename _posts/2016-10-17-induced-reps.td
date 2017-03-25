@@ -1,5 +1,6 @@
 ---
 layout: post
+hidden: true
 math: true
 title: Induced and coinduced representations
 date: 2016-10-17 00:15:00 -0800

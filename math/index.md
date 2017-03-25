@@ -1,8 +1,7 @@
 ---
 layout: entry-list
-title: Academic
-tag: academic
-in-nav: true
+section: math
+in-nav: false
 subsections:
 - title: Formal writing
   entries:
@@ -30,6 +29,8 @@ subsections:
     url: /files/doldkan.pdf
 ---
 
-I'm currently a first-year graduate student in mathematics at Stanford. I was an undergraduate at Harvard from 2011--2015 and spent 2015--2016 at the University of Cambridge.
+## About
+
+I'm currently a first-year PhD student in mathematics at Stanford. I was an undergraduate at Harvard from 2011--2015 and spent 2015--2016 at the University of Cambridge.
 
 My mathematical interests are centered around homotopy theory. I am at the moment feeling particularly compelled towards the mysterious bridges being unearthed between stable homotopy theory and number theory.

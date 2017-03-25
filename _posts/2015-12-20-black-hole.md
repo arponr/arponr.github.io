@@ -2,6 +2,7 @@
 layout: post
 title: Black hole
 date: 2015-12-20 15:00:00 -0500
+section: other
 tags:
 - writing
 - poem

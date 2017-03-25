@@ -1,5 +1,6 @@
 ---
 layout: post
+hidden: true
 math: true
 title: Localization
 date: 2016-07-17 10:15:00 -0500

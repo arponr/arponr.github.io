@@ -1,21 +1,25 @@
+h1 {
+    font-weight: 700;
+}
+
 .page {
   padding-bottom: 1.5 * $bigskip;
-  
-  h1 {
-    font-weight: 900;
-  }
 
   h2 {
-    // @extend .smcp;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   h3 {
     font-style: italic;
   }
   
-  &__header a {
-    @extend %plain;
+  &__header {
+    margin-top: $smallskip;
+    margin-bottom: $medskip;
+    
+    a {
+      @extend %plain;
+    }
   }
   
   &__meta {
@@ -41,21 +45,54 @@
     }
   }
   
-  &__content {
-    h2,
-    ul,
-    ol,
-    blockquote,
-    figure {
-      & + * {
+  &__section {
+    & + & {
+      margin-top: $medskip;
+    }
+    
+    h2, h3 {
+      @extend .alignleft;
+    }
+    
+    * + h2,
+    hr {
+      margin-top: $medskip;
+    }
+
+    * + h3 {
+      margin-top: $smallskip;
+    }
+
+    @media (min-width: $grid-breakpoint-1) {
+      * + h2 + * {
+        margin-top: $medskip;
+      }
+
+      * + h3 + * {
         margin-top: $smallskip;
       }
     }
 
-    h3,
+    @media (max-width: $grid-breakpoint-1 - 1px) {
+      h2 {
+        margin-bottom: $smallskip;
+      }
+
+      h3 {
+        margin-bottom: $tinyskip;
+      }
+    }
+    
+    blockquote,
+    figure {
+      & + :not(h2):not(h3) {
+        margin-top: $smallskip;
+      }
+    }
+
     ul,
     ol {
-      & + * {
+      & + :not(h2):not(h3)  {
         margin-top: $tinyskip;
       }
     }
@@ -98,15 +135,6 @@
       margin-left: 2px;
       border-left: 2px solid $background-accent;
     }
-    
-    * + h2,
-    hr {
-      margin-top: $medskip;
-    }
-
-    * + h3 {
-      margin-top: $smallskip;
-    }
   }
 
   &__pagination {
@@ -138,8 +166,8 @@
   ul, ol {
     margin-left: 2.0rem;
 
-    li {
-      margin-bottom: $tinyskip;
+    li + li {
+      margin-top: $tinyskip;
 
       ul {
         list-style-type: circle;

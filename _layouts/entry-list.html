@@ -2,36 +2,41 @@
 layout: base
 ---
 
-<main class="site__content grid__col-2">
-  <article class="page">
-    
+<main class="site__content grid">
+  <article class="page grid__col-alone">
+
     <header class="page__header">
       <h1>{{ page.title }}</h1>
     </header>
     
-    <div class="page__content section">
-      {{ content }}
-      
-      {% if page.subsections %}
-      {% for s in page.subsections %}
-      <h2>{{ s.title }}</h2>
-      <ul class="entrylist">
-        {% for e in s.entries %}
-        {% include entrylist.html %}
-        {% endfor %}
-      </ul>
-      {% endfor %}
+    <div class="page__content">
+      <div class="page__section">
+        <div class="text">
+          {{ content }}
+        </div>
+      </div>
 
-      {% else %}
-      <ul class="entrylist">
-        {% for e in page.entries %}
-        {% include entrylist.html %}
+      <div class="page__section">
+        {% if page.subsections %}
+        {% for s in page.subsections %}
+        <h2>{{ s.title }}</h2>
+        <ul class="entrylist">
+          {% for e in s.entries %}
+          {% include entrylist.html %}
+          {% endfor %}
+        </ul>
         {% endfor %}
-      </ul>
-      
-      {% endif %}
+        
+        {% else %}
+        <ul class="entrylist">
+          {% for e in page.entries %}
+          {% include entrylist.html %}
+          {% endfor %}
+        </ul>
+        
+        {% endif %}
+      </div>
     </div>
-    
   </article>
 </main>
 

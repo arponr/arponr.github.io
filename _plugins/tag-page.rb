@@ -20,6 +20,7 @@ module Jekyll
         pager = TagPager.new(site, num_page, posts, tag, num_pages)
         dir = pager.paginate_dir(site, num_page)
         page = TagPage.new(site, site.source, dir, tag)
+        page.data['section'] = 'other'
         if num_page == 1 and site.config['nav_tags'].include?(tag)
           page.data['in-nav'] = true
         end

@@ -15,14 +15,22 @@
   </head>
 
   <body class="{{ page.section }}">
-    <div class="site grid">
-      <header class="site__header grid__col-1" role="banner">
-        <nav class="site__nav" role="navigation">
-          <a class="nav__name" href="/">Arpon R.</a>
+    <div class="site">
+      <header class="site__header grid">
+        <nav class="site__nav grid__col-1" role="navigation">
+          <a class="nav__name" href="/">Arpon Raksit</a>
+        </nav>
+        <nav class="grid__col-2">
+          <ul class="nav__pages">
+            <li><a {% if page.section == "math" %}class="active"{% endif %}
+                   href="/math">Math</a></li>
+            <li><a {% if page.section == "other" %}class="active"{% endif %}
+                   href="/other">Other</a></li>
+          </ul>
           <ul class="nav__pages">
             {% assign pages = site.pages | sort:"url" %}
             {% for p in pages %}
-            {% if p.in-nav %}
+            {% if p.section == page.section and p.in-nav %}
             <li><a {% if p.tag == page.tag %}class="active"{% endif %}
                    href="{{ p.url }}">{{ p.title }}</a></li>
             {% endif %}

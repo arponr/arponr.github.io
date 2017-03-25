@@ -1,5 +1,6 @@
 ---
 layout: post
+hidden: true
 math: true
 title: Suspension and rigor
 date: 2016-10-31 16:30:00 -0800

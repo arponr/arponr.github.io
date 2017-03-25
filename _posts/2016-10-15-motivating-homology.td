@@ -1,5 +1,6 @@
 ---
 layout: post
+hidden: true
 math: true
 title: Motivating (co)homology in topology
 date: 2016-10-15 12:30:00 -0800

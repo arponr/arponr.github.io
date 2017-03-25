@@ -2,43 +2,47 @@
 layout: base
 ---
 
-<main class="site__content grid__col-2">
-  <article class="page">
-    
+<main class="site__content grid">
+  <article class="page grid__col-alone">
+
     <header class="page__header">
       <a href="/{{ paginator.root }}"><h1>{{ page.title }}</h1></a>
     </header>
     
-    <div class="page__content section">
+    <div class="page__content">
       {% if paginator.page == 1 %}
-      
-      {% if page.tag == "reading" %}
-      I also keep a <a href="/reading-list">reading list</a>.
-
-      {% else %}
-      {{ content }}
-
+      <div class="page__section">
+        <div class="text">
+          {% if page.tag == "reading" %}
+          <p>I also keep a <a href="/reading-list">reading list</a>.</p>
+          {% endif %}
+          
+          {{ content }}
+        </div>
+      </div>
       {% endif %}
 
-      <h2>Latest posts</h2>
-      {% endif %}
-      
-      <ul class="entrylist">        
-        {% for e in paginator.posts %}
-        {% include entrylist.html %}        
-        {% endfor %}
-      </ul>
+      <div class="page__section">
+        {% if paginator.page == 1 %}
+        <h2>Latest posts</h2>
+        {% endif %}
+        
+        <ul class="entrylist">        
+          {% for e in paginator.posts %}
+          {% include entrylist.html %}        
+          {% endfor %}
+        </ul>
 
-      <div class="page__pagination">
-        {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}" class="previous">&#8592;</a>
-        {% endif %}
-        {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}" class="next">&rarr;</a>
-        {% endif %}
+        <div class="page__pagination">
+          {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="previous">&#8592;</a>
+          {% endif %}
+          {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="next">&rarr;</a>
+          {% endif %}
+        </div>
       </div>
     </div>
-      
   </article>
 </main>
 

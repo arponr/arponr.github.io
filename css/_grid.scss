@@ -1,10 +1,10 @@
 $grid-breakpoint-1: 500px;
-$grid-breakpoint-2: 800px;
+$grid-breakpoint-2: 700px;
 $gutter-width: 3.0rem;
-$gutter-pad: 0.7rem;
-$col-1-width: 18%;
-$col-2-width: 100% - 2*$col-1-width;
+$col-1-width: 20%;
+$col-2-width: 100% - 2 * $col-1-width;
 $col-ratio: percentage($col-1-width/$col-2-width);
+$col-ratio-alt: percentage($col-1-width/($col-1-width+$col-2-width));
 
 .grid {
   &__col-1, &__col-2, &__col-alone {
@@ -26,10 +26,8 @@ $col-ratio: percentage($col-1-width/$col-2-width);
     &__col-1 {
       width: $col-1-width;
       margin-bottom: 0;
-    }
-
-    &__col-2 {
-      padding-left: $gutter-width;
+      padding-right: $gutter-width;
+      text-align: right;
     }
 
     &__col-2, &__col-alone {
@@ -37,9 +35,10 @@ $col-ratio: percentage($col-1-width/$col-2-width);
 
       .alignleft {
         float: left;
-        margin-left: -$gutter-width;
+        margin-left: -$col-ratio-alt;
         margin-bottom: 0;
-        width: calc(#{$gutter-width} - #{$gutter-pad});
+        width: calc(#{$col-ratio-alt} - #{$gutter-width});
+        text-align: right;
       }
     }
 
@@ -53,8 +52,17 @@ $col-ratio: percentage($col-1-width/$col-2-width);
       width: $col-2-width;
 
       .banner {
-        width: percentage((100% - $col-1-width)/$col-2-width);
-        max-height: calc(100% - 4rem);
+        // width: percentage((100% - $col-1-width) / $col-2-width);
+        width: percentage(100% / $col-2-width);
+        margin-left: percentage(-$col-1-width / $col-2-width);
+      }
+
+      .alignleft {
+        float: left;
+        margin-left: -$col-ratio;
+        margin-bottom: 0;
+        width: calc(#{$col-ratio} - #{$gutter-width});
+        text-align: right;
       }
     }
   }

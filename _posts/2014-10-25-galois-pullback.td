@@ -1,5 +1,6 @@
 ---
 layout: post
+hidden: true
 math: true
 title: Pulling back a Galois correspondence
 date: 2014-10-25 16:30:00 -0500
