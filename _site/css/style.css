@@ -19,9 +19,9 @@ html, body {
   height: 100%; }
 
 html {
-  font-family: jaf-bernina-sans, sans-serif;
-  font-size: 81.25%;
-  line-height: 1.6;
+  font-family: capitolium-2, serif;
+  font-size: 93.75%;
+  line-height: 1.5;
   color: #333333;
   background: #ffffff;
   font-variant-numeric: oldstyle-nums;
@@ -34,10 +34,10 @@ html {
       -moz-osx-font-smoothing: auto; } }
   @media (max-width: 600px) {
     html {
-      font-size: 77.1875%; } }
+      font-size: 89.0625%; } }
   @media (max-width: 425px) {
     html {
-      font-size: 73.125%; } }
+      font-size: 84.375%; } }
 
 ul {
   list-style: none; }
@@ -57,11 +57,11 @@ sup {
 sub {
   top: 0.4em; }
 
-.site__footer, .page__tags, .page__section figure figcaption, .entrylist__meta {
+.site__footer, .page__tags, .page figure figcaption, .entrylist__meta {
   font-size: 0.9em;
   line-height: 1.4; }
 
-.site__nav ul, .site__footer, .nav__pages, .nav__pages a, .page__meta, .page__tags, .page__section figure figcaption, .ref, .footnote, .entrylist__meta {
+.site__nav ul, .site__footer, .nav__pages, .nav__pages a, .page__meta, .page__tags, .page figure figcaption, .ref, .footnote, .entrylist__meta {
   color: #777777; }
 
 .smcp {
@@ -73,8 +73,8 @@ a:link, a:visited {
   text-decoration: underline;
   color: inherit; }
 a:hover {
-  color: #dd6622; }
-.page__header a:link, .page__tags a:link, .page__pagination a:link, a.ref:link, a.footnote:link, .entrylist__tags a:link, .page__header a:visited, .page__tags a:visited, .page__pagination a:visited, a.ref:visited, a.footnote:visited, .entrylist__tags a:visited {
+  color: #2266dd; }
+.site__nav a:link, .page__header a:link, .page__tags a:link, .page__pagination a:link, a.ref:link, a.footnote:link, .entrylist__tags a:link, .site__nav a:visited, .page__header a:visited, .page__tags a:visited, .page__pagination a:visited, a.ref:visited, a.footnote:visited, .entrylist__tags a:visited {
   text-decoration: none; }
 a.site__footer:not(:hover):link, a.nav__pages:not(:hover):link, .nav__pages a:not(:hover):link, a.page__meta:not(:hover):link, a.page__tags:not(:hover):link, a.ref:not(:hover):link, a.footnote:not(:hover):link, a.entrylist__meta:not(:hover):link, a.site__footer:not(:hover):visited, a.nav__pages:not(:hover):visited, .nav__pages a:not(:hover):visited, a.page__meta:not(:hover):visited, a.page__tags:not(:hover):visited, a.ref:not(:hover):visited, a.footnote:not(:hover):visited, a.entrylist__meta:not(:hover):visited {
   color: #777777; }
@@ -84,83 +84,64 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
 .grid__col-1, .grid__col-2, .grid__col-alone {
   display: block; }
 .grid__col-1 {
-  margin-bottom: 0.8rem; }
+  margin-bottom: 2.25rem; }
 @media (min-width: 500px) {
   .grid {
     overflow: hidden;
     clear: left; }
     .grid__col-1, .grid__col-2, .grid__col-alone {
       float: left; }
-    .grid__col-1 {
-      width: 20%;
+    .grid__col-1, .grid__col-alone {
+      width: 70%;
       margin-bottom: 0;
-      padding-right: 3rem;
-      text-align: right; }
-    .grid__col-2, .grid__col-alone {
-      width: 80%; }
-      .grid__col-2 .alignleft, .grid__col-2 .page__section h2, .page__section .grid__col-2 h2, .grid__col-2 .page__section h3, .page__section .grid__col-2 h3, .grid__col-2 .environment__label, .grid__col-alone .alignleft, .grid__col-alone .page__section h2, .page__section .grid__col-alone h2, .grid__col-alone .page__section h3, .page__section .grid__col-alone h3, .grid__col-alone .environment__label {
-        float: left;
-        margin-left: -25%;
-        margin-bottom: 0;
-        width: calc(25% - 3rem);
-        text-align: right; }
-    .grid__col-alone {
-      margin-left: 20%; } }
-@media (min-width: 700px) {
-  .grid__col-2, .grid__col-alone {
-    width: 60%; }
-    .grid__col-2 .banner, .grid__col-alone .banner {
-      width: 166.66667%;
-      margin-left: -33.33333%; }
-    .grid__col-2 .alignleft, .grid__col-2 .page__section h2, .page__section .grid__col-2 h2, .grid__col-2 .page__section h3, .page__section .grid__col-2 h3, .grid__col-2 .environment__label, .grid__col-alone .alignleft, .grid__col-alone .page__section h2, .page__section .grid__col-alone h2, .grid__col-alone .page__section h3, .page__section .grid__col-alone h3, .grid__col-alone .environment__label {
-      float: left;
-      margin-left: -33.33333%;
-      margin-bottom: 0;
-      width: calc(33.33333% - 3rem);
-      text-align: right; } }
+      padding-right: 4rem; }
+    .grid__col-2 {
+      width: 30%; } }
 
 .site {
   margin: 0 auto;
-  max-width: 60rem;
+  max-width: 55rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   position: relative; }
 
 .site__nav ul li {
-  margin-bottom: 0.4rem; }
-  @media (max-width: 500px) {
-    .site__nav ul li {
-      display: inline;
-      margin-right: 1.0rem;
-      margin-bottom: 0; } }
+  margin-bottom: 0.375rem; }
 .site__header {
-  padding-top: 1.6rem;
-  padding-bottom: 0.8rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.375rem;
   border-bottom: 1px solid #cccccc; }
 .site__content {
-  padding-top: 0.8rem; }
+  padding-top: 2.25rem; }
 .site__footer {
-  padding-bottom: 2.4rem; }
+  padding-bottom: 2.25rem; }
 
-.nav__pages li {
-  display: inline;
-  margin-right: 0.2rem; }
-  .nav__pages li + li:before {
-    padding-right: 0.4rem;
-    content: "/"; }
+.nav__pages {
+  display: inline; }
+  .nav__pages li {
+    display: inline; }
+    .nav__pages li:before {
+      padding-right: 0.2rem;
+      content: "\2014"; }
+    .nav__pages li + li:before {
+      padding-right: 0.15rem;
+      content: "|"; }
 
 h1 {
   font-weight: 700; }
 
 .page {
-  padding-bottom: 3.6rem; }
+  padding-bottom: 3.375rem; }
   .page h2 {
-    font-weight: 600; }
+    font-weight: 600;
+    margin-bottom: 0.75rem; }
   .page h3 {
-    font-style: italic; }
+    font-style: italic;
+    margin-bottom: 0.375rem; }
+  .page code {
+    font-family: adaptive-mono, mono; }
   .page__header {
-    margin-top: 0.8rem;
-    margin-bottom: 1.6rem; }
+    margin-bottom: 2.25rem; }
   .page__time {
     display: block; }
   .page__tags {
@@ -169,49 +150,39 @@ h1 {
       display: inline;
       margin-right: 0.3rem; }
   .page__section + .page__section {
-    margin-top: 1.6rem; }
-  .page__section * + h2,
-  .page__section hr {
-    margin-top: 1.6rem; }
-  .page__section * + h3 {
-    margin-top: 0.8rem; }
-  @media (min-width: 500px) {
-    .page__section * + h2 + * {
-      margin-top: 1.6rem; }
-    .page__section * + h3 + * {
-      margin-top: 0.8rem; } }
-  @media (max-width: 499px) {
-    .page__section h2 {
-      margin-bottom: 0.8rem; }
-    .page__section h3 {
-      margin-bottom: 0.4rem; } }
-  .page__section blockquote + :not(h2):not(h3),
-  .page__section figure + :not(h2):not(h3) {
-    margin-top: 0.8rem; }
-  .page__section ul + :not(h2):not(h3),
-  .page__section ol + :not(h2):not(h3) {
-    margin-top: 0.4rem; }
-  .page__section p + blockquote,
-  .page__section p + figure {
-    margin-top: 0.8rem; }
-  .page__section p + ul,
-  .page__section p + ol {
-    margin-top: 0.4rem; }
-  .page__section p + p {
+    margin-top: 1.5rem; }
+  .page * + h2,
+  .page hr {
+    margin-top: 2.25rem; }
+  .page * + h3 {
+    margin-top: 1.5rem; }
+  .page blockquote + :not(h2):not(h3),
+  .page figure + :not(h2):not(h3) {
+    margin-top: 0.75rem; }
+  .page ul + :not(h2):not(h3),
+  .page ol + :not(h2):not(h3) {
+    margin-top: 0.375rem; }
+  .page p + blockquote,
+  .page p + figure {
+    margin-top: 0.75rem; }
+  .page p + ul,
+  .page p + ol {
+    margin-top: 0.375rem; }
+  .page p + p {
     text-indent: 1.25em; }
-  .page__section li ul,
-  .page__section li ol {
+  .page li ul,
+  .page li ol {
     margin-bottom: 0; }
-  .page__section figure, .page__section figure img {
+  .page figure, .page figure img {
     width: 100%; }
-  .page__section figure figcaption {
+  .page figure figcaption {
     width: 75%; }
-  .page__section blockquote {
+  .page blockquote {
     padding-left: 1.5rem;
     margin-left: 2px;
     border-left: 2px solid #cccccc; }
   .page__pagination {
-    margin-top: 1.6rem; }
+    margin-top: 1.5rem; }
     .page__pagination .previous {
       float: left; }
     .page__pagination .next {
@@ -224,7 +195,7 @@ h1 {
 .text ul, .text ol {
   margin-left: 2.0rem; }
   .text ul li + li, .text ol li + li {
-    margin-top: 0.4rem; }
+    margin-top: 0.375rem; }
     .text ul li + li ul, .text ol li + li ul {
       list-style-type: circle; }
     .text ul li + li ol, .text ol li + li ol {
@@ -241,8 +212,8 @@ h1 {
   background: #cccccc;
   height: 1px;
   width: 25%;
-  margin-top: 1.6rem;
-  margin-bottom: 0.8rem; }
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem; }
 .footnotes ol {
   list-style-type: decimal;
   font-size: 0.9em;
@@ -250,14 +221,14 @@ h1 {
   margin-left: 0rem; }
 
 .MathJax_Display {
-  margin: 0.4rem 0 !important; }
+  margin: 0.375rem 0 !important; }
   .MathJax_Display * {
     color: #333333 !important; }
 
 .environment {
-  margin-bottom: 0.8rem; }
+  margin-bottom: 0.75rem; }
   * + .environment {
-    margin-top: 0.8rem; }
+    margin-top: 0.75rem; }
   .environment__label {
     color: #777777; }
     .environment__label, .environment__label p {
@@ -278,9 +249,9 @@ h1 {
       display: inline; }
 
 .enumerate {
-  margin-bottom: 0.4rem; }
+  margin-bottom: 0.375rem; }
   * + .enumerate {
-    margin-top: 0.4rem; }
+    margin-top: 0.375rem; }
   .enumerate__label {
     float: left;
     padding-right: 0.5rem;
@@ -300,7 +271,7 @@ h1 {
   position: relative;
   list-style: none; }
 .entrylist li + li {
-  margin-top: 0.8rem; }
+  margin-top: 0.75rem; }
 .entrylist__title {
   display: block; }
 .entrylist__meta {

@@ -3,6 +3,10 @@ layout: entry-list
 title: Reading list
 section: other
 subsections:
+- title: In progress
+  entries:
+  - title: "Tenth of December"
+    desc: George Saunders
 - title: Completed
   entries:
   - title: "Oryx and Crake"

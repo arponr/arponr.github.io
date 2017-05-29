@@ -1,9 +1,10 @@
-$font-main: jaf-bernina-sans, sans-serif;
+$font-main: capitolium-2, serif;
+$font-code: adaptive-mono, mono;
 
-$size-base: (13/16)*100%;
+$size-base: (15/16)*100%;
 $size-small: .9em;
 
-$line-height: 1.6;
+$line-height: 1.5;
 $line-height-unit: $line-height * 1rem;
 $line-height-small: 1.4;
 
@@ -12,7 +13,7 @@ $background-accent: #cccccc;
 
 $color-base: #333333;
 $color-light: #777777;
-$color-accent: #dd6622;
+$color-accent: #2266dd;
 
 $background-progress: #dddddd;
 $color-progress: #888888;

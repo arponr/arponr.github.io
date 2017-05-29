@@ -3,29 +3,16 @@ layout: base
 ---
 
 <main class="site__content grid">
-  <article class="page grid__col-alone">
+  <article class="page">
 
-    <header class="page__header">
-      <a href="/{{ paginator.root }}"><h1>{{ page.title }}</h1></a>
-    </header>
     
     <div class="page__content">
-      {% if paginator.page == 1 %}
-      <div class="page__section">
-        <div class="text">
-          {% if page.tag == "reading" %}
-          <p>I also keep a <a href="/reading-list">reading list</a>.</p>
-          {% endif %}
-          
-          {{ content }}
-        </div>
-      </div>
-      {% endif %}
-
-      <div class="page__section">
-        {% if paginator.page == 1 %}
-        <h2>Latest posts</h2>
-        {% endif %}
+      <div class="grid__col-1">
+        
+        <h2>{{ page.title }} &mdash;
+          {{ paginator.page }} of {{ paginator.total_pages }}
+        </h2>
+        
         
         <ul class="entrylist">        
           {% for e in paginator.posts %}
@@ -42,6 +29,18 @@ layout: base
           {% endif %}
         </div>
       </div>
+
+      {% if paginator.page == 1 %}
+      <div class="grid__col-2">
+        <div class="text">
+          {% if page.tag == "reading" %}
+          <p>I also keep a <a href="/reading-list">reading list</a>.</p>
+          {% endif %}
+          
+          {{ content }}
+        </div>
+      </div>
+      {% endif %}
     </div>
   </article>
 </main>

@@ -4,18 +4,18 @@ layout: base
 
 <main class="site__content">
   <article class="page">
+    <div class="page__content grid">
 
-    <div class="grid">
-      <div class="grid__col-alone">
-        <header class="page__header">
-          <h1>{{ page.title }}</h1>
-        </header>
-        
-        <div class="page__content">
-          <div class="page__section text">
-            {{ content }}
-          </div>
+      <div class="grid__col-1">
+        <div class="text">
+          {{ content }}
         </div>
+      </div>
+
+      <div class="grid__col-2">
+        <figure>
+          <img src="/images/2016-me.jpg">
+        </figure>
       </div>
     </div>
     

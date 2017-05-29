@@ -7,15 +7,20 @@ h1 {
 
   h2 {
     font-weight: 600;
+    margin-bottom: $smallskip;
   }
 
   h3 {
     font-style: italic;
+    margin-bottom: $tinyskip;
+  }
+
+  code {
+    font-family: $font-code;
   }
   
   &__header {
-    margin-top: $smallskip;
-    margin-bottom: $medskip;
+    margin-bottom: $bigskip;
     
     a {
       @extend %plain;
@@ -49,92 +54,92 @@ h1 {
     & + & {
       margin-top: $medskip;
     }
+  }
     
-    h2, h3 {
-      @extend .alignleft;
-    }
-    
-    * + h2,
-    hr {
-      margin-top: $medskip;
-    }
+  // h2, h3 {
+  //   @extend .alignleft;
+  // }
+  
+  * + h2,
+  hr {
+    margin-top: $bigskip;
+  }
 
-    * + h3 {
+  * + h3 {
+    margin-top: $medskip;
+  }
+
+  // @media (min-width: $grid-breakpoint-1) {
+  //   * + h2 + * {
+  //     margin-top: $medskip;
+  //   }
+
+  //   * + h3 + * {
+  //     margin-top: $smallskip;
+  //   }
+  // }
+
+  // @media (max-width: $grid-breakpoint-1 - 1px) {
+  //   h2 {
+  //     margin-bottom: $smallskip;
+  //   }
+
+  //   h3 {
+  //     margin-bottom: $tinyskip;
+  //   }
+  // }
+  
+  blockquote,
+  figure {
+    & + :not(h2):not(h3) {
       margin-top: $smallskip;
     }
+  }
 
-    @media (min-width: $grid-breakpoint-1) {
-      * + h2 + * {
-        margin-top: $medskip;
-      }
-
-      * + h3 + * {
-        margin-top: $smallskip;
-      }
-    }
-
-    @media (max-width: $grid-breakpoint-1 - 1px) {
-      h2 {
-        margin-bottom: $smallskip;
-      }
-
-      h3 {
-        margin-bottom: $tinyskip;
-      }
-    }
-    
-    blockquote,
-    figure {
-      & + :not(h2):not(h3) {
-        margin-top: $smallskip;
-      }
-    }
-
-    ul,
-    ol {
-      & + :not(h2):not(h3)  {
-        margin-top: $tinyskip;
-      }
-    }
-
-    p + blockquote,
-    p + figure {
-      margin-top: $smallskip;
-    }
-
-    p + ul,
-    p + ol {
+  ul,
+  ol {
+    & + :not(h2):not(h3)  {
       margin-top: $tinyskip;
     }
+  }
 
-    p + p {
-      text-indent: 1.25em;
+  p + blockquote,
+  p + figure {
+    margin-top: $smallskip;
+  }
+
+  p + ul,
+  p + ol {
+    margin-top: $tinyskip;
+  }
+
+  p + p {
+    text-indent: 1.25em;
+  }
+
+  li {
+    ul,
+    ol {
+      margin-bottom: 0;
+    }
+  }
+
+  figure {
+    &, img {
+      width: 100%;
     }
 
-    li {
-      ul,
-      ol {
-        margin-bottom: 0;
-      }
+    figcaption {
+      width: 75%;
+      @extend %small;
+      @extend %meta;
     }
+  }
 
-    figure {
-      &, img {
-        width: 100%;
-      }
-
-      figcaption {
-        width: 75%;
-        @extend %small;
-        @extend %meta;
-      }
-    }
-
-    blockquote {
-      padding-left: 1.5rem;
-      margin-left: 2px;
-      border-left: 2px solid $background-accent;
-    }
+  blockquote {
+    padding-left: 1.5rem;
+    margin-left: 2px;
+    border-left: 2px solid $background-accent;
   }
 
   &__pagination {
