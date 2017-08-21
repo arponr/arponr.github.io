@@ -17,6 +17,6 @@ with each explosion, the light
 of one or two or three fireflies  
 among the trees / the reeds,  
 like sparks freed from smoldering logs,  
-or the glint of the flames in your lover's eyes,  
+or the glint of the flames in your love's eyes,  
 or in your heart, as you remember  
 how you watched her watch fire.  
