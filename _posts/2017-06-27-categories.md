@@ -2,7 +2,7 @@
 layout: post
 title: Categories
 date: 2017-06-27 23:00:00 -0500
-section: other
+section: poems
 tags:
 - writing
 - poem

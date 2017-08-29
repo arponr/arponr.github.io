@@ -5,51 +5,46 @@ layout: base
 <main class="site__content">
   <article class="page">
 
-    <div class="grid">
-      <div class="grid__col-alone">
-        <header class="page__header">
-          <h1>{{ page.title }}</h1>
+    <header class="page__header">
+      <h1>{{ page.title }}</h1>
 
-          <div class="page__meta">
-            {% if page.date %}
-            <time pubdate datetime="{{ page.date }}" class="page__time">
-              {{page.date | date: '%d %B %Y' }}
-            </time>
-            {% endif %}
-          </div>
-        </header>
+      <div class="page__meta">
+        {% if page.date %}
+        <time pubdate datetime="{{ page.date }}" class="page__time">
+          {{page.date | date: '%d %B %Y' }}
+        </time>
+        {% endif %}
+      </div>
+    </header>
 
-        <div class="page__content">
-          <div class="page__section">
-            {% if page.preamble %}
-            <div class="preamble">
-              $$
-              {% for cmd in page.preamble %}
-              \newcommand{ \{{ cmd[0] }} }{% if cmd[1] > 0 %}[ {{ cmd[1] }} ]{% endif %}{ {{ cmd[2] }} }
-              {% endfor %}
-              $$
-            </div>
-            {% endif %}
-            
-            <div class="text">
-              {{ content }}
-            </div>
-          </div>
+    <div class="page__content">
+      <div class="page__section">
+        {% if page.preamble %}
+        <div class="preamble">
+          $$
+          {% for cmd in page.preamble %}
+          \newcommand{ \{{ cmd[0] }} }{% if cmd[1] > 0 %}[ {{ cmd[1] }} ]{% endif %}{ {{ cmd[2] }} }
+          {% endfor %}
+          $$
+        </div>
+        {% endif %}
         
-          {% if page.tags.size > 0 %}
-          <div class="page__tags page__section">
-            <ul>
-              {% for tag in page.tags %}
-              {% assign slug = tag | replace: ' ', '-' %}
-              <li><a href="/tag/{{ slug }}">#{{ slug }}</a></li>
-              {% endfor %}
-            </ul>
-          </div>
-          {% endif %}
+        <div class="text">
+          {{ content }}
         </div>
       </div>
-    </div>
-    
+      
+      <!-- {% if page.tags.size > 0 %} -->
+      <!-- <div class="page__tags page__section"> -->
+      <!--   <ul> -->
+      <!--     {% for tag in page.tags %} -->
+      <!--     {% assign slug = tag | replace: ' ', '-' %} -->
+      <!--     <li><a href="/tag/{{ slug }}">#{{ slug }}</a></li> -->
+      <!--     {% endfor %} -->
+      <!--   </ul> -->
+      <!-- </div> -->
+      <!-- {% endif %} -->
+    </div>    
   </article>  
 </main>
 

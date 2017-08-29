@@ -2,7 +2,7 @@
 layout: post
 title: The geometry of Little Expressionless Animals
 date: 2014-10-10 17:00:00 -0500
-section: other
+section: reading
 tags:
 - reading
 - empathy

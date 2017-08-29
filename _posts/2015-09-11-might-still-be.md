@@ -2,7 +2,7 @@
 layout: post
 title: The young man who might still be
 date: 2015-09-11 15:30:00 -0500
-section: other
+section: prose
 tags:
 - writing
 - dream

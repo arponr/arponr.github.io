@@ -1,9 +1,9 @@
 h1 {
-    font-weight: 700;
+  font-size: $size-large;
 }
 
 .page {
-  padding-bottom: 1.5 * $bigskip;
+  padding-bottom: $hugeskip;
 
   h2 {
     font-weight: 600;
@@ -20,7 +20,7 @@ h1 {
   }
   
   &__header {
-    margin-bottom: $bigskip;
+    margin-bottom: $hugeskip;
     
     a {
       @extend %plain;
@@ -33,21 +33,8 @@ h1 {
   
   &__time {
     display: block;
-  }
-
-  &__tags {
     @extend %meta;
     @extend %small;
-    text-transform: lowercase;
-
-    a {
-      @extend %plain;
-    }
-      
-    li {
-      display: inline;
-      margin-right: 0.3rem;
-    }
   }
   
   &__section {
@@ -55,10 +42,6 @@ h1 {
       margin-top: $medskip;
     }
   }
-    
-  // h2, h3 {
-  //   @extend .alignleft;
-  // }
   
   * + h2,
   hr {
@@ -68,31 +51,16 @@ h1 {
   * + h3 {
     margin-top: $medskip;
   }
-
-  // @media (min-width: $grid-breakpoint-1) {
-  //   * + h2 + * {
-  //     margin-top: $medskip;
-  //   }
-
-  //   * + h3 + * {
-  //     margin-top: $smallskip;
-  //   }
-  // }
-
-  // @media (max-width: $grid-breakpoint-1 - 1px) {
-  //   h2 {
-  //     margin-bottom: $smallskip;
-  //   }
-
-  //   h3 {
-  //     margin-bottom: $tinyskip;
-  //   }
-  // }
   
-  blockquote,
-  figure {
+  blockquote {
     & + :not(h2):not(h3) {
       margin-top: $smallskip;
+    }
+  }
+
+  figure {
+    & + :not(h2):not(h3) {
+      margin-top: $bigskip;
     }
   }
 
@@ -103,9 +71,12 @@ h1 {
     }
   }
 
-  p + blockquote,
-  p + figure {
+  p + blockquote {
     margin-top: $smallskip;
+  }
+  
+  p + figure {
+    margin-top: $bigskip;
   }
 
   p + ul,
@@ -131,6 +102,8 @@ h1 {
 
     figcaption {
       width: 75%;
+      margin-left: 25%;
+      text-align: right;
       @extend %small;
       @extend %meta;
     }
@@ -140,22 +113,6 @@ h1 {
     padding-left: 1.5rem;
     margin-left: 2px;
     border-left: 2px solid $background-accent;
-  }
-
-  &__pagination {
-    margin-top: $medskip;
-
-    a {
-      @extend %plain;
-    }
-    
-    .previous {
-      float: left;
-    }
-
-    .next {
-      float: right;
-    }
   }
 }
 

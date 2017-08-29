@@ -9,42 +9,25 @@
   }
 
   li + li {
-    margin-top: $smallskip;
+    margin-top: $tinyskip;
   }
 
   &__title {
     display: block;
   }
 
-  &__meta {
-    display: table;
-    @extend %small;
-    @extend %meta;
-  }
-
-  &__desc, &__time {
+  &__title, &__time {
     display: table-cell;
   }
 
-  &__desc {
+  &__title {
     width: 100%;
-  }
-
-  &__tags {
-    text-transform: lowercase;
-    
-    &, li {
-      display: inline;
-      margin-right: 0.2rem;
-    }
- 
-    a {
-      @extend %plain;
-    }
   }
 
   &__time {
     white-space: nowrap;
     padding-left: 2.0rem;
+    @extend %small;
+    @extend %meta;
   }
 }

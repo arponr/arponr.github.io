@@ -57,12 +57,12 @@ sup {
 sub {
   top: 0.4em; }
 
-.site__footer, .page__tags, .page figure figcaption, .entrylist__meta {
+.site__header, .page__time, .page figure figcaption, .entrylist__meta, .entrylist__time {
   font-size: 0.9em;
   line-height: 1.4; }
 
-.site__nav ul, .site__footer, .nav__pages, .nav__pages a, .page__meta, .page__tags, .page figure figcaption, .ref, .footnote, .entrylist__meta {
-  color: #777777; }
+.site__header, .page__meta, .page__time, .page figure figcaption, .ref, .footnote, .entrylist__meta, .entrylist__time {
+  color: #666666; }
 
 .smcp {
   -moz-font-feature-settings: "c2sc", "smcp";
@@ -73,11 +73,11 @@ a:link, a:visited {
   text-decoration: underline;
   color: inherit; }
 a:hover {
-  color: #2266dd; }
-.site__nav a:link, .page__header a:link, .page__tags a:link, .page__pagination a:link, a.ref:link, a.footnote:link, .entrylist__tags a:link, .site__nav a:visited, .page__header a:visited, .page__tags a:visited, .page__pagination a:visited, a.ref:visited, a.footnote:visited, .entrylist__tags a:visited {
+  color: #dd5511; }
+.site__nav a:link, .page__header a:link, a.ref:link, a.footnote:link, .entrylist__tags a:link, .site__nav a:visited, .page__header a:visited, a.ref:visited, a.footnote:visited, .entrylist__tags a:visited {
   text-decoration: none; }
-a.site__footer:not(:hover):link, a.nav__pages:not(:hover):link, .nav__pages a:not(:hover):link, a.page__meta:not(:hover):link, a.page__tags:not(:hover):link, a.ref:not(:hover):link, a.footnote:not(:hover):link, a.entrylist__meta:not(:hover):link, a.site__footer:not(:hover):visited, a.nav__pages:not(:hover):visited, .nav__pages a:not(:hover):visited, a.page__meta:not(:hover):visited, a.page__tags:not(:hover):visited, a.ref:not(:hover):visited, a.footnote:not(:hover):visited, a.entrylist__meta:not(:hover):visited {
-  color: #777777; }
+a.site__header:not(:hover):link, a.page__meta:not(:hover):link, a.page__time:not(:hover):link, a.ref:not(:hover):link, a.footnote:not(:hover):link, a.entrylist__meta:not(:hover):link, a.entrylist__time:not(:hover):link, a.site__header:not(:hover):visited, a.page__meta:not(:hover):visited, a.page__time:not(:hover):visited, a.ref:not(:hover):visited, a.footnote:not(:hover):visited, a.entrylist__meta:not(:hover):visited, a.entrylist__time:not(:hover):visited {
+  color: #666666; }
 a.active:not(:hover):link, a.active:not(:hover):visited {
   color: #333333; }
 
@@ -91,47 +91,43 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
     clear: left; }
     .grid__col-1, .grid__col-2, .grid__col-alone {
       float: left; }
-    .grid__col-1, .grid__col-alone {
-      width: 70%;
+    .grid__col-1 {
+      width: 22%;
       margin-bottom: 0;
-      padding-right: 4rem; }
-    .grid__col-2 {
-      width: 30%; } }
+      padding-right: 2rem; }
+    .grid__col-2, .grid__col-alone {
+      width: 56%; } }
+@media (min-width: 700px) {
+  .grid__col-2, .grid__col-alone {
+    width: 56%; }
+    .grid__col-2 .banner, .grid__col-alone .banner {
+      width: 178.57143%;
+      margin-left: -39.28571%; }
+    .grid__col-2 .alignleft, .grid__col-alone .alignleft {
+      float: left;
+      margin-left: -39.28571%;
+      margin-bottom: 0;
+      width: calc(39.28571% - 2rem);
+      text-align: right; } }
 
 .site {
   margin: 0 auto;
-  max-width: 55rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  max-width: 36rem;
+  padding: 1.5rem;
   position: relative; }
 
-.site__nav ul li {
-  margin-bottom: 0.375rem; }
 .site__header {
-  padding-top: 1.5rem;
+  margin-bottom: 1.5rem;
   padding-bottom: 0.375rem;
   border-bottom: 1px solid #cccccc; }
-.site__content {
-  padding-top: 2.25rem; }
-.site__footer {
-  padding-bottom: 2.25rem; }
-
-.nav__pages {
-  display: inline; }
-  .nav__pages li {
-    display: inline; }
-    .nav__pages li:before {
-      padding-right: 0.2rem;
-      content: "\2014"; }
-    .nav__pages li + li:before {
-      padding-right: 0.15rem;
-      content: "|"; }
-
-h1 {
+.site .nav__name {
   font-weight: 700; }
 
+h1 {
+  font-size: 1.3em; }
+
 .page {
-  padding-bottom: 3.375rem; }
+  padding-bottom: 3rem; }
   .page h2 {
     font-weight: 600;
     margin-bottom: 0.75rem; }
@@ -139,16 +135,11 @@ h1 {
     font-style: italic;
     margin-bottom: 0.375rem; }
   .page code {
-    font-family: adaptive-mono, mono; }
+    font-family: adaptive-mono, monospace; }
   .page__header {
-    margin-bottom: 2.25rem; }
+    margin-bottom: 3rem; }
   .page__time {
     display: block; }
-  .page__tags {
-    text-transform: lowercase; }
-    .page__tags li {
-      display: inline;
-      margin-right: 0.3rem; }
   .page__section + .page__section {
     margin-top: 1.5rem; }
   .page * + h2,
@@ -156,15 +147,17 @@ h1 {
     margin-top: 2.25rem; }
   .page * + h3 {
     margin-top: 1.5rem; }
-  .page blockquote + :not(h2):not(h3),
-  .page figure + :not(h2):not(h3) {
+  .page blockquote + :not(h2):not(h3) {
     margin-top: 0.75rem; }
+  .page figure + :not(h2):not(h3) {
+    margin-top: 2.25rem; }
   .page ul + :not(h2):not(h3),
   .page ol + :not(h2):not(h3) {
     margin-top: 0.375rem; }
-  .page p + blockquote,
-  .page p + figure {
+  .page p + blockquote {
     margin-top: 0.75rem; }
+  .page p + figure {
+    margin-top: 2.25rem; }
   .page p + ul,
   .page p + ol {
     margin-top: 0.375rem; }
@@ -176,17 +169,13 @@ h1 {
   .page figure, .page figure img {
     width: 100%; }
   .page figure figcaption {
-    width: 75%; }
+    width: 75%;
+    margin-left: 25%;
+    text-align: right; }
   .page blockquote {
     padding-left: 1.5rem;
     margin-left: 2px;
     border-left: 2px solid #cccccc; }
-  .page__pagination {
-    margin-top: 1.5rem; }
-    .page__pagination .previous {
-      float: left; }
-    .page__pagination .next {
-      float: right; }
 
 .text ul {
   list-style-type: disc; }
@@ -230,7 +219,7 @@ h1 {
   * + .environment {
     margin-top: 0.75rem; }
   .environment__label {
-    color: #777777; }
+    color: #666666; }
     .environment__label, .environment__label p {
       display: inline; }
     @media (max-width: 499px) {
@@ -256,7 +245,7 @@ h1 {
     float: left;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
-    color: #777777; }
+    color: #666666; }
   .enumerate__body {
     overflow: hidden; }
   .enumerate__header {
@@ -271,14 +260,14 @@ h1 {
   position: relative;
   list-style: none; }
 .entrylist li + li {
-  margin-top: 0.75rem; }
+  margin-top: 0.375rem; }
 .entrylist__title {
   display: block; }
 .entrylist__meta {
   display: table; }
-.entrylist__desc, .entrylist__time {
+.entrylist__title, .entrylist__time {
   display: table-cell; }
-.entrylist__desc {
+.entrylist__title {
   width: 100%; }
 .entrylist__tags {
   text-transform: lowercase; }

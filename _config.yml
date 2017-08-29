@@ -8,13 +8,10 @@ permalink: pretty
 exclude: ["publish.sh"]
 excerpt_separator: ""
 
-paginate: 10
-paginate_path: ":num"
-
-nav_tags:
-- all
+sections:
+- poems
+- prose
 - reading
-- writing
 
 
 

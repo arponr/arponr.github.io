@@ -1,8 +1,10 @@
 $font-main: capitolium-2, serif;
-$font-code: adaptive-mono, mono;
+$font-sans: acumin-pro, sans-serif;
+$font-code: adaptive-mono, monospace;
 
 $size-base: (15/16)*100%;
 $size-small: .9em;
+$size-large: 1.3em;
 
 $line-height: 1.5;
 $line-height-unit: $line-height * 1rem;
@@ -12,8 +14,8 @@ $background-base: #ffffff;
 $background-accent: #cccccc;
 
 $color-base: #333333;
-$color-light: #777777;
-$color-accent: #2266dd;
+$color-light: #666666;
+$color-accent: #dd5511;
 
 $background-progress: #dddddd;
 $color-progress: #888888;
@@ -22,3 +24,4 @@ $tinyskip: 0.25 * $line-height-unit;
 $smallskip: 0.5 * $line-height-unit;
 $medskip: 1 * $line-height-unit;
 $bigskip: 1.5 * $line-height-unit;
+$hugeskip: 2.0 * $line-height-unit;

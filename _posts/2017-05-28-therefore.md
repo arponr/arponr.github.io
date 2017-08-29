@@ -2,7 +2,7 @@
 layout: post
 title: Therefore
 date: 2017-05-28 22:30:00 -0800
-section: other
+section: poems
 tags:
 - writing
 - poem

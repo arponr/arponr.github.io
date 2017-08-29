@@ -2,37 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>arponr{% if page.title %} | {{ page.title }}{% endif %}</title>
-    <meta name="viewport" content="initial-scale=1"/>
-    <meta property="og:title" content="{{ page.title }}"/>
-    <meta property="og:site_name" content="arponr"/>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}arpon raksit</title>
+    <meta name="viewport" content="initial-scale=1">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:site_name" content="writing.arponr.com">
     <script src="//use.typekit.net/cen6cew.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
     <link href="/css/style.css" rel="stylesheet" type="text/css">
-    {% if page.math %}
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config={{ site.baseurl }}/js/jax-config.js"></script>
-    {% endif %}
   </head>
 
-  <body class="{{ page.section }}">
+  <body>
     <div class="site">
       <header class="site__header">
         <nav class="site__nav" role="navigation">
-          <a class="nav__name" href="/">Arpon Raksit</a>
-          <ul class="nav__pages">
-            <li><a {% if page.section == "math" %}class="active"{% endif %}
-                   href="/math">Math</a></li>
-            <li><a {% if page.section == "other" %}class="active"{% endif %}
-                   href="/other">Other</a></li>
-          </ul>
-          <ul class="nav__pages">
-            {% assign pages = site.pages | sort:"url" %}
-            {% for p in pages %}
-            {% if p.section == page.section and p.in-nav %}
-            <li><a {% if p.tag == page.tag %}class="active"{% endif %}
-                   href="{{ p.url }}">{{ p.title }}</a></li>
-            {% endif %}
-            {% endfor %}
-          </ul>
+          <a class="nav__name" href="//www.arponr.com">arpon raksit</a>
+          &mdash;
+          <a class="nav__sec" href="/">writing</a>
         </nav>
       </header>
