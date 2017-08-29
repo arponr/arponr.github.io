@@ -1,0 +1,12 @@
+<li>
+  {% if e.url %}<a href="{{ e.url }}" class="entrylist__title">{% endif %}
+    {{ e.title }}
+    {% if e.url %}</a>{% endif%}
+
+    {% if e.date %}
+    <time pubdate datetime="{{ e.date }}" class="entrylist__time">
+      {{ e.date | date: '%d %b %Y' }}
+    </time>
+    {% endif %}
+</li>
+
