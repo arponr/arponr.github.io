@@ -2,7 +2,7 @@
 layout: post
 title: The geometry of Little Expressionless Animals
 date: 2014-10-10 17:00:00 -0500
-section: reading
+section: analysis
 tags:
 - reading
 - empathy
@@ -31,7 +31,7 @@ Faye's character revolves around two central relationships, with her mother, Dee
 Faye is again only capable of seeing a projected "image" of her mother, which is somehow "bright-faint"---perhaps bright in its grotesque physical details but faint in its portrayal of the human underlying these details. The reductionism of Faye's image is intensified by the final comparisons of appearance and age, which suggest Faye only sees Dee as a faded, haunting image of her physical future. The scene ends on this same note, as "[Dee] kisses [Faye] gently. Their lips fit perfectly, Faye thinks suddenly. She shivers, in the air-conditioning." (8)
 
 But the disconnect between Faye and her mother revealed by these two-dimensional images and flat perceptions is not an isolated or inconsequential problem for Faye. In Faye's last, and this time
-seemingly truthful, attempt at explaining her lesbian relationship with Julie, she recounts the disturbing scene at the opening of the story:
+seemingly truthful, attempt at explaining her relationship with Julie, she recounts the disturbing scene at the opening of the story:
 
 > "You and your mother happen to go to the movies ... It turns out a man in the theater behind you was playing with your mother's hair all through the movie. She breaks down on the sidewalk. Her husband has to come. She spends a year on antidepressants. Then she drinks.
 >

@@ -1,5 +1,5 @@
 <li>
-  {% if e.url %}<a href="{{ e.url }}" class="entrylist__title">{% endif %}
+  {% if e.url %}<a href="{{ site.baseurl }}{{ e.url }}" class="entrylist__title">{% endif %}
     {{ e.title }}
     {% if e.url %}</a>{% endif%}
 

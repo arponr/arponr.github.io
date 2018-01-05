@@ -1,5 +1,6 @@
 name: arponr
-url: http://writing.arponr.com
+url: http://web.stanford.edu/~arpon/writing
+baseurl: /~arpon/writing
 
 markdown: Kramdown
 
@@ -9,9 +10,9 @@ exclude: ["publish.sh"]
 excerpt_separator: ""
 
 sections:
-- poems
-- prose
-- reading
+- art
+- analysis
+
 
 
 

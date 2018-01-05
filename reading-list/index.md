@@ -3,12 +3,32 @@ layout: entry-list
 title: Reading list
 section: other
 subsections:
-- title: In progress
+- title: books i've read
   entries:
+  - title: "Housekeeping"
+    desc: Marilynne Robinson
+    date: 2017-11-24
+  - title: "The Story of the Lost Child"
+    desc: Elena Ferrante
+    date: 2017-11-05
+  - title: "Those Who Leave and Those Who Stay"
+    desc: Elena Ferrante
+    date: 2017-09-23
+  - title: "The Story of a New Name"
+    desc: Elena Ferrante
+    date: 2017-09-13
+  - title: "My Brilliant Friend"
+    desc: Elena Ferrante
+    date: 2017-09-05
+  - title: "QED: the strange theory of light and matter"
+    desc: Richard Feynman
+    date: 2017-09-04
+  - title: "Interpreter of Maladies"
+    desc: Jhumpa Lahiri
+    date: 2017-08-12
   - title: "Tenth of December"
     desc: George Saunders
-- title: Completed
-  entries:
+    date: 2017-05-15
   - title: "Oryx and Crake"
     desc: Margaret Atwood
     date: 2017-01-05

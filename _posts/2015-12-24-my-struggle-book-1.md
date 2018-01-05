@@ -2,7 +2,7 @@
 layout: post
 title: Failing Knausgaard's My Struggle Book 1
 date: 2015-12-24 14:00:00 -0500
-section: reading
+section: analysis
 tags:
 - reading
 - objectivity

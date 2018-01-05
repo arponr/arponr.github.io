@@ -1,21 +1,23 @@
-$font-main: capitolium-2, serif;
-$font-sans: acumin-pro, sans-serif;
-$font-code: adaptive-mono, monospace;
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Faustina:400,400i,700');
 
-$size-base: (15/16)*100%;
+$font-main: 'Faustina', serif;
+$font-code: monospace;
+
+$size-base: (16/16)*100%;
 $size-small: .9em;
 $size-large: 1.3em;
 
-$line-height: 1.5;
+$line-height: 1.4;
 $line-height-unit: $line-height * 1rem;
-$line-height-small: 1.4;
+$line-height-small: 1.3;
 
-$background-base: #ffffff;
+$background-base: #fdfdfd;
 $background-accent: #cccccc;
 
 $color-base: #333333;
 $color-light: #666666;
-$color-accent: #dd5511;
+$color-accent: #bb5511;
 
 $background-progress: #dddddd;
 $color-progress: #888888;

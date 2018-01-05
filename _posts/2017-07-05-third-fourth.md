@@ -2,7 +2,7 @@
 layout: post
 title: Third/Fourth of July
 date: 2017-07-05 22:00:00 -0500
-section: poems
+section: art
 tags:
 - writing
 - poem

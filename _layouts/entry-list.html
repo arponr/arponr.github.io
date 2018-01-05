@@ -1,0 +1,33 @@
+---
+layout: base
+---
+
+<main class="site__content">
+  <article class="page">
+
+    <!-- <header class="page__header"> -->
+    <!--   <h1>{{ page.title }}</h1> -->
+    <!-- </header> -->
+    
+    <div class="page__content">
+      {% if page.subsections %}
+      {% for s in page.subsections %}
+      <h2>{{ s.title }}</h2>
+      <ul class="entrylist">
+        {% for e in s.entries %}
+        {% include entrylist.html %}
+        {% endfor %}
+      </ul>
+      {% endfor %}
+      
+      {% else %}
+      <ul class="entrylist">
+        {% for e in page.entries %}
+        {% include entrylist.html %}
+        {% endfor %}
+      </ul>
+      
+      {% endif %}
+    </div>
+  </article>
+</main>

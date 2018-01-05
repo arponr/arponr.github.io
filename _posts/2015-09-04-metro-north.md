@@ -2,7 +2,7 @@
 layout: post
 title: Metro North
 date: 2015-09-04 00:30:00 -0500
-section: poems
+section: art
 tags:
 - writing
 - life

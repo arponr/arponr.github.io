@@ -14,19 +14,22 @@
 
   &__title {
     display: block;
+    width: 100%;
   }
 
   &__title, &__time {
     display: table-cell;
   }
 
-  &__title {
-    width: 100%;
-  }
-
   &__time {
     white-space: nowrap;
     padding-left: 2.0rem;
+    @extend %small;
+    @extend %meta;
+  }
+
+  &__desc {
+    margin-bottom: $smallskip;
     @extend %small;
     @extend %meta;
   }
