@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research on Arpon Raksit</title>
+    <link>https://arponr.github.io/work/papers/</link>
+    <description>Recent content in Research on Arpon Raksit</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://arponr.github.io/work/papers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>THH(Z) and the image of J</title>
+      <link>https://arponr.github.io/work/papers/thhzp/</link>
+      <pubDate>Sun, 04 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://arponr.github.io/work/papers/thhzp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>A motivic filtration on the topological cyclic homology of commutative ring spectra</title>
+      <link>https://arponr.github.io/work/papers/even/</link>
+      <pubDate>Wed, 22 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://arponr.github.io/work/papers/even/</guid>
+      <description>Defines the &amp;ldquo;even filtration&amp;rdquo; on an arbitrary commutative ring spectrum; uses this to recharacterize Bhatt&amp;ndash;Morrow&amp;ndash;Scholze&amp;rsquo;s motivic filtrations on THH, TC&amp;ndash;, TP, TC of quasisyntomic commutative rings (and hence their syntomic cohomology, i.e. the associated graded of the filtration on TC), and then extend these to &amp;ldquo;chromatically quasisyntomic&amp;rdquo; commutative ring spectra, such as S, MU, ku (and its Adams summand at any prime), ko, and tmf; finally, calculates the mod (p,v1) syntomic cohomology of the Adams summand at p, realizing part of a picture conjectured by Rognes.</description>
+    </item>
+    <item>
+      <title>Hochschild homology and the derived de Rham complex revisited</title>
+      <link>https://arponr.github.io/work/papers/hhdr/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://arponr.github.io/work/papers/hhdr/</guid>
+      <description>Develops notions of &amp;ldquo;homotopy-coherent cochain complex&amp;rdquo; and &amp;ldquo;filtered circle action&amp;rdquo;, and uses these to characterize the derived de Rham complex and HKR-filtered Hochschild homology by universal properties, as well as reconstruct the filtrations on negative and periodic cyclic homology relating these invariants to derived de Rham cohomology.</description>
+    </item>
+    <item>
+      <title>Motivic Gauss-Bonnet formulas</title>
+      <link>https://arponr.github.io/work/papers/gaussbonnet/</link>
+      <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://arponr.github.io/work/papers/gaussbonnet/</guid>
+      <description>Proves a cohomological formula for the Grothendieck-Witt&amp;ndash;valued Euler characteristic of smooth projective varieties given by A1-homotopy theory, using Levine’s Gauss-Bonnet formula.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>
+    
+    18.901: Introduction to Topology | Arpon Raksit
+    
+  </title>
+  <meta name="viewport" content="initial-scale=1">
+  <meta property="og:title" content=
+        "
+         18.901: Introduction to Topology | Arpon Raksit
+         ">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+  <script type="text/javascript" src="https://arponr.github.io/js/ui.js"></script>
+  <link href="https://arponr.github.io/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+      <div class="site">
+        <div class="site--header">
+
+
+<nav class="site--nav">
+    <a href="https://arponr.github.io/work">Work</a>
+    and
+    <a href="https://arponr.github.io/kajerna">Not Work</a>
+    by
+    <a href="https://arponr.github.io/">Arpon Raksit</a>
+</nav>
+</div>
+        <div class="site--content">
+<div class="course">
+  <div class="course--header">
+    <h1>18.901: Introduction to Topology</h1>
+    <span class="course--meta">Fall 2024 at MIT</span>
+  </div>
+  
+  <div class="post--content">
+    <h2 id="instructor-contact">Instructor contact</h2>
+<p><a href="mailto:arpon@mit.edu">arpon@mit.edu</a> / 2-238a.</p>
+<h2 id="lectures">Lectures</h2>
+<p>TR 2:30&ndash;4:00pm, in 4-163.</p>
+<h2 id="office-hours">Office hours</h2>
+<p>TW 1:30&ndash;2:30pm, or by appointment, in 2-238.</p>
+<br>
+<h2 id="announcements">Announcements</h2>
+<details>
+  <summary>
+    <span class="subject">Final logistics</span>
+    <span class="meta">[Dec 4]</span>
+  </summary>
+<p>The take-home final exam will be posted here immediately after class tomorrow (Dec 5), and it will be due on Gradescope before the final lecture next Tuesday (Dec 10).</p>
+<p>The exam will have 8 problem parts in total, each worth 10 points; out of the 8, your 6 best scores will be counted for your grade, so the exam will be graded out of 60 points.</p>
+<p>Otherwise, it is just like the midterm: while working on the exam, you may consult the lecture notes, past homework, and the textbook, but no other resources (in particular not each other), and if anything on the exam requires clarification, please send me an email.</p>
+</details>
+<details>
+  <summary>
+    <span class="subject">HW9 update</span>
+    <span class="meta">[Nov 27]</span>
+  </summary>
+<p>A new bonus problem has been added to HW9, to help with the other bonus problem on the homework. It is not necessary for the other problems, and will not be covered on the final exam, but I may choose to discuss it during our review next week.</p>
+</details>
+<details>
+  <summary>
+    <span class="subject">HW9 info</span>
+    <span class="meta">[Nov 22]</span>
+  </summary>
+<p>Homework 9 has just been posted here. It is due at 11:59pm on the Tuesday after Thanksgiving (December 3). The last three parts of Problem 3, and the bonus problem, are related to material that will be covered in lecture next Tuesday.</p>
+</details>
+<details>
+  <summary>
+    <span class="subject">Clarification in HW7</span>
+    <span class="meta">[Nov 13]</span>
+  </summary>
+<p>In Problem 2(b) as originally written, I used the notation <em>gx</em> without explaining what this means. It means <em>φ</em>(<em>g</em>)(<em>x</em>). I have updated the homework to use the latter notation (although the former abbreviation is standard, and you should feel free to use it; just note that its meaning depends on the given action <em>φ</em>).</p>
+</details>
+<details>
+  <summary>
+    <span class="subject">Midterm logistics</span>
+    <span class="meta">[Oct 24]</span>
+  </summary>
+<p>The take-home midterm exam has been posted below. It is due on Gradescope by class time next Tuesday. While working on the exam, you may consult the lecture notes, past homework, and the textbook, but no other resources (in particular not each other). If anything on the exam requires clarification, please send me an email.</p>
+</details>
+<details>
+  <summary>
+    <span class="subject">Typos in HW5</span>
+    <span class="meta">[Oct 13]</span>
+  </summary>
+<p>In Problem 3, the definition of the equivalence relation ∼<sub>1</sub> should say &ldquo;(<em>x</em><sub>1</sub>,&hellip;,<em>x</em><sub><em>k</em></sub>,<em>x</em><sub><em>k</em>+1</sub>) ∼<sub>1</sub> (<em>x</em><sub>1</sub>,&hellip;,<em>x</em><sub><em>k</em></sub>,-<em>x</em><sub><em>k</em>+1</sub>)&rdquo;, rather than &ldquo;<em>x</em> ∼<sub>1</sub> <em>-x</em>&rdquo;.</p>
+<p>In Problem 5(c), the definition of the equivalence relation ∼<sub>4</sub> should say &ldquo;for <em>y</em> ∈ S<sup><em>k</em>-1</sup>&rdquo;, rather than &ldquo;for <em>y</em> ∈ D<sup><em>k</em></sup>&rdquo;. (Note that S<sup><em>k</em>-1</sup> is a subset of D<sup><em>k</em></sup>. In the case <em>k</em>=1, S<sup><em>k</em>-1</sup> = S<sup>0</sup> refers to the subset {1,-1} of D<sup><em>k</em></sup> = D<sup>1</sup>.)</p>
+<p>The homework has been updated with these corrections.</p>
+</details>
+<details>
+  <summary>
+    <span class="subject">Missing assumptions in HW4</span>
+    <span class="meta">[Oct 4]</span>
+  </summary>
+<p>In HW4, Problem 3b, the function <em>f</em> should be assumed to be continuous. In Problem 4, the sets <em>Z<sub>1</sub></em> and <em>Z<sub>2</sub></em> should be assumed to be disjoint in <em>X</em>. In Problem 7a, the function <em>f</em> should be assumed to be continuous. In Problem 8, it should be assumed that <em>U</em> and <em>V</em> cover <em>X</em>. The homework has been updated with these corrections.</p>
+</details>
+<details>
+  <summary>
+    <span class="subject">HW extensions</span>
+    <span class="meta">[Oct 3]</span>
+  </summary>
+<p>I am extending the due date for HW3 from earlier today to end of day tomorrow (i.e. Friday 11:59pm).</p>
+<p>And for HW4 onwards, the due time will be changed from 2:30pm to 11:59pm on Thursdays.</p>
+</details>
+<details>
+  <summary>
+    <span class="subject">Missing assumption in HW3</span>
+    <span class="meta">[Oct 2]</span>
+  </summary>
+<p>Problem 3b on HW3 was written incorrectly. It should have stated: Show that if each <em>i<sub>α</sub></em> is a <em>surjective</em> open map, then <em>i</em> is a <em>surjective</em> open map. (A surjective open map means a function that is both surjective and an open map.) The homework has been updated with this change. Sorry for the mistake, and for noticing it rather late.</p>
+</details>
+<details>
+  <summary>
+    <span class="subject">Typo in HW2</span>
+    <span class="meta">[Sep 24]</span>
+  </summary>
+<p>There was a typo in Problem 4b on HW2: where it read &ldquo;<em>x</em> ≤ <em>x</em><sub><em>n</em></sub> &lt; <em>x</em><sub><em>n</em></sub> + <em>ε</em>&rdquo;, it should have been &ldquo;<em>x</em> ≤ <em>x</em><sub><em>n</em></sub> &lt; <em>x</em> + <em>ε</em>&rdquo;. A corrected version is posted here now. Sorry about the error, and thanks to those who brought it to my attention.</p>
+</details>
+<details>
+  <summary>
+    <span class="subject">Gradescope</span>
+    <span class="meta">[Sep 18]</span>
+  </summary>
+<p>As I mentioned I would in lecture yesterday, I have now set up the course on Gradescope (you should have received an email notification from Gradescope; let me know if not). Please submit HW1 and all future assignments on Gradescope, rather than on Canvas. Thank you!</p>
+</details>
+<details>
+  <summary>
+    <span class="subject">Adjustments to homework schedule and office hours</span>
+    <span class="meta">[Sep 10]</span>
+  </summary>
+<p>I have changed the homework release and due dates: they are now on Thursdays rather than on Tuesdays. And I have moved my office hour that was previously on Thursday to Wednesday, still at 1:30pm.</p>
+<p>In particular, the deadline for submitting HW0 has been extended to this Thursday, Sep 12 (before lecture). If you already submitted solutions but are not satisfied with your submission, you are free to resubmit.</p>
+<p>The change to the homework schedule also results in there being one fewer homework assignment in the course: the original plan was for there to be a short HW10 over the Thanksgiving break, and for HW0 and HW10 to together count as one homework with regards to the policy that the lowest homework score will be dropped. There will now be no HW10; instead, there will be extra time to complete HW9, and now HW0 will graded out of 50 points rather than just 15 points, with everybody receiving a free 35 points to start; the policy remains that the lowest homework score will be dropped.</p>
+<p>This page and the syllabus file have been updated to reflect these changes. Sorry about my poor planning. I hope that the arrangement is better now and that the free points make up for the complication. Let me know if you have any questions.</p>
+</details>
+<details>
+  <summary>
+    <span class="subject">Welcome</span>
+    <span class="meta">[Sep 3]</span>
+  </summary>
+<p>Welcome to the class and in particular to the class webpage. I&rsquo;m looking forward to spending the term with you and the material. Please let me know if anything is ever amiss here.</p>
+</details>
+<br>
+<h2 id="syllabus">Syllabus</h2>
+<p><a href="https://arponr.github.io/files/f24-18.901/syl.pdf
+">syl.pdf</a> [updated Sep 10]</p>
+<h2 id="lecture-notes">Lecture notes</h2>
+<p><a href="https://arponr.github.io/files/f24-18.901/notes.pdf
+">notes.pdf</a> [updated Dec 6]</p>
+<h2 id="assignments">Assignments</h2>
+<ul>
+<li><a href="https://arponr.github.io/files/f24-18.901/hw0.pdf
+">hw0.pdf</a></li>
+<li><a href="https://arponr.github.io/files/f24-18.901/hw1.pdf
+">hw1.pdf</a></li>
+<li><a href="https://arponr.github.io/files/f24-18.901/hw2.pdf
+">hw2.pdf</a> [updated Sep 24]</li>
+<li><a href="https://arponr.github.io/files/f24-18.901/hw3.pdf
+">hw3.pdf</a> [updated Oct 2]</li>
+<li><a href="https://arponr.github.io/files/f24-18.901/hw4.pdf
+">hw4.pdf</a> [updated Oct 4]</li>
+<li><a href="https://arponr.github.io/files/f24-18.901/hw5.pdf
+">hw5.pdf</a> [updated Oct 13]</li>
+<li><a href="https://arponr.github.io/files/f24-18.901/mid.pdf
+">mid.pdf</a></li>
+<li><a href="https://arponr.github.io/files/f24-18.901/hw6.pdf
+">hw6.pdf</a></li>
+<li><a href="https://arponr.github.io/files/f24-18.901/hw7.pdf
+">hw7.pdf</a> [updated Nov 13]</li>
+<li><a href="https://arponr.github.io/files/f24-18.901/hw8.pdf
+">hw8.pdf</a></li>
+<li><a href="https://arponr.github.io/files/f24-18.901/hw9.pdf
+">hw9.pdf</a> [updated Nov 27]</li>
+<li><a href="https://arponr.github.io/files/f24-18.901/fin.pdf
+">fin.pdf</a></li>
+</ul>
+<br>
+<h2 id="schedule">Schedule</h2>
+<p>The following lecture plan might need adjustment as we proceed, but the assignment dates should not change (again).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Week</th>
+<th style="text-align:left">Date</th>
+<th style="text-align:left">Lecture topic</th>
+<th style="text-align:left">Assignments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">Sep 5</td>
+<td style="text-align:left">Introduction</td>
+<td style="text-align:left">HW0 release</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">Sep 10</td>
+<td style="text-align:left">Metric spaces</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;</td>
+<td style="text-align:left">Sep 12</td>
+<td style="text-align:left">The <em>p</em>-adic metric</td>
+<td style="text-align:left">HW0 due/HW1 release</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">Sep 17</td>
+<td style="text-align:left">Topological spaces</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;</td>
+<td style="text-align:left">Sep 19</td>
+<td style="text-align:left">Constructions I</td>
+<td style="text-align:left">HW1 due/HW2 release</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">Sep 24</td>
+<td style="text-align:left">Constructions II</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;</td>
+<td style="text-align:left">Sep 26</td>
+<td style="text-align:left">Constructions III</td>
+<td style="text-align:left">HW2 due/HW3 release</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">Oct 1</td>
+<td style="text-align:left">Compactness I</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;</td>
+<td style="text-align:left">Oct 3</td>
+<td style="text-align:left">Compactness II</td>
+<td style="text-align:left">HW3 due/HW4 release</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">Oct 8</td>
+<td style="text-align:left">Connectedness</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;</td>
+<td style="text-align:left">Oct 10</td>
+<td style="text-align:left">Manifolds</td>
+<td style="text-align:left">HW4 due/HW5 release</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">Oct 15</td>
+<td style="text-align:left"><em>No lecture or office hour</em></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;</td>
+<td style="text-align:left">Oct 17</td>
+<td style="text-align:left">Urysohn&rsquo;s lemma</td>
+<td style="text-align:left">HW5 due</td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left">Oct 22</td>
+<td style="text-align:left">Review</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;</td>
+<td style="text-align:left">Oct 24</td>
+<td style="text-align:left">Review</td>
+<td style="text-align:left">Midterm release</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left">Oct 29</td>
+<td style="text-align:left">Homotopy</td>
+<td style="text-align:left">Midterm due</td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;</td>
+<td style="text-align:left">Oct 31</td>
+<td style="text-align:left">Fundamental group I</td>
+<td style="text-align:left">HW6 release</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:left">Nov 5</td>
+<td style="text-align:left">Fundamental group II</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;</td>
+<td style="text-align:left">Nov 7</td>
+<td style="text-align:left">Fundamental groups of spheres</td>
+<td style="text-align:left">HW6 due/HW7 release</td>
+</tr>
+<tr>
+<td style="text-align:left">11</td>
+<td style="text-align:left">Nov 12</td>
+<td style="text-align:left">Fundamental group applications</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;</td>
+<td style="text-align:left">Nov 14</td>
+<td style="text-align:left">Covering spaces I</td>
+<td style="text-align:left">HW7 due/HW8 release</td>
+</tr>
+<tr>
+<td style="text-align:left">12</td>
+<td style="text-align:left">Nov 19</td>
+<td style="text-align:left">Covering spaces II</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;</td>
+<td style="text-align:left">Nov 21</td>
+<td style="text-align:left">Covering spaces III</td>
+<td style="text-align:left">HW8 due/HW9 release</td>
+</tr>
+<tr>
+<td style="text-align:left">13</td>
+<td style="text-align:left">Nov 26</td>
+<td style="text-align:left">Covering spaces IV</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;</td>
+<td style="text-align:left">Nov 28</td>
+<td style="text-align:left"><em>No lecture</em></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">14</td>
+<td style="text-align:left">Dec 3</td>
+<td style="text-align:left">Review</td>
+<td style="text-align:left">HW9 due</td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;</td>
+<td style="text-align:left">Dec 5</td>
+<td style="text-align:left">Review</td>
+<td style="text-align:left">Final release</td>
+</tr>
+<tr>
+<td style="text-align:left">15</td>
+<td style="text-align:left">Dec 10</td>
+<td style="text-align:left">Conclusion</td>
+<td style="text-align:left">Final due</td>
+</tr>
+</tbody>
+</table>
+
+  </div>
+</div>
+
+        </div>
+        <div class="footer section"></div>
+      </div>
+    </body>
+</html>
