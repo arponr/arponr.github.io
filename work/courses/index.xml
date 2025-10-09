@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Teaching on Arpon Raksit</title>
-    <link>https://arponr.github.io/work/courses/</link>
+    <link>https://www.arponr.com/work/courses/</link>
     <description>Recent content in Teaching on Arpon Raksit</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://arponr.github.io/work/courses/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.arponr.com/work/courses/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>18.901: Introduction to Topology</title>
-      <link>https://arponr.github.io/work/courses/f24-18.901/</link>
+      <link>https://www.arponr.com/work/courses/f24-18.901/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arponr.github.io/work/courses/f24-18.901/</guid>
+      <guid>https://www.arponr.com/work/courses/f24-18.901/</guid>
       <description>Instructor contact arpon@mit.edu / 2-238a.&#xA;Lectures TR 2:30&amp;ndash;4:00pm, in 4-163.&#xA;Office hours TW 1:30&amp;ndash;2:30pm, or by appointment, in 2-238.&#xA;Announcements Final logistics [Dec 4] The take-home final exam will be posted here immediately after class tomorrow (Dec 5), and it will be due on Gradescope before the final lecture next Tuesday (Dec 10).&#xA;The exam will have 8 problem parts in total, each worth 10 points; out of the 8, your 6 best scores will be counted for your grade, so the exam will be graded out of 60 points.</description>
     </item>
   </channel>

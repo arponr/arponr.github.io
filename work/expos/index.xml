@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Exposition on Arpon Raksit</title>
-    <link>https://arponr.github.io/work/expos/</link>
+    <link>https://www.arponr.com/work/expos/</link>
     <description>Recent content in Exposition on Arpon Raksit</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 04 Sep 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://arponr.github.io/work/expos/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.arponr.com/work/expos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Smash products &amp; the J-homomorphism</title>
-      <link>https://arponr.github.io/work/expos/smash/</link>
+      <link>https://www.arponr.com/work/expos/smash/</link>
       <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://arponr.github.io/work/expos/smash/</guid>
+      <guid>https://www.arponr.com/work/expos/smash/</guid>
       <description>Constructs a symmetric monoidal structure on the motivic J-homomorphism. One input is a characterization of smash products in terms of the Day convolution product of arrows.</description>
     </item>
     <item>
       <title>Complex cobordism: geometry &amp; algebra</title>
-      <link>https://arponr.github.io/work/expos/cplxcob/</link>
+      <link>https://www.arponr.com/work/expos/cplxcob/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>https://arponr.github.io/work/expos/cplxcob/</guid>
+      <guid>https://www.arponr.com/work/expos/cplxcob/</guid>
       <description>Attempts to convey the miraculous nature of complex cobordism to a fairly broad audience.</description>
     </item>
     <item>
       <title>Motivating infinity-categorical thinking</title>
-      <link>https://arponr.github.io/work/expos/inftycats-motivation/</link>
+      <link>https://www.arponr.com/work/expos/inftycats-motivation/</link>
       <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://arponr.github.io/work/expos/inftycats-motivation/</guid>
+      <guid>https://www.arponr.com/work/expos/inftycats-motivation/</guid>
       <description>Describes a few simple ways in which higher category theory can be used to think about classical homotopy theory.</description>
     </item>
     <item>
       <title>Characters in global equivariant homotopy theory</title>
-      <link>https://arponr.github.io/work/expos/senior-thesis/</link>
+      <link>https://www.arponr.com/work/expos/senior-thesis/</link>
       <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>https://arponr.github.io/work/expos/senior-thesis/</guid>
+      <guid>https://www.arponr.com/work/expos/senior-thesis/</guid>
       <description>On the generalized character theory of Hopkins-Kuhn-Ravenel and Stapleton.</description>
     </item>
   </channel>
