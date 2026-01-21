@@ -6,12 +6,12 @@
     <description>Recent content in Research on Arpon Raksit</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.arponr.com/work/papers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spectral algebraic theories I: derived categories</title>
       <link>https://www.arponr.com/work/papers/sat-i/</link>
-      <pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
       <guid>https://www.arponr.com/work/papers/sat-i/</guid>
       <description>We formulate a general construction that uniformly produces the derived ∞-category of complexes of abelian groups, the ∞-category of derived commutative rings, and the ∞-category of MU-synthetic spectra. The construction is characterized by a universal property, similar to the theory of animation. The three named examples belong to a class of ∞-categories that we call spectral algebraic ∞-categories, and our results rely on general observations about such ∞-categories and how to construct them.</description>
     </item>

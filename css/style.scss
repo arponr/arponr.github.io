@@ -8,11 +8,11 @@
 // vars
 // -------------------------------------------------------------------
  
-$font-main: 'Computer Modern Serif', serif;
-$font-meta: 'Computer Modern Serif', serif;
+$font-main: 'Computer Modern Sans', sans-serif;
+$font-meta: 'Computer Modern Sans', sans-serif;
 
 $nav-width: 3rem;
-$content-width: 38rem;
+$content-width: 36rem;
 
 $size-base: 14px;
 $size-small: 12px;
@@ -25,9 +25,9 @@ $line-height-small: 1.2;
 $background-base: #fffeff;
 
 $color-base: #000201;
-$color-light: #505255;
+$color-light: #606270;
 $color-very-light: #959291;
-$color-accent: #d0e0d0;
+$color-accent: #d0d0e0;
 
 $nanoskip: 0.1 * $line-height-unit;
 $tinyskip: 0.25 * $line-height-unit;
@@ -156,7 +156,7 @@ $site-hpad: 2rem;
 
 .site--header {
   position: absolute;
-  top: 25ex;
+  top: 23ex;
   left: -6rem;
   transform: rotate(-90deg);
   

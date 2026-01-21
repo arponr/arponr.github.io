@@ -6,12 +6,19 @@
     <description>Recent content on Arpon Raksit</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.arponr.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>how things change</title>
+      <link>https://www.arponr.com/kajerna/video/how-things-change/</link>
+      <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.arponr.com/kajerna/video/how-things-change/</guid>
+      <description> </description>
+    </item>
     <item>
       <title>Spectral algebraic theories I: derived categories</title>
       <link>https://www.arponr.com/work/papers/sat-i/</link>
-      <pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
       <guid>https://www.arponr.com/work/papers/sat-i/</guid>
       <description>We formulate a general construction that uniformly produces the derived ∞-category of complexes of abelian groups, the ∞-category of derived commutative rings, and the ∞-category of MU-synthetic spectra. The construction is characterized by a universal property, similar to the theory of animation. The three named examples belong to a class of ∞-categories that we call spectral algebraic ∞-categories, and our results rely on general observations about such ∞-categories and how to construct them.</description>
     </item>
@@ -744,13 +751,6 @@
       <description>would you add a bit of water to me?&#xA;knead me, till i am smooth and pliable,&#xA;and allow me to rest, before you gently&#xA;sever me into pleasantly sized portions?&#xA;would you lay each of me upon the press?&#xA;between crackling parchment, between the&#xA;time-worn plates, and you’d give your weight&#xA;to the lever, and i’d give away my height.&#xA;would you heat cast iron beneath me?&#xA;so i could live a little, puff my chest</description>
     </item>
     <item>
-      <title>Smash products &amp; the J-homomorphism</title>
-      <link>https://www.arponr.com/work/expos/smash/</link>
-      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.arponr.com/work/expos/smash/</guid>
-      <description>Constructs a symmetric monoidal structure on the motivic J-homomorphism. One input is a characterization of smash products in terms of the Day convolution product of arrows.</description>
-    </item>
-    <item>
       <title>To wit</title>
       <link>https://www.arponr.com/kajerna/prose/wit/</link>
       <pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate>
@@ -793,13 +793,6 @@
       <description>proper nouns sung&#xA;with the ache of history, or&#xA;the undulating body&#xA;of a kitten pawing forward.&#xA;such things make me feel&#xA;my bones, and a humble&#xA;beauty in physicality.&#xA;as if lying in the dew&#xA;and half-light of early morning&#xA;before undertaking the work&#xA;of the mind, the gallant&#xA;defense of the intellect.&#xA;or after all that, when too&#xA;it is lovely to remember&#xA;that you and i are creatures,</description>
     </item>
     <item>
-      <title>Complex cobordism: geometry &amp; algebra</title>
-      <link>https://www.arponr.com/work/expos/cplxcob/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.arponr.com/work/expos/cplxcob/</guid>
-      <description>Attempts to convey the miraculous nature of complex cobordism to a fairly broad audience.</description>
-    </item>
-    <item>
       <title>The Cave</title>
       <link>https://www.arponr.com/kajerna/poem/cave/</link>
       <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
@@ -812,13 +805,6 @@
       <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
       <guid>https://www.arponr.com/kajerna/poem/third-fourth/</guid>
       <description>Out on the porch&amp;ndash;the pier,&#xA;the night is tinted indigo&amp;ndash;violet&#xA;and the moon is looking radiant.&#xA;You can hear but not see&#xA;the fireworks. Instead,&#xA;with each explosion, the light&#xA;of one or two or three fireflies&#xA;among the trees&amp;ndash;the reeds,&#xA;like sparks freed from smoldering logs,&#xA;or the glint of the flames in your love’s eyes,&#xA;or in your heart, as you remember&#xA;how you watched her watch fire.</description>
-    </item>
-    <item>
-      <title>Motivating infinity-categorical thinking</title>
-      <link>https://www.arponr.com/work/expos/inftycats-motivation/</link>
-      <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://www.arponr.com/work/expos/inftycats-motivation/</guid>
-      <description>Describes a few simple ways in which higher category theory can be used to think about classical homotopy theory.</description>
     </item>
     <item>
       <title>Kalyani</title>
@@ -861,13 +847,6 @@
       <pubDate>Fri, 24 Jul 2015 00:00:00 +0000</pubDate>
       <guid>https://www.arponr.com/kajerna/prose/insect-md/</guid>
       <description>It&amp;rsquo;s two o&amp;rsquo;clock in the suburban afternoon. A grey sky hangs low outside, whispering in the back of everyone&amp;rsquo;s mind re looming rainfall. Miscellaneous questions are caught in the whispers and whirl forward into consciousness—Are the cushions on the patio chairs out? Does the garden need to be humanly watered?—landing one after another in a paralyzing mess—Should that errand be run now or postponed until the rain has passed?—like piles of crisp dead leaves you&amp;rsquo;ve tucked against the curb being scattered back over your lawn by gusts of wind.</description>
-    </item>
-    <item>
-      <title>Characters in global equivariant homotopy theory</title>
-      <link>https://www.arponr.com/work/expos/senior-thesis/</link>
-      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>https://www.arponr.com/work/expos/senior-thesis/</guid>
-      <description>On the generalized character theory of Hopkins-Kuhn-Ravenel and Stapleton.</description>
     </item>
     <item>
       <title>Transcendence in Infinite Jest</title>
