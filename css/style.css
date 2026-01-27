@@ -61,10 +61,10 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
 }
 
 .site {
-  max-width: 39rem;
+  max-width: 38.5rem;
   padding-top: 5vh;
   padding-bottom: 5vh;
-  padding-left: 5rem;
+  padding-left: 4.5rem;
   padding-right: 2rem;
   margin: 0 auto;
   position: relative;
