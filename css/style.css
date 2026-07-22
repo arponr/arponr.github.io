@@ -23,7 +23,7 @@ html, body {
 }
 
 html {
-  font-family: serif;
+  font-family: Times, serif;
   font-size: 14px;
   line-height: 1.25;
   color: #000201;
@@ -79,7 +79,7 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
   top: 22.5ex;
   left: -5.5rem;
   transform: rotate(-90deg);
-  font-family: serif;
+  font-family: Times, serif;
   color: #929195;
 }
 
@@ -104,7 +104,7 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
   font-size: 11px;
 }
 .site--content date {
-  font-family: serif;
+  font-family: Times, serif;
   color: #505260;
   font-size: 11px;
   display: block;
@@ -191,7 +191,7 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
   flex-shrink: 0;
   margin-left: 1rem;
   text-align: right;
-  font-family: serif;
+  font-family: Times, serif;
   font-size: 11px;
   padding-top: 3px;
 }
@@ -200,9 +200,10 @@ a.active:not(:hover):link, a.active:not(:hover):visited {
   margin-bottom: 1.25rem;
 }
 .course--meta {
-  font-family: serif;
+  font-family: Times, serif;
   font-size: 11px;
   color: #505260;
+  line-height: 1rem;
 }
 .course h2 {
   display: inline-block;

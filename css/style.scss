@@ -8,8 +8,8 @@
 // vars
 // -------------------------------------------------------------------
  
-$font-main: serif;
-$font-meta: serif;
+$font-main: Times, serif;
+$font-meta: Times, serif;
 
 $nav-width: 2.5rem;
 $content-width: 36rem;
@@ -320,6 +320,7 @@ $site-hpad: 2.5rem;
     font-family: $font-meta;
     font-size: $size-small;
     color: $color-light;
+    line-height: $line-height-small-unit;
   }
   
   h2 {
