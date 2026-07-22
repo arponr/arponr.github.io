@@ -6,21 +6,21 @@
     <description>Recent content in Research on Arpon Raksit</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.arponr.com/work/papers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Derived categories as algebraizations</title>
+      <link>https://www.arponr.com/work/papers/der/</link>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.arponr.com/work/papers/der/</guid>
+      <description>We exhibit the derived ∞-categories of certain abelian categories, the ∞-category of derived commutative rings, and certain ∞-categories of synthetic spectra as instances of a universal construction.</description>
+    </item>
     <item>
       <title>Notes on Tate cohomology</title>
       <link>https://www.arponr.com/work/papers/tate/</link>
       <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://www.arponr.com/work/papers/tate/</guid>
       <description></description>
-    </item>
-    <item>
-      <title>Spectral algebraic theories I: derived categories</title>
-      <link>https://www.arponr.com/work/papers/sat-i/</link>
-      <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.arponr.com/work/papers/sat-i/</guid>
-      <description>We formulate a general construction that uniformly produces the derived ∞-category of complexes of abelian groups, the ∞-category of derived commutative rings, and the ∞-category of MU-synthetic spectra. The construction is characterized by a universal property, similar to the theory of animation. The three named examples belong to a class of ∞-categories that we call spectral algebraic ∞-categories, and our results rely on general observations about such ∞-categories and how to construct them.</description>
     </item>
     <item>
       <title>THH(Z) and the image of J</title>

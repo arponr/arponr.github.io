@@ -8,25 +8,26 @@
 // vars
 // -------------------------------------------------------------------
  
-$font-main: 'Computer Modern Sans', sans-serif;
-$font-meta: 'Computer Modern Sans', sans-serif;
+$font-main: serif;
+$font-meta: serif;
 
 $nav-width: 2.5rem;
 $content-width: 36rem;
 
 $size-base: 14px;
-$size-small: 12px;
-$size-medium: 13px;
+$size-small: 11px;
+$size-medium: 12px;
 $size-large: 24px;
 $line-height: 1.25;
+$line-height-small: 1.0;
 $line-height-unit: $line-height * 1rem;
-$line-height-small: 1.2;
+$line-height-small-unit: $line-height-small * 1rem;
 
 $background-base: #fffeff;
 
 $color-base: #000201;
-$color-light: #606270;
-$color-very-light: #959291;
+$color-light: #505260;
+$color-very-light: #929195;
 $color-accent: #d0d0e0;
 
 $nanoskip: 0.1 * $line-height-unit;
@@ -100,6 +101,10 @@ button {
   background: inherit;
 }
 
+sup, sub {
+  line-height: 0;
+}
+
 // -------------------------------------------------------------------
 // links
 // -------------------------------------------------------------------
@@ -142,7 +147,7 @@ a {
 // -------------------------------------------------------------------
 
 $site-vpad: 5vh;
-$site-hpad: 2rem;
+$site-hpad: 2.5rem;
 
 .site {
   max-width: $content-width + $nav-width;
@@ -156,8 +161,8 @@ $site-hpad: 2rem;
 
 .site--header {
   position: absolute;
-  top: 23ex;
-  left: -6rem;
+  top: 22.5ex;
+  left: -5.5rem;
   transform: rotate(-90deg);
   
   font-family: $font-meta;
@@ -166,7 +171,7 @@ $site-hpad: 2rem;
 
 .site--home {
   .home--text {
-    margin-top: $medskip;
+    margin-top: $bigskip;
     max-width: $content-width;
     text-align: justify;
     overflow-wrap: break-word;
@@ -192,7 +197,8 @@ $site-hpad: 2rem;
   }
 
   h2 {
-    font-style: italic;
+    text-transform: uppercase;
+    font-size: $size-small;
   }
   
   date {
@@ -217,8 +223,9 @@ $site-hpad: 2rem;
 
   figcaption {
     margin-top: $tinyskip;
+    font-size: $size-small;
     color: $color-light;
-    text-align: center;
+    text-align: right;
   }
 }
 
@@ -256,11 +263,11 @@ $site-hpad: 2rem;
 .work-entry {
   margin-bottom: $smallskip;
   
-  &--desc, &--meta {
-    font-size: $size-small;
+  &--meta {
+    font-size: $size-medium;
     color: $color-light;
-    line-height: $line-height-small;
-    margin-top: $tinyskip;
+    margin-top: $nanoskip;
+    line-height: $line-height-small-unit;
   }
 }
 
