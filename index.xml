@@ -6,8 +6,15 @@
     <description>Recent content on Arpon Raksit</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.arponr.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Derived categories as algebraizations</title>
+      <link>https://www.arponr.com/work/papers/der/</link>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.arponr.com/work/papers/der/</guid>
+      <description>Using classical ideas from universal algebra, we describe a common framework for constructing and characterizing various types of derived ∞-categories. Examples include the derived ∞-categories of certain abelian categories, the ∞-category of derived commutative rings, and certain ∞-categories of synthetic spectra.</description>
+    </item>
     <item>
       <title>Sounds</title>
       <link>https://www.arponr.com/kajerna/poem/sounds/</link>
@@ -21,13 +28,6 @@
       <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
       <guid>https://www.arponr.com/kajerna/poem/intime2/</guid>
       <description>The periphery flickers&#xA;and a wasp waits ahead;&#xA;I am here, covered in sticky threads,&#xA;pulled by the clock&amp;rsquo;s thin, dark hands.</description>
-    </item>
-    <item>
-      <title>Derived categories as algebraizations</title>
-      <link>https://www.arponr.com/work/papers/der/</link>
-      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.arponr.com/work/papers/der/</guid>
-      <description>Using classical ideas from universal algebra, we describe a common framework for constructing and characterizing various types of derived ∞-categories. Examples include the derived ∞-categories of certain abelian categories, the ∞-category of derived commutative rings, and certain ∞-categories of synthetic spectra.</description>
     </item>
     <item>
       <title>summer rain</title>
